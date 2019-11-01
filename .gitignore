@@ -1,2 +1,4 @@
 **/*.log
+services/ghost/.ghostpid
+services/ghost/.ghost-cli
 node_modules
