@@ -1,19 +1,15 @@
 <script context="module">
-  import GhostContentAPI from '@tryghost/content-api';
-
-  const ghostApi = new GhostContentAPI({
-    url: 'http://localhost:2368',
-    key: 'eabbf3c9fd1ac653523c236a19',
-    version: 'v3'
-  })
-
 	export async function preload({ params, query }) {
-    return ghostApi.posts
-      .read({slug: params.slug})
-      .then(post => ({post}))
-      .catch(error => {
-        console.log(error)
-      })
+		// the `slug` parameter is available because
+		// this file is called [slug].svelte
+		const res = await this.fetch(`blog/${params.slug}.json`);
+		const data = await res.json();
+
+		if (res.status === 200) {
+			return { post: data };
+		} else {
+			this.error(res.status, data.message);
+		}
 	}
 </script>
 
