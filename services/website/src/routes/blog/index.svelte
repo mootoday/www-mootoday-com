@@ -1,10 +1,19 @@
 <script context="module">
-  import GhostContentAPI from '@tryghost/content-api'
+  import GhostContentAPI from '@tryghost/content-api';
+
+  const ghostApi = new GhostContentAPI({
+    url: 'http://localhost:2368',
+    key: 'eabbf3c9fd1ac653523c236a19',
+    version: 'v3'
+  })
 
 	export function preload({ params, query }) {
-		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
-			return { posts };
-		});
+		return ghostApi.posts
+      .browse()
+      .then(posts => ({posts}))
+      .catch(error => {
+        console.log(error)
+      })
 	}
 </script>
 
