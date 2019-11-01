@@ -1,0 +1,28 @@
+{
+  "name": "monorepo-template",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "preadd-new-service": "echo \"Creating service $SERVICE_NAME...\"",
+    "add-new-service": "run-s add-new-service:copy-template add-new-service:set-service-name",
+    "add-new-service:copy-template": "cp -r ./services/_template-service ./services/$SERVICE_NAME",
+    "add-new-service:set-service-name": "npm-run-all add-new-service:set-service-name:*",
+    "add-new-service:set-service-name:packagejson": "sed -i \"s/template-service/$SERVICE_NAME/g\" ./services/$SERVICE_NAME/package.json",
+    "add-new-service:set-service-name:readme": "sed -i \"s/template-service/$SERVICE_NAME/g\" ./services/$SERVICE_NAME/README.md",
+    "bootstrap": "lerna bootstrap",
+    "deploy:chatbot-fulfillment": "lerna run deploy --stream --scope=\"chatbot-fulfillment\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:mikenikles/monorepo-template.git"
+  },
+  "author": "Mike, @mikenikles",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^3.16.4",
+    "npm-run-all": "^4.1.5",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  }
+}

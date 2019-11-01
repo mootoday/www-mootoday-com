@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2018"
+  }
+}
