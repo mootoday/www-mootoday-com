@@ -15,7 +15,7 @@ steps:
   # ====================
   - id: "deploy-1"
     name: "gcr.io/$PROJECT_ID/gcp-deployment"
-    args: ["run", "deploy"]
+    args: ["run", "deploy:website"]
     env:
     - 'DEPLOYMENT_VERSION=$COMMIT_SHA'
     - 'FIREBASE_DEPLOY_TOKEN=$_FIREBASE_DEPLOY_TOKEN'
