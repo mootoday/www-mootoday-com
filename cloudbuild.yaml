@@ -3,13 +3,17 @@ steps:
   # Setup
   # ====================
   - id: "setup-1"
-    name: "gcr.io/cloud-builders/npm"
-    args: ["install", "--no-audit"]
+    name: "gcr.io/cloud-builders/git"
+    args: ["fetch", "--unshallow", "--tags"]
     waitFor: ["-"] # The "-" indicates that this step begins immediately.
   - id: "setup-2"
     name: "gcr.io/cloud-builders/npm"
-    args: ["run", "bootstrap"]
+    args: ["install", "--no-audit"]
     waitFor: ["setup-1"]
+  - id: "setup-3"
+    name: "gcr.io/cloud-builders/npm"
+    args: ["run", "bootstrap"]
+    waitFor: ["setup-2"]
   # ====================
   # Deploy
   # ====================
@@ -23,4 +27,4 @@ steps:
     - 'GHOST_DB_CONNETION_NAME=$_GHOST_DB_CONNETION_NAME'
     - 'GHOST_DB_CONNETION_USER=$_GHOST_DB_CONNETION_USER'
     - 'GHOST_DB_CONNETION_PASSWORD=$_GHOST_DB_CONNETION_PASSWORD'
-    waitFor: ["setup-2"]
+    waitFor: ["setup-3"]
