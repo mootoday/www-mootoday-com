@@ -11,11 +11,12 @@ steps:
     args: ["run", "bootstrap"]
     waitFor: ["setup-1"]
   # ====================
-  # Deploy
+  # Deploy website
   # ====================
-  - id: "deploy-1"
+  - id: "deploy-website-1"
     name: "gcr.io/$PROJECT_ID/gcp-deployment"
-    args: ["run", "deploy:website"]
+    args: ["run", "deploy"]
+    dir: "services/website"
     env:
     - 'DEPLOYMENT_VERSION=$COMMIT_SHA'
     - 'FIREBASE_DEPLOY_TOKEN=$_FIREBASE_DEPLOY_TOKEN'
