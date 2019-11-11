@@ -10,7 +10,9 @@
     "add-new-service:set-service-name:packagejson": "sed -i \"s/template-service/$SERVICE_NAME/g\" ./services/$SERVICE_NAME/package.json",
     "add-new-service:set-service-name:readme": "sed -i \"s/template-service/$SERVICE_NAME/g\" ./services/$SERVICE_NAME/README.md",
     "bootstrap": "lerna bootstrap",
-    "deploy": "sh ./deploy.sh",
+    "deploy": "run-s deploy:ghost deploy:website",
+    "deploy:ghost": "lerna run deploy --stream --scope=\"ghost\"",
+    "deploy:website": "lerna run deploy --stream --scope=\"website\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
