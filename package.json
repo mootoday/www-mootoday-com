@@ -10,7 +10,7 @@
     "add-new-service:set-service-name:packagejson": "sed -i \"s/template-service/$SERVICE_NAME/g\" ./services/$SERVICE_NAME/package.json",
     "add-new-service:set-service-name:readme": "sed -i \"s/template-service/$SERVICE_NAME/g\" ./services/$SERVICE_NAME/README.md",
     "bootstrap": "lerna bootstrap",
-    "deploy:chatbot-fulfillment": "lerna run deploy --stream --scope=\"chatbot-fulfillment\"",
+    "deploy": "sh ./deploy.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
