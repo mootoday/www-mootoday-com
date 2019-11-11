@@ -1,9 +1,9 @@
 {
 	"background_color": "#ffffff",
 	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
-	"display": "minimal-ui",
+	"name": "Mike's Blog",
+	"short_name": "Mike's Blog",
+	"display": "standalone",
 	"start_url": "/",
 	"icons": [
 		{

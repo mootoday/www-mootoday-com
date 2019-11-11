@@ -5,7 +5,7 @@
 		const res = await this.fetch(`blog/${params.slug}.json`);
 		const data = await res.json();
 
-		if (res.status === 200) {
+		if (res.status === 200 && data) {
 			return { post: data };
 		} else {
 			this.error(res.status, data.message);
@@ -51,10 +51,15 @@
 	.content :global(li) {
 		margin: 0 0 0.5em 0;
 	}
+
+  .content :global(img) {
+    max-width: 100%;
+  }
 </style>
 
 <svelte:head>
 	<title>{post.title}</title>
+  <meta name="description" content="{post.meta_description}">
 </svelte:head>
 
 <h1>{post.title}</h1>
