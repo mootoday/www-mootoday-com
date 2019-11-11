@@ -1,0 +1,12 @@
+{
+  "name": "ghost",
+  "version": "1.0.0",
+  "description": "Ghost.org instance for https://blog.mikenikles.com.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gcloud beta run deploy ghost --image gcr.io/www-mikenikles-com/ghost --platform managed --allow-unauthenticated --region us-east1 --max-instances 1 --add-cloudsql-instances www-mikenikles-com:us-east1:www-mikenikles-com-ghost --project www-mikenikles-com --set-env-vars database__connection__socketPath=\"/cloudsql/$GHOST_DB_CONNETION_NAME\",database_connection__user=\"$GHOST_DB_CONNETION_USER\",database__connection__password=\"$GHOST_DB_CONNETION_PASSWORD\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike, @mikenikles",
+  "license": "ISC"
+}
