@@ -1,5 +1,5 @@
 {
-  "name": "monorepo-template",
+  "name": "www-mikenikles-com",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -11,6 +11,7 @@
     "add-new-service:set-service-name:readme": "sed -i \"s/template-service/$SERVICE_NAME/g\" ./services/$SERVICE_NAME/README.md",
     "bootstrap": "lerna bootstrap",
     "deploy": "run-s deploy:ghost deploy:website",
+    "deploy:cdn": "lerna run deploy --stream --scope=\"cdn\"",
     "deploy:ghost": "lerna run deploy --stream --scope=\"ghost\"",
     "deploy:website": "lerna run deploy --stream --scope=\"website\"",
     "test": "echo \"Error: no test specified\" && exit 1"
