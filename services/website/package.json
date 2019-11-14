@@ -3,16 +3,16 @@
   "description": "The website source code for www.mikenikles.com",
   "version": "1.0.0",
   "scripts": {
+    "clean": "rm -fr __sapper__ && rm -fr ./firebase/public/*",
+    "deploy": "run-s deploy:firebase",
+    "deploy:firebase": "npm run export && cd firebase && firebase deploy -m \"${DEPLOYMENT_VERSION}\" --token ${FIREBASE_DEPLOY_TOKEN}",
     "dev": "sapper dev",
-    "build": "rm -fr __sapper__ && sapper build --legacy",
-    "deploy": "npm run export && cd firebase && firebase deploy -m \"${DEPLOYMENT_VERSION}\" --token ${FIREBASE_DEPLOY_TOKEN}",
-    "preexport": "rm -fr __sapper__ && rm -fr ./firebase/public/* && npm run fetchBlogPosts",
     "export": "sapper export ./firebase/public --legacy",
     "fetchBlogPosts": "curl https://blog.mikenikles.com/ghost/api/v3/content/posts/?key=5581c10aee9e1a44e3bfc012f7 > ./src/routes/blog/_posts.json",
-    "start": "node __sapper__/build",
+    "preexport": "run-s clean fetchBlogPosts",
+    "test": "run-p --race dev cy:run",
     "cy:run": "cypress run",
-    "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "@tryghost/content-api": "^1.3.3",
