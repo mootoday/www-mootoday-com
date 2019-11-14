@@ -52,7 +52,7 @@ RUN set -eux; \
 	\
   # Install the GCS storage adapter
   su-exec node mkdir -p "$GHOST_STORAGE/gcs"; \
-  su-exec node yarn add -D ghost-v3-google-cloud-storage@1.0.0; \
+  su-exec node yarn add -D ghost-v3-google-cloud-storage@1.3.0; \
   su-exec node cp -R node_modules/ghost-v3-google-cloud-storage/* "$GHOST_STORAGE/gcs/"; \
   su-exec node rm -rv node_modules/ghost-v3-google-cloud-storage; \
   cd "$GHOST_STORAGE/gcs"; \

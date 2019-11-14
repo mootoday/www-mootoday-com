@@ -24,7 +24,8 @@
   "storage": {
     "active": "gcs",
     "gcs": {
-      "bucket": "www-mikenikles-com-ghost-content"
+      "bucket": "www-mikenikles-com-ghost-content",
+      "cdn": "assets.mikenikles.com"
     }
   }
 }
