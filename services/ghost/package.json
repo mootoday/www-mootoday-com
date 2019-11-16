@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "deploy": "gcloud beta run deploy ghost --image gcr.io/www-mikenikles-com/ghost --platform managed --allow-unauthenticated --region us-east1 --max-instances 1 --add-cloudsql-instances $GHOST_DB_CONNECTION_NAME --project www-mikenikles-com --set-env-vars database__connection__socketPath=\"/cloudsql/$GHOST_DB_CONNECTION_NAME\",database__connection__user=\"$GHOST_DB_CONNECTION_USER\",database__connection__password=\"$GHOST_DB_CONNECTION_PASSWORD\"",
+    "docker:build": "docker build -t www-mikenikles-com-ghost:latest .",
+    "docker:push": "docker push gcr.io/www-mikenikles-com/ghost",
+    "docker:tag": "docker tag www-mikenikles-com-ghost:latest gcr.io/www-mikenikles-com/ghost",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mike, @mikenikles",
