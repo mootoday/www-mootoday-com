@@ -14,6 +14,7 @@
 </script>
 
 <script>
+  import OpenGraphTags from '../../components/open-graph-tags.svelte';
 	export let post;
 </script>
 
@@ -72,6 +73,7 @@
 <svelte:head>
 	<title>{post.title}</title>
   <meta name="description" content="{post.meta_description}">
+  <OpenGraphTags {post} />
 </svelte:head>
 
 <h1>{post.title}</h1>
