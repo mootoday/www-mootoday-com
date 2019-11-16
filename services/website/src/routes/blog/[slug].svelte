@@ -18,6 +18,10 @@
 </script>
 
 <style>
+  h1 {
+    @apply text-3xl text-blue-800 mb-5;
+  }
+
 	/*
 		By default, CSS is locally scoped to the component,
 		and any unused styles are dead-code-eliminated.
@@ -27,9 +31,12 @@
 		all elements inside .content
 	*/
 	.content :global(h2) {
-		font-size: 1.4em;
-		font-weight: 500;
+    @apply text-xl text-blue-800;
 	}
+
+  .content :global(p) {
+    @apply mb-2;
+  }
 
 	.content :global(pre) {
 		background-color: #f9f9f9;
@@ -46,7 +53,12 @@
 
 	.content :global(ul) {
 		line-height: 1.5;
+    @apply list-disc list-inside pl-5;
 	}
+
+  .content :global(hr) {
+    @apply border-b;
+  }
 
 	.content :global(li) {
 		margin: 0 0 0.5em 0;

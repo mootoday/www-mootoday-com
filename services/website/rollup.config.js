@@ -5,6 +5,7 @@ import svelte from 'rollup-plugin-svelte';
 import babel from 'rollup-plugin-babel';
 import json from 'rollup-plugin-json';
 import { terser } from 'rollup-plugin-terser';
+import sveltePreprocess from 'svelte-preprocess';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 
@@ -27,7 +28,8 @@ export default {
 			svelte({
 				dev,
 				hydratable: true,
-				emitCss: true
+				emitCss: true,
+        preprocess: sveltePreprocess({ postcss: true })
 			}),
 			resolve({
 				browser: true,
@@ -75,7 +77,8 @@ export default {
 			}),
 			svelte({
 				generate: 'ssr',
-				dev
+				dev,
+        preprocess: sveltePreprocess({ postcss: true })
 			}),
 			resolve({
 				dedupe
