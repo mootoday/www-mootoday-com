@@ -1,4 +1,6 @@
 <script>
+  import { DateTime } from 'luxon';
+  
   export let post;
 </script>
 
@@ -23,7 +25,7 @@
 <div class="wrapper">
   <h3><a href="blog/{post.slug}">{post.title}</a></h3>
   <div>
-    <span>{post.published_at}</span>
+    <span>{DateTime.fromISO(post.published_at).toRelative()}</span>
     <span>{post.reading_time} min read</span>
   </div>
   <p>{@html post.excerpt}</p>
