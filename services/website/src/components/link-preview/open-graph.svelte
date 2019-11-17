@@ -6,3 +6,4 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="{post.og_title || post.meta_title}">
 <meta property="og:description" content="{post.og_description || post.meta_description}">
+<meta property="og:image" content="{post.og_image || post.feature_image}">

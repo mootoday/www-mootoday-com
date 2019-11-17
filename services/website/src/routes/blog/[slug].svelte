@@ -14,7 +14,7 @@
 </script>
 
 <script>
-  import OpenGraphTags from '../../components/open-graph-tags.svelte';
+  import LinkPreviewMetaTags from '../../components/link-preview/index.svelte';
 	export let post;
 </script>
 
@@ -73,7 +73,7 @@
 <svelte:head>
 	<title>{post.title}</title>
   <meta name="description" content="{post.meta_description}">
-  <OpenGraphTags {post} />
+  <LinkPreviewMetaTags {post} />
 </svelte:head>
 
 <h1>{post.title}</h1>
