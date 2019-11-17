@@ -2,7 +2,10 @@ import {posts} from './_posts.json';
 
 const lookup = new Map();
 posts.forEach(post => {
-	lookup.set(post.slug, JSON.stringify(post));
+	lookup.set(post.slug, JSON.stringify({
+    ...post,
+    url: post.url.replace('blog.mikenikles.com', 'www.mikenikles.com/blog')
+  }));
 });
 
 export function get(req, res, next) {
