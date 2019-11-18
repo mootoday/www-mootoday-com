@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1.0'>
 	<meta name='theme-color' content='#333333'>
 
-  <!-- Uncomment the following line to enable Tailwind utility classes in the broser -->
-  <!-- Only use this for development. Always comment the line in production. -->
-  <!-- <link rel="stylesheet" href="tailwind-dev.css" /> -->
+	<!-- Uncomment the following line to enable Tailwind utility classes in the broser -->
+	<!-- Only use this for development. Always comment the line in production. -->
+	<!-- <link rel="stylesheet" href="tailwind-dev-output.css" /> -->
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
 	%sapper.base%
 
@@ -17,15 +19,17 @@
 	%sapper.styles%
 	%sapper.head%
 </head>
+
 <body>
 	<div id='sapper'>%sapper.html%</div>
 	%sapper.scripts%
 
-  <script src="/__/firebase/7.4.0/firebase-app.js"></script>
-  <script src="/__/firebase/7.4.0/firebase-performance.js"></script>
-  <script src="/__/firebase/init.js"></script>
-  <script>
-    firebase && firebase.performance();
-  </script>
+	<script src="/__/firebase/7.4.0/firebase-app.js"></script>
+	<script src="/__/firebase/7.4.0/firebase-performance.js"></script>
+	<script src="/__/firebase/init.js"></script>
+	<script>
+		firebase && firebase.performance();
+	</script>
 </body>
+
 </html>
