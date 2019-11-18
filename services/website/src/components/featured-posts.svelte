@@ -1,19 +1,27 @@
 <script>
-  import FeaturedPost from './featured-post.svelte';
+  import FeaturedPost from "./featured-post.svelte";
 
-  const featuredPosts = [{
-    featured_image: 'https://assets.mikenikles.com/2019/11/penguin-107645987-1.jpg',
-    slug: 'migrating-from-medium-to-my-own-blog',
-    title: 'Migrating from Medium to my own blog'
-  }, {
-    featured_image: 'https://assets.mikenikles.com/2019/11/penguin-107645987-1.jpg',
-    slug: 'migrating-from-medium-to-my-own-blog',
-    title: 'Migrating from Medium to my own blog Migrating from Medium to my own blog Migrating from Medium to my own blog'
-  }, {
-    featured_image: 'https://assets.mikenikles.com/2019/11/penguin-107645987-1.jpg',
-    slug: 'migrating-from-medium-to-my-own-blog',
-    title: 'Migrating from Medium to my own blog'
-  }]
+  const featuredPosts = [
+    {
+      featured_image:
+        "https://assets.mikenikles.com/2019/11/penguin-107645987-1.jpg",
+      slug: "migrating-from-medium-to-my-own-blog",
+      title: "Migrating from Medium to my own blog"
+    },
+    {
+      featured_image:
+        "https://assets.mikenikles.com/2019/11/penguin-107645987-1.jpg",
+      slug: "migrating-from-medium-to-my-own-blog",
+      title:
+        "Migrating from Medium to my own blog Migrating from Medium to my own blog Migrating from Medium to my own blog"
+    },
+    {
+      featured_image:
+        "https://assets.mikenikles.com/2019/11/penguin-107645987-1.jpg",
+      slug: "migrating-from-medium-to-my-own-blog",
+      title: "Migrating from Medium to my own blog"
+    }
+  ];
 </script>
 
 <style>
