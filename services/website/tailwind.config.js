@@ -1,6 +1,10 @@
 module.exports = {
   theme: {
-    extend: {}
+    extend: {},
+    fontFamily: {
+      'logoName': '"Asap Condensed", sans-serif',
+      'logoName01': '"Barlow Semi Condensed", sans-serif',
+    }
   },
   variants: {},
   plugins: []
