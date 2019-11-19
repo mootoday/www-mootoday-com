@@ -1,32 +1,38 @@
 <script>
-  import { DateTime } from 'luxon';
-  
+  import { DateTime } from "luxon";
+
   export let post;
 </script>
 
 <style>
-  .wrapper {
-    @apply mt-4;
+  .wrapper-blog-post-summary {
+    @apply mb-8
+    border-b
+    pb-8;
   }
 
-  h3 {
-    @apply text-lg text-red-900;
+  .post-title {
+    @apply text-2xl text-brown-800 font-bold leading-snug;
   }
 
   span {
-    @apply text-xs text-gray-700;
+    @apply text-xs text-gray-600 font-medium;
   }
 
   p {
-    @apply tracking-wide;
+    @apply tracking-wide mt-4;
   }
 </style>
 
-<div class="wrapper">
-  <h3><a href="blog/{post.slug}">{post.title}</a></h3>
+<div class="wrapper-blog-post-summary">
+  <h2 class="post-title">
+    <a href="blog/{post.slug}">{post.title}</a>
+  </h2>
   <div>
-    <span>{DateTime.fromISO(post.published_at).toRelative()}</span>
+    <span>{DateTime.fromISO(post.published_at).toRelative()} &bull;</span>
     <span>{post.reading_time} min read</span>
   </div>
-  <p>{@html post.excerpt}</p>
+  <p>
+    {@html post.excerpt}
+  </p>
 </div>
