@@ -25,12 +25,12 @@
 </script>
 
 <style>
-  .wrapper {
-    @apply p-8 bg-gray-300;
+  .wrapper-featured-posts {
+    @apply py-8 px-10 bg-brown-400;
   }
 
-  h2 {
-    @apply text-3xl text-gray-700;
+  .featured-posts-title {
+    @apply text-xl text-gray-700 uppercase;
   }
 
   .posts {
@@ -38,8 +38,8 @@
   }
 </style>
 
-<div class="wrapper">
-  <h2>Featured Posts</h2>
+<div class="wrapper-featured-posts">
+  <h3 class="featured-posts-title">Featured Posts</h3>
   <div class="posts">
     {#each featuredPosts as post}
       <FeaturedPost {post} />

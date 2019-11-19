@@ -1,30 +1,35 @@
 <style>
-  .wrapper {
-    @apply flex-none w-3/12 p-8;
+  .wrapper-left-side-overview {
+    @apply p-6 
+    border-r 
+    min-h-screen
+    w-72
+    fixed;
+  }
+
+  .name-logo {
+    @apply uppercase font-logo-name01 text-center;
+  }
+
+  .name {
+    @apply text-4xl font-medium text-brown-700 tracking-widest;
+  }
+
+  .title {
+    @apply font-normal text-brown-500 tracking-tighter;
+    font-size: 1.7rem;
   }
 
   .bio {
-    @apply flex flex-col text-center;
-  }
-
-  .name-title {
-    @apply font-semibold tracking-widest uppercase font-logoName01;
-  }
-
-  h2 {
-    @apply text-4xl text-gray-700;
-  }
-
-  h3 {
-    @apply text-3xl text-gray-500;
+    @apply flex flex-col;
   }
 
   .profile-pic {
-    @apply mt-8 mb-8 self-center rounded-full;
+    @apply h-24 mt-8 mb-8 self-center rounded-full;
   }
 
   p {
-    @apply text-gray-700;
+    @apply text-gray-700 text-base;
   }
 
   ul {
@@ -47,39 +52,37 @@
   }
 </style>
 
-<div class="wrapper">
-  <div>
-    <div class="bio">
-      <div class="name-title">
-        <h2>
-          <a href="/">Mike Nikles</a>
-        </h2>
-        <h3>
-          <a href="/">Software Architect</a>
-        </h3>
-      </div>
-      <img class="profile-pic" src="/profile-pic.jpg" alt="Profile picture" />
-    </div>
+<div class="wrapper-left-side-overview">
+  <!-- <div> -->
+  <div class="name-logo">
+    <a href="/">
+      <h1 class="name">Mike Nikles</h1>
+      <h1 class="title">Software Architect</h1>
+    </a>
+
+  </div>
+  <div class="bio">
+    <img class="profile-pic" src="/profile-pic.jpg" alt="Profile picture" />
     <p>
       I write about software architecture, travel and leadership. Content on
       this blog is my own and don't represent my former or current employer.
     </p>
-
-    <ul>
-      <li>
-        <a href="blog/featured">Featured Posts</a>
-      </li>
-      <li>
-        <a href="blog">Software Architecture</a>
-      </li>
-      <li>
-        <a href="blog">Travel</a>
-      </li>
-      <li>
-        <a href="blog">Leadership</a>
-      </li>
-    </ul>
   </div>
+  <ul>
+    <li>
+      <a href="blog/featured">Featured Posts</a>
+    </li>
+    <li>
+      <a href="blog">Software Architecture</a>
+    </li>
+    <li>
+      <a href="blog">Travel</a>
+    </li>
+    <li>
+      <a href="blog">Leadership</a>
+    </li>
+  </ul>
+  <!-- </div> -->
 
   <div class="social-icons">
     <a href="https://www.linkedin.com/in/mikenikles/">

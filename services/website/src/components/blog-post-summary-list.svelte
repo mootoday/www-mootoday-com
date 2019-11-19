@@ -1,24 +1,22 @@
 <script>
-  import BlogPostSummary from './blog-post-summary.svelte';
+  import BlogPostSummary from "./blog-post-summary.svelte";
 
-	export let posts;
+  export let posts;
 </script>
 
 <style>
-  .wrapper {
-    @apply p-8 bg-orange-200;
+  .wrapper-blog-post-summary-list {
+    @apply py-8 px-10 bg-brown-200;
   }
-
-  h2 {
-    @apply text-3xl text-gray-700;
-  }
-
 </style>
 
-<div class="wrapper">
-  <h2>Software Development</h2>
+<div class="wrapper-blog-post-summary-list">
 
   {#each posts as post}
-    <BlogPostSummary {post}/>
+    <BlogPostSummary {post} />
+    <BlogPostSummary {post} />
+    <BlogPostSummary {post} />
+    <BlogPostSummary {post} />
+    <BlogPostSummary {post} />
   {/each}
 </div>
