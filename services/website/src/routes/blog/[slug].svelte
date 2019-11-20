@@ -29,23 +29,36 @@
 		all elements inside .content
 	*/
   .wrapper-blog-slug {
-    @apply p-10
-		pt-6
+    @apply py-10 
+    px-12
 		bg-brown-200;
   }
 
-  h1 {
-    @apply text-2xl	
+  .post-title-content {
+    @apply text-5xl	
 		text-brown-800 
-		font-bold leading-snug;
+		font-bold;
+    line-height: 1.15;
+  }
+
+  .date-duration {
+    @apply mt-1;
+  }
+
+  span {
+    @apply text-sm text-gray-600 font-medium;
+  }
+
+  .content {
+    @apply mt-8;
   }
 
   .content :global(h2) {
-    @apply text-xl text-blue-800;
+    @apply text-xl;
   }
 
   .content :global(p) {
-    @apply mb-2;
+    @apply mb-6;
   }
 
   .content :global(pre) {
@@ -63,15 +76,21 @@
 
   .content :global(ul) {
     line-height: 1.5;
-    @apply list-disc list-inside pl-5;
+    @apply list-disc list-outside;
+    padding-left: 1.7rem;
   }
 
   .content :global(hr) {
-    @apply border-b;
+    @apply border-b-0 my-10;
   }
 
   .content :global(li) {
     margin: 0 0 0.5em 0;
+    @apply pl-1;
+  }
+
+  .content :global(figure) {
+    @apply my-8;
   }
 
   .content :global(img) {
@@ -86,9 +105,12 @@
 </svelte:head>
 
 <div class="wrapper-blog-slug">
-  <h1>{post.title}</h1>
-  <span>{DateTime.fromISO(post.published_at).toRelative()} &bull;</span>
-  <span>{post.reading_time} min read</span>
+  <h1 class="post-title-content">{post.title}</h1>
+
+  <div class="date-duration">
+    <span>{DateTime.fromISO(post.published_at).toRelative()} &bull;</span>
+    <span>{post.reading_time} min read</span>
+  </div>
 
   <div class="content">
     {@html post.html}

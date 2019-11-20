@@ -14,12 +14,15 @@
   .wrapper-featured-post:first-child {
     @apply ml-0;
   }
+
   .wrapper-featured-post:last-child {
     @apply mr-0;
   }
+
   .image-bg {
     @apply relative pb-2/3;
   }
+
   img {
     @apply absolute
     w-full 
@@ -27,8 +30,19 @@
     object-cover;
   }
 
-  p {
-    @apply p-3 bg-brown-700 text-white truncate;
+  .post-title-bg {
+    @apply h-20 
+    bg-brown-700 
+    flex
+    items-center
+    p-3;
+  }
+
+  .post-title {
+    @apply text-white
+    overflow-hidden
+    leading-normal
+    h-12;
   }
 </style>
 
@@ -37,6 +51,8 @@
     <div class="image-bg">
       <img src={post.featured_image} alt={post.title} />
     </div>
-    <p>{post.title}</p>
+    <div class="post-title-bg">
+      <p class="post-title">{post.title}</p>
+    </div>
   </a>
 </div>

@@ -43,6 +43,7 @@
   .social-icons {
     @apply flex justify-around items-center py-3 mt-16;
   }
+
   .social-icons a {
     @apply h-5 w-5;
   }
