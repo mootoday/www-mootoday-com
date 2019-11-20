@@ -20,7 +20,8 @@
   }
 
   .image-bg {
-    @apply relative pb-2/3;
+    @apply relative 
+    pb-3/5;
   }
 
   img {
@@ -31,11 +32,11 @@
   }
 
   .post-title-bg {
-    @apply h-20 
-    bg-brown-700 
+    @apply bg-brown-700 
     flex
     items-center
     p-3;
+    height: 4.5rem;
   }
 
   .post-title {
