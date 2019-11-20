@@ -8,16 +8,19 @@
   }
 
   .name-logo {
-    @apply uppercase font-logo-name01 text-center;
+    @apply uppercase font-logo-name01 text-center 
+    font-semibold;
+    line-height: 1.25;
   }
 
   .name {
-    @apply text-4xl font-medium text-brown-700 tracking-widest;
+    @apply text-4xl text-brown-700 tracking-widest;
   }
 
   .title {
-    @apply font-normal text-brown-500 tracking-tighter;
-    font-size: 1.7rem;
+    @apply text-brown-500 
+    tracking-tight
+    text-4xl;
   }
 
   .bio {
@@ -54,11 +57,10 @@
 </style>
 
 <div class="wrapper-left-side-overview">
-  <!-- <div> -->
   <div class="name-logo">
     <a href="/">
       <h1 class="name">Mike Nikles</h1>
-      <h1 class="title">Software Architect</h1>
+      <h1 class="title">S/W Architect</h1>
     </a>
 
   </div>
@@ -83,7 +85,6 @@
       <a href="blog">Leadership</a>
     </li>
   </ul>
-  <!-- </div> -->
 
   <div class="social-icons">
     <a href="https://www.linkedin.com/in/mikenikles/">
