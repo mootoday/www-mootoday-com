@@ -19,7 +19,7 @@
 
   .title {
     @apply text-brown-500 
-    tracking-tight
+    tracking-normal
     text-4xl;
   }
 
@@ -60,7 +60,7 @@
   <div class="name-logo">
     <a href="/">
       <h1 class="name">Mike Nikles</h1>
-      <h1 class="title">S/W Architect</h1>
+      <h1 class="title">SW Architect</h1>
     </a>
 
   </div>
