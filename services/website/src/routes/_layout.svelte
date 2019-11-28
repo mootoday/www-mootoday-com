@@ -21,7 +21,7 @@
 		ml-72;
   }
 
-  @screen md {
+  @screen lg {
     .large-screen {
       @apply block;
     }
