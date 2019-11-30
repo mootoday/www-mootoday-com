@@ -6,7 +6,7 @@
 
 <style>
   .wrapper-blog-post-summary-list {
-    @apply py-8 px-10 bg-brown-200;
+    @apply py-12 px-16 bg-brown-200;
   }
 </style>
 

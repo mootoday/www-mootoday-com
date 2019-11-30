@@ -23,7 +23,7 @@
   }
 
   span {
-    @apply text-xs text-gray-600 font-medium;
+    @apply text-sm text-gray-600 font-medium;
   }
 
   .post-excerpt {

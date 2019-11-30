@@ -26,7 +26,7 @@
 
 <style>
   .wrapper-featured-posts {
-    @apply py-8 px-10 bg-brown-400;
+    @apply py-12 px-16 bg-brown-400;
   }
 
   .featured-posts-title {

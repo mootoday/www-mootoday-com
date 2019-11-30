@@ -5,15 +5,17 @@
 
 <style>
   .small-screen {
-    @apply max-w-6xl
-    m-auto
+    @apply m-auto
     antialiased
     text-gray-900
-    flex-wrap;
+    flex-wrap
+    flex;
   }
 
   .large-screen {
-    @apply hidden;
+    @apply hidden
+     m-auto
+     max-w-6xl;
   }
 
   .right-side {

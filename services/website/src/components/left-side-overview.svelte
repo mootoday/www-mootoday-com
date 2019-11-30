@@ -1,6 +1,7 @@
 <style>
   .wrapper-left-side-overview {
-    @apply p-6 
+    @apply p-8 
+    pt-12
     border-r 
     min-h-screen
     w-72
@@ -8,13 +9,17 @@
   }
 
   .name-logo {
-    @apply uppercase font-logo-name01 text-center 
+    @apply uppercase 
+    font-logo-name01 
+    text-center 
     font-semibold;
     line-height: 1.25;
   }
 
   .name {
-    @apply text-4xl text-brown-700 tracking-widest;
+    @apply text-4xl 
+    text-brown-700;
+    letter-spacing: 0.08em;
   }
 
   .title {
@@ -24,7 +29,9 @@
   }
 
   .bio {
-    @apply flex flex-col;
+    @apply flex 
+    py-4
+    flex-col;
   }
 
   .profile-pic {
