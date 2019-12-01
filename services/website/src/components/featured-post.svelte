@@ -4,11 +4,11 @@
 
 <style>
   .wrapper-featured-post {
-    @apply m-4
-     rounded-lg 
-     overflow-hidden 
-     shadow-md 
-     w-full;
+    @apply mt-6
+    rounded-lg 
+    overflow-hidden 
+    shadow-md
+    min-w-full;
   }
 
   .wrapper-featured-post:first-child {
@@ -21,7 +21,7 @@
 
   .image-bg {
     @apply relative 
-    pb-3/5;
+    pb-5/12;
   }
 
   img {
@@ -34,7 +34,6 @@
   .post-title-bg {
     @apply bg-brown-700 
     flex
-    items-center
     p-3;
     height: 4.5rem;
   }
@@ -43,7 +42,23 @@
     @apply text-white
     overflow-hidden
     leading-normal
-    h-12;
+    h-12
+    leading-snug;
+  }
+
+  @screen md {
+    .wrapper-featured-post {
+      @apply m-4
+      w-full
+      min-w-0
+      mb-0;
+    }
+    .image-bg {
+      @apply pb-3/5;
+    }
+    .post-title {
+      @apply leading-normal;
+    }
   }
 </style>
 

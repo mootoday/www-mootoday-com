@@ -1,6 +1,8 @@
 <script>
   import TailwindBase from "../tailwind-base.svelte";
   import LeftSideOverview from "../components/left-side-overview.svelte";
+  import Header from "../components/header.svelte";
+  import Footer from "../components/footer.svelte";
 </script>
 
 <style>
@@ -43,5 +45,7 @@
 </main>
 
 <main class="small-screen">
+  <Header />
   <slot />
+  <Footer />
 </main>

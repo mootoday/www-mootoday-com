@@ -29,15 +29,17 @@
 		all elements inside .content
 	*/
   .wrapper-blog-slug {
-    @apply py-10 
-    px-12
+    @apply py-4
+    px-5 
 		bg-brown-200;
+    padding-top: 64px;
   }
 
   .post-title-content {
-    @apply text-5xl	
+    @apply text-3xl
 		text-brown-800 
-		font-bold;
+		font-bold
+    mt-8;
     line-height: 1.15;
   }
 
@@ -95,6 +97,15 @@
 
   .content :global(img) {
     max-width: 100%;
+  }
+  @screen md {
+    .wrapper-blog-slug {
+      @apply py-10 
+    px-12;
+    }
+    .post-title-content {
+      @apply text-5xl;
+    }
   }
 </style>
 

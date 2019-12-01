@@ -12,7 +12,7 @@
   }
 
   .post-title {
-    @apply text-3xl 
+    @apply text-2xl 
     text-brown-800 
     font-bold 
     leading-tight;
@@ -27,11 +27,21 @@
   }
 
   .post-excerpt {
-    @apply tracking-wide 
-    mt-4
-    leading-normal
+    @apply mt-4
+    leading-snug
     overflow-hidden;
-    height: 4.5em;
+    height: 4.125em;
+  }
+
+  @screen md {
+    .post-title {
+      @apply text-3xl;
+    }
+    .post-excerpt {
+      @apply tracking-wide
+      leading-normal;
+      height: 4.5em;
+    }
   }
 </style>
 

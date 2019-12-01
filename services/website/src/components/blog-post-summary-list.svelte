@@ -6,12 +6,17 @@
 
 <style>
   .wrapper-blog-post-summary-list {
-    @apply py-12 px-16 bg-brown-200;
+    @apply py-8 px-5 bg-brown-200;
+  }
+
+  @screen md {
+    .wrapper-blog-post-summary-list {
+      @apply py-12 px-16;
+    }
   }
 </style>
 
 <div class="wrapper-blog-post-summary-list">
-
   {#each posts as post}
     <BlogPostSummary {post} />
     <BlogPostSummary {post} />

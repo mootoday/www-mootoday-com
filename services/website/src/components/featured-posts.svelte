@@ -6,14 +6,13 @@
       featured_image:
         "https://assets.mikenikles.com/2019/11/penguin-107645987-1.jpg",
       slug: "migrating-from-medium-to-my-own-blog",
-      title: "Migrating from Medium to my own blog"
+      title: "Migrating from Mg"
     },
     {
       featured_image:
         "https://assets.mikenikles.com/2019/11/penguin-107645987-1.jpg",
       slug: "migrating-from-medium-to-my-own-blog",
-      title:
-        "Migrating from Medium to my own blog Migrating from Medium to my own blog Migrating from Medium to my own blog"
+      title: "Migrating from Medium to my own blog Migrating from Medium"
     },
     {
       featured_image:
@@ -26,15 +25,34 @@
 
 <style>
   .wrapper-featured-posts {
-    @apply py-12 px-16 bg-brown-400;
+    @apply py-8 px-5 bg-brown-400;
   }
 
   .featured-posts-title {
-    @apply text-xl text-gray-700 uppercase;
+    @apply text-lg
+    text-gray-700 
+    uppercase
+    tracking-wide
+    font-semibold;
   }
 
   .posts {
-    @apply flex justify-around;
+    @apply flex 
+    justify-around
+    flex-wrap;
+  }
+
+  @screen md {
+    .wrapper-featured-posts {
+      @apply py-12 px-16;
+    }
+    .featured-posts-title {
+      @apply text-xl
+      font-normal;
+    }
+    .posts {
+      @apply flex-no-wrap;
+    }
   }
 </style>
 

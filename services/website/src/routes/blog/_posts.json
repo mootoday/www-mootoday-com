@@ -3,7 +3,7 @@
     {
       "id": "5dc85e97cd1bd400019e7cee",
       "uuid": "13d86766-bfb9-41f3-a9c7-138caaa34110",
-      "title": "Migrating from Medium to my own blog Migrating from Migrating from Medium to my own blog",
+      "title": "Migrating from Medium to my own blog",
       "slug": "migrating-from-medium-to-my-own-blog",
       "html": "<p>If you end up seeing this, welcome! You're a bit early to the party as this is currently work-in-progress while I work on my new blog setup.</p><p>FYI, since you're here, it's built with:</p><!--kg-card-begin: markdown--><ul>\n<li>Ghost v3 (<a href=\"https://www.ghost.org\">www.ghost.org</a>)</li>\n<li>Svelte &amp; Sapper (<a href=\"https://www.svelte.dev\">www.svelte.dev</a>)</li>\n<li>Tailwind CSS (<a href=\"https://www.tailwindcss.com\">www.tailwindcss.com</a>)</li>\n<li>Google Cloud Platform, particularly Cloud Run (<a href=\"https://www.cloud.run\">www.cloud.run</a>) and Cloud Storage - possibly Firebase Hosting before I launch the blog.</li>\n</ul>\n<!--kg-card-end: markdown--><hr><figure class=\"kg-card kg-image-card\"><img src=\"https://assets.mikenikles.com/2019/11/penguin-107645987-1.jpg\" class=\"kg-image\" alt=\"A penguin walking on ice\"></figure><p></p>",
       "comment_id": "5dc85e97cd1bd400019e7cee",
