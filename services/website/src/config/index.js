@@ -9,7 +9,7 @@ const ENV_CONFIG = {
   dev: {
   },
   production: {
-    [GA_TRACKING]: "UA-112469013-1"
+    [GA_TRACKING]: "G-5G8K1ML8SC"
   }
 };
 
