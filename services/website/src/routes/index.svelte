@@ -14,19 +14,29 @@
 <script>
   import FeaturedPosts from "../components/featured-posts.svelte";
   import BlogPostSummaryList from "../components/blog-post-summary-list.svelte";
+  import Bio from "../components/bio.svelte";
 
   export let posts;
 </script>
 
 <style>
-
+  .content {
+    @apply w-full;
+    padding-top: 64px;
+  }
+  @screen lg {
+    .content {
+      @apply pt-0;
+    }
+  }
 </style>
 
 <svelte:head>
   <title>Software Architecture, Travel, Digital Transformation</title>
 </svelte:head>
 
-<div>
+<div class="content">
+  <Bio />
   <FeaturedPosts />
   <BlogPostSummaryList {posts} />
 </div>

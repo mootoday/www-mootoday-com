@@ -12,15 +12,36 @@
   }
 
   .post-title {
-    @apply text-2xl text-brown-800 font-bold leading-snug;
+    @apply text-2xl 
+    text-brown-800 
+    font-bold 
+    leading-tight;
+  }
+
+  .date-duration {
+    @apply mt-1;
   }
 
   span {
-    @apply text-xs text-gray-600 font-medium;
+    @apply text-sm text-gray-600 font-medium;
   }
 
-  p {
-    @apply tracking-wide mt-4;
+  .post-excerpt {
+    @apply mt-4
+    leading-snug
+    overflow-hidden;
+    height: 4.125em;
+  }
+
+  @screen md {
+    .post-title {
+      @apply text-3xl;
+    }
+    .post-excerpt {
+      @apply tracking-wide
+      leading-normal;
+      height: 4.5em;
+    }
   }
 </style>
 
@@ -28,11 +49,11 @@
   <h2 class="post-title">
     <a href="blog/{post.slug}">{post.title}</a>
   </h2>
-  <div>
+  <div class="date-duration">
     <span>{DateTime.fromISO(post.published_at).toRelative()} &bull;</span>
     <span>{post.reading_time} min read</span>
   </div>
-  <p>
+  <p class="post-excerpt">
     {@html post.excerpt}
   </p>
 </div>

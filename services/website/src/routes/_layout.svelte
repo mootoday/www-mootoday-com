@@ -1,27 +1,51 @@
 <script>
   import TailwindBase from "../tailwind-base.svelte";
   import LeftSideOverview from "../components/left-side-overview.svelte";
+  import Header from "../components/header.svelte";
+  import Footer from "../components/footer.svelte";
 </script>
 
 <style>
-  main {
-    @apply flex 
-    max-w-6xl
-    m-auto
+  .small-screen {
+    @apply m-auto
     antialiased
     text-gray-900
-    flex-wrap;
+    flex-wrap
+    flex;
   }
+
+  .large-screen {
+    @apply hidden
+     m-auto
+     max-w-6xl;
+  }
+
   .right-side {
     @apply w-3/4 
 		ml-72;
   }
+
+  @screen lg {
+    .large-screen {
+      @apply block;
+    }
+
+    .small-screen {
+      @apply hidden;
+    }
+  }
 </style>
 
 <TailwindBase />
-<main>
+<main class="large-screen">
   <LeftSideOverview />
   <div class="right-side">
     <slot />
   </div>
+</main>
+
+<main class="small-screen">
+  <Header />
+  <slot />
+  <Footer />
 </main>
