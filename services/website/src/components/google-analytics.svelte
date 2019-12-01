@@ -1,7 +1,7 @@
 <script>
   import { stores } from "@sapper/app";
   import { GA_TRACKING, getConfigValue } from "../config";
-  import { gtag } from "../utils/ga";
+//  import { gtag } from "../utils/ga";
   const { page } = stores();
   $: {
     if (
@@ -9,9 +9,10 @@
       typeof window !== "undefined" &&
       $page.path.indexOf(".") === -1
     ) {
-      gtag("config", getConfigValue(GA_TRACKING), {
-        page_path: $page.path,
-      });
+      firebase && firebase.analytics().logEvent('page_view');
+//      gtag("config", getConfigValue(GA_TRACKING), {
+//        page_path: $page.path,
+//      });
     }
   }
 </script>

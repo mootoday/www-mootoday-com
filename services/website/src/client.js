@@ -5,4 +5,4 @@ sapper.start({
 	target: document.querySelector('#sapper')
 });
 
-initGA();
+// initGA();
