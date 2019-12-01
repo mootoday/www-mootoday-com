@@ -1,5 +1,6 @@
 <script>
   import TailwindBase from "../tailwind-base.svelte";
+  import GoogleAnalytics from "../components/google-analytics.svelte";
   import LeftSideOverview from "../components/left-side-overview.svelte";
   import Header from "../components/header.svelte";
   import Footer from "../components/footer.svelte";
@@ -36,6 +37,7 @@
   }
 </style>
 
+<GoogleAnalytics />
 <TailwindBase />
 <main class="large-screen">
   <LeftSideOverview />

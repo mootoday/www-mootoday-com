@@ -18,6 +18,7 @@ steps:
     args: ["run", "deploy"]
     dir: "services/website"
     env:
+    - 'DEPLOYMENT_ENV=$_DEPLOYMENT_ENV'
     - 'DEPLOYMENT_VERSION=$COMMIT_SHA'
     - 'FIREBASE_DEPLOY_TOKEN=$_FIREBASE_DEPLOY_TOKEN'
     waitFor: ["setup-2"]
