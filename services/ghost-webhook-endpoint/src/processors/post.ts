@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { publishMessage } from '../pubsub';
 
 export default (req: Request, res: Response): Promise<void> => {
   return new Promise(resolve => {
@@ -7,9 +8,11 @@ export default (req: Request, res: Response): Promise<void> => {
       resolve();
       return;
     }
-    console.log(req.headers);
-    console.log(req.body);
-    // TODO: Implement POST method processor
+    // console.log(req.headers);
+    // console.log(req.body);
+
+    publishMessage(req.body);
+
     res.status(200).send("OK");
     resolve();
   });
