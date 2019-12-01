@@ -1,7 +1,7 @@
 import { GA_TRACKING, getConfigValue } from "../config";
 
 export function gtag() {
-  window.dataLayer.push(arguments);
+  window && window.dataLayer && window.dataLayer.push(arguments);
 }
 
 export const init = () => {
