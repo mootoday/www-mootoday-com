@@ -65,7 +65,7 @@
 <div class="wrapper-featured-post">
   <a href="blog/{post.slug}">
     <div class="image-bg">
-      <img src={post.featured_image} alt={post.title} />
+      <img src={post.feature_image} alt={post.title} />
     </div>
     <div class="post-title-bg">
       <p class="post-title">{post.title}</p>

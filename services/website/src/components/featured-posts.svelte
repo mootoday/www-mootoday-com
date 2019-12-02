@@ -1,26 +1,7 @@
 <script>
   import FeaturedPost from "./featured-post.svelte";
 
-  const featuredPosts = [
-    {
-      featured_image:
-        "https://assets.mikenikles.com/2019/11/penguin-107645987-1.jpg",
-      slug: "migrating-from-medium-to-my-own-blog",
-      title: "Migrating from Mg"
-    },
-    {
-      featured_image:
-        "https://assets.mikenikles.com/2019/11/penguin-107645987-1.jpg",
-      slug: "migrating-from-medium-to-my-own-blog",
-      title: "Migrating from Medium to my own blog Migrating from Medium"
-    },
-    {
-      featured_image:
-        "https://assets.mikenikles.com/2019/11/penguin-107645987-1.jpg",
-      slug: "migrating-from-medium-to-my-own-blog",
-      title: "Migrating from Medium to my own blog"
-    }
-  ];
+  export let posts;
 </script>
 
 <style>
@@ -59,7 +40,7 @@
 <div class="wrapper-featured-posts">
   <h3 class="featured-posts-title">Featured Posts</h3>
   <div class="posts">
-    {#each featuredPosts as post}
+    {#each posts as post}
       <FeaturedPost {post} />
     {/each}
   </div>

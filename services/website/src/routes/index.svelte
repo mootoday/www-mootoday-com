@@ -37,6 +37,6 @@
 
 <div class="content">
   <Bio />
-  <FeaturedPosts />
+  <FeaturedPosts posts={posts.filter(post => post.featured).slice(0, 3)} />
   <BlogPostSummaryList {posts} />
 </div>
