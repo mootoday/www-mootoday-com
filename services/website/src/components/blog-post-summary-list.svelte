@@ -19,9 +19,5 @@
 <div class="wrapper-blog-post-summary-list">
   {#each posts as post}
     <BlogPostSummary {post} />
-    <BlogPostSummary {post} />
-    <BlogPostSummary {post} />
-    <BlogPostSummary {post} />
-    <BlogPostSummary {post} />
   {/each}
 </div>
