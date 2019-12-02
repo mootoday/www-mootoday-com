@@ -124,6 +124,7 @@
   </div>
 
   <div class="content">
+    <img src={post.feature_image} alt="Featured image" />
     {@html post.html}
   </div>
 </div>
