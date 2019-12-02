@@ -6,7 +6,7 @@
       typeof window !== "undefined" &&
       $page.path.indexOf(".") === -1
     ) {
-      firebase && firebase.analytics().logEvent('page_view');
+      window.firebase && firebase.analytics().logEvent('page_view');
     }
   }
 </script>
