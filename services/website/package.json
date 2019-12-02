@@ -8,7 +8,7 @@
     "deploy:firebase": "npm run export && cd firebase && firebase deploy -m \"${DEPLOYMENT_VERSION}\" --token ${FIREBASE_DEPLOY_TOKEN}",
     "dev": "sapper dev",
     "export": "sapper export ./firebase/public --legacy",
-    "fetchBlogPosts": "curl https://blog.mikenikles.com/ghost/api/v3/content/posts/?include=authors,tags&key=5581c10aee9e1a44e3bfc012f7 > ./src/routes/blog/_posts.json",
+    "fetchBlogPosts": "curl https://blog.mikenikles.com/ghost/api/v3/content/posts/?key=5581c10aee9e1a44e3bfc012f7&include=authors,tags > ./src/routes/blog/_posts.json",
     "setActiveEnv": "echo \"export default '$DEPLOYMENT_ENV';\" > ./src/config/active-env.js",
     "preexport": "run-s clean fetchBlogPosts",
     "test": "run-p --race dev cy:run",
