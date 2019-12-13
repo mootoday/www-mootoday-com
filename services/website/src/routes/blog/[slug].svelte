@@ -16,6 +16,8 @@
 <script>
   import { DateTime } from "luxon";
   import LinkPreviewMetaTags from "../../components/link-preview/index.svelte";
+  import GhostPost from "../../components/ghost/post.svelte";
+
   export let post;
 </script>
 
@@ -55,49 +57,6 @@
     @apply mt-8;
   }
 
-  .content :global(h2) {
-    @apply text-xl;
-  }
-
-  .content :global(p) {
-    @apply mb-6;
-  }
-
-  .content :global(pre) {
-    background-color: #f9f9f9;
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
-    padding: 0.5em;
-    border-radius: 2px;
-    overflow-x: auto;
-  }
-
-  .content :global(pre) :global(code) {
-    background-color: transparent;
-    padding: 0;
-  }
-
-  .content :global(ul) {
-    line-height: 1.5;
-    @apply list-disc list-outside;
-    padding-left: 1.7rem;
-  }
-
-  .content :global(hr) {
-    @apply border-b-0 my-10;
-  }
-
-  .content :global(li) {
-    margin: 0 0 0.5em 0;
-    @apply pl-1;
-  }
-
-  .content :global(figure) {
-    @apply my-8;
-  }
-
-  .content :global(img) {
-    max-width: 100%;
-  }
   @screen md {
     .wrapper-blog-slug {
       @apply py-10 
@@ -117,14 +76,16 @@
 
 <div class="wrapper-blog-slug">
   <h1 class="post-title-content">{post.title}</h1>
+  <p>{post.custom_excerpt}</p>
 
   <div class="date-duration">
     <span>{DateTime.fromISO(post.published_at).toRelative()} &bull;</span>
     <span>{post.reading_time} min read</span>
   </div>
 
-  <div class="content">
-    <img src={post.feature_image} alt="Featured image" />
+  <img src={post.feature_image} alt="Featured image" />
+
+  <GhostPost>
     {@html post.html}
-  </div>
+  </GhostPost>
 </div>
