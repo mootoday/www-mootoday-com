@@ -22,14 +22,6 @@
 </script>
 
 <style>
-  /*
-		By default, CSS is locally scoped to the component,
-		and any unused styles are dead-code-eliminated.
-		In this page, Svelte can't know which elements are
-		going to appear inside the {{{post.html}}} block,
-		so we have to use the :global(...) modifier to target
-		all elements inside .content
-	*/
   .wrapper-blog-slug {
     @apply py-4
     px-5 
@@ -51,10 +43,6 @@
 
   span {
     @apply text-sm text-gray-600 font-medium;
-  }
-
-  .content {
-    @apply mt-8;
   }
 
   @screen md {

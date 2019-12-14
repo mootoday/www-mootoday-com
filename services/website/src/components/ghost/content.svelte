@@ -1,4 +1,8 @@
 <style>
+  .ghost-content {
+    @apply mt-8;
+  }
+
   .ghost-content :global(figure.kg-gallery-card) {}
 
   .ghost-content :global(.kg-gallery-container) {
