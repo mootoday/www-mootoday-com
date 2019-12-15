@@ -1,12 +1,19 @@
 <style>
   .ghost-content {
-    @apply mt-8;
+  }
+  .post-content {
+    @apply flex
+    flex-col;
   }
 
-  .ghost-content :global(figure.kg-gallery-card) {}
+  .ghost-content :global(figure.kg-width-full .kg-image) {
+    max-width: 100vw;
+  }
 
   .ghost-content :global(.kg-gallery-container) {
-    @apply flex flex-col;
+    @apply flex flex-col
+    w-screen
+    max-w-5xl;
   }
 
   .ghost-content :global(.kg-gallery-row:first-child) {
@@ -22,28 +29,61 @@
   }
 
   .ghost-content :global(.kg-gallery-image) {
-    @apply ml-3;
+    @apply ml-3 w-full;
   }
 
-  .ghost-content :global(figure.kg-gallery-card figcaption) {
-    @apply mt-4 text-center;
+  .ghost-content :global(figure.kg-card-hascaption figcaption),
+  .ghost-content :global(p:first-of-type) {
+    @apply my-3 
+    text-center
+    text-xs
+    leading-tight
+    text-gray-700;
+  }
+
+  .ghost-content :global(p:first-of-type) {
+    @apply text-right
+    font-sans
+    mb-10;
+  }
+
+  .ghost-content :global(figure) {
+    @apply self-center
+    my-6;
   }
 
   .ghost-content :global(h2) {
-    @apply text-xl;
+    @apply text-3xl
+    font-semibold
+    my-3
+    leading-tight;
   }
 
   .ghost-content :global(h3) {
-    @apply text-lg;
+    @apply text-2xl
+    font-semibold
+    mt-3;
   }
 
   .ghost-content :global(p) {
-    @apply mb-6;
+    @apply mb-5
+    text-lg
+    font-serif
+    text-gray-800
+    leading-normal;
+  }
+
+  .ghost-content :global(a) {
+    @apply border-b
+    border-black;
+  }
+  .ghost-content :global(a:hover) {
+    @apply text-brown-800;
   }
 
   .ghost-content :global(pre) {
     background-color: #f9f9f9;
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 1px 1px 5px rgba(80, 73, 73, 0.05);
     padding: 0.5em;
     border-radius: 2px;
     overflow-x: auto;
@@ -55,9 +95,7 @@
   }
 
   .ghost-content :global(ul) {
-    line-height: 1.5;
-    @apply list-disc list-outside;
-    padding-left: 1.7rem;
+    @apply list-disc list-outside leading-normal pl-8 mb-4;
   }
 
   .ghost-content :global(hr) {
@@ -66,18 +104,75 @@
 
   .ghost-content :global(li) {
     margin: 0 0 0.5em 0;
-    @apply pl-1;
+    @apply pl-1 font-serif text-lg;
   }
 
-  .ghost-content :global(figure) {
-    @apply my-8;
+  .ghost-content :global(blockquote) {
+    @apply min-w-full 
+    text-lg
+    px-5 mb-8 mt-3 border-l-4 border-brown-700 leading-loose font-serif;
   }
 
-  .ghost-content :global(img) {
-    max-width: 100%;
+  .ghost-content :global(em) {
+    @apply font-semibold;
+  }
+
+  @screen md {
+    .ghost-content :global(p) {
+      @apply mb-8
+    leading-relaxed;
+    }
+
+    .ghost-content :global(p:first-of-type) {
+      @apply mb-12
+      mt-3;
+    }
+
+    .ghost-content :global(h2) {
+      @apply text-3xl;
+    }
+
+    .ghost-content :global(figure) {
+      @apply my-10;
+    }
+
+    .ghost-content :global(figure.kg-card-hascaption figcaption) {
+      @apply mt-4;
+    }
+  }
+  @screen lg {
+    .ghost-content {
+      @apply px-32;
+    }
+
+    .ghost-content :global(p) {
+      @apply text-xl;
+    }
+
+    .ghost-content :global(figure) {
+      /* @apply my-3; */
+    }
+
+    .ghost-content :global(figure.kg-card-hascaption figcaption) {
+      @apply text-sm;
+    }
+  }
+
+  @screen xl {
+    .ghost-content {
+      @apply px-40;
+    }
+    .ghost-content :global(p) {
+      @apply text-xl;
+    }
+    .ghost-content :global(p:first-of-type) {
+      @apply mb-20;
+    }
   }
 </style>
 
-<div class="ghost-content">
-  <slot />
-</div>
+<section class="ghost-content ">
+  <div class="post-content">
+    <slot />
+  </div>
+</section>

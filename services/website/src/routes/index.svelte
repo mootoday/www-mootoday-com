@@ -15,18 +15,34 @@
   import FeaturedPosts from "../components/featured-posts.svelte";
   import BlogPostSummaryList from "../components/blog-post-summary-list.svelte";
   import Bio from "../components/bio.svelte";
+  import LeftSideOverview from "../components/left-side-overview.svelte";
 
   export let posts;
 </script>
 
 <style>
   .content {
-    @apply w-full;
-    padding-top: 64px;
+    @apply w-full m-auto;
   }
+
+  .right-side {
+    @apply ml-72;
+  }
+
+  .large-screen {
+    @apply hidden;
+  }
+
   @screen lg {
     .content {
       @apply pt-0;
+    }
+    .large-screen {
+      @apply block;
+    }
+
+    .small-screen {
+      @apply hidden;
     }
   }
 </style>
@@ -36,7 +52,19 @@
 </svelte:head>
 
 <div class="content">
-  <Bio />
-  <FeaturedPosts posts={posts.filter(post => post.featured).slice(0, 3)} />
-  <BlogPostSummaryList {posts} />
+
+  <main class="large-screen">
+    <LeftSideOverview />
+    <div class="right-side">
+      <FeaturedPosts posts={posts.filter(post => post.featured).slice(0, 3)} />
+      <BlogPostSummaryList {posts} />
+    </div>
+  </main>
+
+  <main class="small-screen">
+    <Bio />
+    <FeaturedPosts posts={posts.filter(post => post.featured).slice(0, 3)} />
+    <BlogPostSummaryList {posts} />
+  </main>
+
 </div>

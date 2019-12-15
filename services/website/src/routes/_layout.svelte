@@ -1,7 +1,6 @@
 <script>
   import TailwindBase from "../tailwind-base.svelte";
   import GoogleAnalytics from "../components/google-analytics.svelte";
-  import LeftSideOverview from "../components/left-side-overview.svelte";
   import Header from "../components/header.svelte";
   import Footer from "../components/footer.svelte";
 </script>
@@ -13,17 +12,14 @@
     text-gray-900
     flex-wrap
     flex;
+    padding-top: 64px;
   }
 
   .large-screen {
     @apply hidden
+     /* antialiased */
      m-auto
-     max-w-6xl;
-  }
-
-  .right-side {
-    @apply w-3/4 
-		ml-72;
+    max-w-6xl;
   }
 
   @screen lg {
@@ -40,10 +36,7 @@
 <GoogleAnalytics />
 <TailwindBase />
 <main class="large-screen">
-  <LeftSideOverview />
-  <div class="right-side">
-    <slot />
-  </div>
+  <slot />
 </main>
 
 <main class="small-screen">

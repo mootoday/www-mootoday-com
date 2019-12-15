@@ -17,41 +17,135 @@
   import { DateTime } from "luxon";
   import LinkPreviewMetaTags from "../../components/link-preview/index.svelte";
   import GhostPost from "../../components/ghost/post.svelte";
+  import Header from "../../components/header.svelte";
+  import Footer from "../../components/footer.svelte";
 
   export let post;
 </script>
 
 <style>
-  .wrapper-blog-slug {
-    @apply py-4
-    px-5 
-		bg-brown-200;
-    padding-top: 64px;
+  .headerLg,
+  .footerLg {
+    @apply hidden;
   }
 
-  .post-title-content {
-    @apply text-3xl
+  .wrapper-blog-slug {
+    @apply py-4
+    px-5
+    w-full;
+  }
+
+  .post-full-header {
+    @apply pt-5;
+  }
+
+  .post-full-header span {
+    @apply uppercase text-sm font-semibold text-gray-700;
+  }
+
+  h1.post-full-title {
+    @apply text-4xl
 		text-brown-800 
 		font-bold
-    mt-8;
-    line-height: 1.15;
+    leading-tight;
+  }
+
+  .post-full-custom-excerpt {
+    @apply my-5 
+    mx-0
+    text-xl
+    leading-snug
+    mb-8
+    font-serif
+    text-gray-700;
   }
 
   .date-duration {
-    @apply mt-1;
+    @apply pt-4
+    border-t;
+  }
+
+  .date-duration span {
+    @apply uppercase;
   }
 
   span {
     @apply text-sm text-gray-600 font-medium;
   }
 
+  .post-full-image {
+    @apply flex
+    flex-col
+    items-center
+    mt-6;
+  }
+
+  .post-full-image img {
+    max-width: 100vw;
+  }
+
+  .footerLg {
+    /* @apply border-t; */
+  }
+
   @screen md {
     .wrapper-blog-slug {
       @apply py-10 
-    px-12;
+      px-20
+      m-auto;
     }
-    .post-title-content {
-      @apply text-5xl;
+
+    h1.post-full-title {
+      @apply text-5xl
+      leading-snug;
+    }
+
+    .post-full-custom-excerpt {
+      @apply text-xl;
+    }
+
+    .post-full-image {
+      @apply mt-12;
+    }
+  }
+
+  @screen lg {
+    .headerLg,
+    .footerLg {
+      @apply block;
+    }
+
+    .wrapper-blog-slug {
+      @apply px-12
+      m-auto;
+      padding-top: 64px;
+    }
+
+    .post-full-header {
+      @apply pt-10 
+      pb-16
+    px-32;
+    }
+
+    h1.post-full-title {
+      @apply leading-snug;
+    }
+
+    .post-full-custom-excerpt {
+      @apply text-2xl;
+    }
+
+    .post-full-image {
+      @apply mt-2;
+    }
+  }
+
+  @screen xl {
+    .post-full-image img {
+      @apply max-w-5xl;
+    }
+    .post-full-header {
+      @apply pt-16 px-40;
     }
   }
 </style>
@@ -62,18 +156,33 @@
   <LinkPreviewMetaTags {post} />
 </svelte:head>
 
+<div class="headerLg">
+  <Header />
+</div>
+
 <div class="wrapper-blog-slug">
-  <h1 class="post-title-content">{post.title}</h1>
-  <p>{post.custom_excerpt}</p>
+  <section class="post-full-header">
+    {#each post.tags as tag, i}
+      {#if i >= 1}&nbsp;|{/if}
+      <span>{tag.name}</span>
+    {/each}
+    <h1 class="post-full-title">{post.title}</h1>
+    <p class="post-full-custom-excerpt">{post.custom_excerpt}</p>
+    <div class="date-duration">
+      <span>{DateTime.fromISO(post.published_at).toRelative()} &bull;</span>
+      <span>{post.reading_time} min read</span>
+    </div>
+  </section>
 
-  <div class="date-duration">
-    <span>{DateTime.fromISO(post.published_at).toRelative()} &bull;</span>
-    <span>{post.reading_time} min read</span>
-  </div>
-
-  <img src={post.feature_image} alt="Featured image" />
+  <figure class="post-full-image">
+    <img src={post.feature_image} alt="Featured image" />
+  </figure>
 
   <GhostPost>
     {@html post.html}
   </GhostPost>
+</div>
+
+<div class="footerLg">
+  <Footer />
 </div>

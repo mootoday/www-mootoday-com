@@ -4,7 +4,7 @@
 
 <style>
   .wrapper-featured-post {
-    @apply mt-6
+    @apply mt-3
     rounded-lg 
     overflow-hidden 
     shadow-md
@@ -43,7 +43,9 @@
     overflow-hidden
     leading-normal
     h-12
-    leading-snug;
+    leading-snug
+    font-medium
+    w-full;
   }
 
   @screen md {
@@ -57,7 +59,14 @@
       @apply pb-3/5;
     }
     .post-title {
-      @apply leading-normal;
+      @apply leading-normal
+      text-center;
+    }
+  }
+
+  @screen lg {
+    .wrapper-featured-post {
+      @apply mt-6;
     }
   }
 </style>

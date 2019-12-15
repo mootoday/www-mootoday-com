@@ -8,7 +8,9 @@
     z-50
     shadow
     w-full
-    fixed;
+    fixed
+    top-0
+    left-0;
     height: 64px;
   }
 

@@ -1,7 +1,7 @@
 <style>
   footer {
     @apply w-full
-    p-5;
+    p-5 border-t;
   }
   .social-icons {
     @apply flex 
@@ -25,7 +25,6 @@
   p {
     @apply text-sm
     text-center;
-    /* pt-5; */
   }
 
   .greeting {
@@ -34,7 +33,7 @@
 
   @screen lg {
     footer {
-      @apply p-0;
+      @apply pb-10;
     }
     .social-icons {
       @apply py-3 mt-16;

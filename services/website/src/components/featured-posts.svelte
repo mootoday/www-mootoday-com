@@ -10,7 +10,7 @@
   }
 
   .featured-posts-title {
-    @apply text-lg
+    @apply text-base
     text-gray-700 
     uppercase
     tracking-wide
@@ -28,7 +28,7 @@
       @apply py-12 px-16;
     }
     .featured-posts-title {
-      @apply text-xl
+      @apply text-base
       font-normal;
     }
     .posts {
