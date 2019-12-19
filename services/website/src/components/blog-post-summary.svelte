@@ -7,7 +7,11 @@
 <style>
   .wrapper-blog-post-summary {
     @apply border-b
-    pb-8;
+    py-8;
+  }
+
+  .wrapper-blog-post-summary:first-of-type {
+    @apply pt-0;
   }
 
   .wrapper-blog-post-summary span {
@@ -15,7 +19,7 @@
   }
 
   .post-title {
-    @apply text-2xl 
+    @apply text-3xl 
     text-brown-800 
     font-bold 
     leading-tight;
@@ -33,20 +37,23 @@
     @apply mt-4
     leading-snug
     overflow-hidden;
-    height: 4.125em;
   }
 
   @screen md {
     .post-title {
-      @apply text-3xl;
+      @apply text-4xl;
     }
     .post-excerpt {
       @apply tracking-wide
       leading-normal;
-      height: 4.5em;
     }
     .wrapper-blog-post-summary {
-      @apply mb-8;
+      @apply pb-10;
+    }
+  }
+  @screen lg {
+    .wrapper-blog-post-summary {
+      @apply py-12;
     }
   }
 </style>
