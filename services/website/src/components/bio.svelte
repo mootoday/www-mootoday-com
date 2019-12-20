@@ -9,7 +9,8 @@
   .profile-pic {
     @apply my-3
     self-center 
-    rounded-full;
+    rounded-full
+    w-4/5;
   }
 
   p {
@@ -22,6 +23,9 @@
   @screen sm {
     p {
       @apply text-base;
+    }
+    .profile-pic {
+      @apply w-2/5;
     }
   }
 

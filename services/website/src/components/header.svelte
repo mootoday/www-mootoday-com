@@ -1,4 +1,5 @@
 <script>
+  import { fade, fly, slide, scale, draw } from "svelte/transition";
   let isOpen = false;
 </script>
 
@@ -23,8 +24,10 @@
     font-logo-name01 
     text-center 
     font-semibold
-    text-xl;
-    line-height: 1;
+    text-xl
+    w-48 
+    m-auto
+    leading-none;
   }
 
   .name {
@@ -55,11 +58,26 @@
     @apply text-brown-500;
   }
 
+  .nav-outer {
+    @apply w-screen
+    h-screen
+    top-0
+    left-0
+    pointer-events-none;
+    background: hsla(18.7, 7.8%, 40.4%, 0.9);
+  }
+
+  .nav-outer.open {
+    @apply opacity-100
+    pointer-events-auto;
+  }
+
   nav {
     @apply px-2
     pt-2
     pb-4
     bg-white;
+    max-height: 130px;
   }
 
   nav a {
@@ -126,9 +144,16 @@
     </button>
   </div>
 
-  <nav class={isOpen ? 'block' : 'hidden'}>
-    <a href="#">Featured Posts</a>
-    <a href="#">Software Architecture</a>
-    <a href="#">Leadership</a>
-  </nav>
+  {#if isOpen}
+    <div
+      class="nav-outer"
+      class:open={isOpen}
+      on:click={() => (isOpen = false)}>
+      <nav transition:slide>
+        <a href="#">Featured Posts</a>
+        <a href="#">Software Architecture</a>
+        <a href="#">Leadership</a>
+      </nav>
+    </div>
+  {/if}
 </header>
