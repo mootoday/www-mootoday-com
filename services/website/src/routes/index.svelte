@@ -49,6 +49,7 @@
 
 <svelte:head>
   <title>Software Architecture, Travel, Digital Transformation</title>
+  <meta name="Description" content="Mike Nikles's blog about software architecture & related topics.">
 </svelte:head>
 
 <div class="content">
