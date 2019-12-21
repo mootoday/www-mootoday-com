@@ -17,18 +17,11 @@
   import { DateTime } from "luxon";
   import LinkPreviewMetaTags from "../../components/link-preview/index.svelte";
   import GhostPost from "../../components/ghost/post.svelte";
-  import Header from "../../components/header.svelte";
-  import Footer from "../../components/footer.svelte";
 
   export let post;
 </script>
 
 <style>
-  .headerLg,
-  .footerLg {
-    @apply hidden;
-  }
-
   .wrapper-blog-slug {
     @apply py-4
     px-5
@@ -85,10 +78,6 @@
     max-width: 100vw;
   }
 
-  .footerLg {
-    /* @apply border-t; */
-  }
-
   @screen md {
     .wrapper-blog-slug {
       @apply py-10 
@@ -111,11 +100,6 @@
   }
 
   @screen lg {
-    .headerLg,
-    .footerLg {
-      @apply block;
-    }
-
     .wrapper-blog-slug {
       @apply px-12
       m-auto;
@@ -157,12 +141,6 @@
   <LinkPreviewMetaTags {post} />
 </svelte:head>
 
-<!--
-<div class="headerLg">
-  <Header />
-</div>
--->
-
 <div class="wrapper-blog-slug">
   <section class="post-full-header">
     {#each post.tags as tag, i}
@@ -185,9 +163,3 @@
     {@html post.html}
   </GhostPost>
 </div>
-
-<!--
-<div class="footerLg">
-  <Footer />
-</div>
--->
