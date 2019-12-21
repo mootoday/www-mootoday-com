@@ -1,3 +1,10 @@
+<script>
+  import { onMount } from 'svelte';
+
+  onMount(() => {
+    window.Prism && window.Prism.highlightAll();
+  })
+</script>
 <style>
   .ghost-content {
   }

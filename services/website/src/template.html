@@ -11,6 +11,7 @@
 	<link rel='manifest' href='manifest.json'>
 	<link rel='icon' type='image/png' href='favicon.png'>
 	<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500&display=swap" rel="stylesheet">
+	<link href="css/prism.min.css" rel="stylesheet">
 
 	%sapper.styles%
 	%sapper.head%
@@ -19,6 +20,7 @@
 <body>
 	<div id='sapper'>%sapper.html%</div>
 
+	<script src="js/prism.min.js"></script>
 	<script src="/__/firebase/7.6.0/firebase-app.js"></script>
 	<script src="/__/firebase/7.6.0/firebase-performance.js"></script>
 	<script src="/__/firebase/7.6.0/firebase-analytics.js"></script>
@@ -29,7 +31,7 @@
 		window.firebase && window.firebase.analytics();
 	</script>
 
-  %sapper.scripts%
+	%sapper.scripts%
 </body>
 
 </html>
