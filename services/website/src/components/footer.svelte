@@ -43,7 +43,7 @@
 
 <footer>
   <div class="social-icons">
-    <a href="https://www.linkedin.com/in/mikenikles/">
+    <a href="https://www.linkedin.com/in/mikenikles/" aria-label="LinkedIn Profile">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <path
           d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8
@@ -53,7 +53,7 @@
           42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z" />
       </svg>
     </a>
-    <a href="https://github.com/mikenikles">
+    <a href="https://github.com/mikenikles" aria-label="Github Profile">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
         <path
           d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6
@@ -79,7 +79,7 @@
           0-6.2-1.4-2.3-4-3.3-5.6-2z" />
       </svg>
     </a>
-    <a href="https://twitter.com/mikenikles">
+    <a href="https://twitter.com/mikenikles" aria-label="Twitter Profile">
       <svg
         aria-hidden="true"
         focusable="false"

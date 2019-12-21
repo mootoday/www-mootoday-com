@@ -108,7 +108,7 @@
       </a>
     </div>
 
-    <button type="button" on:click={() => (isOpen = !isOpen)}>
+    <button aria-label="Navigation Menu Toggle" type="button" on:click={() => (isOpen = !isOpen)}>
       {#if isOpen}
         <svg
           xmlns="http://www.w3.org/2000/svg"
