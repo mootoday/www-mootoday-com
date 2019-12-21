@@ -6,40 +6,17 @@
 </script>
 
 <style>
-  .small-screen {
-    @apply m-auto
-    antialiased
-    text-gray-900
-    flex-wrap
-    flex;
-    padding-top: 64px;
-  }
-
-  .large-screen {
-    @apply hidden
-     /* antialiased */
-     m-auto
-    max-w-6xl;
-  }
-
-  @screen lg {
-    .large-screen {
-      @apply block;
-    }
-
-    .small-screen {
-      @apply hidden;
-    }
+  main {
+    @apply antialiased;
+    max-width: 72rem;
+    margin: auto;
   }
 </style>
 
 <GoogleAnalytics />
 <TailwindBase />
-<main class="large-screen">
-  <slot />
-</main>
 
-<main class="small-screen">
+<main>
   <Header />
   <slot />
   <Footer />

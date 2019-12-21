@@ -1,5 +1,7 @@
 <script>
+  import { stores } from "@sapper/app";
   import { fade, fly, slide, scale, draw } from "svelte/transition";
+  const { page } = stores();
   let isOpen = false;
 </script>
 
@@ -97,9 +99,15 @@
     @apply bg-brown-400
     rounded;
   }
+
+  @screen lg {
+    header.index {
+      @apply hidden;
+    }
+  }
 </style>
 
-<header>
+<header class:index={$page.path === '/'}>
   <div class="wrapper-header">
     <div class="name-logo">
       <a href="/">

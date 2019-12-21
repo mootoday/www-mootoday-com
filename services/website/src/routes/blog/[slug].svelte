@@ -33,6 +33,7 @@
     @apply py-4
     px-5
     w-full;
+    margin-top: 64px;
   }
 
   .post-full-header {
@@ -156,9 +157,11 @@
   <LinkPreviewMetaTags {post} />
 </svelte:head>
 
+<!--
 <div class="headerLg">
   <Header />
 </div>
+-->
 
 <div class="wrapper-blog-slug">
   <section class="post-full-header">
@@ -183,6 +186,8 @@
   </GhostPost>
 </div>
 
+<!--
 <div class="footerLg">
   <Footer />
 </div>
+-->

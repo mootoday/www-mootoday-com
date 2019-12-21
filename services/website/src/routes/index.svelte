@@ -23,6 +23,7 @@
 <style>
   .content {
     @apply w-full m-auto;
+    margin-top: 64px;
   }
 
   .right-side {
@@ -36,6 +37,7 @@
   @screen lg {
     .content {
       @apply pt-0;
+      margin-top: 0;
     }
     .large-screen {
       @apply block;

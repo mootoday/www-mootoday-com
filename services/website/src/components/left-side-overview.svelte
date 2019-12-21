@@ -84,5 +84,5 @@
       <a href="blog">Leadership</a>
     </li>
   </ul> -->
-  <Footer />
+  <Footer forceDisplayBlock />
 </div>

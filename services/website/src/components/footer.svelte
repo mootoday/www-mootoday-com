@@ -1,8 +1,20 @@
+<script>
+  import { stores } from "@sapper/app";
+
+  export let forceDisplayBlock = false;
+
+  const { page } = stores();
+</script>
+
 <style>
   footer {
     @apply w-full
     p-5 border-t;
   }
+  footer.block-important {
+    @apply block !important;
+  }
+
   .social-icons {
     @apply flex 
     justify-around 
@@ -35,13 +47,18 @@
     footer {
       @apply pb-10;
     }
+
+    footer.index {
+      @apply hidden;
+    }
+
     .social-icons {
       @apply py-3 mt-16;
     }
   }
 </style>
 
-<footer>
+<footer class:block-important={forceDisplayBlock} class:index={$page.path === '/'}>
   <div class="social-icons">
     <a href="https://www.linkedin.com/in/mikenikles/" aria-label="LinkedIn Profile">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
