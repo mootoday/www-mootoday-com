@@ -17,6 +17,10 @@
     max-width: 100vw;
   }
 
+  .ghost-content :global(figure.kg-code-card) {
+    @apply w-full;
+  }
+
   .ghost-content :global(.kg-gallery-container) {
     @apply flex flex-col
     w-screen
