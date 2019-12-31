@@ -13,11 +13,12 @@
   }
 </script>
 
-<script>
+<script lang="ts">
   import { DateTime } from "luxon";
   import LinkPreviewMetaTags from "../../components/link-preview/index.svelte";
   import GhostPost from "../../components/ghost/post.svelte";
 
+  // @ts-ignore: Not sure how to define `post` as an optional object
   export let post;
 </script>
 

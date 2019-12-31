@@ -82,7 +82,7 @@
     max-height: 130px;
   }
 
-  nav a {
+  /* nav a {
     @apply block
     font-semibold
     px-2
@@ -98,7 +98,7 @@
   nav a:hover {
     @apply bg-brown-400
     rounded;
-  }
+  } */
 
   @screen lg {
     header.index {
@@ -158,9 +158,9 @@
       class:open={isOpen}
       on:click={() => (isOpen = false)}>
       <nav transition:slide>
-        <a href="#">Featured Posts</a>
+        <!-- <a href="#">Featured Posts</a>
         <a href="#">Software Architecture</a>
-        <a href="#">Leadership</a>
+        <a href="#">Leadership</a> -->
       </nav>
     </div>
   {/if}
