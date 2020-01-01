@@ -1,6 +1,8 @@
 <script>
   import { stores } from "@sapper/app";
   import { fade, fly, slide, scale, draw } from "svelte/transition";
+  import NotificationSettings from "./notification-settings.svelte";
+
   const { page } = stores();
   let isOpen = false;
 </script>
@@ -116,7 +118,10 @@
       </a>
     </div>
 
-    <button aria-label="Navigation Menu Toggle" type="button" on:click={() => (isOpen = !isOpen)}>
+    <button
+      aria-label="Navigation Menu Toggle"
+      type="button"
+      on:click={() => (isOpen = !isOpen)}>
       {#if isOpen}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -158,6 +163,7 @@
       class:open={isOpen}
       on:click={() => (isOpen = false)}>
       <nav transition:slide>
+        <NotificationSettings />
         <!-- <a href="#">Featured Posts</a>
         <a href="#">Software Architecture</a>
         <a href="#">Leadership</a> -->
