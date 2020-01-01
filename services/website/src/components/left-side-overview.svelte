@@ -46,13 +46,13 @@
     @apply text-gray-700 text-base;
   }
 
-  ul {
+  /* ul {
     @apply leading-loose mt-4;
   }
 
   li a {
     @apply text-xl text-gray-800;
-  }
+  } */
 </style>
 
 <div class="wrapper-left-side-overview">
