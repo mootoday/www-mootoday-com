@@ -17,6 +17,7 @@
   import { DateTime } from "luxon";
   import LinkPreviewMetaTags from "../../components/link-preview/index.svelte";
   import GhostPost from "../../components/ghost/post.svelte";
+  import Comments from "../../components/comments.svelte";
 
   // @ts-ignore: Not sure how to define `post` as an optional object
   export let post;
@@ -163,4 +164,5 @@
   <GhostPost>
     {@html post.html}
   </GhostPost>
+  <Comments />
 </div>
