@@ -10,7 +10,7 @@
     @apply my-3
     self-center 
     rounded-full
-    w-4/5;
+    w-20;
   }
 
   p {
@@ -24,15 +24,13 @@
     p {
       @apply text-base;
     }
-    .profile-pic {
-      @apply w-2/5;
-    }
   }
 
   @screen md {
     .bio {
       @apply px-16;
     }
+
     p {
       @apply ml-8
       leading-normal
