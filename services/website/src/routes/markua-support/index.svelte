@@ -7,5 +7,5 @@
 </p>
 
 <p>
-  <a href="./privacy-policy">Privacy Policy</a>
+  <a href="/markua-support/privacy-policy">Privacy Policy</a>
 </p>
