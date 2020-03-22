@@ -1,11 +1,19 @@
-<h1>Markua Support - Google Docs Add-on</h1>
+<style>
+  .wrapper {
+    margin-top: 64px;
+  }
+</style>
 
-<p>
-  Documentation, installation instructions and community forum links are
-  available on
-  <a href="https://github.com/mikenikles/markua-docs-addon">Github</a>
-</p>
+<div class="wrapper">
+  <h1>Markua Support - Google Docs Add-on</h1>
 
-<p>
-  <a href="/markua-support/privacy-policy">Privacy Policy</a>
-</p>
+  <p>
+    Documentation, installation instructions and community forum links are
+    available on
+    <a href="https://github.com/mikenikles/markua-docs-addon">Github</a>
+  </p>
+
+  <p>
+    <a href="/markua-support/privacy-policy">Privacy Policy</a>
+  </p>
+</div>
