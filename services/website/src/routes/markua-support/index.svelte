@@ -69,13 +69,21 @@
               Do you write books on Leanpub? Use Google Docs instead and use the
               Markua Support add-on to help you.
             </p>
-            <!-- <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div class="rounded-md shadow">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
-                Get started
-              </a>
+            <div
+              class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <div class="rounded-md shadow">
+                <a
+                  href="https://gsuite.google.com/marketplace/app/markua_support/382576728671"
+                  target="_blank"
+                  class="w-full flex items-center justify-center px-8 py-3
+                  border border-transparent text-base leading-6 font-medium
+                  rounded-md text-white bg-indigo-600 hover:bg-indigo-500
+                  focus:outline-none focus:shadow-outline transition
+                  duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                  Get started
+                </a>
+              </div>
             </div>
-          </div> -->
           </div>
         </div>
         <svg
