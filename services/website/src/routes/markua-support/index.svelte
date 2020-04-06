@@ -80,7 +80,7 @@
                   rounded-md text-white bg-indigo-600 hover:bg-indigo-500
                   focus:outline-none focus:shadow-outline transition
                   duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
-                  Get started
+                  Visit the G Suite Marketplace
                 </a>
               </div>
             </div>
