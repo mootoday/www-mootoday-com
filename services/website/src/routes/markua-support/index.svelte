@@ -212,7 +212,8 @@
       <button on:click={() => (isPrivacyDialogOpen = true)}>
         Privacy Policy
       </button>
-      <!-- <a href="/markua-support/privacy-policy">Privacy Policy</a> -->
+      <span>|</span>
+      <a href="https://github.com/mikenikles/markua-docs-addon" target="_blank">Source Code</a>
     </p>
   </div>
 
