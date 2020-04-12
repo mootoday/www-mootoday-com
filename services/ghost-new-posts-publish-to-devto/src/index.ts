@@ -41,7 +41,7 @@ export const ghostNewPostsPublishToDevtoService = async (data: IPubSubData) => {
         description: ghostBlogPost.custom_excerpt,
         main_image: ghostBlogPost.feature_image,
         published: false,
-        tags: (ghostBlogPost.tags || []).map((tag: { name: string; }) => tag.name),
+        tags: (ghostBlogPost.tags || []).map((tag: { name: string; }) => tag.name.replace(" ", "").toLowerCase()),
         title: ghostBlogPost.title,
       },
     });
