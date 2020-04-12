@@ -1,8 +1,8 @@
 <script>
-  import { stores } from '@sapper/app';
+  import { stores } from "@sapper/app";
   const { page } = stores();
 
-  let isPrivacyDialogOpen = $page.query && $page.query.p || false;
+  let isPrivacyDialogOpen = ($page.query && $page.query.p) || false;
 </script>
 
 <style>
@@ -27,7 +27,30 @@
       <div
         class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl
         lg:w-full lg:pb-28 xl:pb-32">
-        <div class="pt-6 px-4 sm:px-6 lg:px-8" />
+        <div class="pt-6 px-4 sm:px-6 lg:px-8">
+          <nav
+            class="relative flex items-center justify-between sm:h-10
+            lg:justify-start">
+            <div
+              class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+              <div class="flex items-center justify-between w-full md:w-auto">
+                <img
+                  class="h-8 w-auto sm:h-10"
+                  src="markua-support/markua-support-logos-128px.png"
+                  alt="Markua Support logo" />
+              </div>
+            </div>
+            <div class="block ml-10 pr-4">
+              <a
+                href="markua-support#features"
+                class="font-medium text-gray-500 hover:text-gray-900
+                focus:outline-none focus:text-gray-900 transition duration-150
+                ease-in-out">
+                Features
+              </a>
+            </div>
+          </nav>
+        </div>
 
         <div
           class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16
@@ -46,13 +69,21 @@
               Do you write books on Leanpub? Use Google Docs instead and use the
               Markua Support add-on to help you.
             </p>
-            <!-- <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div class="rounded-md shadow">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
-                Get started
-              </a>
+            <div
+              class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <div class="rounded-md shadow">
+                <a
+                  href="https://gsuite.google.com/marketplace/app/markua_support/382576728671"
+                  target="_blank"
+                  class="w-full flex items-center justify-center px-8 py-3
+                  border border-transparent text-base leading-6 font-medium
+                  rounded-md text-white bg-indigo-600 hover:bg-indigo-500
+                  focus:outline-none focus:shadow-outline transition
+                  duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                  Visit the G Suite Marketplace
+                </a>
+              </div>
             </div>
-          </div> -->
           </div>
         </div>
         <svg
@@ -74,6 +105,7 @@
     </div>
   </div>
 
+  <a name="features" />
   <div class="py-12 bg-white">
     <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
       <div class="lg:grid lg:grid-cols-3 lg:gap-8">
@@ -180,7 +212,8 @@
       <button on:click={() => (isPrivacyDialogOpen = true)}>
         Privacy Policy
       </button>
-      <!-- <a href="/markua-support/privacy-policy">Privacy Policy</a> -->
+      <span>|</span>
+      <a href="https://github.com/mikenikles/markua-docs-addon" target="_blank">Source Code</a>
     </p>
   </div>
 
@@ -231,10 +264,10 @@
                 position if you instruct it to do so.
               </p>
               <p class="mt-2 text-sm leading-5 text-gray-500">
-                Markua Support Google Doc add-on will also ask for permission
-                to display a sidebar. It uses the sidebar to display action
-                buttons and options as well as the converted Markua. It allows
-                you to copy the Markua to your clipboard.
+                Markua Support Google Doc add-on will also ask for permission to
+                display a sidebar. It uses the sidebar to display action buttons
+                and options as well as the converted Markua. It allows you to
+                copy the Markua to your clipboard.
               </p>
             </div>
           </div>
