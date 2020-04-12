@@ -28,16 +28,18 @@ export const ghostNewPostsPublishToDevtoService = async (data: IPubSubData) => {
   try {
     const ghostPayload = data.data ? JSON.parse(Buffer.from(data.data, "base64").toString()) : null;
     if (!ghostPayload) {
+      console.error(new Error("No Ghost payload received."));
       return "";
     }
+    const ghostBlogPost = ghostPayload.post.current;
     await publishToDevto({
-      body_markdown: turndownService.turndown(ghostPayload.html),
-      canonical_url: ghostPayload.url.replace("blog.mikenikles.com", "www.mikenikles.com/blog"),
-      description: ghostPayload.custom_excerpt,
-      main_image: ghostPayload.feature_image,
+      body_markdown: turndownService.turndown(ghostBlogPost.html),
+      canonical_url: ghostBlogPost.url.replace("blog.mikenikles.com", "www.mikenikles.com/blog"),
+      description: ghostBlogPost.custom_excerpt,
+      main_image: ghostBlogPost.feature_image,
       published: false,
-      tags: (ghostPayload.tags || []).map((tag: { name: string; }) => tag.name),
-      title: ghostPayload.title,
+      tags: (ghostBlogPost.tags || []).map((tag: { name: string; }) => tag.name),
+      title: ghostBlogPost.title,
     });
   } catch (error) {
     console.error(error);
