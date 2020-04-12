@@ -4,13 +4,15 @@ import * as Turndown from "turndown";
 const turndownService = new Turndown();
 
 interface IDevToApiPayload {
-  body_markdown: string;
-  canonical_url: string;
-  description: string;
-  main_image: string;
-  published: boolean;
-  tags: string[];
-  title: string;
+  article: {
+    body_markdown: string;
+    canonical_url: string;
+    description: string;
+    main_image: string;
+    published: boolean;
+    tags: string[];
+    title: string;
+  };
 }
 
 interface IPubSubData {
@@ -33,13 +35,15 @@ export const ghostNewPostsPublishToDevtoService = async (data: IPubSubData) => {
     }
     const ghostBlogPost = ghostPayload.post.current;
     await publishToDevto({
-      body_markdown: turndownService.turndown(ghostBlogPost.html),
-      canonical_url: ghostBlogPost.url.replace("blog.mikenikles.com", "www.mikenikles.com/blog"),
-      description: ghostBlogPost.custom_excerpt,
-      main_image: ghostBlogPost.feature_image,
-      published: false,
-      tags: (ghostBlogPost.tags || []).map((tag: { name: string; }) => tag.name),
-      title: ghostBlogPost.title,
+      article: {
+        body_markdown: turndownService.turndown(ghostBlogPost.html),
+        canonical_url: ghostBlogPost.url.replace("blog.mikenikles.com", "www.mikenikles.com/blog"),
+        description: ghostBlogPost.custom_excerpt,
+        main_image: ghostBlogPost.feature_image,
+        published: false,
+        tags: (ghostBlogPost.tags || []).map((tag: { name: string; }) => tag.name),
+        title: ghostBlogPost.title,
+      },
     });
   } catch (error) {
     console.error(error);
