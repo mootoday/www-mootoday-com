@@ -20,14 +20,15 @@
   },
   "scripts": {
     "clean": "rm -fr ./lib",
-    "deploy": "gcloud functions deploy ghostNewPostsPublishToDevtoService --set-env-vars=DEVTO_API_KEY=\"$DEVTO_API_KEY\" --memory 128MB --runtime nodejs8 --trigger-topic ghost-new-posts",
+    "deploy": "gcloud functions deploy ghostNewPostsPublishToDevtoService --set-env-vars=DEVTO_API_KEY=\"$DEVTO_API_KEY\" --memory 128MB --runtime nodejs10 --trigger-topic ghost-new-posts",
     "predeploy": "npm run clean && npm run tslint && tsc",
     "test": "echo \"Error: run tests from root\" && exit 1",
     "tslint": "tslint -c ../../tslint.json './src/**/*.ts'"
   },
   "devDependencies": {
     "@types/express": "^4.17.1",
-    "@types/node": "^13.11.1"
+    "@types/node": "^13.11.1",
+    "@types/turndown": "^5.0.0"
   },
   "dependencies": {
     "got": "^10.7.0",
