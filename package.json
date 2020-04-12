@@ -13,6 +13,7 @@
     "deploy": "run-s deploy:ghost deploy:website",
     "deploy:cdn": "lerna run deploy --stream --scope=\"cdn\"",
     "deploy:ghost": "lerna run deploy --stream --scope=\"ghost\"",
+    "deploy:ghost-new-posts-publish-to-devto": "lerna run deploy --stream --scope=\"ghost-new-posts-publish-to-devto\"",
     "deploy:ghost-webhook-endpoint": "lerna run deploy --stream --scope=\"ghost-webhook-endpoint\"",
     "deploy:website": "lerna run deploy --stream --scope=\"website\"",
     "test": "echo \"Error: no test specified\" && exit 1"
