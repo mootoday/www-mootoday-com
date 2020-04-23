@@ -13,11 +13,11 @@ const fetchPosts = async () => {
 
   do {
     const apiResponse = await api.posts.browse({ page, include: "tags,author" });
-    posts.push(apiResponse);
+    posts.push(...apiResponse);
     page = apiResponse.meta.pagination.next;
   } while (page)
 
-  fs.writeFileSync("./src/routes/blog/_posts.json", JSON.stringify(posts));
+  fs.writeFileSync("./src/routes/blog/_posts.json", JSON.stringify({posts}));
 }
 
 try {
