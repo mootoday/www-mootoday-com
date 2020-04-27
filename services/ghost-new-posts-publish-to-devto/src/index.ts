@@ -1,7 +1,9 @@
 import got from "got";
 import * as Turndown from "turndown";
 
-const turndownService = new Turndown();
+const turndownService = new Turndown({
+  codeBlockStyle: "fenced"
+});
 
 interface IDevToApiPayload {
   article: {
