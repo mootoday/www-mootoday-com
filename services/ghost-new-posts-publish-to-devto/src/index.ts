@@ -48,7 +48,7 @@ export const ghostNewPostsPublishToDevtoService = async (data: IPubSubData) => {
       },
     });
   } catch (error) {
-    console.error(error);
+    console.error(error.response.body);
   }
   return "";
 };
