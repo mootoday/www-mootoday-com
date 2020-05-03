@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:8
+FROM mhart/alpine-node:12
 
 ARG CLOUD_SDK_VERSION=270.0.0
 ENV CLOUD_SDK_VERSION=$CLOUD_SDK_VERSION
