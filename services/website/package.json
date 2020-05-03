@@ -11,6 +11,7 @@
     "fetchBlogPosts": "node fetch-blog-posts.js",
     "setActiveEnv": "echo \"export default '$DEPLOYMENT_ENV';\" > ./src/config/active-env.js",
     "preexport": "run-s clean fetchBlogPosts",
+    "postexport": "node generate-sitemap.js",
     "test": "run-p --race dev cy:run",
     "cy:run": "cypress run",
     "cy:open": "cypress open"
