@@ -3,6 +3,8 @@
   "version": "2.0.0",
   "description": "Mike's personal website.",
   "scripts": {
+    "postinstall": "npm run install:services:website",
+    "install:services:website": "npm install --prefix services/web",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
