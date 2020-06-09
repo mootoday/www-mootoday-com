@@ -1,3 +1,0 @@
-# `cdn`
-
-> TODO: description
