@@ -1,3 +1,0 @@
-# `template-service`
-
-> TODO: description
