@@ -20,7 +20,7 @@
     "compression": "^1.7.1",
     "luxon": "^1.21.1",
     "polka": "next",
-    "sirv": "^0.4.0"
+    "sirv": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
