@@ -1,0 +1,11 @@
+image:
+  file: .gitpod.Dockerfile
+tasks:
+  - init: npm install
+ports:
+  - port: 5900
+    onOpen: ignore
+  - port: 6080
+    onOpen: ignore
+  - port: 10000
+    onOpen: ignore

@@ -6,22 +6,42 @@ on:
     - 'services/website/**'
 
 jobs:
-  test:
-    name: Test the services/website
+  test_setup:
+    name: Test setup
     runs-on: ubuntu-latest
+    outputs:
+      preview_url: ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
     steps:
-      - uses: actions/checkout@v2
       - name: Wait for Vercel preview deployment to be ready
         uses: patrickedqvist/wait-for-vercel-preview@master
         id: waitForVercelPreviewDeployment
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           max_timeout: 60
+  test_lighthouse:
+    name: Test Lighthouse
+    needs: test_setup
+    runs-on:  ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
       - name: Audit Vercel preview URL using Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:
           urls: |
-            ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
+            ${{ needs.test_setup.outputs.preview_url }}
           budgetPath: ./services/website/.config/lighthouse/budget.json
           uploadArtifacts: true
           temporaryPublicStorage: true
+  test_e2e:
+    name: Test end-to-end
+    needs: test_setup
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Cypress
+        uses: cypress-io/github-action@v1
+        with:
+          config: baseUrl=${{ needs.test_setup.outputs.preview_url }}
+          install: false # We test a live preview URL, no need to install packages
+          working-directory: services/website
+        
