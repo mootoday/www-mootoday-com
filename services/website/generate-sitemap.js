@@ -16,7 +16,7 @@ const readDirRecursively = (dir, files = []) => {
   return files;
 }
 
-const EXPORT_DIR = "./static";
+const EXPORT_DIR = "./__sapper__/export";
 const generateUrls = () => readDirRecursively(EXPORT_DIR)
   .map(path => path.substring(EXPORT_DIR.length))
   .map(path => path.substring(0, path.length - "index.html".length))
