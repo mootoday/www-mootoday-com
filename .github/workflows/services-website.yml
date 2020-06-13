@@ -53,6 +53,6 @@ jobs:
       - name: Install services/website dependencies
         run: npm run install:services:website
       - name: Test a11y
-        working-directory: services/web
+        working-directory: services/website
         run: |
           ./node_modules/.bin/pa11y-ci --config .config/pa11yci.json --sitemap ${{ needs.test_setup.outputs.preview_url }}/sitemap.xml --sitemap-find www.mikenikles.com --sitemap-replace ${{ needs.test_setup.outputs.preview_url }}
