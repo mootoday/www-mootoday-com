@@ -1,9 +1,10 @@
 name: services/website
 
-on:
-  pull_request:
-    paths:
-    - 'services/website/**'
+on: pull_request
+# on:
+#   pull_request:
+#     paths:
+#     - 'services/website/**'
 
 jobs:
   test_setup:
