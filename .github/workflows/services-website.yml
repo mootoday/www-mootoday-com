@@ -33,3 +33,15 @@ jobs:
           budgetPath: ./services/website/.config/lighthouse/budget.json
           uploadArtifacts: true
           temporaryPublicStorage: true
+  test_e2e:
+    name: Test end-to-end
+    needs: test_setup
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Cypress
+        uses: cypress-io/github-action@v1
+        with:
+          config: baseUrl=${{ needs.test_setup.outputs.preview_url }}
+          working-directory: services/website
+        
