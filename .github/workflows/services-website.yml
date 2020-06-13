@@ -1,0 +1,26 @@
+name: services/website
+
+on:
+  pull_request:
+    paths:
+    - 'services/website/**'
+
+jobs:
+  test:
+    name: Test the services/website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Vercel preview deployment to be ready
+        uses: patrickedqvist/wait-for-vercel-preview@master
+        id: waitForVercelPreviewDeployment
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          max_timeout: 60
+      - name: Audit Vercel preview URL using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: |
+            ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
+          budgetPath: ./services/website/budget.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true
