@@ -50,12 +50,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install pa11y-ci
-        uses: actions/setup-node@v1
-        working-directory: services/web
-        run: npm install pa11y-ci
+      - name: Install services/website dependencies
+        run: npm run install:services:website
       - name: Test a11y
-        uses: actions/setup-node@v1
         working-directory: services/web
         run: |
           ./node_modules/.bin/pa11y-ci --config .config/pa11yci.json --sitemap ${{ needs.test_setup.outputs.preview_url }}/sitemap.xml --sitemap-find www.mikenikles.com --sitemap-replace ${{ needs.test_setup.outputs.preview_url }}
