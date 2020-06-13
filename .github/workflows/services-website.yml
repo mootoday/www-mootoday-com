@@ -51,9 +51,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install pa11y-ci
+        uses: actions/setup-node@v1
         working-directory: services/web
         run: npm install pa11y-ci
       - name: Test a11y
+        uses: actions/setup-node@v1
         working-directory: services/web
         run: |
           ./node_modules/.bin/pa11y-ci --config .config/pa11yci.json --sitemap ${{ needs.test_setup.outputs.preview_url }}/sitemap.xml --sitemap-find www.mikenikles.com --sitemap-replace ${{ needs.test_setup.outputs.preview_url }}
