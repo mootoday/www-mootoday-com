@@ -21,6 +21,6 @@ jobs:
         with:
           urls: |
             ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
-          budgetPath: ./services/website/budget.json
+          budgetPath: ../services/website/budget.json
           uploadArtifacts: true
           temporaryPublicStorage: true
