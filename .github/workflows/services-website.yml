@@ -10,6 +10,7 @@ jobs:
     name: Test the services/website
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Wait for Vercel preview deployment to be ready
         uses: patrickedqvist/wait-for-vercel-preview@master
         id: waitForVercelPreviewDeployment
@@ -21,6 +22,6 @@ jobs:
         with:
           urls: |
             ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
-          budgetPath: ../services/website/budget.json
+          budgetPath: ./services/website/budget.json
           uploadArtifacts: true
           temporaryPublicStorage: true
