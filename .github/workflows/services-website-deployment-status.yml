@@ -13,7 +13,7 @@ jobs:
         uses: treosh/lighthouse-ci-action@v3
         with:
           urls: |
-            ${{ github.event.deployment_status.environment_url }}
+            ${{ github.event.deployment_status.target_url }}
           budgetPath: ./services/website/.config/lighthouse/budget.json
           uploadArtifacts: true
           temporaryPublicStorage: true
@@ -26,7 +26,7 @@ jobs:
       - name: Run Cypress
         uses: cypress-io/github-action@v1
         with:
-          config: baseUrl=${{ github.event.deployment_status.environment_url }}
+          config: baseUrl=${{ github.event.deployment_status.target_url }}
           install: false # We test a live preview URL, no need to install packages
           working-directory: services/website
   test_a11y:
@@ -38,4 +38,4 @@ jobs:
       - name: Test a11y
         working-directory: services/website
         run: |
-          npx pa11y-ci --config .config/pa11yci.json --sitemap ${{ github.event.deployment_status.environment_url }}/sitemap.xml --sitemap-find https://www.mikenikles.com --sitemap-replace ${{ github.event.deployment_status.environment_url }}
+          npx pa11y-ci --config .config/pa11yci.json --sitemap ${{ github.event.deployment_status.target_url }}/sitemap.xml --sitemap-find https://www.mikenikles.com --sitemap-replace ${{ github.event.deployment_status.target_url }}
