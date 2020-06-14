@@ -6,6 +6,7 @@ import babel from "@rollup/plugin-babel";
 import { terser } from "rollup-plugin-terser";
 import sveltePreprocess from "svelte-preprocess";
 import tailwindcss from "tailwindcss";
+import { mdsvex } from "mdsvex";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
 
@@ -18,11 +19,14 @@ const onwarn = (warning, onwarn) =>
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
 
-const sveltePreprocessOptions = sveltePreprocess({
-  postcss: {
-    plugins: [tailwindcss],
-  },
-});
+const sveltePreprocessOptions = [
+  sveltePreprocess({
+    postcss: {
+      plugins: [tailwindcss],
+    },
+  }),
+  mdsvex(),
+];
 
 export default {
   client: {
@@ -37,6 +41,7 @@ export default {
         dev,
         hydratable: true,
         emitCss: true,
+        extensions: [".svelte", ".svx"],
         preprocess: sveltePreprocessOptions,
       }),
       resolve({
@@ -47,7 +52,7 @@ export default {
 
       legacy &&
         babel({
-          extensions: [".js", ".mjs", ".html", ".svelte"],
+          extensions: [".js", ".mjs", ".html", ".svelte", ".svx"],
           babelHelpers: "runtime",
           exclude: ["node_modules/@babel/**"],
           presets: [
@@ -90,6 +95,7 @@ export default {
       svelte({
         generate: "ssr",
         dev,
+        extensions: [".svelte", ".svx"],
         preprocess: sveltePreprocessOptions,
       }),
       resolve({
