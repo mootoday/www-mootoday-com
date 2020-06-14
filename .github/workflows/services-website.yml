@@ -44,4 +44,13 @@ jobs:
           config: baseUrl=${{ needs.test_setup.outputs.preview_url }}
           install: false # We test a live preview URL, no need to install packages
           working-directory: services/website
-        
+  test_a11y:
+    name: Test a11y
+    needs: test_setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test a11y
+        working-directory: services/website
+        run: |
+          npx pa11y-ci --config .config/pa11yci.json --sitemap ${{ needs.test_setup.outputs.preview_url }}/sitemap.xml --sitemap-find https://www.mikenikles.com --sitemap-replace ${{ needs.test_setup.outputs.preview_url }}
