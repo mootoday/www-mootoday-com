@@ -5,7 +5,7 @@ on: deployment_status
 jobs:
   test_lighthouse:
     name: Test Lighthouse
-    if: github.event.state == "success"
+    # if: github.event.state == "success"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
