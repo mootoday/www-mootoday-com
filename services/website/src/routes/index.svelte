@@ -6,5 +6,3 @@
 
 <p>This is being developed as you read it.</p>
 <p>We are testing a preview deployment on Vercel.com. This is deployment 2.</p>
-
-<a href="blog">Blog</a>
