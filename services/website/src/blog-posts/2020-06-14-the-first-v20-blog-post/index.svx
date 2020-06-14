@@ -1,0 +1,20 @@
+---
+title: The first v2.0 blog post
+slug: the-first-v20-blog-post
+---
+
+<script>
+  import Timer from "./timer.svelte";
+</script>
+
+## Introduction
+
+With v2.0 of my personal website, blog posts are now authored in `mdsvex`. Check out https://mdsvex.com/
+for more details on that.
+
+It allows me to write **Markdown** and mix in a bit of Svelte magic. Such as the following little component
+to indicate how many seconds you have already spent on this page.
+
+<Timer />
+
+Enough for now, this is mainly for testing purposes.
