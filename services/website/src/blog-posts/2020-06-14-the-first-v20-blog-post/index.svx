@@ -7,10 +7,6 @@ slug: the-first-v20-blog-post
   import Timer from "./timer.svelte";
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-</svelte:head>
-
 # {title}
 
 ## Introduction
