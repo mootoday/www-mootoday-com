@@ -27,7 +27,7 @@ module.exports = (plop) => {
       {
         type: "add",
         path:
-          "../services/website/statuc/blog-posts/{{today}}-{{dashCase blogPostTitle}}/cover.jpg",
+          "../services/website/static/blog-posts/{{today}}-{{dashCase blogPostTitle}}/cover.jpg",
         templateFile: "../templates/blog-post/cover.jpg",
       },
     ],
