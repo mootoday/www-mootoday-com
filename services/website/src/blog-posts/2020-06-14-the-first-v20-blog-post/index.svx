@@ -7,6 +7,12 @@ slug: the-first-v20-blog-post
   import Timer from "./timer.svelte";
 </script>
 
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
+
+# {title}
+
 ## Introduction
 
 With v2.0 of my personal website, blog posts are now authored in `mdsvex`. Check out https://mdsvex.com/
