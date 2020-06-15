@@ -18,5 +18,7 @@
 
 
 {#each Object.entries(posts) as [_, post]}
-  <a href="blog/{post.metadata.slug}">{post.metadata.title}</a>
+  <p>
+    <a href="blog/{post.metadata.slug}">{post.metadata.title}</a>
+  </p>
 {/each}

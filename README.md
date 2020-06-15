@@ -1,9 +1,25 @@
 # Mike's blog
 
-The source code for www.mikenikles.com.
+The source code for www.mikenikles.com, version 2.0.
 
-## Development
+Check out the `v1.0.0` tag for the source code of the previous version, based on Ghost.org.
 
-The rebuild of my personal website started in early June 2020 and
-you can find a YouTube playlist with a journal of what I developed
-at https://www.youtube.com/playlist?list=PL8RdDvujOwF5iRutSAzdD1ozwFCTJpn1f.
+## Create a new blog post
+
+Use the following command:
+
+```bash
+npm run generate blog-post "My blog post title"
+```
+
+Write you content, with [mdsvex](https://mdsvex.com/) in:
+
+```
+services/website/src/blog-posts/2020-06-15-my-blog-post-title/index.svx
+```
+
+Add your `cover.jpg` image and other assets to:
+
+```
+services/website/static/blog-posts/2020-06-15-my-blog-post-title/
+```
