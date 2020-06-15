@@ -10,6 +10,11 @@ module.exports = (plop) => {
         message:
           "What's the title? (e.g. How to deploy a Sapper app to Cloud Run)",
       },
+      {
+        type: "input",
+        name: "blogPostSummary",
+        message: "What's the summary? (e.g. Learn the steps necessary to ...)",
+      },
     ],
     actions: [
       {
