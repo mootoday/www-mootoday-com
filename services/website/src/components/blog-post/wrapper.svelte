@@ -85,9 +85,10 @@
             </span>
           </a>
         </div>
+        {#if false}
         <div class="flex w-1/2 justify-end content-center">
           <p class="hidden sm:block mr-3 text-center h-14 p-4 text-xs">
-            <span class="pr-2">Share this</span>
+            <span class="pr-2">Share this post</span>
             👉
           </p>
           <a
@@ -120,6 +121,7 @@
             </svg>
           </a>
         </div>
+        {/if}
       </div>
     </div>
     <!--Progress bar-->
