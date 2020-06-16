@@ -28,6 +28,10 @@
     @apply py-4 text-lg;
   }
 
+  div.content :global(code) {
+    @apply py-4 text-lg;
+  }
+
   div.content :global(a) {
     @apply text-gray-800 no-underline border-b-2 border-indigo-700;
   }
@@ -39,6 +43,7 @@
 
 <svelte:head>
   <title>{metadata.title}</title>
+  <link href="prism.css" rel="stylesheet" />
 </svelte:head>
 <svelte:window bind:scrollY />
 
