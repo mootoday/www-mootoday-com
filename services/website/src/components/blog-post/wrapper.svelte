@@ -16,8 +16,16 @@
 </script>
 
 <style>
+  div.content :global(h2) {
+    @apply pt-6 text-3xl font-semibold;
+  }
+
+  div.content :global(ul) {
+    @apply list-disc list-inside text-lg;
+  }
+
   div.content :global(p) {
-    @apply py-6;
+    @apply py-4 text-lg;
   }
 
   div.content :global(a) {
