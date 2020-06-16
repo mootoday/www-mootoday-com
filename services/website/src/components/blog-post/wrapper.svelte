@@ -16,8 +16,29 @@
 </script>
 
 <style>
+  div.content :global(h2) {
+    @apply pt-6 text-3xl font-semibold;
+  }
+
+  div.content :global(ul) {
+    @apply list-disc list-inside text-lg;
+  }
+
+  div.content :global(ol) {
+    @apply list-decimal list-inside text-lg;
+  }
+
   div.content :global(p) {
-    @apply py-6;
+    @apply py-4 text-lg;
+  }
+
+  div.content :global(code) {
+    @apply py-4 text-lg;
+  }
+
+  div.content :global(blockquote) {
+    padding: 0 1.5em;
+    border-left: 3px solid #4c51bf;
   }
 
   div.content :global(a) {
@@ -31,6 +52,7 @@
 
 <svelte:head>
   <title>{metadata.title}</title>
+  <link href="prism.css" rel="stylesheet" />
 </svelte:head>
 <svelte:window bind:scrollY />
 
