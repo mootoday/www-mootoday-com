@@ -16,8 +16,6 @@
   import Subscribe from "../components/subscribe.svelte";
 
   export let posts;
-
-  let postsArray = Object.values(posts);
 </script>
 
 <svelte:head>
@@ -47,9 +45,9 @@
       <div
         class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800
         leading-normal rounded-t">
-        <BlogPostPreviewLead post={postsArray.shift()}/>
+        <BlogPostPreviewLead post={posts.shift()}/>
         <div class="flex flex-wrap justify-between pt-12 -mx-6">
-          {#each postsArray as post}
+          {#each posts as post}
             <BlogPostPreview {post} col="w-1/3" />
           {/each}
         </div>
