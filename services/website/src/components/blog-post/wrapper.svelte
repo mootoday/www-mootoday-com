@@ -35,8 +35,6 @@
 <svelte:window bind:scrollY />
 
 <div class="bg-white font-sans leading-normal tracking-normal">
-
-  <!--Nav-->
   <nav use:setNavHeight class="bg-gray-900 p-4 mt-0 w-full">
     <div class="container mx-auto flex items-center">
       <div class="flex text-white font-extrabold">
@@ -124,12 +122,10 @@
         {/if}
       </div>
     </div>
-    <!--Progress bar-->
     <ScrollProgressBar height={navHeight} />
   </div>
   {/if}
 
-  <!--Title-->
   <div class="text-center pt-16 md:pt-32">
     <p class="text-sm md:text-base font-bold">
       {new Date(metadata.createdAt).toLocaleDateString(undefined, {
@@ -145,7 +141,6 @@
     </h1>
   </div>
 
-  <!--image-->
   <div
     class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded"
     style="background-image:url('blog-posts/{metadata.createdAt.split("T")[0]}-{metadata.slug}/cover.jpg');
@@ -157,12 +152,9 @@
         class="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800
         leading-normal"
         style="font-family:Georgia,serif;">
-
-        <!--Lead paragraph-->
         <p class="text-2xl md:text-3xl mb-5">
           {metadata.summary}
         </p>
-
         <div class="content">
           <slot />
         </div>
