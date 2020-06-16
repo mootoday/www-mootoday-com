@@ -8,6 +8,7 @@
     class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
     <a
       href="blog/{post.metadata.slug}"
+      rel="prefetch"
       class="flex flex-wrap no-underline hover:no-underline">
       <img
         src="blog-posts/{post.metadata.createdAt.split('T')[0]}-{post.metadata.slug}/cover.jpg"

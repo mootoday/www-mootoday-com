@@ -5,6 +5,7 @@
 <div class="flex h-full bg-white rounded overflow-hidden shadow-lg">
   <a
     href="blog/{post.metadata.slug}"
+    rel="prefetch"
     class="flex flex-wrap no-underline hover:no-underline">
     <div class="w-full md:w-2/3 rounded-t">
       <img
