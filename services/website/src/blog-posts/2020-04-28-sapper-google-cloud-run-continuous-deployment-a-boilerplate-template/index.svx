@@ -15,7 +15,7 @@ A boilerplate repository is available at [https://github.com/mikenikles/sapper-o
 
 To get started, click the **Use this template** button:
 
-![](blog-posts/2020-04-28-{slug}/1.png)
+![GitHub Use this template screenshot](blog-posts/2020-04-28-{slug}/1.png)
 
 ## What you will learn
 

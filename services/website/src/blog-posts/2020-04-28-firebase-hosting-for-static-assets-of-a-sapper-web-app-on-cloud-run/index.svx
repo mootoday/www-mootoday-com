@@ -172,11 +172,11 @@ An extra 41 lines of code, including some NPM scripts for convenience, we manage
 
 To compare, here are the WebPageTest results without Firebase Hosting (i.e. what we developed in the previous blog post):
 
-![](blog-posts/2020-04-28-{slug}/2.png)
+![WebPageTest results without Firebase Hosting](blog-posts/2020-04-28-{slug}/2.png)
 
 And here the WebPageTest results with Firebase Hosting (i.e. what we developed in this blog post):
 
-![](blog-posts/2020-04-28-{slug}/3.png)
+![WebPageTest results with Firebase Hosting](blog-posts/2020-04-28-{slug}/3.png)
 
 ### I'm writing a book, Cloud Native Web Development
 
