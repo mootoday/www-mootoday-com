@@ -24,12 +24,21 @@
     @apply list-disc list-inside text-lg;
   }
 
+  div.content :global(ol) {
+    @apply list-decimal list-inside text-lg;
+  }
+
   div.content :global(p) {
     @apply py-4 text-lg;
   }
 
   div.content :global(code) {
     @apply py-4 text-lg;
+  }
+
+  div.content :global(blockquote) {
+    padding: 0 1.5em;
+    border-left: 3px solid #4c51bf;
   }
 
   div.content :global(a) {
