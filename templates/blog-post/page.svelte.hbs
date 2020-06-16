@@ -1,8 +1,8 @@
 <script>
-  import BlogPostWrapper from "../../components/blog-post/wrapper.svelte";
-  import BlogPost, { metadata } from "../../blog-posts/{{today}}-{{dashCase blogPostTitle}}/index.svx";
+  import BlogPostWrapper from "../../../components/blog-post/wrapper.svelte";
+  import BlogPost, { metadata } from "../../../blog-posts/{{blogPostCreatedAt}}-{{dashCase blogPostTitle}}/index.svx";
 </script>
 
-<BlogPostWrapper title={metadata.title}>
+<BlogPostWrapper {metadata}>
   <BlogPost />
 </BlogPostWrapper>
