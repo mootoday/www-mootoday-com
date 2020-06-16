@@ -10,6 +10,13 @@ const posts = names
         encoding: "utf-8",
       })
     ).attributes,
-  }));
+  }))
+  .sort((a, b) =>
+    a.metadata.createdAt > b.metadata.createdAt
+      ? -1
+      : a.metadata.createdAt < b.metadata.createdAt
+      ? 1
+      : 0
+  );
 
 export default posts;
