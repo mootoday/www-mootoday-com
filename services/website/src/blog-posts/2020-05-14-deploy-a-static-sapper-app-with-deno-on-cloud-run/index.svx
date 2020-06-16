@@ -1,7 +1,7 @@
 ---
-title: Deploy a static Sapper app with Deno on Cloud Run
-slug: deploy-a-static-sapper-app-with-deno-on-cloud-run
-summary: Deploy a static Sapper / Svelte application to Cloud Run, served by Deno.
+title: "Deploy a static Sapper app with Deno on Cloud Run"
+slug: "deploy-a-static-sapper-app-with-deno-on-cloud-run"
+summary: "Deploy a static Sapper / Svelte application to Cloud Run, served by Deno."
 createdAt: 2020-05-14
 ---
 
