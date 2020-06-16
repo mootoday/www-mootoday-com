@@ -9,15 +9,15 @@
 </script>
 
 <script>
-  import BlogPostPreview from "../components/blog-post-preview.svelte";
-  import BlogPostPreviewLead from "../components/blog-post-preview-lead.svelte";
+  import BlogPostPreview from "../components/blog-post/previews/index.svelte";
+  import BlogPostPreviewLead from "../components/blog-post/previews/lead.svelte";
   import Footer from "../components/footer.svelte";
   import Nav from "../components/nav.svelte";
   import Subscribe from "../components/subscribe.svelte";
 
   export let posts;
 
-  $: postsArray = Object.values(posts);
+  let postsArray = Object.values(posts);
 </script>
 
 <svelte:head>
