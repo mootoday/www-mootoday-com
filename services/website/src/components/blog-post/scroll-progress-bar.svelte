@@ -24,5 +24,5 @@
 <div
   bind:this={scrollProgressBar}
   class="h-1 bg-white shadow"
-  style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent
+  style="background:linear-gradient(to right, #4C51BF var(--scroll), transparent
   0);" />

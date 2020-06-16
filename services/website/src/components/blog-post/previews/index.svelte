@@ -18,7 +18,7 @@
           GETTING STARTED
         </p>
       {/if}
-      <h2 class="w-full font-bold text-xl text-gray-900 px-6">
+      <h2 class="w-full font-bold text-indigo-700 text-xl text-gray-900 px-6">
         {post.metadata.title}
       </h2>
       <p class="text-gray-900 font-serif text-base px-6 mb-5">
@@ -35,7 +35,9 @@
         data-tippy-content="Author Name"
         src="images/profile-pic.jpg"
         alt="Avatar of Author" />
+      {#if false}
       <p class="text-gray-900 text-xs md:text-sm">1 MIN READ</p>
+      {/if}
     </div>
   </div>
 </div>
