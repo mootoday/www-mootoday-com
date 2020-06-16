@@ -10,7 +10,8 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "test": "run-p --race dev cy:run",
+    "images:jpgtowebp": "find ./static/blog-posts/ -type f -and -iname \"*.jpg\" -exec bash -c 'cwebp -quiet -q 90 \"$0\" -o \"$(dirname \"$0\")/$(basename \"$0\" .jpg).webp\"' {} \\;"
   },
   "dependencies": {
     "compression": "^1.7.1",
