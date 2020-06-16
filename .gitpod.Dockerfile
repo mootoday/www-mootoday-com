@@ -1,6 +1,8 @@
 FROM gitpod/workspace-full-vnc
 
-# Install Cypress dependencies.
+# Install dependencies:
+# - Cypress
+# - webp
 RUN sudo apt-get update \
  && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
    libgtk2.0-0 \
@@ -13,6 +15,7 @@ RUN sudo apt-get update \
    libxtst6 \
    xauth \
    xvfb \
+   webp \
  && sudo rm -rf /var/lib/apt/lists/*
 
  # Install Firefox
