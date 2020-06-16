@@ -16,6 +16,9 @@
   import Subscribe from "../components/subscribe.svelte";
 
   export let posts;
+
+  // Without cloning the posts, it is an empty array when hydration kicks in.
+  const postsArray = [...posts];
 </script>
 
 <svelte:head>
@@ -45,9 +48,9 @@
       <div
         class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800
         leading-normal rounded-t">
-        <BlogPostPreviewLead post={posts.shift()}/>
+        <BlogPostPreviewLead post={postsArray.shift()}/>
         <div class="flex flex-wrap justify-between pt-12 -mx-6">
-          {#each posts as post}
+          {#each postsArray as post}
             <BlogPostPreview {post} col="w-1/3" />
           {/each}
         </div>
