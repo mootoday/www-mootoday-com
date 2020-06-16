@@ -2,14 +2,12 @@
 title: The first v2.0 blog post
 slug: the-first-v20-blog-post
 summary: The first blog post to introduce mdsvex.
-createdAt: "2020-06-14"
+createdAt: 2020-06-14
 ---
 
 <script>
   import Timer from "./timer.svelte";
 </script>
-
-# {title}
 
 ## Introduction
 
@@ -28,7 +26,7 @@ Alright, one more... an image!
 <figure>
 	<img
     alt="A lake with a house in the background, surrounded by a forest."
-    src="blog-posts/2020-06-14-the-first-v20-blog-post/blausee-switzerland.jpeg"
+    src="blog-posts/2020-06-14-the-first-v20-blog-post/cover.jpg"
     class="h-96 w-full object-cover"
   >
 	<figcaption>Blausee in Switzerland</figcaption>

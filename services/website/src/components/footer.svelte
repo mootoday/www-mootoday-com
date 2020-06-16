@@ -19,7 +19,8 @@
               class="inline-block py-2 px-3 text-white no-underline
               hover:text-gray-200 hover:underline"
               href="https://www.twitter.com/mikenikles"
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               Twitter
             </a>
           </li>
@@ -28,7 +29,8 @@
               class="inline-block text-white no-underline hover:text-gray-200
               hover:underline py-2 px-3"
               href="https://www.linkedin.com/in/mikenikles/"
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               LinkedIn
             </a>
           </li>
@@ -37,7 +39,8 @@
               class="inline-block text-white no-underline hover:text-gray-200
               hover:underline py-2 px-3"
               href="https://github.com/mikenikles"
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               GitHub
             </a>
           </li>
