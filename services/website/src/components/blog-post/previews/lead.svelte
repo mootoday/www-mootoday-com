@@ -1,5 +1,7 @@
 <script>
   export let post;
+
+  const coverImageBasePath = `blog-posts/${post.metadata.createdAt.split('T')[0]}-${post.metadata.slug}/cover`;
 </script>
 
 <div class="flex h-full bg-white rounded overflow-hidden shadow-lg">
@@ -8,10 +10,11 @@
     rel="prefetch"
     class="flex flex-wrap no-underline hover:no-underline">
     <div class="w-full md:w-2/3 rounded-t">
-      <img
-        src="blog-posts/{post.metadata.createdAt.split('T')[0]}-{post.metadata.slug}/cover.jpg"
-        class="h-full w-full shadow"
-        alt="Cover picture for a blog post titled {post.metadata.title}" />
+      <picture>
+        <source srcset={`${coverImageBasePath}.webp`} type="image/webp">
+        <source srcset={`${coverImageBasePath}.jp2`} type="image/jp2">
+        <img srcset={`${coverImageBasePath}.jpg`} alt="Cover picture for a blog post titled {post.metadata.title}">
+      </picture>
     </div>
 
     <div class="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
