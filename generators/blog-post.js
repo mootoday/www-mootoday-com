@@ -26,7 +26,7 @@ module.exports = (plop) => {
       {
         type: "add",
         path:
-          "../services/website/src/routes/blog/{{dashCase blogPostTitle}}.svelte",
+          "../services/website/src/routes/blog/{{dashCase blogPostTitle}}/index.svelte",
         templateFile: "../templates/blog-post/page.svelte.hbs",
       },
       {
