@@ -11,7 +11,9 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "images:jpgtowebp": "find ./static/blog-posts/ -type f -and -iname \"*.jpg\" -exec bash -c 'cwebp -quiet -q 90 \"$0\" -o \"$(dirname \"$0\")/$(basename \"$0\" .jpg).webp\"' {} \\;"
+    "images": "run-p images:*",
+    "images:jpgtowebp": "find ./static/blog-posts/ -type f -and -iname \"*.jpg\" -exec bash -c 'convert \"$0\" -quiet -quality 90 \"$(dirname \"$0\")/$(basename \"$0\" .jpg).webp\"' {} \\;",
+    "images:jpgtojp2": "find ./static/blog-posts/ -type f -and -iname \"*.jpg\" -exec bash -c 'convert \"$0\" -quiet -quality 0 \"$(dirname \"$0\")/$(basename \"$0\" .jpg).jp2\"' {} \\;"
   },
   "dependencies": {
     "compression": "^1.7.1",
