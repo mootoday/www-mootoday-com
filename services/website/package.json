@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
-    "export": "NODE_ENV=production sapper export --legacy",
+    "export": "NODE_ENV=production sapper export --legacy --entry /markua-support",
     "postexport": "node generate-sitemap.js",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
