@@ -1,7 +1,7 @@
 <script>
   export let post;
 
-  const coverImageBasePath = `blog-posts/${post.metadata.createdAt.split('T')[0]}-${post.metadata.slug}/cover`;
+  const coverImageBasePath = `blog-posts/${post.metadata.createdAt.split('T')[0]}-${post.metadata.slug}/cover-preview-lead`;
 </script>
 
 <div class="flex h-full bg-white rounded overflow-hidden shadow-lg">

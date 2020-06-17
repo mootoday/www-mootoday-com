@@ -2,7 +2,7 @@
   export let col;
   export let post;
 
-  const coverImageBasePath = `blog-posts/${post.metadata.createdAt.split('T')[0]}-${post.metadata.slug}/cover`;
+  const coverImageBasePath = `blog-posts/${post.metadata.createdAt.split('T')[0]}-${post.metadata.slug}/cover-preview`;
 </script>
 
 <div class="w-full md:{col} p-6 flex flex-col flex-grow flex-shrink">
