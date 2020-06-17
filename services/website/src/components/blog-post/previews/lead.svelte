@@ -1,7 +1,9 @@
 <script>
   export let post;
 
-  const coverImageBasePath = `blog-posts/${post.metadata.createdAt.split('T')[0]}-${post.metadata.slug}/cover-preview-lead`;
+  const coverImageBasePath = `blog-posts/${
+    post.metadata.createdAt.split("T")[0]
+  }-${post.metadata.slug}/cover-preview-lead`;
 </script>
 
 <div class="flex h-full bg-white rounded overflow-hidden shadow-lg">
@@ -11,9 +13,13 @@
     class="flex flex-wrap no-underline hover:no-underline">
     <div class="w-full md:w-2/3 rounded-t">
       <picture>
-        <source srcset={`${coverImageBasePath}.webp`} type="image/webp">
-        <source srcset={`${coverImageBasePath}.jp2`} type="image/jp2">
-        <img src={`${coverImageBasePath}.jpg`} loading="lazy" alt="Cover picture for a blog post titled {post.metadata.title}">
+        <source srcset={`${coverImageBasePath}.webp`} type="image/webp" />
+        <source srcset={`${coverImageBasePath}.jp2`} type="image/jp2" />
+        <img
+          src={`${coverImageBasePath}.jpg`}
+          loading="lazy"
+          class="h-full w-full shadow"
+          alt="Cover picture for a blog post titled {post.metadata.title}" />
       </picture>
     </div>
 
@@ -44,7 +50,7 @@
             src="images/profile-pic.jpg"
             alt="Avatar of Author" />
           {#if false}
-          <p class="text-gray-900 text-xs md:text-sm">1 MIN READ</p>
+            <p class="text-gray-900 text-xs md:text-sm">1 MIN READ</p>
           {/if}
         </div>
       </div>
