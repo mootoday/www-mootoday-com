@@ -16,9 +16,10 @@ RUN sudo apt-get update \
    xauth \
    xvfb \
    webp \
+   imagemagick \
  && sudo rm -rf /var/lib/apt/lists/*
 
- # Install Firefox
+# Install Firefox
 RUN sudo apt-get update -q \
  && sudo apt-get install -yq \
    firefox \
