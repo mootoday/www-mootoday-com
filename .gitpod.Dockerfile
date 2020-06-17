@@ -15,7 +15,6 @@ RUN sudo apt-get update \
    libxtst6 \
    xauth \
    xvfb \
-   webp \
    imagemagick \
  && sudo rm -rf /var/lib/apt/lists/*
 
