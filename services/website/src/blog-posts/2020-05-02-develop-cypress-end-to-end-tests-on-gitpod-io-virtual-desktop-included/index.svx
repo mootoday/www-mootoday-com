@@ -19,11 +19,11 @@ Once `npm install` completes automatically, a development server starts in one t
 
 The first browser tab shows the editor (the errors in the console can safely be ignore):
 
-![Gitpod editor](blog-posts/2020-05-02-{slug}/1.png)
+![Gitpod editor](blog-posts/2020-05-02-{slug}/1.jpg)
 
 Whereas the second browser tab provides the Cypress UI (in this case, it's a default [Sapper](https://sapper.svelte.dev/) application):
 
-![Cypress UI](blog-posts/2020-05-02-{slug}/2.png)
+![Cypress UI](blog-posts/2020-05-02-{slug}/2.jpg)
 
 ### Gitpod Disount
 

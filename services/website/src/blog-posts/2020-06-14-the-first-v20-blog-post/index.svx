@@ -21,13 +21,9 @@ to indicate how many seconds you have already spent on this page.
 
 Enough for now, this is mainly for testing purposes.
 
+
 Alright, one more... an image!
 
-<figure>
-	<img
-    alt="A lake with a house in the background, surrounded by a forest."
-    src="blog-posts/2020-06-14-the-first-v20-blog-post/cover.jpg"
-    class="h-96 w-full object-cover"
-  >
-	<figcaption>Blausee in Switzerland</figcaption>
-</figure>
+![A lake with a house in the background, surrounded by a forest.](blog-posts/2020-06-14-the-first-v20-blog-post/cover.jpg)
+
+Blausee in Switzerland

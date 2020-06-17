@@ -7,6 +7,7 @@ import { terser } from "rollup-plugin-terser";
 import sveltePreprocess from "svelte-preprocess";
 import tailwindcss from "tailwindcss";
 import { mdsvex } from "mdsvex";
+import rehypePicture from "rehype-picture";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
 
@@ -14,13 +15,24 @@ const mode = process.env.NODE_ENV;
 const dev = mode === "development";
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
+console.log(rehypePicture);
+
 const onwarn = (warning, onwarn) =>
   (warning.code === "CIRCULAR_DEPENDENCY" &&
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
 
 const sveltePreprocessOptions = [
-  mdsvex(),
+  mdsvex({
+    rehypePlugins: [
+      [
+        rehypePicture,
+        {
+          jpg: { webp: "image/webp", jp2: "image/jp2" },
+        },
+      ],
+    ],
+  }),
   sveltePreprocess({
     postcss: {
       plugins: [tailwindcss],
