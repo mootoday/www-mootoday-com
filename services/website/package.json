@@ -13,11 +13,11 @@
     "test": "run-p --race dev cy:run",
     "images": "run-s images:resize images:convert",
     "images:resize": "run-p images:resize:*",
-    "images:resize:preview": "find ./static/blog-posts/ -type f -and -iname \"cover.jpg\" -exec bash -c 'convert \"$0\" -quiet -resize '336' \"$(dirname \"$0\")/$(basename \"$0\" .jpg)-preview.jpg\"' {} \\;",
-    "images:resize:previewlead": "find ./static/blog-posts/ -type f -and -iname \"cover.jpg\" -exec bash -c 'convert \"$0\" -quiet -resize '736' \"$(dirname \"$0\")/$(basename \"$0\" .jpg)-preview-lead.jpg\"' {} \\;",
+    "images:resize:preview": "find ./static/blog-posts/ -type f -and -iname \"cover.jpg\" -exec bash -c '[ ! -f \"$(dirname \"$0\")/$(basename \"$0\" .jpg)-preview.jpg\" ] && convert \"$0\" -quiet -resize '336' \"$(dirname \"$0\")/$(basename \"$0\" .jpg)-preview.jpg\"' {} \\;",
+    "images:resize:previewlead": "find ./static/blog-posts/ -type f -and -iname \"cover.jpg\" -exec bash -c '[ ! -f \"$(dirname \"$0\")/$(basename \"$0\" .jpg)-preview-lead.jpg\" ] && convert \"$0\" -quiet -resize '736' \"$(dirname \"$0\")/$(basename \"$0\" .jpg)-preview-lead.jpg\"' {} \\;",
     "images:convert": "run-p images:convert:*",
-    "images:convert:jpgtowebp": "find ./static/blog-posts/ -type f -and -iname \"cover-*.jpg\" -exec bash -c 'convert \"$0\" -quiet -quality 90 \"$(dirname \"$0\")/$(basename \"$0\" .jpg).webp\"' {} \\;",
-    "images:convert:jpgtojp2": "find ./static/blog-posts/ -type f -and -iname \"cover-*.jpg\" -exec bash -c 'convert \"$0\" -quiet -quality 0 \"$(dirname \"$0\")/$(basename \"$0\" .jpg).jp2\"' {} \\;"
+    "images:convert:jpgtowebp": "find ./static/blog-posts/ -type f -and -iname \"cover-*.jpg\" -exec bash -c '[ ! -f \"$(dirname \"$0\")/$(basename \"$0\" .jpg).webp\" ] && convert \"$0\" -quiet -quality 90 \"$(dirname \"$0\")/$(basename \"$0\" .jpg).webp\"' {} \\;",
+    "images:convert:jpgtojp2": "find ./static/blog-posts/ -type f -and -iname \"cover-*.jpg\" -exec bash -c '[ ! -f \"$(dirname \"$0\")/$(basename \"$0\" .jpg).jp2\" ] && convert \"$0\" -quiet -quality 0 \"$(dirname \"$0\")/$(basename \"$0\" .jpg).jp2\"' {} \\;"
   },
   "dependencies": {
     "compression": "^1.7.1",
