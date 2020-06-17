@@ -3,8 +3,10 @@
   "description": "Website",
   "version": "0.0.1",
   "scripts": {
+    "clean": "rm -fr __sapper__",
     "dev": "sapper dev",
     "build": "sapper build --legacy",
+    "preexport": "run-s clean",
     "export": "NODE_ENV=production sapper export --legacy --entry '/ /markua-support'",
     "postexport": "node generate-sitemap.js",
     "start": "node __sapper__/build",
