@@ -16,7 +16,7 @@
       <picture>
         <source srcset={`${coverImageBasePath}.webp`} type="image/webp">
         <source srcset={`${coverImageBasePath}.jp2`} type="image/jp2">
-        <img srcset={`${coverImageBasePath}.jpg`} alt="Cover picture for a blog post titled {post.metadata.title}">
+        <img src={`${coverImageBasePath}.jpg`} loading="lazy" alt="Cover picture for a blog post titled {post.metadata.title}">
       </picture>
 
       {#if false}
