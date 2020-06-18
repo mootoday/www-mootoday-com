@@ -65,7 +65,7 @@
           hover:no-underline"
           href="/">
           👋
-          <span class="hidden w-0 md:w-auto md:block pl-1">Mike Nikles</span>
+          <span class="md:w-auto md:block pl-1">Mike Nikles</span>
         </a>
       </div>
       {#if false}
@@ -92,22 +92,22 @@
     class="bg-white fixed w-full z-10 top-0 animated"
     style="opacity: .95;"
     transition:fade>
-    <div class="bg-white">
-      <div class="flex flex-wrap items-center content-center">
+    <div class="bg-white p-4">
+      <div class="container mx-auto flex flex-wrap items-center content-center">
         <div class="flex w-1/2 justify-start text-white font-extrabold">
           <a
             class="flex text-gray-900 no-underline hover:text-gray-900
-            hover:no-underline pl-2"
+            hover:no-underline"
             href="/">
             👋
-            <span class="hidden w-0 md:w-auto md:block pl-1">
+            <span class="md:w-auto md:block pl-1">
               Mike Nikles
             </span>
           </a>
         </div>
         {#if false}
         <div class="flex w-1/2 justify-end content-center">
-          <p class="hidden sm:block mr-3 text-center h-14 p-4 text-xs">
+          <p class="sm:block mr-3 text-center h-14 p-4 text-xs">
             <span class="pr-2">Share this post</span>
             👉
           </p>
