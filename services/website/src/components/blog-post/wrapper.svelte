@@ -65,7 +65,7 @@
           hover:no-underline"
           href="/">
           👋
-          <span class="hidden w-0 md:w-auto md:block pl-1">Mike Nikles</span>
+          <span class="md:w-auto md:block pl-1">Mike Nikles</span>
         </a>
       </div>
       {#if false}
@@ -100,14 +100,14 @@
             hover:no-underline"
             href="/">
             👋
-            <span class="hidden w-0 md:w-auto md:block pl-1">
+            <span class="md:w-auto md:block pl-1">
               Mike Nikles
             </span>
           </a>
         </div>
         {#if false}
         <div class="flex w-1/2 justify-end content-center">
-          <p class="hidden sm:block mr-3 text-center h-14 p-4 text-xs">
+          <p class="sm:block mr-3 text-center h-14 p-4 text-xs">
             <span class="pr-2">Share this post</span>
             👉
           </p>
