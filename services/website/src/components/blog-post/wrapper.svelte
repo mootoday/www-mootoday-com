@@ -153,10 +153,8 @@
       {new Date(metadata.createdAt).toLocaleDateString(undefined, {
         weekday: "long", year: "numeric", month: "long", day: "numeric"
       })}
-      {#if false}
-      <span class="text-gray-900">/</span>
-      GETTING STARTED
-      {/if}
+      <span class="text-gray-900">-</span>
+      <span class="uppercase">{metadata.tags.join(" | ")}</span>
     </p>
     <h1 class="font-bold break-normal text-indigo-700 text-3xl md:text-5xl">
       {metadata.title}

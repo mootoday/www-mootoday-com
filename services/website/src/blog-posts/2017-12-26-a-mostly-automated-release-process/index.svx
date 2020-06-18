@@ -3,6 +3,7 @@ title: "A (mostly) automated release process"
 slug: "a-mostly-automated-release-process"
 summary: "Automate whatever you can automate and share the responsibility for the remaining tasks."
 createdAt: 2017-12-26
+tags: ["series-monorepo"]
 ---
 
 Photo by [Alex Knight](https://unsplash.com/@agkdesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/automation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

@@ -25,11 +25,9 @@
           alt="Cover picture for a blog post titled {post.metadata.title}" />
       </picture>
 
-      {#if false}
-        <p class="w-full text-gray-900 text-xs md:text-sm px-6">
-          GETTING STARTED
-        </p>
-      {/if}
+      <p class="w-full text-gray-900 text-xs md:text-sm px-6 uppercase">
+        {post.metadata.tags[0]}
+      </p>
       <h2 class="w-full font-bold text-indigo-700 text-xl text-gray-900 px-6">
         {post.metadata.title}
       </h2>
