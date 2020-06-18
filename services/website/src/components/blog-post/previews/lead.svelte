@@ -49,9 +49,7 @@
             data-tippy-content="Author Name"
             src="images/profile-pic.jpg"
             alt="Avatar of Author" />
-          {#if false}
-            <p class="text-gray-900 text-xs md:text-sm">1 MIN READ</p>
-          {/if}
+          <p class="text-gray-900 text-xs md:text-sm">{post.metadata.readingTime}</p>
         </div>
       </div>
     </div>
