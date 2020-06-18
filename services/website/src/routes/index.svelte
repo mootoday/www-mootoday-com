@@ -49,7 +49,7 @@
         class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800
         leading-normal rounded-t">
         <BlogPostPreviewLead post={postsArray.shift()}/>
-        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pt-12">
+        <div class="flex flex-wrap justify-between py-12 md:-mx-6">
           {#each postsArray as post}
             <BlogPostPreview {post} />
           {/each}

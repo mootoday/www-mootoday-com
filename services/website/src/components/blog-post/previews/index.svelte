@@ -6,9 +6,9 @@
   }-${post.metadata.slug}/cover-preview`;
 </script>
 
-<div>
+<div class="w-full md:w-1/3 py-6 md:px-6 flex flex-col flex-grow flex-shrink">
   <div
-    class="bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+    class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
     <a
       href="blog/{post.metadata.slug}"
       rel="prefetch"
