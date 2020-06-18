@@ -3,6 +3,7 @@ title: "Our approach to software development consistency"
 slug: "our-approach-to-software-development-consistency"
 summary: "Don't document what you can automate."
 createdAt: 2018-01-03
+tags: ["series-monorepo"]
 ---
 
 Photo by [Priscilla Du Preez](https://unsplash.com/@priscilladupreez?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/solid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
