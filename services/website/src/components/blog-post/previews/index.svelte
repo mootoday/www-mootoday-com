@@ -1,5 +1,4 @@
 <script>
-  export let col;
   export let post;
 
   const coverImageBasePath = `blog-posts/${
@@ -7,9 +6,9 @@
   }-${post.metadata.slug}/cover-preview`;
 </script>
 
-<div class="w-full md:{col} p-6 flex flex-col flex-grow flex-shrink">
+<div>
   <div
-    class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+    class="bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
     <a
       href="blog/{post.metadata.slug}"
       rel="prefetch"
