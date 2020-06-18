@@ -10,4 +10,4 @@
   });
 </script>
 
-You have been here for {seconds} {seconds === 1 ? "second" : "seconds"}.
+<p>You have been here for {seconds} {seconds === 1 ? "second" : "seconds"}.</p>
