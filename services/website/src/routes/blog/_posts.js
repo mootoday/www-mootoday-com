@@ -14,7 +14,7 @@ const generatePost = (dirent) => {
   return {
     metadata: {
       ...postFrontMatter.attributes,
-      readingTime: readingTime(postFrontMatter.body).text,
+      readingTime: readingTime(postFrontMatter.body),
     },
   };
 };
