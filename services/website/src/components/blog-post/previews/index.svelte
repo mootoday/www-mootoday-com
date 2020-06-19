@@ -44,7 +44,7 @@
         data-tippy-content="Author Name"
         src="images/profile-pic.jpg"
         alt="Avatar of Author" />
-      <p class="text-gray-900 text-xs md:text-sm">{post.metadata.readingTime}</p>
+      <p class="text-gray-900 text-xs md:text-sm">{post.metadata.readingTime.text}</p>
     </div>
   </div>
 </div>

@@ -4,10 +4,11 @@
   import ScrollProgressBar from "./scroll-progress-bar.svelte";
   import Subscribe from "../subscribe.svelte";
 
-  export let metadata;
+  export let post;
 
   let scrollY;
   let navHeight;
+
   $: isShowHeader = scrollY > navHeight;
 
   const setNavHeight = (node) => {
@@ -51,7 +52,7 @@
 </style>
 
 <svelte:head>
-  <title>{metadata.title}</title>
+  <title>{post.metadata.title}</title>
   <link href="prism.css" rel="stylesheet" />
 </svelte:head>
 <svelte:window bind:scrollY />
@@ -144,26 +145,26 @@
         {/if}
       </div>
     </div>
-    <ScrollProgressBar height={navHeight} />
+    <ScrollProgressBar height={navHeight} readingTime={post.metadata.readingTime} />
   </div>
   {/if}
 
   <div class="text-center pt-16 md:pt-32">
     <p class="text-sm md:text-base font-bold">
-      {new Date(metadata.createdAt).toLocaleDateString(undefined, {
+      {new Date(post.metadata.createdAt).toLocaleDateString(undefined, {
         weekday: "long", year: "numeric", month: "long", day: "numeric"
       })}
       <span class="text-gray-900">-</span>
-      <span class="uppercase">{metadata.tags.join(" | ")}</span>
+      <span class="uppercase">{post.metadata.tags.join(" | ")}</span>
     </p>
     <h1 class="font-bold break-normal text-indigo-700 text-3xl md:text-5xl">
-      {metadata.title}
+      {post.metadata.title}
     </h1>
   </div>
 
   <div
     class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded"
-    style="background-image:url('blog-posts/{metadata.createdAt.split("T")[0]}-{metadata.slug}/cover.jpg');
+    style="background-image:url('blog-posts/{post.metadata.createdAt.split("T")[0]}-{post.metadata.slug}/cover.jpg');
     height: 75vh;" />
 
   <div class="container max-w-5xl mx-auto -mt-32">
@@ -173,7 +174,7 @@
         leading-normal"
         style="font-family:Georgia,serif;">
         <p class="text-2xl md:text-3xl mb-5">
-          {metadata.summary}
+          {post.metadata.summary}
         </p>
         <div class="content">
           <slot />
