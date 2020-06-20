@@ -1,6 +1,6 @@
 name: services/website - deployment_status
 
-on: deployment_status
+on: [deployment_status]
 
 jobs:
   test_lighthouse:
