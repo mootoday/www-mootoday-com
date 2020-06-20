@@ -1,4 +1,4 @@
-<nav class="mt-0 w-full">
+<nav class="mt-0 w-full bg-gray-900">
   <div class="container mx-auto flex items-center">
     <div class="flex w-1/2 pl-4 text-sm">
       <ul
