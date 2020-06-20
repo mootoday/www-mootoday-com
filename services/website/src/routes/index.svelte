@@ -12,7 +12,7 @@
   import BlogPostPreview from "../components/blog-post/previews/index.svelte";
   import BlogPostPreviewLead from "../components/blog-post/previews/lead.svelte";
   import Footer from "../components/footer.svelte";
-  import Nav from "../components/nav.svelte";
+  import HomepageNav from "../components/homepage-nav.svelte";
   import Subscribe from "../components/subscribe.svelte";
 
   export let posts;
@@ -41,9 +41,7 @@
 
   <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
     <div class="mx-0 sm:mx-6">
-      {#if false}
-        <Nav />
-      {/if}
+      <HomepageNav />
 
       <div
         class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800
