@@ -1,9 +1,22 @@
 <script>
   import { searchStore } from "../../stores/search";
 
+  let searchInputNode;
   let searchTerm = "";
-  $: searchStore.search(searchTerm);
+  $: if (searchTerm === "/") {
+    searchTerm = "";
+  } else {
+    $searchStore = searchTerm;
+  };
+
+  const handleBodyKeyPress = (event) => {
+    if (event.key === "/") {
+      searchInputNode.focus();
+    }
+  };
 </script>
+
+<svelte:body on:keypress={handleBodyKeyPress}/>
 
 <div class="max-w-lg w-full lg:max-w-xs">
   <label for="search" class="sr-only">Search</label>
@@ -24,11 +37,12 @@
     </div>
     <input
       id="search"
+      bind:this={searchInputNode}
       class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md
       leading-5 bg-gray-700 text-gray-300 placeholder-gray-400
       focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm
       transition duration-150 ease-in-out"
-      placeholder="Search"
+      placeholder='Search (Press "/" to focus)'
       type="search"
       bind:value={searchTerm} />
   </div>
