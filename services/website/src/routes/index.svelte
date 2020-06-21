@@ -12,33 +12,19 @@
   import BlogPostPreview from "../components/blog-post/previews/index.svelte";
   import BlogPostPreviewLead from "../components/blog-post/previews/lead.svelte";
   import Footer from "../components/footer.svelte";
-  import NavHeader from "../components/nav/header.svelte";
+  import Header from "../components//header/index.svelte";
   import Subscribe from "../components/subscribe.svelte";
+  import { searchStore } from "../stores/search";
 
   export let posts;
 
   // Without cloning the posts, it is an empty array when hydration kicks in.
   const postsArray = [...posts];
 
-  let isShowHeader = false;
-
-  const homepageNavAction = node => {
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach(entry => {
-          isShowHeader = !entry.isIntersecting;
-        });
-      }
-    );
-
-    observer.observe(node);
-
-    return {
-      destroy() {
-        observer.disconnect();
-      }
-    };
-  };
+  $: filteredPosts = postsArray.filter(post =>
+    post.metadata.title.toLowerCase().includes($searchStore.toLowerCase()) ||
+    post.metadata.summary.toLowerCase().includes($searchStore.toLowerCase())
+  );
 </script>
 
 <svelte:head>
@@ -46,15 +32,12 @@
 </svelte:head>
 
 <div class="bg-gray-200 font-sans leading-normal tracking-normal">
-  {#if isShowHeader}
-    <NavHeader />
-  {/if}
+  <Header />
   <div
     class="w-full m-0 p-0 bg-cover bg-bottom"
     style="background-image:url('images/cover.jpg'); height: 60vh;
     max-height:460px;">
     <div
-      use:homepageNavAction
       class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
       <h1 class="text-white font-extrabold text-3xl md:text-5xl">
         👋 Mike Nikles
@@ -68,12 +51,16 @@
       <div
         class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800
         leading-normal rounded-t">
-        <BlogPostPreviewLead post={postsArray.shift()} />
-        <div class="flex flex-wrap justify-between py-12 md:-mx-6">
-          {#each postsArray as post}
-            <BlogPostPreview {post} />
-          {/each}
-        </div>
+        {#if filteredPosts.length > 0}
+          <BlogPostPreviewLead post={filteredPosts.shift()} />
+          <div class="flex flex-wrap justify-between py-12 md:-mx-6">
+            {#each filteredPosts as post (post.metadata.slug)}
+              <BlogPostPreview {post} />
+            {/each}
+          </div>
+        {:else}
+          <p>No blog posts match your search criteria.</p>
+        {/if}
       </div>
 
       {#if false}
