@@ -1,4 +1,6 @@
 <script>
+  import A from "../ui-elements/a.svelte";
+
   export let isOpen = false;
   export let menuItems;
 </script>
@@ -23,14 +25,14 @@
             <div>
               <nav class="grid row-gap-8">
                 {#each menuItems as menuItem}
-                <a href="{menuItem.href}" class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
+                <A href="{menuItem.href}" class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
                   <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{menuItem.svgPath}"/>
                   </svg>
                   <div class="text-base leading-6 font-medium text-gray-900">
                     {menuItem.label}
                   </div>
-                </a>
+                </A>
                 {/each}
               </nav>
             </div>

@@ -1,5 +1,7 @@
 <script>
   import { stores } from "@sapper/app";
+  import A from "../../components/ui-elements/a.svelte";
+
   const { page } = stores();
   let isPrivacyDialogOpen = ($page.query && $page.query.p) || false;
 </script>
@@ -42,13 +44,13 @@
               </div>
             </div>
             <div class="block ml-10 pr-4">
-              <a
+              <A
                 href="markua-support#features"
                 class="font-medium text-gray-700 hover:text-gray-900
                 focus:outline-none focus:text-gray-900 transition duration-150
                 ease-in-out">
                 Features
-              </a>
+              </A>
             </div>
           </nav>
         </div>
@@ -73,7 +75,7 @@
             <div
               class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div class="rounded-md shadow">
-                <a
+                <A
                   href="https://gsuite.google.com/marketplace/app/markua_support/382576728671"
                   target="_blank"
                   class="w-full flex items-center justify-center px-8 py-3
@@ -82,7 +84,7 @@
                   focus:outline-none focus:shadow-outline transition
                   duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                   Visit the G Suite Marketplace
-                </a>
+                </A>
               </div>
             </div>
           </div>
@@ -214,7 +216,7 @@
         Privacy Policy
       </button>
       <span>|</span>
-      <a href="https://github.com/mikenikles/markua-docs-addon" target="_blank">Source Code</a>
+      <A href="https://github.com/mikenikles/markua-docs-addon" target="_blank">Source Code</A>
     </p>
   </div>
 

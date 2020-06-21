@@ -1,4 +1,5 @@
 <script>
+  import A from "../ui-elements/a.svelte";
   import FlyOutMenu from "./fly-out-menu.svelte";
   import MobileMenu from "./mobile-menu.svelte";
 
@@ -33,7 +34,7 @@
     <div class="flex justify-between items-center md:justify-start">
       <div class="hidden md:flex flex-1">
         <div class="flex content-center">
-          <a
+          <A
             class="inline-block text-gray-500 no-underline hover:text-white
             hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 avatar"
             href="https://twitter.com/mikenikles"
@@ -61,8 +62,8 @@
                 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313
                 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z" />
             </svg>
-          </a>
-          <a
+          </A>
+          <A
             class="inline-block text-gray-500 no-underline hover:text-white
             hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 avatar"
             href="https://www.linkedin.com/in/mikenikles/"
@@ -80,8 +81,8 @@
                 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5
                 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z" />
             </svg>
-          </a>
-          <a
+          </A>
+          <A
             class="inline-block text-gray-500 no-underline hover:text-white
             hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 avatar"
             href="https://www.github.com/mikenikles/"
@@ -117,19 +118,19 @@
                 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9
                 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
             </svg>
-          </a>
+          </A>
         </div>
       </div>
 
 
       <div class="md:flex items-center md:flex-1 lg:w-0 text-white font-extrabold">
-        <a
+        <A
           class="flex text-white text-base no-underline hover:text-white
           hover:no-underline p-2"
           href="/">
           👋
           <span class="md:w-auto md:block pl-1">Mike Nikles</span>
-        </a>
+        </A>
       </div>
 
       <div class="-mr-2 -my-2 md:hidden">
@@ -143,9 +144,9 @@
 
       <nav class="hidden md:flex justify-end space-x-10">
         {#if false}
-        <a href="TODO.html" class="text-base leading-6 font-medium text-gray-500 hover:text-white focus:outline-none focus:text-white transition ease-in-out duration-150">
+        <A href="TODO.html" class="text-base leading-6 font-medium text-gray-500 hover:text-white focus:outline-none focus:text-white transition ease-in-out duration-150">
           TODO
-        </a>
+        </A>
         {/if}
         <FlyOutMenu isOpen={openMenu === "projects"} menu={projectsMenu} on:click={onMenuClicked("projects")} />
       </nav>
