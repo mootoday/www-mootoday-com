@@ -1,5 +1,6 @@
 <script>
-  export let height;
+  import { fade } from "svelte/transition";
+
   export let readingTime;
 
   let documentElement = document.documentElement,
@@ -13,7 +14,7 @@
   let scrollY = 0;
   let remainingReadingTime = 0;
 
-  $: if (progressBarNode && remainingReadingTimeNode && scrollY > height) {
+  $: if (progressBarNode && remainingReadingTimeNode && scrollY) {
     // Percentage indicator
     const scrollPercentage =
       ((documentElement[scrollTop] || body[scrollTop]) /
@@ -50,7 +51,7 @@
 
 <svelte:window bind:scrollY />
 
-<div>
+<div in:fade>
   <div
     bind:this={progressBarNode}
     class="h-1 bg-white shadow"
