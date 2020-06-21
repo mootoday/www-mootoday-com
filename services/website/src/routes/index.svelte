@@ -21,32 +21,10 @@
   // Without cloning the posts, it is an empty array when hydration kicks in.
   const postsArray = [...posts];
 
-  let isShowHeader = false;
-
   $: filteredPosts = postsArray.filter(post =>
     post.metadata.title.toLowerCase().includes($searchStore.toLowerCase()) ||
     post.metadata.summary.toLowerCase().includes($searchStore.toLowerCase())
   );
-
-  const homepageNavAction = node => {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if ($searchStore === "") {
-          isShowHeader = !entry.isIntersecting;
-        } else {
-          isShowHeader = true;
-        }
-      });
-    });
-
-    observer.observe(node);
-
-    return {
-      destroy() {
-        observer.disconnect();
-      }
-    };
-  };
 </script>
 
 <svelte:head>
@@ -54,15 +32,12 @@
 </svelte:head>
 
 <div class="bg-gray-200 font-sans leading-normal tracking-normal">
-  {#if isShowHeader}
-    <Header />
-  {/if}
+  <Header />
   <div
     class="w-full m-0 p-0 bg-cover bg-bottom"
     style="background-image:url('images/cover.jpg'); height: 60vh;
     max-height:460px;">
     <div
-      use:homepageNavAction
       class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
       <h1 class="text-white font-extrabold text-3xl md:text-5xl">
         👋 Mike Nikles
