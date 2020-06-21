@@ -1,3 +1,7 @@
+<script>
+  import A from "./ui-elements/a.svelte";
+</script>
+
 <footer class="bg-gray-900">
   <div
     class="container w-full px-4 md:px-0 max-w-6xl mx-auto flex items-center
@@ -19,34 +23,31 @@
             class="list-reset flex justify-center flex-1 md:flex-none
             items-center">
             <li>
-              <a
+              <A
                 class="inline-block py-2 px-3 text-white no-underline
                 hover:text-gray-200 hover:underline"
                 href="https://www.twitter.com/mikenikles"
-                target="_blank"
-                rel="noopener">
+                target="_blank">
                 Twitter
-              </a>
+              </A>
             </li>
             <li>
-              <a
+              <A
                 class="inline-block text-white no-underline hover:text-gray-200
                 hover:underline py-2 px-3"
                 href="https://www.linkedin.com/in/mikenikles/"
-                target="_blank"
-                rel="noopener">
+                target="_blank">
                 LinkedIn
-              </a>
+              </A>
             </li>
             <li>
-              <a
+              <A
                 class="inline-block text-white no-underline hover:text-gray-200
                 hover:underline py-2 px-3"
                 href="https://github.com/mikenikles"
-                target="_blank"
-                rel="noopener">
+                target="_blank">
                 GitHub
-              </a>
+              </A>
             </li>
           </ul>
         </div>

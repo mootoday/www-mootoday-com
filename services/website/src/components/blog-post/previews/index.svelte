@@ -1,4 +1,6 @@
 <script>
+  import A from "../../ui-elements/a.svelte";
+
   export let post;
 
   const coverImageBasePath = `blog-posts/${
@@ -9,9 +11,8 @@
 <div class="w-full md:w-1/3 py-6 md:px-6 flex flex-col flex-grow flex-shrink">
   <div
     class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-    <a
+    <A
       href="blog/{post.metadata.slug}"
-      rel="prefetch"
       class="flex flex-wrap no-underline hover:no-underline">
 
       <picture>
@@ -33,7 +34,7 @@
       <p class="text-gray-900 font-serif text-base px-6 mb-5">
         {post.metadata.summary}
       </p>
-    </a>
+    </A>
   </div>
   <div
     class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden
