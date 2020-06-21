@@ -1,3 +1,10 @@
+<script>
+  import { searchStore } from "../../stores/search";
+
+  let searchTerm = "";
+  $: searchStore.search(searchTerm);
+</script>
+
 <div class="max-w-lg w-full lg:max-w-xs">
   <label for="search" class="sr-only">Search</label>
   <div class="relative">
@@ -22,6 +29,7 @@
       focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm
       transition duration-150 ease-in-out"
       placeholder="Search"
-      type="input" />
+      type="search"
+      bind:value={searchTerm} />
   </div>
 </div>

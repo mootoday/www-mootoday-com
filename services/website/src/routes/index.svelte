@@ -14,6 +14,7 @@
   import Footer from "../components/footer.svelte";
   import Header from "../components//header/index.svelte";
   import Subscribe from "../components/subscribe.svelte";
+  import { searchStore } from "../stores/search";
 
   export let posts;
 
@@ -22,14 +23,21 @@
 
   let isShowHeader = false;
 
+  $: filteredPosts = postsArray.filter(post =>
+    post.metadata.title.toLowerCase().includes($searchStore.toLowerCase()) ||
+    post.metadata.summary.toLowerCase().includes($searchStore.toLowerCase())
+  );
+
   const homepageNavAction = node => {
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if ($searchStore === "") {
           isShowHeader = !entry.isIntersecting;
-        });
-      }
-    );
+        } else {
+          isShowHeader = true;
+        }
+      });
+    });
 
     observer.observe(node);
 
@@ -68,12 +76,16 @@
       <div
         class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800
         leading-normal rounded-t">
-        <BlogPostPreviewLead post={postsArray.shift()} />
-        <div class="flex flex-wrap justify-between py-12 md:-mx-6">
-          {#each postsArray as post}
-            <BlogPostPreview {post} />
-          {/each}
-        </div>
+        {#if filteredPosts.length > 0}
+          <BlogPostPreviewLead post={filteredPosts.shift()} />
+          <div class="flex flex-wrap justify-between py-12 md:-mx-6">
+            {#each filteredPosts as post (post.metadata.slug)}
+              <BlogPostPreview {post} />
+            {/each}
+          </div>
+        {:else}
+          <p>No blog posts match your search criteria.</p>
+        {/if}
       </div>
 
       {#if false}

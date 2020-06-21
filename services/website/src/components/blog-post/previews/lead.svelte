@@ -3,7 +3,7 @@
 
   export let post;
 
-  const coverImageBasePath = `blog-posts/${
+  $: coverImageBasePath = `blog-posts/${
     post.metadata.createdAt.split("T")[0]
   }-${post.metadata.slug}/cover-preview-lead`;
 </script>
