@@ -66,7 +66,7 @@
   <link href="prism.css" rel="stylesheet" />
 </svelte:head>
 
-<div class="bg-white font-sans leading-normal tracking-normal">
+<div class="bg-gray-200 font-sans leading-normal tracking-normal">
   <NavHeader>
     {#if isShowScrollProgressBar}
       <ScrollProgressBar
@@ -104,7 +104,7 @@
         leading-normal"
         style="font-family:Georgia,serif;">
         <p class="text-2xl md:text-3xl mb-5">{post.metadata.summary}</p>
-        <div class="content">
+        <div class="content break-words">
           <slot />
         </div>
       </div>
