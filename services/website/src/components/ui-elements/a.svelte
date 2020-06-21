@@ -11,4 +11,4 @@
   }
 </script>
 
-<a href={hrefProps.href} {...hrefProps}><slot /></a>
+<a {href} {...hrefProps}><slot /></a>
