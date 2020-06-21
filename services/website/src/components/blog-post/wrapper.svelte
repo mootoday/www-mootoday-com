@@ -1,7 +1,7 @@
 <script>
   import { fade } from "svelte/transition";
   import Footer from "../footer.svelte";
-  import NavHeader from "../nav/header.svelte";
+  import Header from "../header/index.svelte";
   import ScrollProgressBar from "./scroll-progress-bar.svelte";
   import Subscribe from "../subscribe.svelte";
 
@@ -67,12 +67,12 @@
 </svelte:head>
 
 <div class="bg-gray-200 font-sans leading-normal tracking-normal">
-  <NavHeader>
+  <Header isSearchVisible={false}>
     {#if isShowScrollProgressBar}
       <ScrollProgressBar
         readingTime={post.metadata.readingTime} />
     {/if}
-  </NavHeader>
+  </Header>
 
   <div class="text-center pt-16 md:pt-32">
     <p class="text-sm md:text-base font-bold">

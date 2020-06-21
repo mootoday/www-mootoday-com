@@ -12,7 +12,7 @@
   import BlogPostPreview from "../components/blog-post/previews/index.svelte";
   import BlogPostPreviewLead from "../components/blog-post/previews/lead.svelte";
   import Footer from "../components/footer.svelte";
-  import NavHeader from "../components/nav/header.svelte";
+  import Header from "../components//header/index.svelte";
   import Subscribe from "../components/subscribe.svelte";
 
   export let posts;
@@ -47,7 +47,7 @@
 
 <div class="bg-gray-200 font-sans leading-normal tracking-normal">
   {#if isShowHeader}
-    <NavHeader />
+    <Header />
   {/if}
   <div
     class="w-full m-0 p-0 bg-cover bg-bottom"
