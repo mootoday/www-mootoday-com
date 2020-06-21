@@ -16,7 +16,7 @@
   </button>
 
   {#if isOpen}
-    <div in:slide={{duration: 200}} out:slide={{duration: 150}} class="absolute -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2 z-10">
+    <div in:slide={{duration: 200}} out:slide={{duration: 150}} class="absolute right-0 mt-3 transform px-2 w-screen max-w-md sm:px-0 z-10">
       <div class="rounded-lg shadow-lg">
         <div class="rounded-lg shadow-xs overflow-hidden">
           <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
