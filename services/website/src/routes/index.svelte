@@ -12,7 +12,7 @@
   import BlogPostPreview from "../components/blog-post/previews/index.svelte";
   import BlogPostPreviewLead from "../components/blog-post/previews/lead.svelte";
   import Footer from "../components/footer.svelte";
-  import Header from "../components//header/index.svelte";
+  import Header from "../components/header/index.svelte";
   import Subscribe from "../components/subscribe.svelte";
   import { searchStore } from "../stores/search";
 
@@ -31,7 +31,7 @@
   <title>Mike's Personal Website</title>
 </svelte:head>
 
-<div class="bg-gray-200 font-sans leading-normal tracking-normal">
+<div class="flex flex-col min-h-screen bg-gray-200 font-sans leading-normal tracking-normal">
   <Header />
   <div
     class="w-full m-0 p-0 bg-cover bg-bottom"
@@ -46,7 +46,7 @@
     </div>
   </div>
 
-  <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
+  <div class="flex-grow container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
     <div class="mx-0 sm:mx-6">
       <div
         class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800
