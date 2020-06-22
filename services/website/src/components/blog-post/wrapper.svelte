@@ -1,5 +1,6 @@
 <script>
   import { fade } from "svelte/transition";
+  import Comments from "../comments.svelte";
   import Footer from "../footer.svelte";
   import Header from "../header/index.svelte";
   import ScrollProgressBar from "./scroll-progress-bar.svelte";
@@ -107,6 +108,7 @@
         <div class="content break-words">
           <slot />
         </div>
+        <Comments />
       </div>
 
       {#if false}
