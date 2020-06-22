@@ -1,8 +1,8 @@
 {
-  "background_color": "#ffffff",
-  "theme_color": "#333333",
-  "name": "Mike's blog",
-  "short_name": "Mike's blog",
+  "background_color": "#1a202c",
+  "theme_color": "#1a202c",
+  "name": "Mike's Blog",
+  "short_name": "Mike's Blog",
   "display": "minimal-ui",
   "start_url": "/",
   "icons": [
