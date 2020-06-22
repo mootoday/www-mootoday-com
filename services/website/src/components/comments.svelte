@@ -1,5 +1,5 @@
 <svelte:head>
-  <script src="https://cdn.commento.io/js/commento.js">
+  <script src="https://cdn.commento.io/js/commento.js" data-css-override="https://www.mikenikles.com/commento.css">
   </script>
 </svelte:head>
 
