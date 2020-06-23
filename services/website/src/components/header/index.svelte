@@ -1,16 +1,18 @@
 <script>
+  import { stores } from '@sapper/app';
+  import { headerStore } from "../../stores";
   import A from "../ui-elements/a.svelte";
   import Logo from "./logo.svelte";
   import MobileMenu from "./mobile-menu.svelte";
   import RightNav from "./right-nav.svelte";
+  import ScrollProgressBar from "../blog-post/scroll-progress-bar.svelte";
   import Search from "./search.svelte";
   import SocialIcons from "./social-icons.svelte";
-  import { stores } from '@sapper/app';
 
-  const { page } = stores();
-  const isBlogPage = $page.path.startsWith("/blog")
+  export let segment; // `undefined` means index page at /
 
-  export let isSearchVisible = true;
+  $: isBlogPage = segment === "blog";
+  $: isSearchVisible = !segment;
 
   let openMenu = "";
 
@@ -42,9 +44,15 @@
   };
 </script>
 
+<style>
+  .transparent {
+    @apply bg-transparent;
+  }
+</style>
+
 <svelte:body on:click={() => (openMenu = '')} />
 
-<div class="fixed bg-gray-900 w-full">
+<div class:transparent={$headerStore.header.isTransparent} class="fixed transition duration-500 bg-gray-900 w-full">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-center text-white p-2">
       <div class={`${isBlogPage ? 'hidden md:flex' : 'flex'} justify-start flex-1`}>
@@ -81,5 +89,7 @@
     </div>
   </div>
   <MobileMenu isOpen={openMenu === 'mobile'} menuItems={projectsMenu.items} />
-  <slot />
+  {#if isBlogPage && process.browser}
+    <ScrollProgressBar />
+  {/if}
 </div>

@@ -14,7 +14,7 @@
   import Footer from "../components/footer.svelte";
   import Header from "../components/header/index.svelte";
   import Subscribe from "../components/subscribe.svelte";
-  import { searchStore } from "../stores/search";
+  import { headerStore, searchStore } from "../stores";
 
   export let posts;
 
@@ -25,6 +25,24 @@
     post.metadata.title.toLowerCase().includes($searchStore.toLowerCase()) ||
     post.metadata.summary.toLowerCase().includes($searchStore.toLowerCase())
   );
+
+  const titleAction = node => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        headerStore.setHeaderTransparent(entry.isIntersecting);
+      });
+    });
+
+    observer.observe(node);
+
+    return {
+      destroy() {
+        headerStore.setHeaderTransparent(false);
+        observer.disconnect();
+      }
+    };
+  };
+
 </script>
 
 <svelte:head>
@@ -32,14 +50,13 @@
 </svelte:head>
 
 <div class="flex flex-col min-h-screen bg-gray-200 font-sans leading-normal tracking-normal">
-  <Header />
   <div
     class="w-full m-0 p-0 bg-cover bg-bottom"
     style="background-image:url('images/cover.jpg'); height: 60vh;
     max-height:460px;">
     <div
       class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
-      <h1 class="text-white font-extrabold text-3xl md:text-5xl">
+      <h1 use:titleAction class="text-white font-extrabold text-3xl md:text-5xl">
         👋 Mike Nikles
       </h1>
       <h2 class="text-xl md:text-2xl text-gray-500">Welcome to my blog</h2>
