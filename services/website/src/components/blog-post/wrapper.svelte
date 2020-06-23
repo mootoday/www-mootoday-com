@@ -4,6 +4,7 @@
   import Comments from "../comments.svelte";
   import Footer from "../footer.svelte";
   import Header from "../header/index.svelte";
+  import SeoHeadPost from "../seo/head-post.svelte";
   import Subscribe from "../subscribe.svelte";
 
   export let post;
@@ -60,6 +61,8 @@
     @apply text-indigo-700;
   }
 </style>
+
+<SeoHeadPost {post} />
 
 <svelte:head>
   <title>{post.metadata.title}</title>
