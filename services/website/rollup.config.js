@@ -35,7 +35,7 @@ const sveltePreprocessOptions = [
     postcss: {
       plugins: [tailwindcss],
     },
-    preserve: ["json"],
+    preserve: ["json", "ld+json"],
   }),
 ];
 
