@@ -1,6 +1,7 @@
 <script>
   import { stores } from "@sapper/app";
   import SeoHead from "./head.svelte";
+  import LdJson from "./ld-json.svelte";
 
   export let post;
 
@@ -17,4 +18,6 @@
   {image}
   {keywords}
   {title}
-  imageAlt={`Cover picture for a blog post titled ${title}`} />
+  imageAlt={`Cover picture for a blog post titled ${title}`}>
+  <LdJson {post} />
+</SeoHead>

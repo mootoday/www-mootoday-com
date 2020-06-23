@@ -16,4 +16,6 @@
 
   <TwitterPreview {description} {image} {imageAlt} {title} />
   <OpenGraphPreview {description} {image} {title} />
+
+  <slot />
 </svelte:head>
