@@ -1,20 +1,16 @@
 <script>
+  import { fade } from "svelte/transition";
+  import { headerStore } from "../../stores";
   import A from "../ui-elements/a.svelte";
-  import { stores } from '@sapper/app';
-
-  const { page } = stores();
-  const isBlogPage = $page.path.startsWith("/blog")
 </script>
 
-<style>
-  .forceshow {
-    @apply flex;
-  }
-</style>
-
-<div class:forceshow={isBlogPage} class="hidden md:flex justify-center flex-1 font-extrabold">
-  <A class="flex" href="/">
-    👋
-    <span class="pl-1">Mike Nikles</span>
-  </A>
+<div class="flex justify-center flex-1 font-extrabold">
+  {#if !$headerStore.header.isTransparent}
+    <div transition:fade={{duration: 500}}>
+      <A class="flex" href="/">
+        👋
+        <span class="pl-1">Mike Nikles</span>
+      </A>
+    </div>
+  {/if}
 </div>

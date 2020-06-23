@@ -1,5 +1,5 @@
 <script>
-  import { searchStore } from "../../stores/search";
+  import { searchStore } from "../../stores";
 
   let searchInputNode;
   let searchTerm = "";

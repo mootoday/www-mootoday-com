@@ -1,19 +1,17 @@
 <script>
   import { fade } from "svelte/transition";
+  import { headerStore } from "../../stores";
   import Comments from "../comments.svelte";
   import Footer from "../footer.svelte";
   import Header from "../header/index.svelte";
-  import ScrollProgressBar from "./scroll-progress-bar.svelte";
   import Subscribe from "../subscribe.svelte";
 
   export let post;
 
-  let isShowScrollProgressBar = false;
-
   const titleAction = node => {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
-        isShowScrollProgressBar = !entry.isIntersecting;
+        headerStore.setScrollBarProgressVisible(!entry.isIntersecting, post.metadata.readingTime)
       });
     });
 
@@ -21,6 +19,7 @@
 
     return {
       destroy() {
+        headerStore.setScrollBarProgressVisible(false, {});
         observer.disconnect();
       }
     };
@@ -68,13 +67,6 @@
 </svelte:head>
 
 <div class="bg-gray-200 font-sans leading-normal tracking-normal">
-  <Header isSearchVisible={false}>
-    {#if isShowScrollProgressBar}
-      <ScrollProgressBar
-        readingTime={post.metadata.readingTime} />
-    {/if}
-  </Header>
-
   <div class="text-center pt-16 md:pt-32">
     <p class="text-sm md:text-base font-bold">
       {new Date(post.metadata.createdAt).toLocaleDateString(undefined, {

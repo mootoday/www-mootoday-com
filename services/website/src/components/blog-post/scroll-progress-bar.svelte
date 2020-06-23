@@ -1,7 +1,8 @@
 <script>
   import { fade } from "svelte/transition";
+  import { headerStore } from "../../stores";
 
-  export let readingTime;
+  $: readingTime = $headerStore.scrollBarProgress.readingTime;
 
   let documentElement = document.documentElement,
     body = document.body,
@@ -51,16 +52,18 @@
 
 <svelte:window bind:scrollY />
 
-<div in:fade>
-  <div
-    bind:this={progressBarNode}
-    class="h-1 bg-white shadow"
-    style="background:linear-gradient(to right, #4C51BF var(--scroll),
-    transparent 0);" />
-  <span
-    bind:this={remainingReadingTimeNode}
-    class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium
-    leading-5 bg-indigo-100 text-indigo-800">
-    {remainingReadingTime === 0 ? "🎉 Thanks for reading" : `${remainingReadingTime} min remaining`}
-  </span>
-</div>
+{#if $headerStore.scrollBarProgress.isVisible}
+  <div in:fade>
+    <div
+      bind:this={progressBarNode}
+      class="h-1 bg-white shadow"
+      style="background:linear-gradient(to right, #4C51BF var(--scroll),
+      transparent 0);" />
+    <span
+      bind:this={remainingReadingTimeNode}
+      class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium
+      leading-5 bg-indigo-100 text-indigo-800">
+      {remainingReadingTime === 0 ? "🎉 Thanks for reading" : `${remainingReadingTime} min remaining`}
+    </span>
+  </div>
+{/if}
