@@ -63,9 +63,7 @@
 </style>
 
 <SeoHeadPost {post} />
-
 <svelte:head>
-  <title>{post.metadata.title}</title>
   <link href="prism.css" rel="stylesheet" />
 </svelte:head>
 

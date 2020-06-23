@@ -13,6 +13,7 @@
   import BlogPostPreviewLead from "../components/blog-post/previews/lead.svelte";
   import Footer from "../components/footer.svelte";
   import Header from "../components/header/index.svelte";
+  import SeoHead from "../components/seo/head.svelte";
   import Subscribe from "../components/subscribe.svelte";
   import { headerStore, searchStore } from "../stores";
 
@@ -45,10 +46,7 @@
 
 </script>
 
-<svelte:head>
-  <title>Mike's Personal Website</title>
-</svelte:head>
-
+<SeoHead />
 <div class="flex flex-col min-h-screen bg-gray-200 font-sans leading-normal tracking-normal">
   <div
     class="w-full m-0 p-0 bg-cover bg-bottom"
