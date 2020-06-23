@@ -4,7 +4,7 @@
 
   export let description;
   export let image;
-  export let imageAlt;
+  export let imageAlt = "";
   export let title;
 </script>
 
