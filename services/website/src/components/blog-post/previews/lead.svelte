@@ -11,7 +11,7 @@
 <div class="flex h-full bg-white rounded overflow-hidden shadow-lg">
   <A
     href="blog/{post.metadata.slug}"
-    class="flex flex-wrap no-underline hover:no-underline">
+    class="flex flex-wrap w-full no-underline hover:no-underline">
     <div class="w-full md:w-2/3 rounded-t">
       <picture>
         <source srcset={`${coverImageBasePath}.webp`} type="image/webp" />
