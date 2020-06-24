@@ -9,6 +9,7 @@
 
   export let post;
 
+  headerStore.setHeaderTransparent(false);
   const titleAction = node => {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -87,7 +88,7 @@
   </div>
 
   <div
-    class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded"
+    class="container w-full max-w-6xl mx-auto bg-white bg-cover bg-center mt-8 rounded"
     style="background-image:url('blog-posts/{post.metadata.createdAt.split('T')[0]}-{post.metadata.slug}/cover.jpg');
     height: 75vh;" />
 
