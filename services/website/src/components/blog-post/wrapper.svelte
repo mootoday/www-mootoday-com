@@ -29,18 +29,29 @@
 </script>
 
 <style>
+  /* Headings */
   div.content :global(h2) {
     @apply pt-6 text-3xl font-semibold;
   }
 
-  div.content :global(ul) {
-    @apply list-disc list-inside text-lg;
+  /* Lists */
+  div.content :global(ol, ul) {
+    @apply list-inside text-lg;
   }
 
   div.content :global(ol) {
-    @apply list-decimal list-inside text-lg;
+    @apply list-decimal;
   }
 
+  div.content :global(ul) {
+    @apply list-disc;
+  }
+
+  div.content :global(ol ul, ol ol, ul ul, ul ol) {
+    @apply pl-8;
+  }
+
+  /* Content. p, code, etc. */
   div.content :global(p) {
     @apply py-4 text-lg;
   }
