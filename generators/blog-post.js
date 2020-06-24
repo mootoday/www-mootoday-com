@@ -27,7 +27,7 @@ module.exports = (plop) => {
       {
         type: "add",
         path:
-          "../services/website/src/blog-posts/{{blogPostCreatedAt}}-{{dashCase blogPostTitle}}/index.svx",
+          "../services/website/src/blog-posts/{{convertDateIsoToYMD blogPostCreatedAt}}-{{dashCase blogPostTitle}}/index.svx",
         templateFile: "../templates/blog-post/index.svx.hbs",
       },
       {
@@ -39,7 +39,7 @@ module.exports = (plop) => {
       {
         type: "add",
         path:
-          "../services/website/static/blog-posts/{{blogPostCreatedAt}}-{{dashCase blogPostTitle}}/cover.jpg",
+          "../services/website/static/blog-posts/{{convertDateIsoToYMD blogPostCreatedAt}}-{{dashCase blogPostTitle}}/cover.jpg",
         templateFile: "../templates/blog-post/cover.jpg",
       },
     ],
