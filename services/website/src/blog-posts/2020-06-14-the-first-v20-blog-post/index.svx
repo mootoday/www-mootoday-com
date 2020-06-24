@@ -2,7 +2,7 @@
 title: "The first v2.0 blog post"
 slug: "the-first-v20-blog-post"
 summary: "The first blog post to introduce mdsvex."
-createdAt: 2020-06-14
+createdAt: 2020-06-14T00:00:00.000Z
 tags: ["personal", "mdsvex", "vercel"]
 ---
 

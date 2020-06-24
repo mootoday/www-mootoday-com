@@ -2,7 +2,7 @@
 title: "How to use Svelte for your Google Docs add-on"
 slug: "how-to-use-svelte-for-your-google-docs-add-on"
 summary: "Develop Google Docs add-on sidebars with Svelte and Typescript."
-createdAt: 2020-03-28
+createdAt: 2020-03-28T00:00:00.000Z
 tags: ["svelte", "development"]
 ---
 

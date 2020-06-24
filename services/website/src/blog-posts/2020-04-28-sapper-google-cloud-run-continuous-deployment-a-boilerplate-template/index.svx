@@ -2,7 +2,7 @@
 title: "Sapper, Google Cloud Run, Continuous Deployment - A boilerplate template"
 slug: "sapper-google-cloud-run-continuous-deployment-a-boilerplate-template"
 summary: "Deploy a Sapper / Svelte web application to Google Cloud Run with continuous deployment using Cloud Build and Artifact Registry."
-createdAt: 2020-04-28
+createdAt: 2020-04-28T00:00:00.000Z
 tags: ["googlecloud", "sapper", "svelte", "cloudrun", "serverless", "webdev"]
 ---
 

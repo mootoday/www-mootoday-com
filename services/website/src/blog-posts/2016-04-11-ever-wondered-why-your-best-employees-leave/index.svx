@@ -2,7 +2,7 @@
 title: "Ever wondered why your best employees leave"
 slug: "ever-wondered-why-your-best-employees-leave"
 summary: "Thoughts on why top employees leave their jobs."
-createdAt: 2016-04-11
+createdAt: 2016-04-11T00:00:00.000Z
 tags: ["team", "morale"]
 ---
 

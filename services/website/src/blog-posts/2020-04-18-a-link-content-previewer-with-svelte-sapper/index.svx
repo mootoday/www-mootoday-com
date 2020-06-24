@@ -2,7 +2,7 @@
 title: "A Link Content Previewer with Svelte & Sapper"
 slug: "a-link-content-previewer-with-svelte-sapper"
 summary: "Develop a <LinkPreview> Svelte component to display a link's content in a preview card."
-createdAt: 2020-04-18
+createdAt: 2020-04-18T00:00:00.000Z
 tags: ["svelte", "sapper", "web", "development"]
 ---
 
