@@ -9,10 +9,10 @@
   import Search from "./search.svelte";
   import SocialIcons from "./social-icons.svelte";
 
-  export let segment; // `undefined` means index page at /
+  const { page } = stores();
 
-  $: isBlogPage = segment === "blog";
-  $: isSearchVisible = !segment;
+  $: isBlogPage = $page.path === "/blog";
+  $: isSearchVisible = $page.path === "/";
 
   let openMenu = "";
 
