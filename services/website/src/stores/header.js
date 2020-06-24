@@ -3,7 +3,7 @@ import { writable } from "svelte/store";
 const createStore = () => {
   const { subscribe, update } = writable({
     header: {
-      isTransparent: false,
+      isTransparent: true,
     },
     scrollBarProgress: {
       isVisible: false,
