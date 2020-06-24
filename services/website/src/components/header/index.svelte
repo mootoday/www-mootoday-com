@@ -11,7 +11,7 @@
 
   const { page } = stores();
 
-  $: isBlogPage = $page.path === "/blog";
+  $: isBlogPage = $page.path.startsWith("/blog");
   $: isSearchVisible = $page.path === "/";
 
   let openMenu = "";
