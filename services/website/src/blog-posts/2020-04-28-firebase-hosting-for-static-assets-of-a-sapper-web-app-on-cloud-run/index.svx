@@ -2,7 +2,7 @@
 title: "Firebase Hosting for static assets of a Sapper web app on Cloud Run"
 slug: "firebase-hosting-for-static-assets-of-a-sapper-web-app-on-cloud-run"
 summary: "Use Firebase Hosting for static assets of a Sapper web application deployed on Cloud Run."
-createdAt: 2020-04-28
+createdAt: 2020-04-28T00:00:00.000Z
 tags: ["googlecloud", "sapper", "svelte", "firebase", "cloudrun", "serverless", "webdev"]
 ---
 

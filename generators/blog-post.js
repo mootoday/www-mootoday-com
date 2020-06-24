@@ -19,8 +19,8 @@ module.exports = (plop) => {
         type: "input",
         name: "blogPostCreatedAt",
         message:
-          "What's the createdAt date [yyyy-mm-dd]? (leave blank for today)",
-        default: new Date().toISOString().split("T")[0],
+          "What's the createdAt time [YYYY-MM-DDTHH:mm:ss.sssZ]? (leave blank for now)",
+        default: new Date().toISOString(),
       },
     ],
     actions: [

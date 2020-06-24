@@ -2,7 +2,7 @@
 title: "I am writing a book: Cloud Native Web Development"
 slug: "i-am-writing-a-book-cloud-native-web-development"
 summary: "I am writing a hands-on guidebook on how to develop cloud-native web applications."
-createdAt: 2020-05-10
+createdAt: 2020-05-10T00:00:00.000Z
 tags: ["webdev", "cloud", "book", "javascript"]
 ---
 

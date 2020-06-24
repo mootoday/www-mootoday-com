@@ -2,7 +2,7 @@
 title: "Add a commenting platform to a Svelte app"
 slug: "add-a-commenting-platform-to-a-svelte-app"
 summary: "A short intro on how to add a commenting platform to a Svelte app using commento.io."
-createdAt: 2020-01-01
+createdAt: 2020-01-01T00:00:00.000Z
 tags: ["web", "development", "svelte"]
 ---
 
