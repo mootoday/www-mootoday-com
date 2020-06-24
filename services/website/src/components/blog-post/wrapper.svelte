@@ -34,9 +34,13 @@
     @apply pt-6 text-3xl font-semibold;
   }
 
+  div.content :global(h3) {
+    @apply pt-4;
+  }
+
   /* Lists */
   div.content :global(ol, ul) {
-    @apply list-inside text-lg;
+    @apply list-inside pb-4 text-lg;
   }
 
   div.content :global(ol) {
@@ -47,11 +51,20 @@
     @apply list-disc;
   }
 
-  div.content :global(ol ul, ol ol, ul ul, ul ol) {
+  div.content :global(ol ul),
+  div.content :global(ol ol),
+  div.content :global(ul ul),
+  div.content :global(ul ol) {
     @apply pl-8;
   }
 
   /* Content. p, code, etc. */
+  div.content :global(h1 + p),
+  div.content :global(h2 + p),
+  div.content :global(h3 + p) {
+    @apply pt-1;
+  }
+
   div.content :global(p) {
     @apply py-4 text-lg;
   }
