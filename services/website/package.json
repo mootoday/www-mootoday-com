@@ -15,7 +15,7 @@
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
     "images": "run-s images:resize images:convert",
-    "images:resize": "run-p images:resize:*",
+    "images:resize": "run-p images:resize:* images:resize:**",
     "images:resize:cover:preview": "find ./static/blog-posts/ -type f -iname \"cover.jpg\" -exec bash -c '[ ! -f \"$(dirname \"$0\")/$(basename \"$0\" .jpg)-preview.jpg\" ] && convert \"$0\" -quiet -resize 'x323' \"$(dirname \"$0\")/$(basename \"$0\" .jpg)-preview.jpg\"' {} \\;",
     "images:resize:cover:previewlead": "find ./static/blog-posts/ -type f -iname \"cover.jpg\" -exec bash -c '[ ! -f \"$(dirname \"$0\")/$(basename \"$0\" .jpg)-preview-lead.jpg\" ] && convert \"$0\" -quiet -resize 'x473' \"$(dirname \"$0\")/$(basename \"$0\" .jpg)-preview-lead.jpg\"' {} \\;",
     "images:resize:post": "find ./static/blog-posts/ -type f -iname \"*.jpg\" -and -not -iname \"cover*.jpg\" -exec bash -c 'convert \"$0\" -quiet -resize 'x523' \"$0\"' {} \\;",
