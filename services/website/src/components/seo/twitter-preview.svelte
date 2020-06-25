@@ -15,4 +15,4 @@
 <meta name="twitter:image" content="{image}">
 <meta name="twitter:image:alt" content="{imageAlt}">
 <meta name="twitter:title" content="{title}">
-<meta name="twitter:url" content="https://{$page.host + $page.path}">
+<meta name="twitter:url" content="https://www.mikenikles.com{$page.path}">
