@@ -1,3 +1,7 @@
+#commento {
+  overflow-x: revert;
+}
+
 #commento-error {
   color: #e12f2f;
 }
