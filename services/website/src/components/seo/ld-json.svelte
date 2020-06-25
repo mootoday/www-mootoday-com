@@ -1,10 +1,7 @@
 <script>
-  import { stores } from '@sapper/app';
-  
   export let post;
 
-  const { page } = stores();
-  const imageUrl = `https://${$page.host}/blog-posts/${
+  const imageUrl = `https://www.mikenikles.com/blog-posts/${
     post.metadata.createdAt.split("T")[0]
   }-${post.metadata.slug}/cover-preview-lead.jpg`;
 </script>

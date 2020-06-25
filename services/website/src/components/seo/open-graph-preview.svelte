@@ -13,4 +13,4 @@
 <meta property="og:site_name" content="Mike's Personal Website">
 <meta property="og:title" content="{title}">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://{$page.host + $page.path}">
+<meta property="og:url" content="https://www.mikenikles.com{$page.path}">
