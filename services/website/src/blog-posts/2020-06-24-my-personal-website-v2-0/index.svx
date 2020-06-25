@@ -175,10 +175,4 @@ guidebook from zero to production and anything in between!
 
 **Use coupon code `mikenikles-com` for a 25% discount!**
 
-### your-analytics.org - My next side project
-
-With the book published and the new website launched, I will focus on my next side project. I hinted at it above:
-A privacy-focused, not-for-profit (web) analytics SaaS product. It will feature end-to-end encryption,
-be 100% open source and with privacy core and center.
-
 👋
