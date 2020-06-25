@@ -4,6 +4,7 @@
   import Comments from "../comments.svelte";
   import Footer from "../footer.svelte";
   import Header from "../header/index.svelte";
+  import ImageZoom from "./image-zoom.svelte";
   import SeoHeadPost from "../seo/head-post.svelte";
   import Subscribe from "../subscribe.svelte";
 
@@ -85,6 +86,11 @@
   div.content :global(a:hover) {
     @apply text-indigo-700;
   }
+
+  /* Media assets */
+  div.content :global(img) {
+    cursor: zoom-in;
+  }
 </style>
 
 <SeoHeadPost {post} />
@@ -134,5 +140,6 @@
       {/if}
     </div>
   </div>
+  <ImageZoom />
   <Footer />
 </div>
