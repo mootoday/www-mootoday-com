@@ -1,37 +1,35 @@
 # Mike's blog
 
-The source code for www.mikenikles.com. It consists of:
+The source code for www.mikenikles.com, version 2.0.
 
-**A Ghost.org instance**
-* Deployed to [Cloud Run](www.cloud.run)
-* Backed with a [Cloud SQL](https://cloud.google.com/sql/docs/) database
-* Assets hosted in [Google Cloud Storage](https://cloud.google.com/storage/) with a [Cloud CDN](https://cloud.google.com/cdn/) for better performance.
+Check out the `v1.0.0` tag for the source code of the previous version, based on Ghost.org.
 
-**A Svelte / Sapper static website**
-* Deployed to [Firebase Hosting](https://firebase.google.com/docs/hosting) and available at www.mikenikles.com
-* Developed with [Svelte](https://svelte.dev/), [Sapper](https://sapper.svelte.dev/) and [Tailwind CSS](https://tailwindcss.com/).
+## Create a new blog post
 
-# Development
+1. Use the following command:
 
-This is a monorepo with all required source code available as services in `./services`. See each individual service's README for details.
+   ```bash
+   npm run generate blog-post "My blog post title"
+   ```
 
-## Install dependencies
+1. Write you content, with [mdsvex](https://mdsvex.com/) in:
 
-1. `npm install`
-1. `npm run bootstrap`
+   ```
+   services/website/src/blog-posts/YYYY-MM-DD-my-blog-post-title/index.svx
+   ```
 
-## Add a new service
+1. Add your `cover.jpg` image and other assets to:
 
-Run the following command. Replace `your-service-name`:
+   ```
+   services/website/static/blog-posts/YYYY-MM-DD-my-blog-post-title/
+   ```
 
-```sh
-SERVICE_NAME=your-service-name npm run add-new-service
-```
+1. Navigate to `services/website` and run the following script to create images in WebP and JPEG 2000 formats:
 
-# Deployment
+   ```bash
+   npm run images
+   ```
 
-Each service contains a `deploy` npm script.
-
-## Continuous deployment of the website
-
-The `./services/website` service deploys automatically on each push to the `master` branch. See the `./cloudbuild.yaml` for details.
+   Until there's a fix, run `git restore static/blog-posts`. That's because the above script modifies all files and not
+   just the new ones. There's a way to make this work by passing a parameter to that NPM script, but it took me more
+   than 15 minutes to figure out and wasn't a priority.

@@ -1,23 +1,16 @@
 <script>
-  import TailwindBase from "../tailwind-base.svelte";
-  import GoogleAnalytics from "../components/google-analytics.svelte";
-  import Header from "../components/header.svelte";
-  import Footer from "../components/footer.svelte";
+  import Header from "../components/header/index.svelte";
+  import TailwindCSS from "../components/tailwindcss.svelte";
+  import WebAnalytics from "../components/web-analytics.svelte";
+
+  export let segment;
 </script>
 
-<style>
-  main {
-    @apply antialiased;
-    max-width: 72rem;
-    margin: auto;
-  }
-</style>
+<TailwindCSS />
 
-<GoogleAnalytics />
-<TailwindBase />
-
+<Header {segment} />
 <main>
-  <Header />
-  <slot />
-  <Footer />
+	<slot></slot>
 </main>
+
+<WebAnalytics />

@@ -1,33 +1,29 @@
 {
   "name": "www-mikenikles-com",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "Mike's personal website.",
   "scripts": {
-    "preadd-new-service": "echo \"Creating service $SERVICE_NAME...\"",
-    "add-new-service": "run-s add-new-service:copy-template add-new-service:set-service-name",
-    "add-new-service:copy-template": "cp -r ./services/_template-service ./services/$SERVICE_NAME",
-    "add-new-service:set-service-name": "npm-run-all add-new-service:set-service-name:*",
-    "add-new-service:set-service-name:packagejson": "sed -i \"s/template-service/$SERVICE_NAME/g\" ./services/$SERVICE_NAME/package.json",
-    "add-new-service:set-service-name:readme": "sed -i \"s/template-service/$SERVICE_NAME/g\" ./services/$SERVICE_NAME/README.md",
-    "bootstrap": "lerna bootstrap",
-    "deploy": "run-s deploy:ghost deploy:website",
-    "deploy:cdn": "lerna run deploy --stream --scope=\"cdn\"",
-    "deploy:ghost": "lerna run deploy --stream --scope=\"ghost\"",
-    "deploy:ghost-new-posts-publish-to-devto": "lerna run deploy --stream --scope=\"ghost-new-posts-publish-to-devto\"",
-    "deploy:ghost-webhook-endpoint": "lerna run deploy --stream --scope=\"ghost-webhook-endpoint\"",
-    "deploy:website": "lerna run deploy --stream --scope=\"website\"",
+    "generate": "plop --plopfile ./generators/index.js",
+    "postinstall": "run-p install:services:*",
+    "install:services:website": "npm install --prefix services/website",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:mikenikles/monorepo-template.git"
+    "url": "git@gitlab.com:mikenikles/www-mikenikles-com.git"
   },
   "author": "Mike, @mikenikles",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "lerna": "^3.16.4",
+    "husky": "^4.2.5",
     "npm-run-all": "^4.1.5",
-    "tslint": "^6.1.1",
-    "typescript": "^3.6.3"
+    "plop": "^2.7.1",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
   }
 }

@@ -4,34 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="theme-color" content="#333333" />
+    <meta name="monetization" content="$ilp.uphold.com/jbiAHEknJmJ3" />
 
     %sapper.base%
 
-    <link rel="manifest" href="manifest.json" />
-    <link rel="icon" type="image/png" href="favicon.png?v=1" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500&display=swap"
-      rel="stylesheet"
-    />
-    <link href="css/prism.min.css" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="/logo-192.png" />
 
-    %sapper.styles% %sapper.head%
+    <!-- Sapper generates a <style> tag containing critical CSS
+	     for the current page. CSS for the rest of the app is
+	     lazily loaded when it precaches secondary pages -->
+    %sapper.styles%
+
+    <!-- This contains the contents of the <svelte:head> component, if
+	     the current page has one -->
+    %sapper.head%
   </head>
-
   <body>
+    <!-- The application will be rendered inside this element,
+	     because `src/client.js` references it -->
     <div id="sapper">%sapper.html%</div>
 
-    <script src="js/prism.min.js"></script>
-    <script src="/__/firebase/7.6.0/firebase-app.js"></script>
-    <script src="/__/firebase/7.6.0/firebase-performance.js"></script>
-    <script src="/__/firebase/7.6.0/firebase-analytics.js"></script>
-    <script src="/__/firebase/init.js"></script>
-
-    <script>
-      window.firebase && window.firebase.performance();
-      window.firebase && window.firebase.analytics();
-    </script>
-
+    <!-- Sapper creates a <script> tag containing `src/client.js`
+	     and anything else it needs to hydrate the app and
+	     initialise the router -->
     %sapper.scripts%
   </body>
 </html>

@@ -4,5 +4,3 @@
 yarn-error.log
 /cypress/screenshots/
 /__sapper__/
-/firebase/public/
-/static/tailwind-dev-output.css

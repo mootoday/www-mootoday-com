@@ -1,16 +1,15 @@
-import resolve from "rollup-plugin-node-resolve";
-import replace from "rollup-plugin-replace";
-import commonjs from "rollup-plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
+import replace from "@rollup/plugin-replace";
+import commonjs from "@rollup/plugin-commonjs";
 import svelte from "rollup-plugin-svelte";
-import babel from "rollup-plugin-babel";
-import json from "rollup-plugin-json";
+import babel from "@rollup/plugin-babel";
 import { terser } from "rollup-plugin-terser";
-// import sveltePreprocess from "svelte-preprocess";
+import sveltePreprocess from "svelte-preprocess";
+import tailwindcss from "tailwindcss";
+import { mdsvex } from "mdsvex";
+import rehypePicture from "rehype-picture";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
-import typescript from "rollup-plugin-typescript2";
-
-const svelteOptions = require("./svelte.config");
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
@@ -20,8 +19,25 @@ const onwarn = (warning, onwarn) =>
   (warning.code === "CIRCULAR_DEPENDENCY" &&
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
-const dedupe = importee =>
-  importee === "svelte" || importee.startsWith("svelte/");
+
+const sveltePreprocessOptions = [
+  mdsvex({
+    rehypePlugins: [
+      [
+        rehypePicture,
+        {
+          jpg: { webp: "image/webp", jp2: "image/jp2" },
+        },
+      ],
+    ],
+  }),
+  sveltePreprocess({
+    postcss: {
+      plugins: [tailwindcss],
+    },
+    preserve: ["json", "ld+json"],
+  }),
+];
 
 export default {
   client: {
@@ -30,57 +46,53 @@ export default {
     plugins: [
       replace({
         "process.browser": true,
-        "process.env.NODE_ENV": JSON.stringify(mode)
+        "process.env.NODE_ENV": JSON.stringify(mode),
       }),
       svelte({
-				...svelteOptions,
         dev,
         hydratable: true,
         emitCss: true,
+        extensions: [".svelte", ".svx"],
+        preprocess: sveltePreprocessOptions,
       }),
       resolve({
         browser: true,
-        dedupe
+        dedupe: ["svelte"],
       }),
       commonjs(),
-      typescript(),
-      json({
-        exclude: "node_modules/**",
-        preferConst: true,
-        compact: true
-      }),
 
       legacy &&
         babel({
           extensions: [".js", ".mjs", ".html", ".svelte"],
-          runtimeHelpers: true,
+          babelHelpers: "runtime",
           exclude: ["node_modules/@babel/**"],
           presets: [
             [
               "@babel/preset-env",
               {
-                targets: "> 0.25%, not dead"
-              }
-            ]
+                targets: "> 0.25%, not dead",
+              },
+            ],
           ],
           plugins: [
             "@babel/plugin-syntax-dynamic-import",
             [
               "@babel/plugin-transform-runtime",
               {
-                useESModules: true
-              }
-            ]
-          ]
+                useESModules: true,
+              },
+            ],
+          ],
         }),
 
       !dev &&
         terser({
-          module: true
-        })
+          module: true,
+        }),
     ],
 
-    onwarn
+    preserveEntrySignatures: false,
+    onwarn,
   },
 
   server: {
@@ -89,30 +101,26 @@ export default {
     plugins: [
       replace({
         "process.browser": false,
-        "process.env.NODE_ENV": JSON.stringify(mode)
+        "process.env.NODE_ENV": JSON.stringify(mode),
       }),
       svelte({
-				...svelteOptions,
         generate: "ssr",
         dev,
+        extensions: [".svelte", ".svx"],
+        preprocess: sveltePreprocessOptions,
       }),
       resolve({
-        dedupe
+        dedupe: ["svelte"],
       }),
-			commonjs(),
-			typescript(),
-      json({
-        exclude: "node_modules/**",
-        preferConst: true,
-        compact: true
-      })
+      commonjs(),
     ],
     external: Object.keys(pkg.dependencies).concat(
       require("module").builtinModules ||
         Object.keys(process.binding("natives"))
     ),
 
-    onwarn
+    preserveEntrySignatures: "strict",
+    onwarn,
   },
 
   serviceworker: {
@@ -122,13 +130,13 @@ export default {
       resolve(),
       replace({
         "process.browser": true,
-        "process.env.NODE_ENV": JSON.stringify(mode)
+        "process.env.NODE_ENV": JSON.stringify(mode),
       }),
-			commonjs(),
-			typescript(),
-      !dev && terser()
+      commonjs(),
+      !dev && terser(),
     ],
 
-    onwarn
-  }
+    preserveEntrySignatures: false,
+    onwarn,
+  },
 };

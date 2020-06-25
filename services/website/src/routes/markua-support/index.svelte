@@ -1,7 +1,8 @@
 <script>
   import { stores } from "@sapper/app";
-  const { page } = stores();
+  import A from "../../components/ui-elements/a.svelte";
 
+  const { page } = stores();
   let isPrivacyDialogOpen = ($page.query && $page.query.p) || false;
 </script>
 
@@ -9,17 +10,19 @@
   .wrapper {
     margin-top: 64px;
   }
-
   #cover-image {
     object-position: right;
   }
-
   .bold-italic-underline {
     font-weight: bold;
     font-style: italic;
     text-decoration: underline;
   }
 </style>
+
+<svelte:head>
+  <title>Markua Support - a Google Docs Add-on</title>
+</svelte:head>
 
 <div class="wrapper">
   <div class="relative bg-white overflow-hidden">
@@ -41,13 +44,13 @@
               </div>
             </div>
             <div class="block ml-10 pr-4">
-              <a
+              <A
                 href="markua-support#features"
-                class="font-medium text-gray-500 hover:text-gray-900
+                class="font-medium text-gray-700 hover:text-gray-900
                 focus:outline-none focus:text-gray-900 transition duration-150
                 ease-in-out">
                 Features
-              </a>
+              </A>
             </div>
           </nav>
         </div>
@@ -56,15 +59,15 @@
           class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16
           lg:mt-20 lg:px-8 xl:mt-28">
           <div class="sm:text-center lg:text-left">
-            <h2
+            <h1
               class="text-4xl tracking-tight leading-10 font-extrabold
               text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
               Markua Support
               <br class="xl:hidden" />
               <span class="text-indigo-600">a Google Docs Add-on</span>
-            </h2>
+            </h1>
             <p
-              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl
+              class="mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg sm:max-w-xl
               sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
               Do you write books on Leanpub? Use Google Docs instead and use the
               Markua Support add-on to help you.
@@ -72,7 +75,7 @@
             <div
               class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div class="rounded-md shadow">
-                <a
+                <A
                   href="https://gsuite.google.com/marketplace/app/markua_support/382576728671"
                   target="_blank"
                   class="w-full flex items-center justify-center px-8 py-3
@@ -81,7 +84,7 @@
                   focus:outline-none focus:shadow-outline transition
                   duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                   Visit the G Suite Marketplace
-                </a>
+                </A>
               </div>
             </div>
           </div>
@@ -128,10 +131,10 @@
             </svg>
           </div>
           <div class="mt-5">
-            <h5 class="text-lg leading-6 font-medium text-gray-900">
+            <h2 class="text-lg leading-6 font-medium text-gray-900">
               Snippets
-            </h5>
-            <p class="mt-2 text-base leading-6 text-gray-500">
+            </h2>
+            <p class="mt-2 text-base leading-6 text-gray-700">
               Leanpub's Markua language provides features such as "aside",
               "blurb", etc. This syntax can be difficult to remember and
               distracts from writing a book. Click a butto to insert specific
@@ -158,10 +161,10 @@
             </svg>
           </div>
           <div class="mt-5">
-            <h5 class="text-lg leading-6 font-medium text-gray-900">
+            <h2 class="text-lg leading-6 font-medium text-gray-900">
               Text Formatting
-            </h5>
-            <p class="mt-2 text-base leading-6 text-gray-500">
+            </h2>
+            <p class="mt-2 text-base leading-6 text-gray-700">
               Formatting text can be difficult. For example,
               <code>**bold**</code>
               formats as a
@@ -194,8 +197,8 @@
             </svg>
           </div>
           <div class="mt-5">
-            <h5 class="text-lg leading-6 font-medium text-gray-900">Convert</h5>
-            <p class="mt-2 text-base leading-6 text-gray-500">
+            <h2 class="text-lg leading-6 font-medium text-gray-900">Convert</h2>
+            <p class="mt-2 text-base leading-6 text-gray-700">
               When you're ready to preview or publish your book, simply click a
               button to convert your Google Doc to Markua, then click another
               button to copy the text and paste it into the Leanpub online
@@ -208,12 +211,12 @@
   </div>
 
   <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
-    <p class="mt-4 text-base leading-6 text-gray-500">
+    <p class="mt-4 text-base leading-6 text-gray-700">
       <button on:click={() => (isPrivacyDialogOpen = true)}>
         Privacy Policy
       </button>
       <span>|</span>
-      <a href="https://github.com/mikenikles/markua-docs-addon" target="_blank">Source Code</a>
+      <A href="https://github.com/mikenikles/markua-docs-addon" target="_blank">Source Code</A>
     </p>
   </div>
 
@@ -246,24 +249,24 @@
             </svg>
           </div>
           <div class="mt-3 sm:mt-5">
-            <h3 class="text-lg text-center leading-6 font-medium text-gray-900">
+            <h2 class="text-lg text-center leading-6 font-medium text-gray-900">
               Privacy Policy
-            </h3>
+            </h2>
             <div class="mt-2">
-              <p class="text-sm leading-5 text-gray-500">
+              <p class="text-sm leading-5 text-gray-700">
                 The Markua Support Google Doc add-on does not collect or
                 distribute any information about you or the documents it
                 converts.
               </p>
-              <h2 class="mt-4 mb-2">Required permissions</h2>
-              <p class="mt-2 text-sm leading-5 text-gray-500">
+              <h3 class="mt-4 mb-2">Required permissions</h3>
+              <p class="mt-2 text-sm leading-5 text-gray-700">
                 Markua Support Google Doc add-on will ask for permission to
                 access the current Doc (to convert it and insert Markua
                 snippets). Markua Support Google Doc add-on reads the document
                 content and structure; it inserts snippets at the cursor's
                 position if you instruct it to do so.
               </p>
-              <p class="mt-2 text-sm leading-5 text-gray-500">
+              <p class="mt-2 text-sm leading-5 text-gray-700">
                 Markua Support Google Doc add-on will also ask for permission to
                 display a sidebar. It uses the sidebar to display action buttons
                 and options as well as the converted Markua. It allows you to

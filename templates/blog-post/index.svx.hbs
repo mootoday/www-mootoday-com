@@ -1,0 +1,13 @@
+---
+title: "{{ blogPostTitle }}"
+slug: "{{ dashCase blogPostTitle }}"
+summary: "{{ blogPostSummary }}"
+createdAt: {{ blogPostCreatedAt }}
+tags: [""]
+---
+
+<script>
+  const assetsBasePath = `blog-posts/{{convertDateIsoToYMD blogPostCreatedAt}}-${slug}`;
+</script>
+
+TODO: Add the blog content here...
