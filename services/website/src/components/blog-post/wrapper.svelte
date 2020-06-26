@@ -10,7 +10,6 @@
 
   export let post;
 
-  headerStore.setHeaderTransparent(false);
   const titleAction = node => {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {

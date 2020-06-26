@@ -14,6 +14,10 @@
   $: isBlogPage = $page.path.startsWith("/blog");
   $: isSearchVisible = $page.path === "/";
 
+  $: if ($page.path !== "/") {
+    headerStore.setHeaderTransparent(false);
+  }
+
   let openMenu = "";
 
   const projectsMenu = {
