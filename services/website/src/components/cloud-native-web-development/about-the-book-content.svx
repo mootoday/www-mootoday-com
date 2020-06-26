@@ -1,0 +1,22 @@
+Web applications once were static HTML with CSS and a backend that processed form submissions. Fast forward to today and web development is more complex than it has ever been. With new frameworks, technologies & reusable code packages appearing (what feels like) weekly, where do you begin?
+
+In this book, we will walk through the end-to-end process of developing a cloud-native web application. You will learn technologies, processes, tips & tricks and gain hands-on experience. You will find out about mistakes made (so you can avoid them) by the author based on his two decades of experience in developing web applications.
+
+Links to additional resources such as videos, blog posts and articles are provided where necessary to give you an opportunity to dive deeper into topics of interest. These are resources I found useful and wish I had access to earlier in my career.
+
+The book starts with introductions to technologies used throughout the book and explains what alternatives are available.
+* [Svelte](https://svelte.dev/) to develop the web application
+* [Sapper](https://sapper.svelte.dev/) as a static site generator
+* [Tailwind CSS](https://tailwindcss.com/) for styling
+* [Firebase Hosting](https://firebase.google.com/docs/hosting) to host the web application
+* [Cypress](https://www.cypress.io/) for component and end-to-end testing
+* [Firebase Authentication](https://firebase.google.com/products/auth) to create accounts and authenticate users
+* [Cloud Firestore](https://firebase.google.com/docs/firestore) for data persistence
+* [Node.js](https://nodejs.org/en/) services deployed to [Cloud Run](https://cloud.run/) on [Google Cloud Platform](https://cloud.google.com/) to deal with asynchronous tasks (e.g. send a welcome email to new users)
+
+The second part is hands-on, with pull requests that correspond to individual chapters in the book. All readers are part of a community and can collaborate among themselves and with the author.
+We will start with a basic boilerplate repository, configure a CI / CD pipeline to test and deploy the web application and add feature toggles to ensure frequent deployments to production are fearless. For operational visibility, we will set up production monitoring & alerts and discuss how to perform rollbacks should that become necessary.
+A big part is going to be how to test web applications, with component and end-to-end tests to make sure new features don't introduce regression bugs. To have the most impact, tests are going to be part of the continuous integration pipeline and deployments will not happen if a test fails.
+We will configure Tailwind CSS to style the pages and components and learn about user authentication and how to interact with a database to persist and load data.
+
+To wrap up the book, we will look at how Firestore and serverless Cloud Functions allow us to develop a scalable event-driven architecture where individual parts of the system are decoupled and can be maintained independently.
