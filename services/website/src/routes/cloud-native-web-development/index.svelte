@@ -2,11 +2,12 @@
   import AboutTheBook from "../../components/cloud-native-web-development/about-the-book.svelte";
   import Chapters from "../../components/cloud-native-web-development/chapters.svelte";
   import Reviews from "../../components/cloud-native-web-development/reviews.svelte";
+  import Footer from "../../components/footer.svelte";
   import { headerStore } from "../../stores";
 
-  const nameAction = node => {
+  const nameAction = (node) => {
     const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         headerStore.setHeaderTransparent(entry.isIntersecting);
       });
     });
@@ -17,12 +18,21 @@
       destroy() {
         headerStore.setHeaderTransparent(false);
         observer.disconnect();
-      }
+      },
     };
   };
 </script>
 
 <style>
+  .buy-button {
+    background-color: #e6e051;
+    color: #041522;
+    font-family: magistral-condensed, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    bottom: 1rem;
+    right: 1rem;
+  }
   .wrapper :global(h1) {
     font-family: magistral-condensed, sans-serif;
     font-style: normal;
@@ -45,7 +55,6 @@
 
   .wrapper :global(p) {
     font-family: "Open Sans", sans-serif;
-    
   }
 
   .intro {
@@ -67,27 +76,38 @@
     @apply text-base mb-5 leading-relaxed;
   }
 
-  @screen md{
-  .wrapper :global(p) {
-      @apply text-lg leading-loose;
-  }
-  
-  .wrapper :global(ul) {
-      @apply text-lg;
+  .footer :global(footer){
+    /* background-color: #041522; */
+
   }
 
+  @screen md {
+    .wrapper :global(p) {
+      @apply text-lg leading-loose;
+    }
+
+    .wrapper :global(ul) {
+      @apply text-lg;
+    }
+
     .wrapper .author {
-        @apply text-3xl;
+      @apply text-3xl;
     }
   }
 
-  @screen lg{
-      .intro h1{
-          font-size: 5rem;
-      }
-      .intro .description{
-          @apply text-2xl;
-      }
+  @screen lg {
+    .buy-button {
+      bottom: 4rem;
+      right: 4rem;
+    }
+
+    .intro h1 {
+      font-size: 5rem;
+    }
+
+    .intro .description {
+      @apply text-2xl;
+    }
   }
 </style>
 
@@ -99,10 +119,16 @@
 </svelte:head>
 
 <div class="wrapper max-w-6xl mx-auto text-white">
-  <span class="absolute right-0 z-20 p-3"><a href="https://gumroad.com/l/cloud-native-web-development">Buy Now</a></span>
+  <span
+    class="buy-button fixed block z-20 py-2 px-4 md:py-3 md:px-6 rounded-lg
+    text-xl tracking-widest">
+    <a href="https://gumroad.com/l/cloud-native-web-development">Buy Now</a>
+  </span>
 
   <!-- Intro - The Book Cover -->
-  <section class="intro flex flex-col justify-between h-screen bg-center bg-cover bg-top w-full">
+  <section
+    class="intro subpixel-antialiased flex flex-col justify-between h-screen
+    bg-center bg-cover bg-top w-full">
     <div class="flex justify-center pt-24">
       <div class="m-5 md:m-8 lg:m-10">
         <h1 class="flex flex-col text-4xl md:text-6xl tracking-wide">
@@ -114,7 +140,11 @@
         </p>
       </div>
     </div>
-    <p use:nameAction class="author self-end m-6 md:m-10 tracking-widest text-2xl md:text-3xl">Mike Nikles</p>
+    <p
+      use:nameAction
+      class="author self-end m-6 md:m-10 tracking-widest text-2xl md:text-3xl">
+      Mike Nikles
+    </p>
   </section>
 
   <!-- About The Book -->
@@ -140,7 +170,7 @@
   </section>
 
   <!-- The author -->
-  <section class="the-author w-full px-6 pt-8 md:p-24">
+  <section class="the-author w-full px-6 py-8 md:p-24">
     <h2 class="text-2xl md:text-4xl uppercase mb-4 tracking-widest">
       The author
     </h2>
@@ -162,4 +192,8 @@
       .
     </p>
   </section>
+  <div class="footer">
+  <Footer />
+  </div>
+
 </div>
