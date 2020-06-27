@@ -3,7 +3,6 @@
   import Chapters from "../../components/cloud-native-web-development/chapters.svelte";
   import Reviews from "../../components/cloud-native-web-development/reviews.svelte";
   import Stats from "../../components/cloud-native-web-development/stats.svelte";
-  import Footer from "../../components/footer.svelte";
   import { headerStore } from "../../stores";
 
   const nameAction = (node) => {
@@ -165,9 +164,11 @@
     <Chapters />
   </section>
 
-<section>
-<Stats />
-</section>
+  <section>
+
+    <Stats />
+
+  </section>
 
   <!-- The author -->
   <section class="the-author w-full px-6 py-8 md:p-24">
@@ -192,6 +193,4 @@
       .
     </p>
   </section>
-
-  <Footer />
 </div>

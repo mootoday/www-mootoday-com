@@ -153,13 +153,13 @@ p span{
     <Chapter chapter={chapterAboutThisBook} />
   </div>
   <div>
-    <p class="pt-8 pb-5"><span class="text-2xl md:text-3xl tracking-wide">Part 1: Technologies, tools & processes</span></p>
+    <p class="pt-8 pb-5"><span class="text-xl md:text-3xl tracking-wide">Part 1: Technologies, tools & processes</span></p>
     {#each chaptersPart1 as chapter}
       <Chapter {chapter} />
     {/each}
   </div>
   <div>
-    <p class="pt-8 pb-5"><span class="text-2xl md:text-3xl tracking-wide">Part 2: Develop a foundation</span></p>
+    <p class="pt-8 pb-5"><span class="text-xl md:text-3xl tracking-wide">Part 2: Develop a foundation</span></p>
     {#each chaptersPart2 as chapter}
       <Chapter {chapter} />
     {/each}
