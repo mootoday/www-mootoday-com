@@ -15,8 +15,11 @@ The book starts with introductions to technologies used throughout the book and 
 * [Node.js](https://nodejs.org/en/) services deployed to [Cloud Run](https://cloud.run/) on [Google Cloud Platform](https://cloud.google.com/) to deal with asynchronous tasks (e.g. send a welcome email to new users)
 
 The second part is hands-on, with pull requests that correspond to individual chapters in the book. All readers are part of a community and can collaborate among themselves and with the author.
+
 We will start with a basic boilerplate repository, configure a CI / CD pipeline to test and deploy the web application and add feature toggles to ensure frequent deployments to production are fearless. For operational visibility, we will set up production monitoring & alerts and discuss how to perform rollbacks should that become necessary.
+
 A big part is going to be how to test web applications, with component and end-to-end tests to make sure new features don't introduce regression bugs. To have the most impact, tests are going to be part of the continuous integration pipeline and deployments will not happen if a test fails.
+
 We will configure Tailwind CSS to style the pages and components and learn about user authentication and how to interact with a database to persist and load data.
 
 To wrap up the book, we will look at how Firestore and serverless Cloud Functions allow us to develop a scalable event-driven architecture where individual parts of the system are decoupled and can be maintained independently.
