@@ -9,6 +9,7 @@
 <style>
   .bgcnwd {
       background-color: #041522;
+      @apply antialiased;
   }
 </style>
 
