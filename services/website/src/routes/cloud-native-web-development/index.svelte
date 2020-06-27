@@ -4,7 +4,7 @@
   import Reviews from "../../components/cloud-native-web-development/reviews.svelte";
   import { headerStore } from "../../stores";
 
-  const titleAction = node => {
+  const nameAction = node => {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         headerStore.setHeaderTransparent(entry.isIntersecting);
@@ -80,7 +80,7 @@
   <section class="intro flex flex-col justify-between h-screen bg-center bg-cover w-full">
     <div class="flex justify-center pt-24">
       <div class="m-5 md:m-8">
-        <h1 use:titleAction class="flex flex-col text-4xl md:text-6xl tracking-wide">
+        <h1 class="flex flex-col text-4xl md:text-6xl tracking-wide">
           <span class="">Cloud Native</span>
           <span class="">Web Development</span>
         </h1>
@@ -89,7 +89,7 @@
         </p>
       </div>
     </div>
-    <p class="author self-end m-6 md:m-10 tracking-widest text-2xl md:text-3xl">Mike Nikles</p>
+    <p use:nameAction class="author self-end m-6 md:m-10 tracking-widest text-2xl md:text-3xl">Mike Nikles</p>
   </section>
 
   <!-- About The Book -->
