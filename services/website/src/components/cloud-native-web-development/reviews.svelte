@@ -16,7 +16,16 @@
   }];
 </script>
 
-<div class="max-w-screen-xl mx-auto md:grid md:grid-cols-3 md:px-6 lg:px-8">
+<style>
+div {
+background-color: #082134;
+}
+div :global(div:first-child) {
+    border-left: 0;
+}
+</style>
+
+<div class="max-w-screen-xl mx-auto lg:grid lg:grid-cols-3 lg:px-6 xl:px-8">
 {#each reviews as review}
   <Review {review} />
 {/each}

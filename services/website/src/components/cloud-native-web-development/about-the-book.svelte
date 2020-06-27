@@ -4,7 +4,15 @@
 
 <style>
   div :global(ul) {
-    @apply list-disc;
+    @apply list-disc text-base;
+  }
+
+  div :global(li) {
+    @apply mb-2;
+  }
+
+  div :global(p) {
+    @apply text-base mb-5 leading-relaxed;
   }
 </style>
 

@@ -1,38 +1,106 @@
 <script>
   import AboutTheBook from "../../components/cloud-native-web-development/about-the-book.svelte";
   import Chapters from "../../components/cloud-native-web-development/chapters.svelte";
-  import Footer from "../../components/footer.svelte";
   import Reviews from "../../components/cloud-native-web-development/reviews.svelte";
 </script>
 
 <style>
-  h2 {
-    @apply text-4xl uppercase;
+  .wrapper :global(h1) {
+    font-family: magistral-condensed, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #e6e051;
+  }
+
+  .wrapper :global(h2) {
+    font-family: magistral-condensed, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #e6e051;
+  }
+
+  .description {
+    font-family: industry, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .wrapper :global(p) {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .intro {
+    background-image: url("/cloud-native-web-development/cloud-native-web-development-bg-2000.jpg");
+  }
+
+  .colored-bg {
+    background-color: #082134;
+  }
+
+  .wrapper .author {
+    font-family: magistral, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #e6e051;
+  }
+
+  .the-author p {
+    @apply text-base mb-5 leading-relaxed;
   }
 </style>
 
-<div>
-  <div class="pt-16 md:pt-32">
-    <div class="w-full">
-      <h2>About the book</h2>
-      <AboutTheBook />
-    </div>
-  </div>
+<svelte:head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+    @import url("https://use.typekit.net/iuz8ejq.css");
+  </style>
+</svelte:head>
 
-  <div class="w-full">
-    <h2>Reviews</h2>
+<div class="wrapper max-w-6xl mx-auto text-white">
+
+<!-- Intro - The Book Cover -->
+  <section class="intro relative h-screen bg-center bg-cover w-full">
+    <div class="flex justify-center pt-24">
+      <div class="m-5 md:m-8">
+        <h1 class="flex flex-col text-4xl md:text-6xl tracking-wide">
+          <span class="">Cloud Native</span>
+          <span class="">Web Development</span>
+        </h1>
+        <p class="description text-base tracking-widest">
+          From zero to production: A hands-on guidebook
+        </p>
+      </div>
+      <p class="author m-6 md:m-10 absolute right-0 bottom-0 tracking-widest text-2xl md:text-3xl">Mike Nikles</p>
+    </div>
+  </section>
+
+  <!-- About The Book -->
+  <section class="w-full px-6 pt-8 md:p-24">
+    <h2 class="text-2xl md:text-4xl uppercase mb-4 pt-4 tracking-widest">
+      About the book
+    </h2>
+    <AboutTheBook />
+  </section>
+
+  <!-- Reviews -->
+  <section class="colored-bg w-full px-6 pt-8 md:p-24">
+    <h2 class="text-2xl md:text-4xl uppercase mb-4 tracking-widest">Reviews</h2>
     <Reviews />
-  </div>
+  </section>
 
   <!-- Chapters -->
-  <div class="w-full">
-    <h2>Chapters</h2>
+  <section class="w-full px-6 pt-8 md:p-24">
+    <h2 class="text-2xl md:text-4xl uppercase mb-4 tracking-widest">
+      Chapters
+    </h2>
     <Chapters />
-  </div>
+  </section>
 
   <!-- The author -->
-  <div>
-    <h2>The author</h2>
+  <section class="the-author w-full px-6 pt-8 md:p-24">
+    <h2 class="text-2xl md:text-4xl uppercase mb-4 tracking-widest">
+      The author
+    </h2>
     <p>
       Mike is a software architect who started his career right at the peak of
       the dot-com bubble in summer of 2000. He currently works at Google,
@@ -42,7 +110,7 @@
       He focuses on cloud native web development, best practices, productivity
       and team morale.
     </p>
-    <p>
+    <p class="mb-0">
       He shares his thoughts at
       <a href="https://www.mikenikles.com">www.mikenikles.com</a>
       (previously on Medium at https://medium.com/@mikenikles) and can also be
@@ -50,6 +118,5 @@
       <a href="https://www.twitter.com/@mikenikles">@mikenikles</a>
       .
     </p>
-  </div>
-  <Footer />
+  </section>
 </div>
