@@ -1,48 +1,100 @@
 About this book	9
-Topics you will learn	18
-What is cloud-native?	18
-Guiding Principles	19
-Development Environment	24
-Frontend	27
-Svelte	28
-Tailwind CSS	30
-Firebase SDK	33
-Backend	34
-Sapper	34
-Google Cloud Platform	38
-Database	42
-Cloud Firestore	42
-CI / CD	44
+
+
+Part 1
+
+
+Topics you will learn	19
+
+What is cloud-native?	20
+
+Guiding Principles	21
+
+Development Environment	26
+
+Frontend	29
+
+Svelte	29
+
+Tailwind CSS	32
+
+Firebase SDK	34
+
+Backend	35
+
+Sapper	36
+
+Google Cloud Platform	40
+
+Database	44
+
+Cloud Firestore	44
+
+CI / CD	46
+
 GitHub Actions	45
-Testing	46
-Cypress	50
-Testing Library	52
-Monorepo	54
+
+Testing	48
+
+Cypress	52
+
+Testing Library	54
+
+Monorepo	56
+
 
 Part 2
 
-Introduction	57
-Project Overview	57
-A monorepo template to start with	58
-Add the Sapper template	61
-Hosting on Firebase	65
-Set up the continuous deployment pipeline	80
-Local Development	87
-Feature Toggles	91
-Production monitoring	102
-Rollbacks	106
-Testing	107
-End-to-end tests	108
-Component tests	113
-Generate product videos	120
-Cypress Dashboard	121
-Enable tests in the continuous integration pipeline	124
-Tailwind CSS	128
-User authentication	134
-Database - Cloud Firestore	147
-Firebase Local Emulator Suite	164
-Trigger services based on events	172
-Speed up CI / CD by caching node_modules	194
-Connect a custom domain	196
-That's a wrap!	197
-What's next? Web development in 2025	197
+
+
+Introduction	60
+
+Project Overview	61
+
+A monorepo template to start with	62
+
+Add the Sapper template	65
+
+Hosting on Firebase	70
+
+Set up the continuous deployment pipeline	85
+
+Local Development	92
+
+Feature Toggles	95
+
+Production monitoring	107
+
+Rollbacks	111
+
+Testing	112
+
+End-to-end tests	113
+
+Component tests	119
+
+Use Testing Library 124
+
+Generate product videos	126
+
+Cypress Dashboard	127
+
+Enable tests in the continuous integration pipeline	130
+
+Tailwind CSS	135
+
+User authentication	142
+
+Database - Cloud Firestore	156
+
+Firebase Local Emulator Suite	174
+
+Trigger services based on events	183
+
+Speed up CI / CD by caching node_modules	206
+
+Connect a custom domain	209
+
+That's a wrap!	210
+
+What's next? Web development in 2025	211

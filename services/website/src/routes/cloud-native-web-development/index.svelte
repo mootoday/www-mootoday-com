@@ -2,6 +2,24 @@
   import AboutTheBook from "../../components/cloud-native-web-development/about-the-book.svelte";
   import Chapters from "../../components/cloud-native-web-development/chapters.svelte";
   import Reviews from "../../components/cloud-native-web-development/reviews.svelte";
+  import { headerStore } from "../../stores";
+
+  const nameAction = node => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        headerStore.setHeaderTransparent(entry.isIntersecting);
+      });
+    });
+
+    observer.observe(node);
+
+    return {
+      destroy() {
+        headerStore.setHeaderTransparent(false);
+        observer.disconnect();
+      }
+    };
+  };
 </script>
 
 <style>
@@ -83,8 +101,8 @@
 <div class="wrapper max-w-6xl mx-auto text-white">
   <span class="absolute right-0 z-20 p-3"><a href="https://gumroad.com/l/cloud-native-web-development">Buy Now</a></span>
 
-<!-- Intro - The Book Cover -->
-  <section class="intro relative h-screen bg-center bg-top bg-cover w-full">
+  <!-- Intro - The Book Cover -->
+  <section class="intro flex flex-col justify-between h-screen bg-center bg-cover bg-top w-full">
     <div class="flex justify-center pt-24">
       <div class="m-5 md:m-8 lg:m-10">
         <h1 class="flex flex-col text-4xl md:text-6xl tracking-wide">
@@ -95,8 +113,8 @@
           From zero to production: A hands-on guidebook
         </p>
       </div>
-      <p class="author m-6 md:m-10 absolute right-0 bottom-0 tracking-widest text-2xl lg:text-3xl">Mike Nikles</p>
     </div>
+    <p use:nameAction class="author self-end m-6 md:m-10 tracking-widest text-2xl md:text-3xl">Mike Nikles</p>
   </section>
 
   <!-- About The Book -->
