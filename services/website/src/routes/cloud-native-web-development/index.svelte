@@ -2,6 +2,24 @@
   import AboutTheBook from "../../components/cloud-native-web-development/about-the-book.svelte";
   import Chapters from "../../components/cloud-native-web-development/chapters.svelte";
   import Reviews from "../../components/cloud-native-web-development/reviews.svelte";
+  import { headerStore } from "../../stores";
+
+  const titleAction = node => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        headerStore.setHeaderTransparent(entry.isIntersecting);
+      });
+    });
+
+    observer.observe(node);
+
+    return {
+      destroy() {
+        headerStore.setHeaderTransparent(false);
+        observer.disconnect();
+      }
+    };
+  };
 </script>
 
 <style>
@@ -62,7 +80,7 @@
   <section class="intro flex flex-col justify-between h-screen bg-center bg-cover w-full">
     <div class="flex justify-center pt-24">
       <div class="m-5 md:m-8">
-        <h1 class="flex flex-col text-4xl md:text-6xl tracking-wide">
+        <h1 use:titleAction class="flex flex-col text-4xl md:text-6xl tracking-wide">
           <span class="">Cloud Native</span>
           <span class="">Web Development</span>
         </h1>

@@ -59,7 +59,7 @@
 <div class:transparent={$headerStore.header.isTransparent} class="fixed transition duration-500 bg-gray-900 w-full">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-center text-white p-2">
-      <div class={`${isBlogPage ? 'hidden md:flex' : 'flex'} justify-start flex-1`}>
+      <div class={`${isSearchVisible ? 'flex' : 'hidden md:flex'} justify-start flex-1`}>
         <SocialIcons />
         {#if isSearchVisible}
         <Search />
