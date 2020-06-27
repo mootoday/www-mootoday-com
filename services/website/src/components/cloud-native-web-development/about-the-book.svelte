@@ -4,7 +4,7 @@
 
 <style>
   div :global(ul) {
-    @apply list-disc text-base;
+    @apply list-disc text-base ;
   }
 
   div :global(li) {
@@ -14,6 +14,7 @@
   div :global(p) {
     @apply text-base mb-5 leading-relaxed;
   }
+
 </style>
 
 <div>

@@ -19,7 +19,7 @@
     color: #e6e051;
   }
 
-  .description {
+  .intro .description {
     font-family: industry, sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -27,6 +27,7 @@
 
   .wrapper :global(p) {
     font-family: "Open Sans", sans-serif;
+    
   }
 
   .intro {
@@ -37,7 +38,7 @@
     background-color: #082134;
   }
 
-  .wrapper .author {
+  .intro .author {
     font-family: magistral, sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -46,6 +47,29 @@
 
   .the-author p {
     @apply text-base mb-5 leading-relaxed;
+  }
+
+  @screen md{
+  .wrapper :global(p) {
+      @apply text-lg leading-loose;
+  }
+  
+  .wrapper :global(ul) {
+      @apply text-lg;
+  }
+
+    .wrapper .author {
+        @apply text-3xl;
+    }
+  }
+
+  @screen lg{
+      .intro h1{
+          font-size: 5rem;
+      }
+      .intro .description{
+          @apply text-2xl;
+      }
   }
 </style>
 
@@ -57,20 +81,21 @@
 </svelte:head>
 
 <div class="wrapper max-w-6xl mx-auto text-white">
+  <span class="absolute right-0 z-20 p-3"><a href="https://gumroad.com/l/cloud-native-web-development">Buy Now</a></span>
 
 <!-- Intro - The Book Cover -->
-  <section class="intro relative h-screen bg-center bg-cover w-full">
+  <section class="intro relative h-screen bg-center bg-top bg-cover w-full">
     <div class="flex justify-center pt-24">
-      <div class="m-5 md:m-8">
+      <div class="m-5 md:m-8 lg:m-10">
         <h1 class="flex flex-col text-4xl md:text-6xl tracking-wide">
-          <span class="">Cloud Native</span>
-          <span class="">Web Development</span>
+          <span>Cloud Native</span>
+          <span>Web Development</span>
         </h1>
         <p class="description text-base tracking-widest">
           From zero to production: A hands-on guidebook
         </p>
       </div>
-      <p class="author m-6 md:m-10 absolute right-0 bottom-0 tracking-widest text-2xl md:text-3xl">Mike Nikles</p>
+      <p class="author m-6 md:m-10 absolute right-0 bottom-0 tracking-widest text-2xl lg:text-3xl">Mike Nikles</p>
     </div>
   </section>
 

@@ -9,7 +9,7 @@
 
 </style>
 
-<div class="wrapper py-12 px-4 border-t-2 sm:px-6 md:py-16 md:pr-0 md:pl-10 md:border-t-0 md:border-l lg:pl-16 md:flex md:flex-col">
+<div class="wrapper py-12 px-4 border-t-2 sm:px-6 md:py-14 md:pr-0 md:pl-10 md:border-t-0 md:border-l lg:pl-14 md:flex md:flex-col">
   <blockquote class="px-6 mt-8 md:flex-grow md:flex md:flex-col">
     <div class="relative text-lg leading-7 font-medium md:flex-grow">
       <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8" fill="#005072" viewBox="0 0 32 32">
@@ -20,8 +20,8 @@
       </p>
     </div>
     <footer class="mt-8">
-      <div class="flex">
-        <div class="ml-4">
+      <div class="flex justify-end">
+        <div>
           <div class="text-base leading-6 font-medium">{review.name}
           </div>
           <!-- <div class="text-base leading-6 font-medium text-indigo-200">
