@@ -14,6 +14,6 @@
   </div>
   <div class="w-5/6">
     <p class="text-lg">{chapter.title}</p>
-    <p class="text-sm">{chapter.subtitles.join(" • ")}</p>
+    <p class="text-sm md:text-base">{chapter.subtitles.join(" • ")}</p>
   </div>
 </div>

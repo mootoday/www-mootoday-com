@@ -14,7 +14,12 @@
   div :global(p) {
     @apply text-base mb-5 leading-relaxed;
   }
-
+  
+@screen md {
+   div :global(p) {
+      @apply text-lg leading-loose;
+    }
+}
 </style>
 
 <div>
