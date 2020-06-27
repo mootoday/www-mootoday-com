@@ -58,8 +58,8 @@
 
 <div class="wrapper max-w-6xl mx-auto text-white">
 
-<!-- Intro - The Book Cover -->
-  <section class="intro relative h-screen bg-center bg-cover w-full">
+  <!-- Intro - The Book Cover -->
+  <section class="intro flex flex-col justify-between h-screen bg-center bg-cover w-full">
     <div class="flex justify-center pt-24">
       <div class="m-5 md:m-8">
         <h1 class="flex flex-col text-4xl md:text-6xl tracking-wide">
@@ -70,8 +70,8 @@
           From zero to production: A hands-on guidebook
         </p>
       </div>
-      <p class="author m-6 md:m-10 absolute right-0 bottom-0 tracking-widest text-2xl md:text-3xl">Mike Nikles</p>
     </div>
+    <p class="author self-end m-6 md:m-10 tracking-widest text-2xl md:text-3xl">Mike Nikles</p>
   </section>
 
   <!-- About The Book -->
