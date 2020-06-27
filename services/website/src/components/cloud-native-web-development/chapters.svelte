@@ -1,5 +1,4 @@
 <script>
-  import Content from "./chapters-content.svx";
   import Chapter from "./chapter.svelte";
 
   // prettier-ignore
