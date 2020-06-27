@@ -2,6 +2,7 @@
   import AboutTheBook from "../../components/cloud-native-web-development/about-the-book.svelte";
   import Chapters from "../../components/cloud-native-web-development/chapters.svelte";
   import Reviews from "../../components/cloud-native-web-development/reviews.svelte";
+  import Stats from "../../components/cloud-native-web-development/stats.svelte";
   import Footer from "../../components/footer.svelte";
   import { headerStore } from "../../stores";
 
@@ -74,11 +75,6 @@
 
   .the-author p {
     @apply text-base mb-5 leading-relaxed;
-  }
-
-  .footer :global(footer){
-    /* background-color: #041522; */
-
   }
 
   @screen md {
@@ -169,6 +165,10 @@
     <Chapters />
   </section>
 
+<section>
+<Stats />
+</section>
+
   <!-- The author -->
   <section class="the-author w-full px-6 py-8 md:p-24">
     <h2 class="text-2xl md:text-4xl uppercase mb-4 tracking-widest">
@@ -192,8 +192,6 @@
       .
     </p>
   </section>
-  <div class="footer">
-  <Footer />
-  </div>
 
+  <Footer />
 </div>
