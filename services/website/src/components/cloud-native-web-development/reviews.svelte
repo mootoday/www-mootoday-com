@@ -9,10 +9,10 @@
     content: "I was very pleased to read through your book and enjoyed the content. Really like the diagram pictures and love the easiness to follow everything.",
     name: "Mihai Oprea",
     title: "Customer Engineer, Google"
-  }, {
-    content: "",
-    name: "Rock Hu",
-    title: "Software Engineer, Grammarly"
+  // }, {
+  //   content: "",
+  //   name: "Rock Hu",
+  //   title: "Software Engineer, Grammarly"
   }, {
     content: "Enjoyed reading your analysis for major design decisions and recommendations. In addition highlighting Google Firebase product with concrete use cases, like feature toggling for example, will be highly appreciated by developers!",
     name: "Andrey Feldman",
