@@ -3,10 +3,13 @@
 </script>
 
 <style>
-.wrapper {
-    border-color:#041522;
-}
+  .wrapper {
+      border-color:#041522;
+  }
 
+  .title {
+    color: #e6e051;
+  }
 </style>
 
 <div class="wrapper py-12 border-t-2 md:py-10 md:pr-0 md:pl-10 md:border-t-0 md:border-l lg:pl-14 md:flex md:flex-col">
@@ -24,9 +27,9 @@
         <div>
           <div class="text-base leading-6 font-medium">{review.name}
           </div>
-          <!-- <div class="text-base leading-6 font-medium text-indigo-200">
-          <a href="{review.socialMediaLink}">{review.socialMediaLink}</a>
-          </div> -->
+          <div class="title text-base leading-6 font-medium">
+            {review.title}
+          </div>
         </div>
       </div>
     </footer>

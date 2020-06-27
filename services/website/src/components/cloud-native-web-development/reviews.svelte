@@ -2,17 +2,21 @@
   import Review from "./review.svelte";
 
   const reviews = [{
-    content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos iste, alias facere quae provident aperiam, ab, modi consectetur molestiae rem dolore? Expedita facilis perspiciatis, harum minima excepturi et incidunt officiis?",
-    name: "Hanna Choi",
-    socialMediaLink: "https://www.github.com/hannac222"
+    content: "You’re producing really high quality content with this book! I think it’s a good sign that I can’t stop reading and I don’t have to force myself to try out all the stuff, which is actually the problem of most technical hands-on books. Also, even if you work with a different techstack, the concept applies anyways. I already had some takeaways which I brought to my company, especially from all those little sidenotes.",
+    name: "Thomas Niedermaier",
+    title: "Fullstack Engineer"
   }, {
-    content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos iste, alias facere quae provident aperiam, ab, modi consectetur molestiae rem dolore?",
-    name: "Someone else",
-    socialMediaLink: "https://www.twitter.com/someoneelse"
+    content: "I was very pleased to read through your book and enjoyed the content. Really like the diagram pictures and love the easiness to follow everything.",
+    name: "Mihai Oprea",
+    title: "Customer Engineer, Google"
   }, {
-    content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos iste, alias facere quae provident aperiam, ab, modi",
-    name: "Me or you",
-    socialMediaLink: "https://www.linkedin.com/in/meoryou"
+    content: "",
+    name: "Rock Hu",
+    title: "Software Engineer, Grammarly"
+  }, {
+    content: "Enjoyed reading your analysis for major design decisions and recommendations. In addition highlighting Google Firebase product with concrete use cases, like feature toggling for example, will be highly appreciated by developers!",
+    name: "Andrey Feldman",
+    title: "Customer Engineer, Google"
   }];
 </script>
 
