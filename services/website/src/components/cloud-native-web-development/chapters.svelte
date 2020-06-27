@@ -139,18 +139,27 @@
   }];
 </script>
 
+<style>
+p span{
+    font-family: magistral-condensed, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #e6e051;
+}
+</style>
+
 <div>
   <div>
     <Chapter chapter={chapterAboutThisBook} />
   </div>
   <div>
-    <h3>Part 1: Technologies, tools & processes</h3>
+    <p class="pt-8 pb-5"><span class="text-2xl md:text-3xl tracking-wide">Part 1: Technologies, tools & processes</span></p>
     {#each chaptersPart1 as chapter}
       <Chapter {chapter} />
     {/each}
   </div>
   <div>
-    <h3>Part 2: Develop a foundation</h3>
+    <p class="pt-8 pb-5"><span class="text-2xl md:text-3xl tracking-wide">Part 2: Develop a foundation</span></p>
     {#each chaptersPart2 as chapter}
       <Chapter {chapter} />
     {/each}
