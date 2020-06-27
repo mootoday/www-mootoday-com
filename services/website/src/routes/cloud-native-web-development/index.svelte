@@ -1,5 +1,6 @@
 <script>
   import AboutTheBook from "../../components/cloud-native-web-development/about-the-book.svelte";
+  import BuyButton from "../../components/cloud-native-web-development/buy-button.svelte";
   import Chapters from "../../components/cloud-native-web-development/chapters.svelte";
   import Reviews from "../../components/cloud-native-web-development/reviews.svelte";
   import Stats from "../../components/cloud-native-web-development/stats.svelte";
@@ -24,15 +25,6 @@
 </script>
 
 <style>
-  .buy-button {
-    background-color: #e6e051;
-    color: #041522;
-    font-family: magistral-condensed, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    bottom: 1rem;
-    right: 1rem;
-  }
   .wrapper :global(h1) {
     font-family: magistral-condensed, sans-serif;
     font-style: normal;
@@ -91,11 +83,6 @@
   }
 
   @screen lg {
-    .buy-button {
-      bottom: 4rem;
-      right: 4rem;
-    }
-
     .intro h1 {
       font-size: 5rem;
     }
@@ -114,11 +101,7 @@
 </svelte:head>
 
 <div class="wrapper max-w-6xl mx-auto text-white">
-  <span
-    class="buy-button fixed block z-20 py-2 px-4 md:py-3 md:px-6 rounded-lg
-    text-xl tracking-widest">
-    <a href="https://gumroad.com/l/cloud-native-web-development">Buy Now</a>
-  </span>
+  <BuyButton />
 
   <!-- Intro - The Book Cover -->
   <section
