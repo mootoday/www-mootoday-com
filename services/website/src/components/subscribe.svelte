@@ -4,7 +4,7 @@
     Subscribe to my newsletter
   </h2>
   <h3
-    class="break-normal font-normal text-gray-600 text-base md:text-xl">
+    class="break-normal font-normal text-gray-900 text-base md:text-xl">
     Get the latest blog posts and project updates delivered right to your inbox
   </h3>
   <div class="w-full text-center pt-4">
@@ -21,8 +21,8 @@
         <button
           type="submit"
           class="flex-1 mt-4 md:mt-0 block md:inline-block appearance-none
-          bg-teal-500 text-white text-base font-semibold tracking-wider
-          uppercase p-4 rounded shadow hover:bg-teal-400">
+          bg-teal-700 text-white text-base font-semibold tracking-wider
+          uppercase p-4 rounded shadow hover:bg-teal-600">
           Subscribe
         </button>
       </div>
