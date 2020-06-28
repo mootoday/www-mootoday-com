@@ -10,7 +10,11 @@
   const nameAction = (node) => {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
-        headerStore.setHeaderTransparent(entry.isIntersecting);
+        if (entry.boundingClientRect.top > 0) {
+          headerStore.setHeaderTransparent(true);
+        } else {
+          headerStore.setHeaderTransparent(entry.isIntersecting);
+        }
       });
     });
 
