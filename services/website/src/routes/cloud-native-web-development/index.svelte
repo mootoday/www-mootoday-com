@@ -10,7 +10,7 @@
   import { headerStore } from "../../stores";
 
   const description = "A hands-on guidebook that leads you through the process of creating a cloud-native web application from scratch.";
-  const image = "https://www.mikenikles.com/cloud-native-web-development/cloud-native-web-development-bg-2000-medium.jpg";
+  const image = "https://www.mikenikles.com/cloud-native-web-development/cloud-native-web-development-mikenikles-2000.jpg";
   const imageAlt = "Cloud Native Web Development Book Cover";
   const keywords = "cloud, google, google cloud platform, cloud-native, web, web development, book, svelte, sapper, tailwind css, firebase, cypress, cloud firestore, nodejs, node.js, cloud run, testing, end-to-end tests";
   const title = "Cloud Native Web Development - From zero to production: A hands-on guidebook";
