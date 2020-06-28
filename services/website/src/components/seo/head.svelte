@@ -11,6 +11,7 @@
 
 <svelte:head>
   <title>{title}</title>
+  <meta name="author" content="Mike Nikles">
   <meta name="description" content="{description}" />
   <meta name="keywords" content="{keywords}" />
 
