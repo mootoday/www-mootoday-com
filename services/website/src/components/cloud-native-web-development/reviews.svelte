@@ -2,6 +2,10 @@
   import Review from "./review.svelte";
 
   const reviews = [{
+    content: "Cloud Native App development is a difficult space and Mike's knowledge and experience really comes out in this book. Thank you for writing this book.",
+    name: "Vikas Desai",
+    title: "Customer Engineer, Google"
+  },{
     content: "You’re producing really high quality content with this book! I think it’s a good sign that I can’t stop reading and I don’t have to force myself to try out all the stuff, which is actually the problem of most technical hands-on books. Also, even if you work with a different techstack, the concept applies anyways. I already had some takeaways which I brought to my company, especially from all those little sidenotes.",
     name: "Thomas Niedermaier",
     title: "Fullstack Engineer"
