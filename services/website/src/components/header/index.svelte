@@ -60,7 +60,7 @@
 <svelte:body on:click={() => (openMenu = '')} />
 
 {#if isHeaderVisible}
-  <div class:transparent={$headerStore.header.isTransparent} class="fixed transition duration-500 bg-gray-900 w-full">
+  <div class:transparent={$headerStore.header.isTransparent} class="fixed transition duration-500 bg-gray-900 w-full z-10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center text-white p-2">
         <div class={`${isSearchVisible ? 'flex' : 'hidden md:flex'} justify-start flex-1`}>
