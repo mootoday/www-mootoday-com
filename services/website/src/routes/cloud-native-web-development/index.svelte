@@ -5,6 +5,7 @@
   import Reviews from "../../components/cloud-native-web-development/reviews.svelte";
   import SeoHead from "../../components/seo/head.svelte";
   import Stats from "../../components/cloud-native-web-development/stats.svelte";
+  import Subscribe from "../../components/subscribe.svelte";
   import Author from "../../components/cloud-native-web-development/author.svelte";
   import { headerStore } from "../../stores";
 
@@ -54,6 +55,12 @@
     font-style: normal;
     font-weight: 400;
     color: var(--primary-color);
+  }
+
+  .wrapper .subscribe :global(.container) {
+    background-color: #041522;
+    border-color: #082134;
+    @apply border-t-2;
   }
 
   .intro .description {
@@ -156,5 +163,9 @@
   <!-- The author -->
   <section class="w-full px-6 py-8 md:p-24">
     <Author />
+  </section>
+
+  <section class="subscribe">
+    <Subscribe />
   </section>
 </div>

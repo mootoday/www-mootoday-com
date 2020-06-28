@@ -133,10 +133,7 @@
         </div>
         <Comments />
       </div>
-
-      {#if false}
-        <Subscribe />
-      {/if}
+      <Subscribe />
     </div>
   </div>
   <ImageZoom />
