@@ -6,10 +6,17 @@
   export let segment;
 </script>
 
+<style>
+  .bgcnwd {
+      background-color: #041522;
+      @apply antialiased;
+  }
+</style>
+
 <TailwindCSS />
 
-<Header {segment} />
-<main>
+<Header />
+<main class:bgcnwd={segment === "cloud-native-web-development"}>
 	<slot></slot>
 </main>
 
