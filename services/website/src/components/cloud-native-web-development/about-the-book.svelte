@@ -4,7 +4,7 @@
 
 <style>
   div :global(ul) {
-    @apply list-disc text-base ;
+    @apply list-disc text-base ml-6;
   }
 
   div :global(li) {
@@ -17,7 +17,7 @@
 
   div :global(a){
       @apply font-semibold;
-      color: #e6e051;
+      color: #83fcfc;
   }
 
   div :global(a:hover){

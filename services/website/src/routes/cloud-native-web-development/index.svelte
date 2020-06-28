@@ -97,7 +97,7 @@
           <span>Cloud Native</span>
           <span>Web Development</span>
         </h1>
-        <p class="description text-base lg:text-2xl tracking-widest">
+        <p class="description text-base md:text-xl lg:text-2xl tracking-widest">
           From zero to production: A hands-on guidebook
         </p>
       </div>
