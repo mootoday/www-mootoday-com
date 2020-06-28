@@ -26,7 +26,7 @@
         A book, source code & a community
       </h3>
       <p class="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
-        Be part of a a community with other readers. Review & discuss source
+        Be part of a community with other readers. Review & discuss source
         code. Ask questions.
       </p>
     </div>
