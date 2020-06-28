@@ -121,19 +121,19 @@
     title: "Trigger services based on events",
     subtitles: ["Initialize Firebase Cloud Functions", "Test the default Cloud Function locally", "Develop the new service placeholder", "Develop the integration with DEV", "Test the new service", "Convert Markdown to HTML", "Write tests for the service", "Deploy the new service", "Summary"]
   }, {
-    page: 209,
+    page: 208,
     title: "Speed up CI / CD",
     subtitles: ["Summary"]
   }, {
-    page: 212,
+    page: 211,
     title: "Connect a custom domain",
     subtitles: []
   }, {
-    page: 213,
+    page: 212,
     title: "That's a wrap!",
     subtitles: []
   }, {
-    page: 214,
+    page: 213,
     title: "What's next? Web development in 2025",
     subtitles: ["Distributed static page generation", "Web & IoT", "Upcoming personal projects"]
   }];
