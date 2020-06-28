@@ -48,7 +48,7 @@
               <dd
                 class="number order-1 text-5xl leading-none font-extrabold"
                 aria-describedby="stats-pages">
-                212
+                215
               </dd>
             </div>
             <div
