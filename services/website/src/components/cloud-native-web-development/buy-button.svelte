@@ -21,7 +21,7 @@
   }
 
   span.bottom {
-    transform: translate(0, 90vh)
+    transform: translate(0, 80vh)
   }
 
   @screen lg {
