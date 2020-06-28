@@ -4,6 +4,7 @@
   import Chapters from "../../components/cloud-native-web-development/chapters.svelte";
   import Reviews from "../../components/cloud-native-web-development/reviews.svelte";
   import Stats from "../../components/cloud-native-web-development/stats.svelte";
+  import Author from "../../components/cloud-native-web-development/author.svelte";
   import { headerStore } from "../../stores";
 
   const nameAction = (node) => {
@@ -132,32 +133,11 @@
   </section>
 
   <section>
-
     <Stats />
-
   </section>
 
   <!-- The author -->
-  <section class="the-author w-full px-6 py-8 md:p-24">
-    <h2 class="text-2xl md:text-4xl uppercase mb-4 tracking-widest">
-      The author
-    </h2>
-    <p class="text-base mb-5 md:text-lg leading-relaxed md:leading-loose">
-      Mike is a software architect who started his career right at the peak of
-      the dot-com bubble in summer of 2000. He currently works at Google,
-      advising enterprise customers on their journey to the Cloud.
-    </p>
-    <p class="text-base mb-5 md:text-lg leading-relaxed md:leading-loose">
-      He focuses on cloud native web development, best practices, productivity
-      and team morale.
-    </p>
-    <p class="mb-0 text-base md:text-lg leading-relaxed md:leading-loose">
-      He shares his thoughts at
-      <a href="https://www.mikenikles.com">www.mikenikles.com</a>
-      (previously on Medium at https://medium.com/@mikenikles) and can also be
-      found on Twitter
-      <a href="https://www.twitter.com/@mikenikles">@mikenikles</a>
-      .
-    </p>
+  <section class="w-full px-6 py-8 md:p-24">
+    <Author />
   </section>
 </div>
