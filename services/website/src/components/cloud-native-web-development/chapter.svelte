@@ -4,7 +4,7 @@
 
 <style>
   .page {
-    color: #e6e051;
+    color: var(--primary-color);
   }
 </style>
 

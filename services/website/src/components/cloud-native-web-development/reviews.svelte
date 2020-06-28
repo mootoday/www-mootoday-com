@@ -21,9 +21,9 @@
 </script>
 
 <style>
-div {
-background-color: #082134;
-}
+  div {
+    background-color: #082134;
+  }
 </style>
 
 <div class="max-w-screen-xl mx-auto lg:grid lg:grid-cols-3">

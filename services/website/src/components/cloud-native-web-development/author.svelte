@@ -1,7 +1,7 @@
 <style>
   a {
     @apply font-semibold;
-    color: #83fcfc;
+    color: var(--secondary-color);
   }
 
   a:hover {

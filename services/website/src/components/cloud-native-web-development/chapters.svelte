@@ -144,7 +144,7 @@ p span{
     font-family: magistral-condensed, sans-serif;
     font-style: normal;
     font-weight: 400;
-    color: #e6e051;
+    color: var(--primary-color);
 }
 </style>
 

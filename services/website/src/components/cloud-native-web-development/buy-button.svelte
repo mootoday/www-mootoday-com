@@ -7,7 +7,7 @@
 
 <style>
   span {
-    background-color: #e6e051;
+    background-color: var(--primary-color);
     color: #041522;
     font-family: magistral-condensed, sans-serif;
     font-weight: 500;

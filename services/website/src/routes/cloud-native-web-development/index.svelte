@@ -30,18 +30,23 @@
 </script>
 
 <style>
+  .wrapper {
+    --primary-color: #e6e051;
+    --secondary-color: #83fcfc;
+  }
+
   .wrapper :global(h1) {
     font-family: magistral-condensed, sans-serif;
     font-style: normal;
     font-weight: 500;
-    color: #e6e051;
+    color: var(--primary-color);
   }
 
   .wrapper :global(h2) {
     font-family: magistral-condensed, sans-serif;
     font-style: normal;
     font-weight: 400;
-    color: #e6e051;
+    color: var(--primary-color);
   }
 
   .intro .description {
@@ -66,7 +71,7 @@
     font-family: magistral, sans-serif;
     font-style: normal;
     font-weight: 300;
-    color: #e6e051;
+    color: var(--primary-color);
   }
 
   @screen md {

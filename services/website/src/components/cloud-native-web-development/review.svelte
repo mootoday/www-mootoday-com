@@ -8,7 +8,7 @@
   }
 
   .title {
-    color: #e6e051;
+    color: var(--primary-color);
   }
 </style>
 
