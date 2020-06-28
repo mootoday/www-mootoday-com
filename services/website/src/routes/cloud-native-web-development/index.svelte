@@ -63,6 +63,10 @@
     @apply border-t-2;
   }
 
+  .wrapper .subscribe :global(h3) {
+    @apply text-white;
+  }
+
   .intro .description {
     font-family: industry, sans-serif;
     font-weight: 500;
