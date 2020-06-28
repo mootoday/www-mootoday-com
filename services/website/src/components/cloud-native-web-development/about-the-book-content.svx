@@ -12,7 +12,7 @@ The book starts with introductions to technologies used throughout the book and 
 * [Cypress](https://www.cypress.io/) for component and end-to-end testing
 * [Firebase Authentication](https://firebase.google.com/products/auth) to create accounts and authenticate users
 * [Cloud Firestore](https://firebase.google.com/docs/firestore) for data persistence
-* [Node.js](https://nodejs.org/en/) services deployed to [Cloud Run](https://cloud.run/) on [Google Cloud Platform](https://cloud.google.com/) to deal with asynchronous tasks (e.g. send a welcome email to new users)
+* [Node.js](https://nodejs.org/en/) services deployed to [Cloud Functions](https://cloud.google.com/functions/) on [Google Cloud Platform](https://cloud.google.com/) to deal with asynchronous tasks (e.g. send a welcome email to new users)
 
 The second part is hands-on, with pull requests that correspond to individual chapters in the book. All readers are part of a community and can collaborate among themselves and with the author.
 
