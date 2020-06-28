@@ -37,27 +37,27 @@
         <div class="max-w-4xl mx-auto">
           <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
             <div class="flex flex-col border-b p-6 text-center sm:border-0 sm:border-r">
-              <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500" id="item-1">
-                Pull Requests
+              <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500" id="stats-pages">
+                Pages
               </dt>
-              <dd class="number order-1 text-5xl leading-none font-extrabold" aria-describedby="item-1">
-                19
+              <dd class="number order-1 text-5xl leading-none font-extrabold" aria-describedby="stats-pages">
+                212
               </dd>
             </div>
             <div class="flex flex-col border-t border-b p-6 text-center sm:border-0 sm:border-l sm:border-r">
-              <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+              <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500" id="stats-chapters">
                 Chapters
               </dt>
-              <dd class="number order-1 text-5xl leading-none font-extrabold">
+              <dd class="number order-1 text-5xl leading-none font-extrabold" aria-describedby="stats-chapters">
                 32
               </dd>
             </div>
             <div class="flex flex-col border-t p-6 text-center sm:border-0 sm:border-l">
-              <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-                Pages
+              <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500" id="stats-pr">
+                Pull Requests
               </dt>
-              <dd class="number order-1 text-5xl leading-none font-extrabold">
-                212
+              <dd class="number order-1 text-5xl leading-none font-extrabold" aria-describedby="stats-pr">
+                19
               </dd>
             </div>
           </dl>
