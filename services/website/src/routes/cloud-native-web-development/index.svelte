@@ -51,7 +51,7 @@
   }
 
   .intro {
-    background-image: url("/cloud-native-web-development/cloud-native-web-development-bg-2000.jpg");
+    background-image: url("/cloud-native-web-development/cloud-native-web-development-bg-2000-medium.jpg");
   }
 
   .colored-bg {
