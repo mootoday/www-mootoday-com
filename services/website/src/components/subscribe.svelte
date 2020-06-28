@@ -15,6 +15,7 @@
           type="email"
           name="email"
           placeholder="youremail@example.com"
+          aria-label="Your email address"
           class="flex-1 w-full appearance-none rounded shadow p-3 text-gray-600 mr-2
           focus:outline-none" />
         <button
