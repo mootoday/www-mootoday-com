@@ -74,6 +74,7 @@
         <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
           <button on:click={hideBanner}
             type="button"
+            aria-label="Hide banner"
             class="-mr-1 flex p-2 rounded-md hover:bg-gray-800
             focus:outline-none focus:bg-gray-800">
             <svg
