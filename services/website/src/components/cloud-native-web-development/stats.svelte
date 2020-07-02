@@ -36,9 +36,9 @@
       <div class="absolute inset-0 h-1/2 bg-gray-50" />
       <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto">
-          <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+          <dl class="rounded-lg shadow-lg sm:grid sm:grid-cols-3">
             <div
-              class="card-bg flex flex-col border-gray-500 border-b p-6
+              class="card-bg flex flex-col border-b p-6
               text-center sm:border-0 sm:border-r">
               <dt
                 class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500"
