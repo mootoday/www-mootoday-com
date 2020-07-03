@@ -10,10 +10,14 @@ tags: ["book", "cloud", "cloud-native", "web", "development", "webdev", "communi
   const assetsBasePath = `blog-posts/2020-07-03-${slug}`;
 </script>
 
+Photo credit: [Florian Klauer](https://unsplash.com/@florianklauer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+
 ## About the book
 
 The best place to learn about the book is on its [landing page](/cloud-native-web-development). It contains
 details of the content, a list of each chapter, reviews and more.
+
+![Cloud Native Web Development cover]({assetsBasePath}/2.jpg)
 
 In short: Cloud Native Web Development is a hands-on guidebook that walks readers through the entire end-to-end
 process of developing, testing, deploying and monitoring a cloud-native web application.
