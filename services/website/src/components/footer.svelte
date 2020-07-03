@@ -1,10 +1,11 @@
 <script>
   import A from "./ui-elements/a.svelte";
+  import CnwdBanner from "./cloud-native-web-development/banner.svelte";
 </script>
 
 <footer class="bg-gray-900">
   <div
-    class="container w-full px-4 md:px-0 max-w-6xl mx-auto flex items-center
+    class="container pb-24 w-full px-4 md:px-0 max-w-6xl mx-auto flex items-center
     py-8">
     <div class="w-full mx-0 sm:mx-6">
       <div class="w-full mx-auto flex flex-wrap items-center">
@@ -54,4 +55,5 @@
       </div>
     </div>
   </div>
+  <CnwdBanner />
 </footer>
