@@ -29,7 +29,7 @@ As the software world embraced cloud environments to deploy and run applications
 
 I'm a Chromebook user - have been for a year and a half and will continue to be (AMA if you're curious why)! While I can install [VS Code](https://code.visualstudio.com/) - my editor of choice - on a Chromebook thanks to its linux support, I couldn't find an answer to "Why?". Why would I develop locally when in the end, the applications I work on run in the cloud? Why would I want to carry my laptop everywhere I want to write code?
 
-There have been solutions to run an IDE in the cloud for some time. I remember Cloud9, then experimented with `[code-server](https://github.com/cdr/code-server)` before I settled on [www.gitpod.io](https://www.gitpod.io/).
+There have been solutions to run an IDE in the cloud for some time. I remember Cloud9, then experimented with [code-server](https://github.com/cdr/code-server) before I settled on [www.gitpod.io](https://www.gitpod.io/).
 
 > **Are You Ready-To-Code?** Start Instantly. Anywhere.  
 > Gitpod launches ready-to-code dev environments for your GitHub or GitLab project with a single click.
@@ -105,6 +105,6 @@ It's important to be fully transparent and list two gotchas that come to mind.
 
 I most recently developed [https://github.com/mikenikles/markua-docs-addon](https://github.com/mikenikles/markua-docs-addon) entirely in Gitpod. The efficiency and convenience of this experience led me to write this post and to share my experience with a wider audience.
 
-There is a lot more to how I work, reduce friction and increase productivity especially when it comes to web development. If you're interested, please head over to [https://leanpub.com/cloud-native-web-development](https://leanpub.com/cloud-native-web-development) and sign up for updates of my upcoming book, **Cloud Native Web Development**.
+There is a lot more to how I work, reduce friction and increase productivity especially when it comes to web development. If you're interested, please head over to [the book's detail page](/cloud-native-web-development) to learn more and purchase **Cloud Native Web Development**.
 
 👋
