@@ -29,64 +29,6 @@
 </script>
 
 <style>
-  /* Headings */
-  div.content :global(h2) {
-    @apply pt-6 text-3xl font-semibold;
-  }
-
-  div.content :global(h3) {
-    @apply pt-4;
-  }
-
-  /* Lists */
-  div.content :global(ol, ul) {
-    @apply list-inside pb-4 text-lg;
-  }
-
-  div.content :global(ol) {
-    @apply list-decimal;
-  }
-
-  div.content :global(ul) {
-    @apply list-disc;
-  }
-
-  div.content :global(ol ul),
-  div.content :global(ol ol),
-  div.content :global(ul ul),
-  div.content :global(ul ol) {
-    @apply pl-8;
-  }
-
-  /* Content. p, code, etc. */
-  div.content :global(h1 + p),
-  div.content :global(h2 + p),
-  div.content :global(h3 + p) {
-    @apply pt-1;
-  }
-
-  div.content :global(p) {
-    @apply py-4 text-lg;
-  }
-
-  div.content :global(code) {
-    @apply py-4 text-lg;
-  }
-
-  div.content :global(blockquote) {
-    padding: 0 1.5em;
-    border-left: 3px solid #4c51bf;
-  }
-
-  div.content :global(a) {
-    @apply text-gray-800 no-underline border-b-2 border-indigo-700;
-  }
-
-  div.content :global(a:hover) {
-    @apply text-indigo-700;
-  }
-
-  /* Media assets */
   div.content :global(img) {
     cursor: zoom-in;
   }
@@ -128,7 +70,7 @@
         leading-normal"
         style="font-family:Georgia,serif;">
         <p class="text-2xl md:text-3xl mb-5">{post.metadata.summary}</p>
-        <div class="content break-words">
+        <div class="prose lg:prose-xl content break-words">
           <slot />
         </div>
         <Comments />
