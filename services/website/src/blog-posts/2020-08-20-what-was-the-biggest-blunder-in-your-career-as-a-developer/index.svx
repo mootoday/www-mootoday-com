@@ -22,19 +22,19 @@ My snarky response was that Twitter doesn't provide enough characters to answer 
 
 I am going to expand on the question and include things I generally handled badly and would not let happen again.
 
-## Non-techncial
+## Non-technical
 
 ### Share my current salary
 
-I was young and naive and didn't know how recruiting worked. After a few months, I started to participate in technical hiring interviews and by chance got to see a candidate's offer with a salary quite a bit above mine... Asked HR to at least match my salary, without success. I moveed on.
+I was young and naive and didn't know how recruiting worked. After a few months, I started to participate in technical hiring interviews and by chance got to see a candidate's offer with a salary quite a bit above mine... I asked HR to at least match my salary, without success. I moveed on.
 
 **Lesson learned**: Never, ever share your current salary. It's nobody's business. You apply for a new role, a new company, a new environment and the salary should reflect what value you bring to that environment.
 
 ### Not negotiate my salary
 
-My first job abroad. I thought I was lucky to get hired and have the company's support for my work visa. Again, you and naive.
+My first job abroad. I thought I was lucky to get hired and have the company's support for my work visa. Again, young and naive.
 
-**Lesson learned**: Always, always ask for more than the company offers. A recruiter's job is to hire you at the lowest possible rate. Remember, they work for the company, not for you!
+**Lesson learned**: Always, always ask for more than the company offers. A recruiter's job is to hire you at the lowest possible rate. Remember, they work for the company, not for you! Worst that can happen is they say no and you get what they offered initially - don't give up easily though, they're trained professionals!
 
 ### Let micro-managers stress me out
 
@@ -54,7 +54,7 @@ When I joined the second family business, a former co-worker lured me in with fa
 
 ### Let someone yell at me in a meeting
 
-Also one that makes me laugh and feel pitty for the dude. I led the engineering team and a wants-to-be-important designer micro-manager yelled at me saying the engineering team needs to deliver software quicker. No oher execs in the room would speak up and it was clear there's no hope for them.
+Also one that makes me laugh and feel pitty for the dude. I led the engineering team and a wants-to-be-important designer micro-manager yelled at me saying the engineering team needs to deliver software quicker. No other execs in the room would speak up and it was clear there's no hope for them.
 
 **Lesson learned**: If yelled at again, get up and go home. Let people cool down and see what's next.
 
@@ -66,7 +66,7 @@ Also one that makes me laugh and feel pitty for the dude. I led the engineering 
 
 The list goes on. It's very, very rarerly worth it to work evenings, nights or weekends.
 
-**Unless**, you work on your own business!
+**Unless**, you work on your own business! Even then though, don't burn out.
 
 **Lesson learned**: Health & happiness are the most important. Putting that at risk to make someone else's dream come true is dumb.
 
@@ -93,3 +93,5 @@ I am not going to attempt to list what I messed up from a technical perspective.
 > Do not blame individuals for technical blunders - blame the processes, tools and workflows.
 
 This is important and should be the #1 guideline every development team adopts. If your processes and tools allow inividuals to mess up, you failed at putting proper safeguards in place. Period.
+
+👋
