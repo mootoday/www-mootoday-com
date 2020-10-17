@@ -29,19 +29,24 @@
       "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
     items: [
       {
-        label: "Cloud Native Web Development",
-        description: "A hands-on guidebook: From source code to production.",
+        label: "打開門",
+        description: "RECYCLING and RE-PURPOSING scavenged objects from the WCH area is a key incentive to our artistic production and occasional open house sessions to turn our raw material into art pieces.",
         href: "/cloud-native-web-development",
         svgPath:
           "M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
       },
       {
-        label: "Markua Support",
-        description:
-          "Do you write books on Leanpub? Use Google Docs instead and use the Markua Support add-on to help you.",
+        label: "據點一杯茶",
+        description: "Floating Teatime",
         href: "/markua-support",
         svgPath:
           "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+      },
+      {
+        label: "句點藝術群體",
+        description: "Floating Projects Collective",
+        href: "/markua-support",
+        svgPath: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
       }
     ]
   };

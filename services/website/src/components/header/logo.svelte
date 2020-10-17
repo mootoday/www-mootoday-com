@@ -8,8 +8,7 @@
   {#if !$headerStore.header.isTransparent}
     <div transition:fade={{duration: 500}}>
       <A class="flex" href="/">
-        👋
-        <span class="pl-1">Mike Nikles</span>
+        <span class="pl-1">據點。句點</span>
       </A>
     </div>
   {/if}

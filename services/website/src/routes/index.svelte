@@ -55,7 +55,7 @@
     <div
       class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
       <h1 use:titleAction class="text-white font-extrabold text-3xl md:text-5xl">
-        👋 Mike Nikles
+        👋 Floating Projects Collective
       </h1>
       <h2 class="text-xl md:text-2xl text-gray-500">Welcome to my blog</h2>
     </div>

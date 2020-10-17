@@ -10,7 +10,7 @@
 
 <meta property="og:description" content="{description}">
 <meta property="og:image" content="{image}">
-<meta property="og:site_name" content="Mike's Personal Website">
+<meta property="og:site_name" content="據點。句點">
 <meta property="og:title" content="{title}">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.mikenikles.com{$page.path}">
+<meta property="og:url" content="https://http://floatingprojectscollective.net/{$page.path}">

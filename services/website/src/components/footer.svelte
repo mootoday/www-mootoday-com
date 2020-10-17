@@ -1,6 +1,5 @@
 <script>
   import A from "./ui-elements/a.svelte";
-  import CnwdBanner from "./cloud-native-web-development/banner.svelte";
 </script>
 
 <footer class="bg-gray-900">
@@ -13,8 +12,7 @@
           class="flex w-full md:w-1/2 justify-center md:justify-start text-white
           font-extrabold">
           <p class="no-underline">
-            👋
-            <span class="text-base text-white">Mike Nikles</span>
+            <span class="text-base text-white">據點。句點</span>
           </p>
         </div>
         <div
@@ -27,27 +25,9 @@
               <A
                 class="inline-block py-2 px-3 text-white no-underline
                 hover:text-gray-200 hover:underline"
-                href="https://www.twitter.com/mikenikles"
+                href="https://www.facebook.com/floatingprojects"
                 target="_blank">
-                Twitter
-              </A>
-            </li>
-            <li>
-              <A
-                class="inline-block text-white no-underline hover:text-gray-200
-                hover:underline py-2 px-3"
-                href="https://www.linkedin.com/in/mikenikles/"
-                target="_blank">
-                LinkedIn
-              </A>
-            </li>
-            <li>
-              <A
-                class="inline-block text-white no-underline hover:text-gray-200
-                hover:underline py-2 px-3"
-                href="https://github.com/mikenikles"
-                target="_blank">
-                GitHub
+                Facebook
               </A>
             </li>
           </ul>
@@ -55,5 +35,4 @@
       </div>
     </div>
   </div>
-  <CnwdBanner />
 </footer>
