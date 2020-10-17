@@ -1,5 +1,5 @@
 {
-  "name": "www-mikenikles-com",
+  "name": "fp-website",
   "version": "2.0.0",
   "description": "Mike's personal website.",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:mikenikles/www-mikenikles-com.git"
+    "url": "https://github.com/fukkuen/www-mikenikles-com.git"
   },
   "author": "Mike, @mikenikles",
   "license": "MIT",
