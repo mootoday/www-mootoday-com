@@ -4,6 +4,7 @@ slug: "my-personal-website-v2-0"
 summary: "A complete rewrite of my personal website and blog with Svelte, Sapper, mdsvex and Tailwind CSS. Blog posts can be reviewed on a preview URL and discussed in a pull request. The site follows best practices; accessibility (a11y), top Lighthouse score, Google's web vitals, and SEO."
 createdAt: 2020-06-24T13:48:01.764Z
 tags: ["svelte", "sapper", "web development", "mdsvex", "tailwind css"]
+layout: blog
 ---
 
 <script>

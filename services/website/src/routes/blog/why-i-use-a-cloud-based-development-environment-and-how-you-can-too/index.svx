@@ -4,6 +4,7 @@ slug: "why-i-use-a-cloud-based-development-environment-and-how-you-can-too"
 summary: "JBuilder, Eclipse, WebStorm, Atom, VS Code - The evolution of my development IDEs before I moved to the cloud. Learn why I did and how you can too!"
 createdAt: 2020-03-31T00:00:00.000Z
 tags: ["development", "cloud"]
+layout: blog
 ---
 
 Photo by myself, [Sulsseeli](https://goo.gl/maps/tezxpewfmSGkNFme6) in Switzerland

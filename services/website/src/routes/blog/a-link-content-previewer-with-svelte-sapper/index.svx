@@ -4,6 +4,7 @@ slug: "a-link-content-previewer-with-svelte-sapper"
 summary: "Develop a <LinkPreview> Svelte component to display a link's content in a preview card."
 createdAt: 2020-04-18T00:00:00.000Z
 tags: ["svelte", "sapper", "web", "development"]
+layout: blog
 ---
 
 Photo by [JJ Ying](https://unsplash.com/@jjying?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/link?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
