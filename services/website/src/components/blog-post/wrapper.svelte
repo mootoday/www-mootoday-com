@@ -1,6 +1,6 @@
 <script>
   import { fade } from "svelte/transition";
-  import { headerStore } from "../../stores";
+  // import { headerStore } from "../../stores";
   import Comments from "../comments.svelte";
   import Footer from "../footer.svelte";
   import Header from "../header/index.svelte";
@@ -10,21 +10,21 @@
 
   export let post;
 
-  const titleAction = node => {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        headerStore.setScrollBarProgressVisible(!entry.isIntersecting, post.metadata.readingTime)
-      });
-    });
+  const titleAction = (/*node*/) => {
+  //   const observer = new IntersectionObserver((entries, observer) => {
+  //     entries.forEach(entry => {
+  //       // headerStore.setScrollBarProgressVisible(!entry.isIntersecting, post.metadata.readingTime)
+  //     });
+  //   });
 
-    observer.observe(node);
+  //   observer.observe(node);
 
-    return {
-      destroy() {
-        headerStore.setScrollBarProgressVisible(false, {});
-        observer.disconnect();
-      }
-    };
+  //   return {
+  //     destroy() {
+  //       headerStore.setScrollBarProgressVisible(false, {});
+  //       observer.disconnect();
+  //     }
+  //   };
   };
 </script>
 

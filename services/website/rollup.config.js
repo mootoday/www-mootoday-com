@@ -22,6 +22,9 @@ const onwarn = (warning, onwarn) =>
 
 const sveltePreprocessOptions = [
   mdsvex({
+    layout: {
+      blog: "./src/components/blog-post/layout.svelte",
+    },
     rehypePlugins: [
       [
         rehypePicture,

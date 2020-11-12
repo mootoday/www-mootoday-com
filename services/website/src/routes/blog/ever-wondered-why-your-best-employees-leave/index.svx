@@ -4,6 +4,7 @@ slug: "ever-wondered-why-your-best-employees-leave"
 summary: "Thoughts on why top employees leave their jobs."
 createdAt: 2016-04-11T00:00:00.000Z
 tags: ["team", "morale"]
+layout: blog
 ---
 
 Take off your rose-coloured sunglasses and be excellent to your employees

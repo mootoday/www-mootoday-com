@@ -4,6 +4,7 @@ slug: "i-am-writing-a-book-cloud-native-web-development"
 summary: "I am writing a hands-on guidebook on how to develop cloud-native web applications."
 createdAt: 2020-05-10T00:00:00.000Z
 tags: ["webdev", "cloud", "book", "javascript"]
+layout: blog
 ---
 
 Photo by [Paul Hanaoka](https://unsplash.com/@plhnk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/book-cover?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

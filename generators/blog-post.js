@@ -27,14 +27,8 @@ module.exports = (plop) => {
       {
         type: "add",
         path:
-          "../services/website/src/blog-posts/{{convertDateIsoToYMD blogPostCreatedAt}}-{{dashCase blogPostTitle}}/index.svx",
+          "../services/website/src/routes/blog/{{dashCase blogPostTitle}}/index.svx",
         templateFile: "../templates/blog-post/index.svx.hbs",
-      },
-      {
-        type: "add",
-        path:
-          "../services/website/src/routes/blog/{{dashCase blogPostTitle}}/index.svelte",
-        templateFile: "../templates/blog-post/page.svelte.hbs",
       },
       {
         type: "add",

@@ -1,8 +1,12 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
+  - command: echo ""
   - init: npm install
+    command: cd services/website && npm run dev
 ports:
+  - port: 3000
+    onOpen: ignore
   - port: 5900
     onOpen: ignore
   - port: 6080

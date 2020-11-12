@@ -1,10 +1,10 @@
 import fs from "fs";
 import frontMatter from "front-matter";
-import readingTime from "reading-time";
+// import readingTime from "reading-time";
 
 const generatePost = (dirent) => {
   const postContent = fs.readFileSync(
-    `./src/blog-posts/${dirent.name}/index.svx`,
+    `./src/routes/blog/${dirent.name}/index.svx`,
     {
       encoding: "utf-8",
     }
@@ -14,12 +14,16 @@ const generatePost = (dirent) => {
   return {
     metadata: {
       ...postFrontMatter.attributes,
-      readingTime: readingTime(postFrontMatter.body),
+      // readingTime: readingTime(postFrontMatter.body),
+      // TODO: Find a way to implement the above again
+      readingTime: {
+        text: "",
+      },
     },
   };
 };
 
-const names = fs.readdirSync("./src/blog-posts", { withFileTypes: true });
+const names = fs.readdirSync("./src/routes/blog", { withFileTypes: true });
 const posts = names
   .filter((dirent) => dirent.isDirectory())
   .map(generatePost)
