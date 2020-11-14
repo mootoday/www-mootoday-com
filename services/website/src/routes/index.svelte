@@ -1,10 +1,8 @@
 <script context="module">
-  export function preload({ params, query }) {
-    return this.fetch(`blog.json`)
-      .then(r => r.json())
-      .then(posts => {
-        return { posts };
-      });
+  export async function  preload({ params, query }) {
+    const response = await this.fetch(`blog.json`);
+    const posts = await response.json();
+    return { posts };
   }
 </script>
 
@@ -19,10 +17,7 @@
 
   export let posts;
 
-  // Without cloning the posts, it is an empty array when hydration kicks in.
-  const postsArray = [...posts];
-
-  $: filteredPosts = postsArray.filter(post =>
+  $: filteredPosts = posts.filter(post =>
     post.metadata.title.toLowerCase().includes($searchStore.toLowerCase()) ||
     post.metadata.summary.toLowerCase().includes($searchStore.toLowerCase())
   ).sort((a, b) =>
@@ -32,6 +27,8 @@
       ? 1
       : 0
   );
+  $: mostRecentPost = filteredPosts[0];
+  $: olderPosts = filteredPosts.slice(1);
 
   const titleAction = node => {
     const observer = new IntersectionObserver((entries, observer) => {
@@ -72,21 +69,21 @@
       <div
         class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800
         leading-normal rounded-t">
-        {#if filteredPosts.length > 0}
-          <BlogPostPreviewLead post={filteredPosts.shift()} />
-          <div class="flex flex-wrap justify-between py-12 md:-mx-6">
-            {#each filteredPosts as post (post.metadata.slug)}
-              <BlogPostPreview {post} />
-            {/each}
-          </div>
-        {:else}
+          {#if mostRecentPost}
+            <BlogPostPreviewLead post={mostRecentPost} />
+          {/if}
+          {#if olderPosts.length > 0}
+            <div class="flex flex-wrap justify-between py-12 md:-mx-6">
+              {#each olderPosts as post (post.metadata.slug)}
+                <BlogPostPreview {post} />
+              {/each}
+            </div>
+          {/if}
+        {#if !mostRecentPost && olderPosts.length === 0}
           <p>No blog posts match your search criteria.</p>
         {/if}
       </div>
-
-      {#if false}
-        <Subscribe />
-      {/if}
+      <Subscribe />
     </div>
   </div>
   <Footer />
