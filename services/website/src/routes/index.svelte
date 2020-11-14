@@ -25,6 +25,12 @@
   $: filteredPosts = postsArray.filter(post =>
     post.metadata.title.toLowerCase().includes($searchStore.toLowerCase()) ||
     post.metadata.summary.toLowerCase().includes($searchStore.toLowerCase())
+  ).sort((a, b) =>
+    a.metadata.createdAt > b.metadata.createdAt
+      ? -1
+      : a.metadata.createdAt < b.metadata.createdAt
+      ? 1
+      : 0
   );
 
   const titleAction = node => {
