@@ -15,7 +15,6 @@
   };
 
   const handleBodyKeydown = event => {
-    console.log("JFLKDJFLKSJFLKSJFDSLKFJSLDKFJSKDLFJSL")
     let isEscape = false;
     if ("key" in event) {
       isEscape = event.key === "Escape" || event.key === "Esc";

@@ -23,7 +23,7 @@
               </div>
             </div>
             <div>
-              <nav class="grid row-gap-8">
+              <nav class="grid gap-y-8">
                 {#each menuItems as menuItem}
                 <A href="{menuItem.href}" class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
                   <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
