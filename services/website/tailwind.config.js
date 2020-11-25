@@ -2,7 +2,7 @@ module.exports = {
   purge: {
     content: ["./src/**/*.svelte"],
     options: {
-      whitelistPatterns: [/svelte-/],
+      safelist: [/svelte-/],
     },
   },
   theme: {
