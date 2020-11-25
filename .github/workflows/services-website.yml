@@ -3,7 +3,7 @@ name: services/website
 on:
   pull_request:
     paths:
-    - 'services/website/**'
+      - "services/website/**"
 
 jobs:
   test_setup:
@@ -21,7 +21,7 @@ jobs:
   test_lighthouse:
     name: Test Lighthouse
     needs: test_setup
-    runs-on:  ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Audit Vercel preview URL using Lighthouse
@@ -39,7 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run Cypress
-        uses: cypress-io/github-action@v1
+        uses: cypress-io/github-action@v2
         with:
           config: baseUrl=${{ needs.test_setup.outputs.preview_url }}
           install: false # We test a live preview URL, no need to install packages
