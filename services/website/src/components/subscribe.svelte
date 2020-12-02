@@ -1,5 +1,5 @@
 <div
-  class="container font-sans bg-teal-100 rounded mt-8 p-4 md:p-24 text-center">
+  class="container font-sans bg-green-50 rounded mt-8 p-4 md:p-24 text-center">
   <h2 class="font-bold break-normal text-2xl md:text-4xl tracking-widest">
     Subscribe to my newsletter
   </h2>
@@ -21,8 +21,8 @@
         <button
           type="submit"
           class="flex-1 mt-4 md:mt-0 block md:inline-block appearance-none
-          bg-teal-700 text-white text-base font-semibold tracking-wider
-          uppercase p-4 rounded shadow hover:bg-teal-600">
+          bg-green-700 text-white text-base font-semibold tracking-wider
+          uppercase p-4 rounded shadow hover:bg-green-600">
           Subscribe
         </button>
       </div>
