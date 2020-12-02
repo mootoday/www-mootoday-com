@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    content: ["./src/**/*.svelte"],
+    content: ["./src/**/*.svelte", "./src/**/*.svx"],
     options: {
       safelist: [/svelte-/],
     },
