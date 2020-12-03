@@ -1,8 +1,15 @@
 <script>
   export let entry;
+  export let isSelfPositionEnd = false;
 </script>
 
-<div>
+<style>
+  .isSelfPositionEnd {
+    @apply self-end;
+  }
+</style>
+
+<div class:isSelfPositionEnd class="w-1/2">
   <p>{entry.timestamp}</p>
   <p>{entry.label}</p>
   <p>{entry.milestone}</p>
