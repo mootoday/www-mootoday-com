@@ -14,7 +14,10 @@
   }
 </style>
 
-<span class="text-sm capitalize">{formatRelative(entry.timestamp, Date.now())}</span>
+<div class="flex justify-between items-center">
+  <span class="text-sm capitalize">{formatRelative(entry.timestamp, Date.now())}</span>
+  <span class="py-1 px-4 rounded-full uppercase text-white bg-{entry.label}-500">{entry.label}</span>
+</div>
 
 <p>
 {#if entry.cta}
