@@ -4,7 +4,26 @@
   export let entry;
 </script>
 
-<p>{formatRelative(entry.timestamp, Date.now())}</p>
-<p>{entry.milestone}</p>
-<p>{entry.cta}</p>
-<p>{entry.link}</p>
+<style>
+  a {
+    @apply underline;
+  }
+
+  p {
+    @apply leading-10 text-xl;
+  }
+</style>
+
+<span class="text-sm capitalize">{formatRelative(entry.timestamp, Date.now())}</span>
+
+<p>
+{#if entry.cta}
+  {entry.milestone}
+{:else}
+  <a href="{entry.link}">{entry.milestone}</a>
+{/if}
+</p>
+
+{#if entry.cta}
+  <p><a href="{entry.link}">{entry.cta}</a></p>
+{/if}
