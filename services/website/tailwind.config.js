@@ -17,6 +17,12 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      alignSelf: ["even"],
+      flexDirection: ["odd"],
+      justifyContent: ["odd"],
+    },
+  },
   plugins: [require("@tailwindcss/typography")],
 };
