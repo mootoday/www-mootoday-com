@@ -10,6 +10,7 @@
 
 <style>
   .entries::after {
+    /* Kudos to https://www.florin-pop.com/timeline */
     background-color: #000;
     content: "";
     position: absolute;
