@@ -1,5 +1,5 @@
 <script context="module">
-  export async function  preload({ params, query }) {
+  export async function  preload() {
     const response = await this.fetch(`blog.json`);
     const posts = await response.json();
     return { posts };
@@ -10,9 +10,9 @@
   import BlogPostPreview from "../components/blog-post/previews/index.svelte";
   import BlogPostPreviewLead from "../components/blog-post/previews/lead.svelte";
   import Footer from "../components/footer.svelte";
-  import Header from "../components/header/index.svelte";
   import SeoHead from "../components/seo/head.svelte";
   import Subscribe from "../components/subscribe.svelte";
+  import Timeline from "../components/timeline/index.svelte";
   import { headerStore, searchStore } from "../stores";
 
   export let posts;
@@ -24,7 +24,7 @@
     a.metadata.createdAt > b.metadata.createdAt
       ? -1
       : a.metadata.createdAt < b.metadata.createdAt
-      ? 1
+      ? 1 
       : 0
   );
   $: mostRecentPost = filteredPosts[0];
@@ -50,6 +50,9 @@
 </script>
 
 <SeoHead />
+
+<Timeline />
+
 <div class="flex flex-col min-h-screen bg-gray-200 font-sans leading-normal tracking-normal">
   <div
     class="w-full m-0 p-0 bg-cover bg-bottom"
