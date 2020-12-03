@@ -23,7 +23,7 @@
   <Filters {filters} />
   <Intro />
   
-  <div class="entries flex flex-col">
+  <div class="mt-20 flex flex-col space-y-10 entries">
     {#each entries as entry, index}
       <Entry {entry} isSelfPositionEnd={index % 2 !== 0} />
     {/each}
