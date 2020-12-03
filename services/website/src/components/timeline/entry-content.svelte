@@ -14,7 +14,7 @@
   }
 </style>
 
-<div class="z-10 p-4 bg-white shadow-md rounded-md border-4 border-{entry.label} md:w-3/5">
+<div class="z-10 p-4 w-full bg-white shadow-md rounded-md border-4 border-{entry.label} text-sm md:w-3/5 md:text-lg">
   <div class="flex justify-between items-center">
     <span class="text-sm capitalize">{formatRelative(entry.timestamp, Date.now())}</span>
     <span class="py-1 px-4 rounded-full uppercase text-white bg-{entry.label}">{entry.label}</span>

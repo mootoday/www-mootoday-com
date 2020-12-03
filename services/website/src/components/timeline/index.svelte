@@ -14,15 +14,10 @@
 
 <style>
   .entries::after {
+    /* Kudos to https://www.florin-pop.com/timeline */
     @apply bg-black absolute left-4 w-1 h-full;
+    left: calc(50% - 2px);
     content: "";
-  }
-
-  @screen md {
-    .entries::after {
-      /* Kudos to https://www.florin-pop.com/timeline */
-      left: calc(50% - 2px);
-    }
   }
 </style>
 

@@ -7,7 +7,7 @@
 
 <style>
   div {
-    @apply pl-5;
+    @apply px-2;
   }
 
   .circle {
@@ -20,7 +20,7 @@
 
   @screen md {
     div {
-      @apply pl-0;
+      @apply px-0;
     }
 
     .circle {
@@ -42,7 +42,7 @@
 </style>
 
 <div class:odd={isOddChild} class="flex w-full md:odd:justify-start md:even:self-end md:odd:flex-row-reverse md:w-1/2">
-  <span class="circle z-10 self-center bg-white rounded-full h-10 w-10 border-4 border-{entry.label}"></span>
-  <span class="triangle transform rotate-45 self-center h-10 w-10 bg-{entry.label}"></span>
+  <span class="circle hidden md:block z-10 self-center bg-white rounded-full h-10 w-10 border-4 border-{entry.label}"></span>
+  <span class="triangle hidden md:block transform rotate-45 self-center h-10 w-10 bg-{entry.label}"></span>
   <EntryContent {entry} />
 </div>
