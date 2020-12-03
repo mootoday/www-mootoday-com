@@ -13,3 +13,7 @@ ports:
     onOpen: ignore
   - port: 10000
     onOpen: ignore
+
+vscode:
+  extensions:
+    - bradlc.vscode-tailwindcss@0.5.4:JBo46wRidL8+LjxbN3OTyA==
