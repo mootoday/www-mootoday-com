@@ -4,16 +4,16 @@ module.exports = {
   purge: {
     content: ["./src/**/*.svelte", "./src/**/*.svx"],
     options: {
-      safelist: [/svelte-/, /blog-/, /project-/, /twitter-/, /youtube-/],
+      safelist: [/svelte-/, /-blog/, /-project/, /-twitter/, /-youtube/],
     },
   },
   theme: {
     extend: {
       colors: {
-        blog: colors.purple,
-        project: colors.red,
-        twitter: colors.green,
-        youtube: colors.blue,
+        blog: colors.trueGray["500"],
+        project: colors.violet["500"],
+        twitter: "#1da1f2",
+        youtube: "#ff0000",
       },
     },
   },
