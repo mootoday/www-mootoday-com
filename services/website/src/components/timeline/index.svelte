@@ -25,7 +25,7 @@
   <Intro />
   <Filters />
 
-  <div class="mt-20 flex flex-col space-y-10 relative entries">
+  <div class="entries mt-10 flex flex-col space-y-10 relative md:mt-20">
     {#each $timelineEntries as entry}
       {#if typeof entry === "number"}
         <YearDivider year={entry} />
