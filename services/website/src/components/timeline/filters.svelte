@@ -1,17 +1,17 @@
 <script>
-  import { timelineFiltersStore } from "../../stores";
+  import { selectedFilters, uniqueFilters } from "../../stores/timeline";
 
-  export let filters;
+  // export let filters;
 </script>
 
 <div class="mt-20 mb-10 px-2 grid grid-cols-2 md:flex md:justify-center md:space-x-20">
-  {#each filters as filter}
+  {#each $uniqueFilters as filter}
     <div class="relative flex items-center text-{filter}">
       <div class="flex items-center h-6 md:h-10">
         <input
           id="filter_{filter}"
           type="checkbox"
-          bind:group={$timelineFiltersStore}
+          bind:group={$selectedFilters}
           value={filter}
           class="focus:ring-indigo-500 h-5 w-5 border-gray-300 rounded md:h-10 md:w-10" />
       </div>
