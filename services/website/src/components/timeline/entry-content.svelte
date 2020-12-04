@@ -3,7 +3,7 @@
 
   export let entry;
 
-  $: humanReadableTimestamp = entry.isBirth ? "On a sunny day in the 1980s" : formatDistanceToNow(entry.timestamp, { addSuffix: true });
+  $: humanReadableTimestamp = entry.isBirth ? entry.timestamp : formatDistanceToNow(entry.timestamp, { addSuffix: true });
 </script>
 
 <style>

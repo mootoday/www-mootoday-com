@@ -9,8 +9,9 @@
   const birthEntry = {
     label: "black",
     isBirth: true,
-    milestone: "👶",
-    year: "1980s"
+    milestone: "👶🍼 => 🤓🖥️ => 👨🗺️",
+    timestamp: "Starting on a sunny day in the 1980s...",
+    year: "1980s",
   };
 </script>
 
