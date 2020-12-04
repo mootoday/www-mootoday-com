@@ -2,6 +2,7 @@
   import { timelineEntries } from "../../stores/timeline";
   import Entry from "./entry.svelte";
   import Filters from "./filters.svelte";
+  import Search from "./search.svelte";
   import Intro from "./intro.svelte";
   import YearDivider from "./year-divider.svelte";
 
@@ -24,6 +25,7 @@
 <div class="pt-20 md:container md:mx-auto">
   <Intro />
   <Filters />
+  <Search />
 
   <div class="entries mt-10 flex flex-col space-y-10 relative md:mt-20">
     {#each $timelineEntries as entry}

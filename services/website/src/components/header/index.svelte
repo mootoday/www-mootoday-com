@@ -4,13 +4,11 @@
   import MobileMenu from "./mobile-menu.svelte";
   import RightNav from "./right-nav.svelte";
   import ScrollProgressBar from "../blog-post/scroll-progress-bar.svelte";
-  import Search from "./search.svelte";
   import SocialIcons from "./social-icons.svelte";
 
   const { page } = stores();
 
   $: isBlogPage = $page.path.startsWith("/blog");
-  $: isSearchVisible = $page.path === "/";
 
   let openMenu = "";
 
@@ -47,11 +45,8 @@
 <div class="z-20 fixed transition duration-500 bg-gray-900 w-full">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-center text-white p-2">
-      <div class={`${isSearchVisible ? 'flex' : 'hidden md:flex'} justify-start flex-1`}>
+      <div class="hidden md:flex justify-start flex-1">
         <SocialIcons />
-        {#if isSearchVisible}
-        <Search />
-        {/if}
       </div>
       <Logo />
       <RightNav {onMenuClicked} {openMenu} {projectsMenu} />
