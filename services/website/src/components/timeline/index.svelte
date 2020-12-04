@@ -3,6 +3,7 @@
   import Entry from "./entry.svelte";
   import Filters from "./filters.svelte";
   import Intro from "./intro.svelte";
+  import YearDivider from "./year-divider.svelte";
 
   export let entries;
 
@@ -10,6 +11,14 @@
   $timelineFiltersStore = uniqueFilters;
 
   $: filteredEntries = entries.filter(entry => $timelineFiltersStore.includes(entry.label));
+  $: entriesGroupedByYear = filteredEntries.reduce((result, entry) => {
+    const entryYear = new Date(entry.timestamp).getFullYear();
+    if (!result[entryYear]) {
+      result[entryYear] = [];
+    }
+    result[entryYear].push(entry);
+    return result;
+  }, {});
 </script>
 
 <style>
@@ -26,8 +35,11 @@
   <Filters filters={uniqueFilters} />
   
   <div class="mt-20 flex flex-col space-y-10 relative entries">
-    {#each filteredEntries as entry, index}
-      <Entry {entry} isOddChild={index % 2 === 0} />
+    {#each Object.keys(entriesGroupedByYear).sort((a,b) => b-a) as year}
+      {#each entriesGroupedByYear[year] as entry, indexEntry}
+        <Entry {entry} isOddChild={indexEntry % 2 === 0} />
+      {/each}
+      <YearDivider {year} />
     {/each}
   </div>
 </div>

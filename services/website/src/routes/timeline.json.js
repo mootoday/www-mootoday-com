@@ -20,14 +20,14 @@ const timelineEntries = [
     link: "/blog/introducing-the-timeline-view",
   },
   {
-    timestamp: 1606911112654,
+    timestamp: 1577059200000,
     label: "twitter",
     milestone: "700 Followers 🎉",
     cta: "Check out my tweets",
     link: "/blog/introducing-the-timeline-view",
   },
   {
-    timestamp: 1606901112654,
+    timestamp: 1526083200000,
     label: "youtube",
     milestone: "20 Subscribers 🎉",
     cta: "Check out my videos",
