@@ -15,7 +15,7 @@ const timelineEntries = [
   {
     timestamp: 1606921112654,
     label: "twitter",
-    milestone: "700 Followers 🎉",
+    milestone: "705 Followers 🎉",
     cta: "Check out my tweets",
     link: "/blog/introducing-the-timeline-view",
   },
@@ -23,6 +23,13 @@ const timelineEntries = [
     timestamp: 1577059200000,
     label: "twitter",
     milestone: "700 Followers 🎉",
+    cta: "Check out my tweets",
+    link: "/blog/introducing-the-timeline-view",
+  },
+  {
+    timestamp: 1577059100000,
+    label: "twitter",
+    milestone: "699 Followers 🎉",
     cta: "Check out my tweets",
     link: "/blog/introducing-the-timeline-view",
   },

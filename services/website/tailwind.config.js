@@ -22,6 +22,7 @@ module.exports = {
       alignSelf: ["even"],
       flexDirection: ["odd"],
       justifyContent: ["odd"],
+      margin: ["odd"],
     },
   },
   plugins: [require("@tailwindcss/typography")],

@@ -7,6 +7,12 @@
 
   export let entries;
 
+  const birthEntry = {
+    label: "black",
+    isBirth: true,
+    milestone: "👶"
+  }
+
   const uniqueFilters = Array.from(new Set(entries.map(entry => entry.label)));
   $timelineFiltersStore = uniqueFilters;
 
@@ -41,5 +47,7 @@
       {/each}
       <YearDivider {year} />
     {/each}
+    <Entry entry={birthEntry} />
+    <YearDivider year="1980s" />
   </div>
 </div>
