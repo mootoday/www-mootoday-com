@@ -1,7 +1,6 @@
 <script>
   import Footer from "../components/footer.svelte";
   import Header from "../components/header/index.svelte";
-  import { headerStore } from "../stores";
 
   export let status;
   export let error;
@@ -9,8 +8,6 @@
   const dev = process.env.NODE_ENV === "development";
   const title =
     status === 500 ? "Updates available..." : "Don't worry, we can fix this.";
-
-  headerStore.setHeaderTransparent(false);
 </script>
 
 <svelte:head>

@@ -1,7 +1,5 @@
 <script>
   import { stores } from '@sapper/app';
-  import { headerStore } from "../../stores";
-  import A from "../ui-elements/a.svelte";
   import Logo from "./logo.svelte";
   import MobileMenu from "./mobile-menu.svelte";
   import RightNav from "./right-nav.svelte";
@@ -12,14 +10,7 @@
   const { page } = stores();
 
   $: isBlogPage = $page.path.startsWith("/blog");
-  $: isCnwdPage = $page.path.startsWith("/cloud-native-web-development");
-
-  $: isHeaderVisible = !isCnwdPage || !$headerStore.header.isTransparent;
   $: isSearchVisible = $page.path === "/";
-
-  $: if ($page.path !== "/") {
-    headerStore.setHeaderTransparent(false);
-  }
 
   let openMenu = "";
 
@@ -51,54 +42,46 @@
   };
 </script>
 
-<style>
-  .transparent {
-    @apply bg-transparent;
-  }
-</style>
-
 <svelte:body on:click={() => (openMenu = '')} />
 
-{#if isHeaderVisible}
-  <div class:transparent={$headerStore.header.isTransparent} class="fixed transition duration-500 bg-gray-900 w-full z-10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex justify-between items-center text-white p-2">
-        <div class={`${isSearchVisible ? 'flex' : 'hidden md:flex'} justify-start flex-1`}>
-          <SocialIcons />
-          {#if isSearchVisible}
-          <Search />
-          {/if}
-        </div>
-        <Logo />
-        <RightNav {onMenuClicked} {openMenu} {projectsMenu} />
+<div class="z-20 fixed transition duration-500 bg-gray-900 w-full">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex justify-between items-center text-white p-2">
+      <div class={`${isSearchVisible ? 'flex' : 'hidden md:flex'} justify-start flex-1`}>
+        <SocialIcons />
+        {#if isSearchVisible}
+        <Search />
+        {/if}
+      </div>
+      <Logo />
+      <RightNav {onMenuClicked} {openMenu} {projectsMenu} />
 
-        <div class="-mr-2 -my-2 md:hidden">
-          <button
-            on:click|stopPropagation={onMenuClicked('mobile')}
-            type="button"
-            aria-label="Menu"
-            class="inline-flex items-center justify-center p-2 rounded-md
-            text-gray-400 focus:outline-none transition duration-150 ease-in-out">
-            <svg
-              focusable="false"
-              aria-hidden="true"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
+      <div class="-mr-2 -my-2 md:hidden">
+        <button
+          on:click|stopPropagation={onMenuClicked('mobile')}
+          type="button"
+          aria-label="Menu"
+          class="inline-flex items-center justify-center p-2 rounded-md
+          text-gray-400 focus:outline-none transition duration-150 ease-in-out">
+          <svg
+            focusable="false"
+            aria-hidden="true"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
     </div>
-    <MobileMenu isOpen={openMenu === 'mobile'} menuItems={projectsMenu.items} />
-    {#if isBlogPage && process.browser}
-      <ScrollProgressBar />
-    {/if}
   </div>
-{/if}
+  <MobileMenu isOpen={openMenu === 'mobile'} menuItems={projectsMenu.items} />
+  {#if isBlogPage && process.browser}
+    <ScrollProgressBar />
+  {/if}
+</div>
