@@ -28,7 +28,11 @@
     {#if entry.cta}
       {entry.milestone}
     {:else}
-      <a href="{entry.link}">{entry.milestone}</a>
+      {#if entry.link}
+        <a href="{entry.link}">{entry.milestone}</a>
+      {:else}
+        {entry.milestone}
+      {/if}
     {/if}
   </p>
 
