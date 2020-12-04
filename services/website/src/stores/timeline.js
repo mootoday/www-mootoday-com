@@ -103,7 +103,11 @@ export const timelineEntries = derived(
     const entriesReadyForDisplay = [];
     yearsWithEntries.forEach((entries, year) => {
       entries.forEach((entry) => entriesReadyForDisplay.push(entry));
-      entriesReadyForDisplay.push(year);
+      // entriesReadyForDisplay.push(year);
+
+      // At this point in the forEach loop, the latest element is the first of the currently processed year.
+      // We add the `year` property to display the year in the timeline view after this specific `entry`.
+      entriesReadyForDisplay[entriesReadyForDisplay.length - 1].year = year;
     }, []);
 
     set(entriesReadyForDisplay);

@@ -10,6 +10,7 @@
     label: "black",
     isBirth: true,
     milestone: "👶",
+    year: "1980s"
   };
 </script>
 
@@ -36,6 +37,5 @@
       {/if}
     {/each}
     <Entry entry={birthEntry} />
-    <YearDivider year="1980s" />
   </div>
 </div>
