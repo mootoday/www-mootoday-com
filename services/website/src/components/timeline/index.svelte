@@ -10,13 +10,18 @@
   const birthEntry = {
     label: "black",
     isBirth: true,
-    milestone: "👶"
-  }
+    milestone: "👶",
+  };
 
-  const uniqueFilters = Array.from(new Set(entries.map(entry => entry.label)));
+  const uniqueFilters = Array.from(
+    new Set(entries.map((entry) => entry.label))
+  );
   $timelineFiltersStore = uniqueFilters;
 
-  $: filteredEntries = entries.filter(entry => $timelineFiltersStore.includes(entry.label));
+  $: filteredEntries = entries.filter(
+    (entry) =>
+      $timelineFiltersStore.includes(entry.label)
+  );
   $: entriesGroupedByYear = filteredEntries.reduce((result, entry) => {
     const entryYear = new Date(entry.timestamp).getFullYear();
     if (!result[entryYear]) {
@@ -39,11 +44,11 @@
 <div class="pt-20 md:container md:mx-auto">
   <Intro />
   <Filters filters={uniqueFilters} />
-  
+
   <div class="mt-20 flex flex-col space-y-10 relative entries">
-    {#each Object.keys(entriesGroupedByYear).sort((a,b) => b-a) as year}
+    {#each Object.keys(entriesGroupedByYear).sort((a, b) => b - a) as year}
       {#each entriesGroupedByYear[year] as entry, indexEntry}
-        <Entry {entry} isOddChild={indexEntry % 2 === 0} />
+        <Entry {entry} />
       {/each}
       <YearDivider {year} />
     {/each}
