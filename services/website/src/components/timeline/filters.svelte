@@ -2,7 +2,7 @@
   import { selectedFilters, uniqueFilters } from "../../stores/timeline";
 </script>
 
-<div class="mt-10 px-2 grid grid-cols-2 md:mt-20 md:mb-10 md:flex md:justify-center md:space-x-20">
+<div class="mt-10 px-2 grid grid-cols-2 gap-4 md:mt-20 md:mb-10 md:flex md:justify-center md:space-x-20">
   {#each $uniqueFilters as filter}
     <div class="relative flex items-center text-{filter}">
       <div class="flex items-center h-6 md:h-10">
