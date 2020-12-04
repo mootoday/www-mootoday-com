@@ -16,6 +16,12 @@ const rawTimeline = [
     link: "https://www.your-analytics.org",
   },
   {
+    timestamp: 1606923102654,
+    label: "blog",
+    milestone: "Why I moved from React to Svelte and you should too",
+    link: "/blog/introducing-the-timeline-view",
+  },
+  {
     timestamp: 1606921112654,
     label: "twitter",
     milestone: "705 Followers 🎉",
@@ -71,8 +77,8 @@ export const byFilterAndSearch = derived(
       set(
         $byFilter.filter(
           (entry) =>
-            entry.milestone.toLowerCase().includes($search) ||
-            entry.label.includes($search)
+            entry.milestone.toLowerCase().includes($search.toLowerCase()) ||
+            entry.label.includes($search.toLowerCase())
         )
       );
     }
