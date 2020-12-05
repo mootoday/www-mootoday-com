@@ -27,18 +27,10 @@
   </div>
 
   <p class="py-2 font-medium">
-    {#if entry.cta}
-      {entry.milestone}
-    {:else}
-      {#if entry.link}
-        <a href="{entry.link}">{entry.milestone}</a>
-      {:else}
-        {entry.milestone}
-      {/if}
-    {/if}
+    {entry.milestone}
   </p>
 
-  {#if entry.cta}
+  {#if !entry.isBirth}
     <p><a href="{entry.link}">{entry.cta}</a></p>
   {/if}
 </div>
