@@ -12,7 +12,7 @@
   }
 
   p {
-    @apply leading-10 text-xl;
+    @apply leading-relaxed text-xl;
   }
 </style>
 
@@ -20,13 +20,13 @@
   <div class="flex justify-between items-center">
     <span class="text-sm capitalize">{humanReadableTimestamp}</span>
     {#if !entry.isBirth}
-      <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-{entry.label} text-white">
+      <span class="px-3 py-0.5 inline-flex items-center rounded-full text-sm font-medium bg-{entry.label} text-white uppercase">
         {entry.label}
       </span>
     {/if}
   </div>
 
-  <p>
+  <p class="py-2 font-medium">
     {#if entry.cta}
       {entry.milestone}
     {:else}
