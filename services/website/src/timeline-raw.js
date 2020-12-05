@@ -1,7 +1,7 @@
 import { parseISO } from "date-fns";
 
 const template = {
-  cta: "[Optional] A call to action. If present, it points to `link`",
+  cta: "A call to action. If present, it points to `link`",
   label: "blog|project|twitter|youtube",
   link: "An absolute or relative URL.",
   milestone: "Main content. If `cta` is not present, this points to `link`",
