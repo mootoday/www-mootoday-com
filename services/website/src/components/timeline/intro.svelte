@@ -14,7 +14,8 @@
           Mike Nikles
         </div>
         <div class="text-gray-600">
-          Software Architect 👷. Productivity ⏱️ & Team Morale 😊. Web, Javascript, Cloud Native ☁️. Author 📚 and Educator 🧑‍🏫.
+          <p>Software Architect 👷. Productivity ⏱️ & Team Morale 😊. Web, Javascript, Cloud Native ☁️. Author 📚 and Educator 🧑‍🏫.</p>
+          <p class="mt-5">I talk about software architecture, web development, cloud, productivity, team morale and what's next in tech.</p>
         </div>
       </div>
     </div>
