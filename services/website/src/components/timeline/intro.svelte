@@ -1,4 +1,4 @@
-<div class="text-center">
+<div class="px-2 text-center">
   <h1 class="py-5 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:py-10 md:text-6xl">
     <span class="block xl:inline">A story,</span>
     <span class="block text-blue-600 xl:inline">my story...</span>
@@ -19,6 +19,11 @@
         <div class="text-gray-600">
           <p>Software Architect 👷. Productivity ⏱️ & Team Morale 😊. Web, Javascript, Cloud Native ☁️. Author 📚 and Educator 🧑‍🏫.</p>
           <p class="mt-5">I talk about software architecture, web development, cloud, productivity, team morale and what's next in tech.</p>
+          <div class="mt-5 flex justify-center sm:hidden">
+            <svg class="animate-bounce w-6 h-6 text-blue-600" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
