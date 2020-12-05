@@ -45,13 +45,11 @@
 <div class="z-20 fixed transition duration-500 bg-gray-900 w-full">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-center text-white p-2">
-      <div class="hidden md:flex justify-start flex-1">
-        <SocialIcons />
-      </div>
+      <SocialIcons />
       <Logo />
       <RightNav {onMenuClicked} {openMenu} {projectsMenu} />
 
-      <div class="-mr-2 -my-2 md:hidden">
+      <div class="-mr-2 -my-2 flex justify-end flex-1 md:hidden">
         <button
           on:click|stopPropagation={onMenuClicked('mobile')}
           type="button"

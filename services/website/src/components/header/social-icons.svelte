@@ -26,14 +26,14 @@
   ];
 </script>
 
-<div class="hidden md:flex content-center">
+<div class="flex flex-1">
   {#each icons as icon}
     <A
-      class="text-gray-500 hover:text-white p-2 h-10 w-10"
+      class="text-gray-500 hover:text-white p-2 h-8 w-8 md:h-10 md:w-10"
       href={icon.href}
       aria-label={icon.ariaLabel}>
       <svg
-        class="fill-current h-4"
+        class="fill-current h-4 md:h-6"
         focusable="false"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"

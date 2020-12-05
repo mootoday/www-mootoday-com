@@ -7,7 +7,7 @@
   export let projectsMenu;
 </script>
 
-<nav class="hidden md:flex justify-end flex-1 space-x-10">
+<nav class="hidden md:flex justify-end flex-1">
   {#if false}
     <A
       href="TODO.html"
