@@ -3,14 +3,13 @@ import rawTimeline from "../timeline-raw";
 import search from "./search";
 
 const timeline = readable(rawTimeline);
-
-export const uniqueFilters = readable(
-  Array.from(new Set(rawTimeline.map((entry) => entry.label)))
+const uniqueFilters = Array.from(
+  new Set(rawTimeline.map((entry) => entry.label))
 );
 
-export const selectedFilters = writable(
-  Array.from(new Set(rawTimeline.map((entry) => entry.label)))
-);
+export const allFiltersForDisplay = readable(uniqueFilters);
+
+export const selectedFilters = writable(uniqueFilters);
 
 const byFilter = derived(
   [timeline, selectedFilters],
@@ -19,7 +18,7 @@ const byFilter = derived(
   }
 );
 
-export const byFilterAndSearch = derived(
+const byFilterAndSearch = derived(
   [byFilter, search],
   ([$byFilter, $search], set) => {
     if ($search === "") {
@@ -39,17 +38,14 @@ export const byFilterAndSearch = derived(
 export const timelineEntries = derived(
   [byFilterAndSearch],
   ([$byFilterAndSearch], set) => {
-    const yearsWithEntries = $byFilterAndSearch.reduce(
-      (result, current, index) => {
-        const entryFullYear = new Date(current.timestamp).getFullYear();
-        if (!result.has(entryFullYear)) {
-          result.set(entryFullYear, []);
-        }
-        result.get(entryFullYear).push(current);
-        return result;
-      },
-      new Map()
-    );
+    const yearsWithEntries = $byFilterAndSearch.reduce((result, current) => {
+      const entryFullYear = new Date(current.timestamp).getFullYear();
+      if (!result.has(entryFullYear)) {
+        result.set(entryFullYear, []);
+      }
+      result.get(entryFullYear).push(current);
+      return result;
+    }, new Map());
 
     const entriesReadyForDisplay = [];
     yearsWithEntries.forEach((entries, year) => {
@@ -61,5 +57,12 @@ export const timelineEntries = derived(
     }, []);
 
     set(entriesReadyForDisplay);
+  }
+);
+
+export const filteredFilters = derived(
+  [byFilterAndSearch, selectedFilters],
+  ([$byFilterAndSearch, $selectedFilters], set) => {
+    set(Array.from(new Set($byFilterAndSearch.map((entry) => entry.label))));
   }
 );
