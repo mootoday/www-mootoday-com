@@ -4,6 +4,6 @@ describe("Sapper template app", () => {
   });
 
   it("has the correct <h1>", () => {
-    cy.contains("h1", "👋 Mike Nikles");
+    cy.contains("h1", "A story, my story...");
   });
 });
