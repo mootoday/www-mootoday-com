@@ -11,6 +11,7 @@
     "export:move404": "mv __sapper__/export/404/index.html __sapper__/export/404.html && rm -r __sapper__/export/404",
     "postexport": "run-s export:move404 && node generate-sitemap.js",
     "start": "node __sapper__/build",
+    "cy:install": "cypress install",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
