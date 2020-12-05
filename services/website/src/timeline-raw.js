@@ -5,10 +5,17 @@ const template = {
   label: "blog|project|twitter|youtube",
   link: "An absolute or relative URL.",
   milestone: "Main content. If `cta` is not present, this points to `link`",
-  timestamp: parseISO("2014-02-11T11:30:30").getTime(),
+  timestamp: parseISO("2020-02-11T11:30:30").getTime(),
 };
 
 export default [
+  {
+    cta: "Check out my tweets",
+    label: "twitter",
+    link: "https://www.twitter.com/mikenikles",
+    milestone: "700 Followers 🎉",
+    timestamp: parseISO("2020-12-01").getTime(),
+  },
   {
     label: "blog",
     link: "/blog/what-was-the-biggest-blunder-in-your-career-as-a-developer",
@@ -22,6 +29,13 @@ export default [
     milestone:
       "How I wrote 214 pages for a web development book with 19 pull requests in 3 months",
     timestamp: parseISO("2020-07-03T20:26:33").getTime(),
+  },
+  {
+    cta: "Learn more",
+    label: "project",
+    link: "/cloud-native-web-development",
+    milestone: "Published my book Cloud Native Web Development",
+    timestamp: parseISO("2020-06-28").getTime(),
   },
   {
     label: "blog",
