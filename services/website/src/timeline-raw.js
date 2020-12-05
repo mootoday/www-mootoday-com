@@ -2,7 +2,7 @@ import { parseISO } from "date-fns";
 
 const template = {
   cta: "A call to action. If present, it points to `link`",
-  label: "blog|project|twitter|youtube",
+  label: "blog|projects|twitter|youtube",
   link: "An absolute or relative URL.",
   milestone: "Main content. If `cta` is not present, this points to `link`",
   timestamp: parseISO("2020-02-11T11:30:30").getTime(),
@@ -34,7 +34,7 @@ export default [
   },
   {
     cta: "Learn more",
-    label: "project",
+    label: "projects",
     link: "/cloud-native-web-development",
     milestone: "Published my book Cloud Native Web Development",
     timestamp: parseISO("2020-06-28").getTime(),
