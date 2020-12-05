@@ -23,7 +23,7 @@
   }
 </style>
 
-<div class="pt-20 md:container md:mx-auto">
+<div class="pt-10 md:container md:mx-auto md:pt-20">
   <Intro />
   <Filters />
   <Search />
