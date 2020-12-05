@@ -85,7 +85,7 @@ export default [
       "/blog/sapper-google-cloud-run-continuous-deployment-a-boilerplate-template",
     milestone:
       "Sapper, Google Cloud Run, Continuous Deployment - A boilerplate template",
-    timestamp: parseISO("2020-04-28T00:00:00").getTime(),
+    timestamp: parseISO("2020-04-28T00:00:01").getTime(),
   },
   {
     cta: "Read the blog post",
