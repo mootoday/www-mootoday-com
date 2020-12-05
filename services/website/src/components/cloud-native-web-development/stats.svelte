@@ -25,7 +25,7 @@
       <h3 class="text-3xl leading-9 font-extrabold sm:text-4xl sm:leading-10">
         A book, source code & a community
       </h3>
-      <p class="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
+      <p class="mt-3 text-xl leading-7 text-white sm:mt-4">
         Be part of a community with other readers. Review & discuss source
         code. Ask questions.
       </p>
@@ -41,7 +41,7 @@
               class="card-bg flex flex-col border-b p-6
               text-center sm:border-0 sm:border-r">
               <dt
-                class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500"
+                class="order-2 mt-2 text-lg leading-6 font-medium text-white"
                 id="stats-pages">
                 Pages
               </dt>
@@ -52,10 +52,10 @@
               </dd>
             </div>
             <div
-              class="card-bg flex flex-col border-gray-500 border-t border-b p-6
+              class="card-bg flex flex-col border-white border-t border-b p-6
               text-center sm:border-0 sm:border-l sm:border-r">
               <dt
-                class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500"
+                class="order-2 mt-2 text-lg leading-6 font-medium text-white"
                 id="stats-chapters">
                 Chapters
               </dt>
@@ -69,7 +69,7 @@
               class="card-bg flex flex-col border-gray-500 border-t p-6
               text-center sm:border-0 sm:border-l">
               <dt
-                class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500"
+                class="order-2 mt-2 text-lg leading-6 font-medium text-white"
                 id="stats-pr">
                 Pull Requests
               </dt>
