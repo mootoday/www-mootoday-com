@@ -29,7 +29,7 @@
   <Search />
 
   <div class="entries mt-10 flex flex-col space-y-10 relative md:mt-20">
-    {#each $timelineEntries as entry}
+    {#each $timelineEntries as entry (entry.timestamp)}
       <Entry {entry} />
     {/each}
     <Entry entry={birthEntry} />
