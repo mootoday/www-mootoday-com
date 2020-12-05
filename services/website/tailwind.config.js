@@ -10,10 +10,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blog: colors.fuchsia["500"],
-        project: colors.violet["500"],
-        twitter: "#1da1f2",
-        youtube: "#ff0000",
+        blog: colors.fuchsia["600"],
+        project: colors.violet["600"],
+        twitter: "#007bc7",
+        youtube: "#e00",
       },
     },
   },
