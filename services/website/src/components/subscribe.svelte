@@ -1,5 +1,5 @@
 <div
-  class="mt-8 mx-2 py-4 text-center font-sans bg-green-50 rounded md:container md:mx-auto md:p-24">
+  class="container mt-8 py-4 text-center font-sans bg-green-50 rounded md:mx-auto md:p-24">
   <h2 class="font-bold break-normal text-2xl md:text-4xl tracking-widest">
     Subscribe to my newsletter
   </h2>
