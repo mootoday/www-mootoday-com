@@ -1,11 +1,11 @@
 <div
-  class="container font-sans bg-green-50 rounded mt-8 p-4 md:p-24 text-center">
+  class="mt-8 mx-2 py-4 text-center font-sans bg-green-50 rounded md:container md:mx-auto md:p-24">
   <h2 class="font-bold break-normal text-2xl md:text-4xl tracking-widest">
     Subscribe to my newsletter
   </h2>
   <h3
     class="break-normal font-normal text-gray-900 text-base md:text-xl">
-    Get the latest blog posts and project updates delivered right to your inbox
+    Get the latest blog posts and project updates delivered right to your inbox.
   </h3>
   <div class="w-full text-center pt-4">
     <form action="https://gumroad.com/follow_from_embed_form" method="post">
