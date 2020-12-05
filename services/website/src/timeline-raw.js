@@ -132,6 +132,13 @@ export default [
     timestamp: parseISO("2019-12-26T00:00:00").getTime(),
   },
   {
+    cta: "Read 53 older blog posts",
+    label: "blog",
+    link: "https://medium.com/@mikenikles",
+    milestone: "Migrated my blog from Medium to www.mikenikles.com",
+    timestamp: parseISO("2019-12-21T11:30:30").getTime(),
+  },
+  {
     cta: "Read the blog post",
     label: "blog",
     link: "/blog/our-approach-to-software-development-consistency",
