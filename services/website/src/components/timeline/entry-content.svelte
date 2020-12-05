@@ -20,7 +20,9 @@
   <div class="flex justify-between items-center">
     <span class="text-sm capitalize">{humanReadableTimestamp}</span>
     {#if !entry.isBirth}
-      <span class="py-1 px-4 rounded-full uppercase text-white bg-{entry.label}">{entry.label}</span>
+      <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-{entry.label} text-white">
+        {entry.label}
+      </span>
     {/if}
   </div>
 
