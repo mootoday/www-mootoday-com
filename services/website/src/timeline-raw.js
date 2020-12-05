@@ -47,6 +47,13 @@ export default [
     timestamp: parseISO("2020-06-24T13:48:01").getTime(),
   },
   {
+    cta: "Watch my videos",
+    label: "youtube",
+    link: "https://www.youtube.com/channel/UCgEvLz_YbByFqn8f32wh9lA",
+    milestone: "Introduced my new Youtube channel - The Software Architect",
+    timestamp: parseISO("2020-06-09T16:13:26").getTime(),
+  },
+  {
     cta: "Read the blog post",
     label: "blog",
     link: "/blog/deploy-a-static-sapper-app-with-deno-on-cloud-run",
