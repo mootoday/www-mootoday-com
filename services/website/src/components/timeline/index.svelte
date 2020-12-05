@@ -4,7 +4,6 @@
   import Filters from "./filters.svelte";
   import Search from "./search.svelte";
   import Intro from "./intro.svelte";
-  import YearDivider from "./year-divider.svelte";
 
   const birthEntry = {
     label: "black",
