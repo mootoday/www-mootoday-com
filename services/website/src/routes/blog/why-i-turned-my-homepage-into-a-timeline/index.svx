@@ -14,7 +14,7 @@ In summer of 2020, I launched [v2 of my website](/blog/my-personal-website-v2-0)
 
 As of v2, the homepage displayed a list of blog post previews.
 
-![v2 homepage screenshot](blog-posts/2020-12-06-{slug}/cover.jpg)
+![v2 homepage screenshot](blog-posts/2020-12-06-{slug}/1.jpg)
 
 That was great up until just about now, read December 2020.
 
@@ -22,7 +22,7 @@ That was great up until just about now, read December 2020.
 
 The latest evolution of the homepage looks as follows:
 
-![timeline homepage screenshot](blog-posts/2020-12-06-{slug}/1.jpg)
+![timeline homepage screenshot](blog-posts/2020-12-06-{slug}/cover.jpg)
 
 See [this Twitter thread](https://twitter.com/mikenikles/status/1334305377500925953) for progress updates and how the homepage came together.
 
