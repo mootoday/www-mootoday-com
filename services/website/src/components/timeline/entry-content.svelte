@@ -1,5 +1,6 @@
 <script>
   import { formatDistanceToNow } from "date-fns";
+  import A from "../ui-elements/a.svelte";
 
   export let entry;
 
@@ -7,7 +8,7 @@
 </script>
 
 <style>
-  a {
+  p :global(a) {
     @apply underline;
   }
 
@@ -31,6 +32,6 @@
   </p>
 
   {#if !entry.isBirth}
-    <p><a href="{entry.link}">{entry.cta}</a></p>
+    <p><A href="{entry.link}">{entry.cta}</A></p>
   {/if}
 </div>
