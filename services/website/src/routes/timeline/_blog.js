@@ -22,7 +22,9 @@ const generatePost = (dirent) => {
   };
 };
 
-const names = fs.readdirSync(BLOG_POSTS_BASE_DIR, { withFileTypes: true });
-const posts = names.filter((dirent) => dirent.isDirectory()).map(generatePost);
+const posts = fs
+  .readdirSync(BLOG_POSTS_BASE_DIR, { withFileTypes: true })
+  .filter((dirent) => dirent.isDirectory())
+  .map(generatePost);
 
 export default posts;
