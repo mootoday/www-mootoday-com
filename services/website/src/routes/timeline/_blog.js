@@ -24,6 +24,5 @@ const generatePost = (dirent) => {
 
 const names = fs.readdirSync(BLOG_POSTS_BASE_DIR, { withFileTypes: true });
 const posts = names.filter((dirent) => dirent.isDirectory()).map(generatePost);
-// .sort((a, b) => b.createdAt - a.createdAt);
 
 export default posts;

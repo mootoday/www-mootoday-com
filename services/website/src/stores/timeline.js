@@ -1,5 +1,4 @@
-import { derived, get, readable, writable } from "svelte/store";
-// import rawTimeline from "../timeline";
+import { derived, readable, writable } from "svelte/store";
 import search from "./search";
 
 export const timeline = writable([]);
@@ -8,14 +7,10 @@ const uniqueFilters = derived([timeline], ([$timeline], set) => {
   set(Array.from(new Set($timeline.map((entry) => entry.label))));
 });
 
-// const uniqueFilters = readable(Array.from(
-//   new Set(get(timeline).map((entry) => entry.label))
-// ));
-
-export const allFiltersForDisplay = readable(get(uniqueFilters));
-
+export const allFiltersForDisplay = writable([]);
 export const selectedFilters = writable([]);
 uniqueFilters.subscribe((value) => {
+  allFiltersForDisplay.set(value);
   selectedFilters.set(value);
 });
 
