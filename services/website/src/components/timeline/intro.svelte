@@ -20,7 +20,7 @@
           <p>Software Architect 👷. Productivity ⏱️ & Team Morale 😊. Web, Javascript, Cloud Native ☁️. Author 📚 and Educator 🧑‍🏫.</p>
           <p class="mt-5">I talk about software architecture, web development, cloud, productivity, team morale and what's next in tech.</p>
           <div class="mt-5 flex justify-center sm:hidden">
-            <a href="#filters">
+            <a href="#filters" aria-label="Link to the filters section">
               <svg class="animate-bounce w-6 h-6 text-blue-600" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
               </svg>
