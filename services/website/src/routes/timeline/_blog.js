@@ -1,3 +1,4 @@
+import { parseISO } from "date-fns";
 import fs from "fs";
 import frontMatter from "front-matter";
 // import readingTime from "reading-time";
@@ -27,4 +28,14 @@ const posts = fs
   .filter((dirent) => dirent.isDirectory())
   .map(generatePost);
 
-export default posts;
+const additionalBlogRelatedEntries = [
+  {
+    cta: "Read 53 blog posts on Medium",
+    label: "blog",
+    link: "https://medium.com/@mikenikles",
+    milestone: "Moved my blog from Medium to my own blog",
+    timestamp: parseISO("2019-12-29T11:30:30").getTime(),
+  },
+];
+
+export default [...posts, ...additionalBlogRelatedEntries];
