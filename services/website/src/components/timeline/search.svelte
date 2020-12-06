@@ -39,7 +39,7 @@
       id="search"
       bind:this={searchInputNode}
       class="block w-full py-4 pl-10 pr-3 border border-transparent rounded-full
-      leading-5 bg-gray-700 text-gray-400 placeholder-gray-400
+      leading-5 bg-gray-700 text-white placeholder-white
       focus:outline-none focus:ring 
       transition duration-150 ease-in-out md:text-2xl"
       placeholder={`Search (Press "/" to focus)`}
