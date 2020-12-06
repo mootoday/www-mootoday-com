@@ -16,7 +16,7 @@
   }
 </style>
 
-<div class="z-10 p-4 w-full bg-white shadow-md rounded-md border-4 border-{entry.label} text-sm md:w-3/5 md:text-lg">
+<div class="z-10 p-4 w-full bg-white shadow-md rounded-md border-4 border-{entry.label} text-sm md:w-5/6 md:text-lg">
   <div class="flex justify-between items-center">
     <span class="text-sm capitalize">{humanReadableTimestamp}</span>
     {#if !entry.isBirth}

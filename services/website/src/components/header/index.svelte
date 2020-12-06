@@ -43,7 +43,7 @@
 <svelte:body on:click={() => (openMenu = '')} />
 
 <div class="z-20 fixed transition duration-500 bg-gray-900 w-full">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto px-2 sm:px-0">
     <div class="flex justify-between items-center text-white p-2">
       <SocialIcons />
       <Logo />

@@ -23,7 +23,7 @@
   }
 </style>
 
-<div class="pt-10 md:container md:mx-auto md:pt-20">
+<div class="max-w-6xl mx-auto pt-10 md:pt-20">
   <Intro />
   <Filters />
   <Search />

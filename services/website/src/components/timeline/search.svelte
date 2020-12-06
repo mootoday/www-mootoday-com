@@ -18,7 +18,7 @@
 
 <svelte:body on:keypress={handleBodyKeyPress} />
 
-<div class="mt-6 px-2 mx-auto md:mt-10 md:w-1/2">
+<div class="mt-6 px-2 md:mt-10">
   <label for="search" class="sr-only">Search</label>
   <div class="relative">
     <div
