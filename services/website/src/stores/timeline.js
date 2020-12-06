@@ -38,23 +38,39 @@ const byFilterAndSearch = derived(
 export const timelineEntries = derived(
   [byFilterAndSearch],
   ([$byFilterAndSearch], set) => {
-    const yearsWithEntries = $byFilterAndSearch.reduce((result, current) => {
-      const entryFullYear = new Date(current.timestamp).getFullYear();
-      if (!result.has(entryFullYear)) {
-        result.set(entryFullYear, []);
-      }
-      result.get(entryFullYear).push(current);
-      return result;
-    }, new Map());
+    const yearsMonthsWithEntries = $byFilterAndSearch.reduce(
+      (result, current) => {
+        const entryDate = new Date(current.timestamp);
+        const entryFullYear = entryDate.getFullYear();
+        const entryMonth = entryDate.getMonth();
+        if (!result.has(entryFullYear)) {
+          result.set(entryFullYear, new Map());
+        }
+        if (!result.get(entryFullYear).has(entryMonth)) {
+          result.get(entryFullYear).set(entryMonth, []);
+        }
+
+        result.get(entryFullYear).get(entryMonth).push(current);
+        return result;
+      },
+      new Map()
+    );
 
     const entriesReadyForDisplay = [];
-    yearsWithEntries.forEach((entries, year) => {
-      entries.forEach((entry) => {
-        // When filters are applied, some elements have their `year` property set because they were the first
-        // in a given year for the given filter.
-        // Let's make sure we reset all `year` properties so only the first entry of a given year has it set.
-        entry.year = undefined;
-        entriesReadyForDisplay.push(entry);
+    yearsMonthsWithEntries.forEach((months, year) => {
+      months.forEach((entries, month) => {
+        entries.forEach((entry) => {
+          // When filters are applied, some elements have their `year` & `month` properties set because they were the first
+          // in a given year for the given filter.
+          // Let's make sure we reset all `year` & `month` properties so only the first entry of a given year or of a given month have it set.
+          entry.month = undefined;
+          entry.year = undefined;
+          entriesReadyForDisplay.push(entry);
+        });
+
+        // At this point in the forEach loop, the latest element is the first of the currently processed month.
+        // We add the `month` property to display the month in the timeline view after this specific `entry`.
+        entriesReadyForDisplay[entriesReadyForDisplay.length - 1].month = month;
       });
 
       // At this point in the forEach loop, the latest element is the first of the currently processed year.
