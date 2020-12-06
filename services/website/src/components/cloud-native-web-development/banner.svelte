@@ -35,7 +35,7 @@
 
 {#if isBannerVisible}
 <div
-  class="wrapper transition transform fixed z-100 bottom-0 inset-x-0 pb-2
+  class="wrapper z-50 transition transform fixed z-100 bottom-0 inset-x-0 pb-2
   sm:pb-5">
   <div class="max-w-screen-xl mx-auto px-2 sm:px-4">
     <div class="p-2 rounded-lg bg-gray-900 shadow-lg sm:p-3">

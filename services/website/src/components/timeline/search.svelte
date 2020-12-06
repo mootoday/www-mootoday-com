@@ -7,7 +7,7 @@
     searchTerm = "";
   } else {
     $searchStore = searchTerm;
-  };
+  }
 
   const handleBodyKeyPress = (event) => {
     if (event.key === "/") {
@@ -16,9 +16,9 @@
   };
 </script>
 
-<svelte:body on:keypress={handleBodyKeyPress}/>
+<svelte:body on:keypress={handleBodyKeyPress} />
 
-<div class="max-w-lg w-full lg:max-w-xs">
+<div class="mt-6 px-2 md:mt-10">
   <label for="search" class="sr-only">Search</label>
   <div class="relative">
     <div
@@ -38,11 +38,11 @@
     <input
       id="search"
       bind:this={searchInputNode}
-      class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md
-      leading-5 bg-gray-700 text-gray-300 placeholder-gray-400
-      focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm
-      transition duration-150 ease-in-out"
-      placeholder='Search (Press "/" to focus)'
+      class="block w-full py-4 pl-10 pr-3 border border-transparent rounded-full
+      leading-5 bg-gray-700 text-white placeholder-white
+      focus:outline-none focus:ring 
+      transition duration-150 ease-in-out md:text-2xl"
+      placeholder={`Search (Press "/" to focus)`}
       type="search"
       bind:value={searchTerm} />
   </div>

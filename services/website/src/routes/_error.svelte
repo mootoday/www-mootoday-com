@@ -1,7 +1,6 @@
 <script>
   import Footer from "../components/footer.svelte";
   import Header from "../components/header/index.svelte";
-  import { headerStore } from "../stores";
 
   export let status;
   export let error;
@@ -10,7 +9,9 @@
   const title =
     status === 500 ? "Updates available..." : "Don't worry, we can fix this.";
 
-  headerStore.setHeaderTransparent(false);
+  const reloadPage = () => {
+    window.location.reload(true)
+  };
 </script>
 
 <svelte:head>
@@ -35,12 +36,12 @@
 
         {#if status === 500}
           <div class="flex justify-center">
-            <a
-              href="javascript:window.location.reload(true)"
+            <button
+              on:click={reloadPage}
               class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6
               focus:outline-none hover:bg-indigo-600 rounded text-lg">
               Click here to update the site
-            </a>
+            </button>
           </div>
         {/if}
 

@@ -7,34 +7,12 @@
   import Stats from "../../components/cloud-native-web-development/stats.svelte";
   import Subscribe from "../../components/subscribe.svelte";
   import Author from "../../components/cloud-native-web-development/author.svelte";
-  import { headerStore } from "../../stores";
 
   const description = "A hands-on guidebook that leads you through the process of creating a cloud-native web application from scratch.";
   const image = "https://www.mikenikles.com/cloud-native-web-development/cloud-native-web-development-mikenikles-2000.jpg";
   const imageAlt = "Cloud Native Web Development Book Cover";
   const keywords = "cloud, google, google cloud platform, cloud-native, web, web development, book, svelte, sapper, tailwind css, firebase, cypress, cloud firestore, nodejs, node.js, cloud run, testing, end-to-end tests";
   const title = "Cloud Native Web Development - From zero to production: A hands-on guidebook";
-
-  const nameAction = (node) => {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.boundingClientRect.top > 0) {
-          headerStore.setHeaderTransparent(true);
-        } else {
-          headerStore.setHeaderTransparent(entry.isIntersecting);
-        }
-      });
-    });
-
-    observer.observe(node);
-
-    return {
-      destroy() {
-        headerStore.setHeaderTransparent(false);
-        observer.disconnect();
-      },
-    };
-  };
 </script>
 
 <style>
@@ -132,7 +110,6 @@
       </div>
     </div>
     <p
-      use:nameAction
       class="author self-end m-6 md:m-10 tracking-widest text-2xl md:text-3xl">
       Mike Nikles
     </p>
