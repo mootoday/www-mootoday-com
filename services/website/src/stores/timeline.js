@@ -1,15 +1,23 @@
-import { derived, readable, writable } from "svelte/store";
-import rawTimeline from "../timeline-raw";
+import { derived, get, readable, writable } from "svelte/store";
+// import rawTimeline from "../timeline";
 import search from "./search";
 
-const timeline = readable(rawTimeline);
-const uniqueFilters = Array.from(
-  new Set(rawTimeline.map((entry) => entry.label))
-);
+export const timeline = writable([]);
 
-export const allFiltersForDisplay = readable(uniqueFilters);
+const uniqueFilters = derived([timeline], ([$timeline], set) => {
+  set(Array.from(new Set($timeline.map((entry) => entry.label))));
+});
 
-export const selectedFilters = writable(uniqueFilters);
+// const uniqueFilters = readable(Array.from(
+//   new Set(get(timeline).map((entry) => entry.label))
+// ));
+
+export const allFiltersForDisplay = readable(get(uniqueFilters));
+
+export const selectedFilters = writable([]);
+uniqueFilters.subscribe((value) => {
+  selectedFilters.set(value);
+});
 
 const byFilter = derived(
   [timeline, selectedFilters],
@@ -77,7 +85,6 @@ export const timelineEntries = derived(
       // We add the `year` property to display the year in the timeline view after this specific `entry`.
       entriesReadyForDisplay[entriesReadyForDisplay.length - 1].year = year;
     }, []);
-
     set(entriesReadyForDisplay);
   }
 );
