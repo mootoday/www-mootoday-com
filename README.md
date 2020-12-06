@@ -9,7 +9,7 @@ Check out the `v1.0.0` tag for the source code of the previous version, based on
 1. Use the following command:
 
    ```bash
-   npm run generate blog-post "My blog post title"
+   npm run generate blog-post
    ```
 
 1. Write you content, with [mdsvex](https://mdsvex.com/) in:
