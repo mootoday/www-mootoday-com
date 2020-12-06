@@ -33,8 +33,8 @@ A lightweight version of the timeline is used on mobile:
 See [this Twitter thread](https://twitter.com/mikenikles/status/1334305377500925953) for progress updates and how the homepage came together.
 
 The reason to show a timeline is twofold and inspired by [Florin Pop's timeline on his website](https://www.florin-pop.com/timeline):
-Simplicity
-It's about more than blog posts
+1. Simplicity
+1. It's about more than blog posts
 
 ### Simplicity
 
