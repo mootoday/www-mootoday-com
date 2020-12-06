@@ -1,5 +1,3 @@
-const timelineRaw = require("../../src/timeline-raw");
-
 describe("Homepage", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -15,8 +13,12 @@ describe("Homepage - Timeline", () => {
     cy.visit("/");
   });
 
-  timelineRaw.forEach((entry) => {
-    it(`it displays the ${entry.milestone} timeline entry`, () => {
+  it("displays all timeline entries", async () => {
+    const response = await fetch("/timeline.json");
+    const timeline = await response.json();
+
+    expect(timeline).to.not.be.empty;
+    timeline.forEach((entry) => {
       cy.contains("p", entry.milestone);
       cy.get(`a[href="${entry.link}"]`).contains(entry.cta);
     });
