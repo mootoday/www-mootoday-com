@@ -3,13 +3,13 @@ title: "Why I turned my homepage into a timeline"
 slug: "why-i-turned-my-homepage-into-a-timeline"
 summary: "A short explanation of why I streamlined the homepage into a timeline showcasing my blog posts, Twitter stats, YouTube videos, and projects."
 createdAt: 2020-12-06T20:21:32.999Z
-tags: [""]
+tags: ["design", "tailwindcss"]
 layout: blog
 ---
 
 ## What has happened so far?
 
-On December 21, 2019 I migrated my blog from Medium to my own infrastructure ([this blog post has more details](https://dev.to/mikenikles/migrating-from-medium-to-my-own-blog-1nj8). The main reason was to own my content rather than leaving it on servers owned by a company. It also gives me more flexibility should the need arise to provide my content in other formats, e.g. RSS feed.
+On December 21, 2019 I migrated my blog from Medium to my own infrastructure ([this blog post has more details](https://dev.to/mikenikles/migrating-from-medium-to-my-own-blog-1nj8)). The main reason was to own my content rather than leaving it on servers owned by a company. It also gives me more flexibility should the need arise to provide my content in other formats, e.g. RSS feed.
 In summer of 2020, I launched [v2 of my website](/blog/my-personal-website-v2-0) in preparation for the publication of my first book, [Cloud Native Web Development](/cloud-native-web-development). The main goal of v2 was to significantly simplify the architecture.
 
 As of v2, the homepage displayed a list of blog post previews.
