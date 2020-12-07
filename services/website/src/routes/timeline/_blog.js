@@ -1,12 +1,13 @@
 import { parseISO } from "date-fns";
 import fs from "fs";
+import { join } from "path";
 import frontMatter from "front-matter";
 
-const BLOG_POSTS_BASE_DIR = "./src/routes/blog";
+const BLOG_POSTS_PATH = "../../../src/routes/blog";
 
 const generatePost = (dirent) => {
   const postContent = fs.readFileSync(
-    `${BLOG_POSTS_BASE_DIR}/${dirent.name}/index.svx`,
+    `${join(__dirname)}/${BLOG_POSTS_PATH}/${dirent.name}/index.svx`,
     {
       encoding: "utf-8",
     }
@@ -23,7 +24,7 @@ const generatePost = (dirent) => {
 };
 
 const posts = fs
-  .readdirSync(BLOG_POSTS_BASE_DIR, { withFileTypes: true })
+  .readdirSync(`${join(__dirname)}/${BLOG_POSTS_PATH}`, { withFileTypes: true })
   .filter((dirent) => dirent.isDirectory())
   .filter((dirent) => !dirent.name.startsWith("["))
   .map(generatePost);
