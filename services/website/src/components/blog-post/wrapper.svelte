@@ -1,30 +1,38 @@
 <script>
-  import { fade } from "svelte/transition";
-  // import { headerStore } from "../../stores";
+  import { onMount } from "svelte";
+  import { headerStore } from "../../stores";
   import Comments from "../comments.svelte";
   import Footer from "../footer.svelte";
-  import Header from "../header/index.svelte";
   import ImageZoom from "./image-zoom.svelte";
   import SeoHeadPost from "../seo/head-post.svelte";
   import Subscribe from "../subscribe.svelte";
 
   export let post;
 
-  const titleAction = (/*node*/) => {
-  //   const observer = new IntersectionObserver((entries, observer) => {
-  //     entries.forEach(entry => {
-  //       // headerStore.setScrollBarProgressVisible(!entry.isIntersecting, post.metadata.readingTime)
-  //     });
-  //   });
+  let readingTime;
 
-  //   observer.observe(node);
+  onMount(async () => {
+    const response = await fetch(`/blog/${post.metadata.slug}/reading-time.json`);
+    readingTime = await response.json();
+  });
 
-  //   return {
-  //     destroy() {
-  //       headerStore.setScrollBarProgressVisible(false, {});
-  //       observer.disconnect();
-  //     }
-  //   };
+  const titleAction = (node) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (readingTime) {
+          headerStore.setScrollBarProgressVisible(!entry.isIntersecting, readingTime)
+        }
+      });
+    });
+
+    observer.observe(node);
+
+    return {
+      destroy() {
+        headerStore.setScrollBarProgressVisible(false, {});
+        observer.disconnect();
+      }
+    };
   };
 </script>
 

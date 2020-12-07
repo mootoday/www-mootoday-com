@@ -1,7 +1,6 @@
 import { parseISO } from "date-fns";
 import fs from "fs";
 import frontMatter from "front-matter";
-// import readingTime from "reading-time";
 
 const BLOG_POSTS_BASE_DIR = "./src/routes/blog";
 
@@ -26,6 +25,7 @@ const generatePost = (dirent) => {
 const posts = fs
   .readdirSync(BLOG_POSTS_BASE_DIR, { withFileTypes: true })
   .filter((dirent) => dirent.isDirectory())
+  .filter((dirent) => !dirent.name.startsWith("["))
   .map(generatePost);
 
 const additionalBlogRelatedEntries = [
