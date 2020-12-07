@@ -5,10 +5,5 @@
       "src": "package.json",
       "use": "vercel-sapper"
     }
-  ],
-  "functions": {
-    "index": {
-      "includeFiles": "src/routes/blog/**"
-    }
-  }
+  ]
 }
