@@ -10,6 +10,9 @@
 
   export let post;
 
+  // Blog posts prior to PR 259 had their cover.jpg file stored in the `static` directory of this git repo.
+  const coverUrl = post.metadata.coverPhotoId ? `https://source.unsplash.com/${post.metadata.coverPhotoId}/1200x1000` : `blog-posts/${post.metadata.createdAt.split('T')[0]}-${post.metadata.slug}/cover.jpg`
+
   const titleAction = (/*node*/) => {
   //   const observer = new IntersectionObserver((entries, observer) => {
   //     entries.forEach(entry => {
@@ -60,7 +63,7 @@
 
   <div
     class="container w-full max-w-6xl mx-auto bg-white bg-cover bg-center mt-8 rounded"
-    style="background-image:url('blog-posts/{post.metadata.createdAt.split('T')[0]}-{post.metadata.slug}/cover.jpg');
+    style="background-image:url('{coverUrl}');
     height: 75vh;" />
 
   <div class="container max-w-5xl mx-auto -mt-32">
