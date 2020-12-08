@@ -1,11 +1,14 @@
 ---
 title: "Why I turned my homepage into a timeline"
 slug: "why-i-turned-my-homepage-into-a-timeline"
+coverPhotoId: "nbKaLT4cmRM"
 summary: "A short explanation of why I streamlined the homepage into a timeline showcasing my blog posts, Twitter stats, YouTube videos, and projects."
 createdAt: 2020-12-06T20:21:32.999Z
 tags: ["design", "tailwindcss"]
 layout: blog
 ---
+
+Photo by [Félix Prado](https://unsplash.com/@fprado?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/line?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
 
 ## What has happened so far?
 
