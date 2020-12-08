@@ -1,6 +1,7 @@
 ---
 title: "Why I turned my homepage into a timeline"
 slug: "why-i-turned-my-homepage-into-a-timeline"
+coverPhotoId: "nbKaLT4cmRM"
 summary: "A short explanation of why I streamlined the homepage into a timeline showcasing my blog posts, Twitter stats, YouTube videos, and projects."
 createdAt: 2020-12-06T20:21:32.999Z
 tags: ["design", "tailwindcss"]
