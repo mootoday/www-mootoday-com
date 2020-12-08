@@ -8,6 +8,8 @@ tags: ["design", "tailwindcss"]
 layout: blog
 ---
 
+Photo by [Félix Prado](https://unsplash.com/@fprado?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/line?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+
 ## What has happened so far?
 
 On December 21, 2019 I migrated my blog from Medium to my own infrastructure ([this blog post has more details](https://dev.to/mikenikles/migrating-from-medium-to-my-own-blog-1nj8)). The main reason was to own my content rather than leaving it on servers owned by a company. It also gives me more flexibility should the need arise to provide my content in other formats, e.g. RSS feed.
