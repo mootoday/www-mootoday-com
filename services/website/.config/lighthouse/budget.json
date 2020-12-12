@@ -37,7 +37,7 @@
     ]
   },
   {
-    "path": "/blog/*",
+    "path": "/blog",
     "timings": [
       {
         "metric": "interactive",
