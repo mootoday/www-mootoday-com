@@ -27,7 +27,9 @@ jobs:
       - name: Audit Vercel preview URL using Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:
-          urls: "${{ needs.test_setup.outputs.preview_url }},${{ needs.test_setup.outputs.preview_url }}/blog/why-i-turned-my-homepage-into-a-timeline"
+          urls: |
+            ${{ needs.test_setup.outputs.preview_url }}
+            ${{ needs.test_setup.outputs.preview_url }}/blog/why-i-turned-my-homepage-into-a-timeline
           budgetPath: ./services/website/.config/lighthouse/budget.json
           uploadArtifacts: true
           temporaryPublicStorage: true
