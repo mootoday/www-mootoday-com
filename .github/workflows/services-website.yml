@@ -29,6 +29,7 @@ jobs:
         with:
           urls: |
             ${{ needs.test_setup.outputs.preview_url }}
+            ${{ needs.test_setup.outputs.preview_url }}/blog/why-i-turned-my-homepage-into-a-timeline
           budgetPath: ./services/website/.config/lighthouse/budget.json
           uploadArtifacts: true
           temporaryPublicStorage: true
