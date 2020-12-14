@@ -1,9 +1,12 @@
 import posts from "./_posts.js";
+import tags from './_tags'
 
 export const get = (req, res) => {
   res.writeHead(200, {
     "Content-Type": "application/json",
   });
-  console.log(JSON.stringify(posts))
-  res.end(JSON.stringify(posts));
+  const result = {
+    posts, tags
+  }
+  res.end(JSON.stringify(result));
 };

@@ -1,10 +1,7 @@
 <script context="module">
   export function preload({ params, query }) {
     return this.fetch(`blog.json`)
-      .then(r => r.json())
-      .then(posts => {
-        return { posts };
-      });
+      .then(r => r.json());
   }
 </script>
 
@@ -18,6 +15,7 @@
   import { headerStore, searchStore } from "../stores";
 
   export let posts;
+  export let tags;
 
   // Without cloning the posts, it is an empty array when hydration kicks in.
   const postsArray = [...posts];
@@ -71,6 +69,12 @@
           <div class="flex flex-wrap justify-between py-12 md:-mx-6">
             {#each filteredPosts as post (post.metadata.slug)}
               <BlogPostPreview {post} />
+            {/each}
+
+            {#each tags as t}
+              <div class="flex">
+              <div style="margin: 0 0.5em">{t}</div>
+              </div>
             {/each}
           </div>
         {:else}
