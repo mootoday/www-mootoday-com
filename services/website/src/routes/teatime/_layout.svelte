@@ -19,7 +19,7 @@
 			<b>tag:</b>
 			<ul>
 				{#each tags as t}
-				<li>{t}</li>
+				<li><a href="/teatime/tag/{t}">{t}</a></li>
 				{/each}
 			</ul>
 			archive: ..
