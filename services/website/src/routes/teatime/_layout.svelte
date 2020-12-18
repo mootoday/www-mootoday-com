@@ -7,6 +7,8 @@
 
 <script>
 	export let tags
+	export let authors
+	export let categories
 </script>
 
 <div style="padding-top: 60px">
@@ -15,15 +17,28 @@
 			<slot></slot>
 		</div>
 		<div>
-			<b>category:</b>
-			<b>tag:</b>
+			<h5><b>category:</b></h5>
 			<ul>
-				{#each tags as t}
-				<li><a href="/teatime/tag/{t}">{t}</a></li>
+				{#each categories as t}
+					<li><a href="/teatime/category/{t}">{t}</a></li>
 				{/each}
 			</ul>
-			archive: ..
-			author: ..
+
+			<h5><b>tag:</b></h5>
+			<ul>
+				{#each tags as t}
+					<li><a href="/teatime/tags/{t}">{t}</a></li>
+				{/each}
+			</ul>
+
+			<h5><b>archive:</b></h5>
+
+			<h5><b>author:</b></h5>
+			<ul>
+				{#each authors as t}
+					<li><a href="/teatime/author/{t}">{t}</a></li>
+				{/each}
+			</ul>
 		</div>
 	</div>
 </div>
