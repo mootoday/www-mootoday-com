@@ -7,10 +7,27 @@
 
 <script>
 	export let posts
-</script>
-displaying posts for xx
 
-{#each posts as p}
-	{p.metadata.title}
-{/each}
+	const getCover = (post) => {
+		return `blog-posts/${
+				post.metadata.createdAt.split("T")[0]
+		}-${post.metadata.slug}/cover-preview.jpg`
+	}
+</script>
+
+<ul>
+	{#each posts as post}
+		<li style="margin-bottom: 20px">
+			<a href="blog/{post.metadata.slug}">
+				<img
+								src={getCover(post)}
+								loading="lazy"
+								width="100"
+								alt="Cover picture for a blog post titled {post.metadata.title}" />
+				{post.metadata.title}
+			</a>
+		</li>
+	{/each}
+</ul>
+
 
