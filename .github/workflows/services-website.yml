@@ -35,13 +35,23 @@ jobs:
   test_e2e:
     name: Test end-to-end
     needs: test_setup
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+      - name: Cache services/website/node_modules and Cypress
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/Cypress
+            services/website/node_modules
+          key: services-website-cache-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Cypress
+        working-directory: services/website
+        run: npm i cypress
       - name: Run Cypress
         uses: cypress-io/github-action@v2
         with:
-          build: npm i -D cypress
           config: baseUrl=${{ needs.test_setup.outputs.preview_url }}
           install: false # We test a live preview URL, no need to install packages
           working-directory: services/website
