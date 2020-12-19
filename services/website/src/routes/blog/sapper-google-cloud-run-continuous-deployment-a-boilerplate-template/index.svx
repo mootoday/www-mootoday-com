@@ -17,7 +17,7 @@ A boilerplate repository is available at [https://github.com/mikenikles/sapper-o
 
 To get started, click the **Use this template** button:
 
-![GitHub Use this template screenshot](blog-posts/2020-04-28-{slug}/1.jpg)
+![GitHub Use this template screenshot](blog-posts/{slug}/1.jpg)
 
 ## What you will learn
 
@@ -98,7 +98,7 @@ Let's see how we can use the SSR approach, but make sure we have minimal work to
 
 The overall architecture we are going to create looks like this:
 
-![Continuous Deployment of a Sapper web application to Cloud Run](blog-posts/2020-04-28-{slug}/2.jpg)
+![Continuous Deployment of a Sapper web application to Cloud Run](blog-posts/{slug}/2.jpg)
 
 Continuous Deployment of a Sapper web application to Cloud Run
 

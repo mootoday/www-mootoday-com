@@ -55,7 +55,7 @@ Here’s why: Passionate software engineers want to spend their time dealing wit
 *   You do that once a day, five days a week.
 *   Here’s the math: 21 minutes x 5 days per week = 105 minutes per week x 4 weeks = 420 minutes per month.
 
-![420 minutes equal to 7 hours](blog-posts/2017-12-26-{slug}/1.jpg)
+![420 minutes equal to 7 hours](blog-posts/{slug}/1.jpg)
 
 Source: [Google](https://www.google.ca/search?ei=5j4_Wv2MOpiajwOvjLz4CQ&q=400+minutes+to+hours&oq=400+minutes+to+hours&gs_l=psy-ab.3..0j0i5i10i30k1j0i5i30k1j0i8i30k1l2.126360.126360.0.126726.1.1.0.0.0.0.176.176.0j1.1.0....0...1.1.64.psy-ab..0.1.175....0.Tsb9aXPHVHE)
 
@@ -76,7 +76,7 @@ At the very least, and this is what our goal at work was before we started autom
 
 With the above in mind, the following diagram which I briefly mentioned in my first blog post of this series outlines our (mostly) automated release process:
 
-![A diagram of the release process on CircleCI](blog-posts/2017-12-26-{slug}/2.jpg)
+![A diagram of the release process on CircleCI](blog-posts/{slug}/2.jpg)
 
 As you can see, we use [CircleCI](https://circleci.com/). With CircleCI 2.0 and [Workflows](https://circleci.com/docs/2.0/workflows/), the above translates to the following `[.circleci/config.yml](https://circleci.com/docs/2.0/configuration-reference/)` file:
 
