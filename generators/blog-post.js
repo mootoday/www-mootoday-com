@@ -33,7 +33,7 @@ module.exports = (plop) => {
       {
         type: "add",
         path:
-          "../services/website/static/blog-posts/{{convertDateIsoToYMD blogPostCreatedAt}}-{{dashCase blogPostTitle}}/cover.jpg",
+          "../services/website/static/blog-posts/{{dashCase blogPostTitle}}/cover.jpg",
         templateFile: "../templates/blog-post/cover.jpg",
       },
     ],
