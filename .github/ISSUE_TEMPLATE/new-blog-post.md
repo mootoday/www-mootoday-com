@@ -10,9 +10,11 @@ assignees: ''
 Follow these steps to publish a new blog post:
 - [ ] Create branch
 - [ ] Run `npm run generate` to create a new blog post
-- [ ] Write post (either in the new `*.svx` file or as a comment in this issue before copying to the `*.svx` file)
-- [ ] Add assets
+- [ ] Write post in Google Docs, use Markdown where necessary (e.g. headings, lists, etc.)
+- [ ] Copy content to `src/routes/blog/{slug}/index.svx`
+- [ ] Add jpg assets to `static/blog-posts/{slug}/`
 - [ ] Run `npm run images` in the `services/website` directory to generate next-gen image formats
+- [ ] Review blog post locally
 - [ ] Open PR & review preview deployment
 - [ ] Record the code review video and publish to the Software Architect's YouTube channel
 - [ ] Link from the YouTube video to the PR
