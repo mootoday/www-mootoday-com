@@ -8,7 +8,7 @@ layout: blog
 ---
 
 <script>
-  const assetsBasePath = `blog-posts/2020-07-03-${slug}`;
+  const assetsBasePath = `blog-posts/${slug}`;
 </script>
 
 Photo credit: [Florian Klauer](https://unsplash.com/@florianklauer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)

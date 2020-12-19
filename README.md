@@ -15,13 +15,13 @@ Check out the `v1.0.0` tag for the source code of the previous version, based on
 1. Write you content, with [mdsvex](https://mdsvex.com/) in:
 
    ```
-   services/website/src/blog-posts/YYYY-MM-DD-my-blog-post-title/index.svx
+   services/website/src/routes/blog/{slug}/index.svx
    ```
 
 1. Add your `cover.jpg` image and other assets to:
 
    ```
-   services/website/static/blog-posts/YYYY-MM-DD-my-blog-post-title/
+   services/website/static/blog-posts/{slug}/
    ```
 
 1. Navigate to `services/website` and run the following script to create images in WebP and JPEG 2000 formats:
