@@ -3,8 +3,8 @@
   import TwitterPreview from "./twitter-preview.svelte";
 
   export let description = "Software Architect 👷. Productivity ⏱️ & Team Morale 😊. Javascript, Typescript, Cloud Native ☁️. Author 📚 and Educator 🧑‍🏫.";
-  export let image = "";
-  export let imageAlt = "";
+  export let image = "https://www.mikenikles.com/headshot.png";
+  export let imageAlt = "Mike Nikles";
   export let keywords = "software architecture, productivity, team morale, javascript, typescript, cloud, cloud native, author, educator";
   export let title = "Mike’s Personal Website - Software Architecture & More";
 </script>
