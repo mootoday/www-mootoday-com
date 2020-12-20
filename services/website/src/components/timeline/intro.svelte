@@ -5,7 +5,7 @@
   </h1>
 
   <figure class="mx-auto p-8 bg-gray-100 rounded-xl overflow-hidden md:p-0 md:w-2/3 md:flex">
-    <img class="w-32 h-32 md:w-48 md:h-auto md:rounded-none rounded-full object-cover mx-auto" src="/headshot.png" alt="" width="384" height="512">
+    <img class="w-32 h-32 md:w-48 md:h-auto md:rounded-none rounded-full object-cover mx-auto" src="/headshot.png" alt="Headshot of Mike Nikles" width="384" height="512">
     <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
       <blockquote>
         <p class="text-lg font-semibold italic">

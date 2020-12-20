@@ -41,7 +41,7 @@
     <div class="p-2 rounded-lg bg-gray-900 shadow-lg sm:p-3">
       <div class="flex items-center justify-between flex-wrap">
         <div class="w-0 flex-1 flex items-center">
-          <img class="md:hidden h-6" src="/cloud-native-web-development/icon-part-cloud-native-web-development.svg" alt="" />
+          <img class="md:hidden h-6" src="/cloud-native-web-development/icon-part-cloud-native-web-development.svg" alt="Book logo" />
           <p class="ml-3 font-medium text-white truncate">
             <span class="md:hidden">
               <span class="sr-only">Cloud Native Web Development</span>
