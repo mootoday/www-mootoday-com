@@ -21,16 +21,7 @@ const onwarn = (warning, onwarn) =>
   onwarn(warning);
 
 const sveltePreprocessOptions = [
-  mdsvex({
-    rehypePlugins: [
-      [
-        rehypePicture,
-        {
-          jpg: { webp: "image/webp", jp2: "image/jp2" },
-        },
-      ],
-    ],
-  }),
+  mdsvex(),
   sveltePreprocess({
     postcss: {
       plugins: [tailwindcss],
