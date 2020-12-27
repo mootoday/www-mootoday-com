@@ -15,19 +15,27 @@
 	}
 </script>
 
-<ul>
-	{#each posts as post}
-		<li style="margin-bottom: 20px">
-			<a href="blog/{post.metadata.slug}">
+
+{#each posts as post}
+	<div class="mb20">
+		<a href="blog/{post.metadata.slug}" class="flex">
+			<div style="min-width: 12em; max-width: 12em;">
 				<img
 								src={getCover(post)}
 								loading="lazy"
-								width="100"
 								alt="Cover picture for a blog post titled {post.metadata.title}" />
-				{post.metadata.title}
-			</a>
-		</li>
-	{/each}
-</ul>
+			</div>
+			<div class="fw ml10">
+				<h2>{post.metadata.title}</h2>
+				<p class="mt5 text-gray-700">{post.metadata.summary}</p>
+				<p class="mt5">
+					{#each post.metadata.tags as t}
+						<a href="/teatime/tags/{t}" class="mx3 text-gray-600">#{t}</a>
+					{/each}
+				</p>
+			</div>
+		</a>
+	</div>
+{/each}
 
 

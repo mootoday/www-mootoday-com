@@ -1,6 +1,7 @@
 <script>
   import Header from "../components/header/index.svelte";
   import TailwindCSS from "../components/tailwindcss.svelte";
+  import GlobalCSS from "../components/global-css.svelte";
   import WebAnalytics from "../components/web-analytics.svelte";
 
   export let segment;
@@ -14,6 +15,7 @@
 </style>
 
 <TailwindCSS />
+<GlobalCSS />
 
 <Header />
 <main class:bgcnwd={segment === "cloud-native-web-development"}>

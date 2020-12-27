@@ -13,28 +13,32 @@
 
 <div style="padding-top: 60px">
 	<div class="flex">
-		<div>
+		<div class="fw" style="padding: 1em">
 			<slot></slot>
 		</div>
-		<div>
-			<h5><b>category:</b></h5>
-			<ul>
+
+		<div style="padding: 1em">
+			<h5>Category:</h5>
+			<ul class="mb10">
 				{#each categories as t}
 					<li><a href="/teatime/category/{t}">{t}</a></li>
 				{/each}
 			</ul>
 
-			<h5><b>tag:</b></h5>
-			<ul>
+			<h5>Tag:</h5>
+			<ul class="mb10">
 				{#each tags as t}
 					<li><a href="/teatime/tags/{t}">{t}</a></li>
 				{/each}
 			</ul>
 
-			<h5><b>archive:</b></h5>
+			<h5>Archive:</h5>
+			<ul class="mb10">
+				<li>..</li>
+			</ul>
 
-			<h5><b>author:</b></h5>
-			<ul>
+			<h5>Author:</h5>
+			<ul class="mb10">
 				{#each authors as t}
 					<li><a href="/teatime/author/{t}">{t}</a></li>
 				{/each}
