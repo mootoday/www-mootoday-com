@@ -4,6 +4,7 @@ slug: "what-was-the-biggest-blunder-in-your-career-as-a-developer"
 summary: "A twenty year tech career retrospective of what I would do differently and why."
 createdAt: 2020-08-20T12:47:18.287Z
 tags: [""]
+type: "member"
 ---
 
 <script>

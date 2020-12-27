@@ -4,6 +4,7 @@ slug: "how-i-wrote-214-pages-for-a-web-development-book-with-19-pull-requests-in
 summary: "An in-depth journey report of the last three months when I wrote the Cloud Native Web Development book. Why did I write it? How did I develop the source code? Why do I self-publish? What has the post-publication experience been like?"
 createdAt: 2020-07-03T20:26:33.694Z
 tags: ["book", "cloud", "cloud-native", "web", "development", "webdev", "community", "self-publish"]
+type: "event"
 ---
 
 <script>
