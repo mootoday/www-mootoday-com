@@ -17,28 +17,28 @@
 			<slot></slot>
 		</div>
 
-		<div style="padding: 1em">
-			<h5>Category:</h5>
-			<ul class="mb10">
+		<div style="padding: 1em; width: 20em">
+			<h3>Category:</h3>
+			<ul class="mb20">
 				{#each categories as t}
 					<li><a href="/teatime/category/{t}">{t}</a></li>
 				{/each}
 			</ul>
 
-			<h5>Tag:</h5>
-			<ul class="mb10">
+			<h3>Tag:</h3>
+			<ul class="mb20">
 				{#each tags as t}
 					<li><a href="/teatime/tags/{t}">{t}</a></li>
 				{/each}
 			</ul>
 
-			<h5>Archive:</h5>
-			<ul class="mb10">
+			<h3>Archive:</h3>
+			<ul class="mb20">
 				<li>..</li>
 			</ul>
 
-			<h5>Author:</h5>
-			<ul class="mb10">
+			<h3>Author:</h3>
+			<ul class="mb20">
 				{#each authors as t}
 					<li><a href="/teatime/author/{t}">{t}</a></li>
 				{/each}

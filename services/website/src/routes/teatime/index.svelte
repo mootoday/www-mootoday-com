@@ -26,7 +26,7 @@
 								alt="Cover picture for a blog post titled {post.metadata.title}" />
 			</div>
 			<div class="fw ml10">
-				<h2>{post.metadata.title}</h2>
+				<h4>{post.metadata.title}</h4>
 				<p class="mt5 text-gray-700">{post.metadata.summary}</p>
 				<p class="mt5">
 					{#each post.metadata.tags as t}

@@ -127,12 +127,10 @@
 		font-size: 16px;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		background: #fff;
+		background: #f5f5f5;
 		color: #555;
 		line-height: 1.67;
-		font-family: "Arial Rounded MT Bold", "Yuanti SC", "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
-		max-width: 100vw;
-		overflow: scroll;
+		font-family: "Karla", Arial, sans-serif;
 	}
 	h1,
 	h2,
@@ -141,7 +139,6 @@
 	h5,
 	h6 {
 		line-height: 1.2;
-		font-weight: bold;
 	}
 	h1 {
 		font-size: 2em;
