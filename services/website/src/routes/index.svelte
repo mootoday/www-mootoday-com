@@ -44,41 +44,10 @@
 </script>
 
 <SeoHead />
-<div class="flex flex-col min-h-screen bg-gray-200 font-sans leading-normal tracking-normal">
-  <div
-    class="w-full m-0 p-0 bg-cover bg-bottom"
-    style="background-image:url('images/cover.jpg'); height: 60vh;
-    max-height:460px;">
-    <div
-      class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
-      <h1 use:titleAction class="text-white font-extrabold text-3xl md:text-5xl">
-        👋 Floating Projects Collective
-      </h1>
-      <h2 class="text-xl md:text-2xl text-gray-500">Welcome to my blog</h2>
-    </div>
-  </div>
 
-  <div class="flex-grow container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
-    <div class="mx-0 sm:mx-6">
-      <div
-        class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800
-        leading-normal rounded-t">
-        {#if filteredPosts.length > 0}
-          <BlogPostPreviewLead post={filteredPosts.shift()} />
-          <div class="flex flex-wrap justify-between py-12 md:-mx-6">
-            {#each filteredPosts as post (post.metadata.slug)}
-              <BlogPostPreview {post} />
-            {/each}
-          </div>
-        {:else}
-          <p>No blog posts match your search criteria.</p>
-        {/if}
-      </div>
+<h1>Latest events:</h1>
 
-      {#if false}
-        <Subscribe />
-      {/if}
-    </div>
-  </div>
-  <Footer />
-</div>
+
+<h1>Latest articles:</h1>
+
+<Footer />

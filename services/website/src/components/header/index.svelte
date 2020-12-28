@@ -29,7 +29,9 @@
   ]
 </script>
 
+<a href="/">
 <h1 class="bold mb5 mt10 tac">FP</h1>
+</a>
 <div class="ac jc tac">
 	{#each items as item}
 		<a href="{item.href}" class="mx10">
