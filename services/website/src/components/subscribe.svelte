@@ -9,7 +9,7 @@
   </h3>
   <div class="w-full text-center pt-4">
     <form action="https://gumroad.com/follow_from_embed_form" method="post">
-      <input name="seller_id" type="hidden" value="599289951265">
+      <input name="seller_id" type="hidden" value="916051007948">
       <div class="max-w-xl mx-auto p-1 pr-0 flex flex-wrap flex-col md:flex-row items-center">
         <input
           type="email"
