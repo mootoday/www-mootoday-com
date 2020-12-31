@@ -1,0 +1,20 @@
+---
+title: "A smart guide for your career as a software engineer"
+slug: "a-smart-guide-for-your-career-as-a-software-engineer"
+coverPhotoId: "[TODO: Replace with an Unsplash photo ID]"
+summary: "Best practices, tips &amp; tricks, advice and pitfalls to avoid based on 20+ years of experience. I have interviewed well over one hundred candidates, learn what worked and what did not, who stood out and who did not."
+createdAt: 2020-12-29T00:29:05.822Z
+tags: [""]
+layout: blog
+---
+
+<script>
+  const assetsBasePath = `blog-posts/${slug}`;
+</script>
+
+
+Photo by [TODO NAME](https://unsplash.com/@TODO_USERNAME?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/notebook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+
+TODO: Add the blog content here...
+
+Insert images with: ![alt]({assetsBasePath/1.jpg)
