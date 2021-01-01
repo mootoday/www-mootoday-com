@@ -56,6 +56,7 @@ Optionally, I provide templates in Google Doc / Sheet and Notion.so format for t
 * 1:1 meeting notes template
 * Personal development plan template
 * "People I Met" spreadsheet
+* Promotion tracking
 
 In the book, I describe what each template does and how you can develop your own. The templates are available if you want to save time and use what I have been battle-testing personally.
 
