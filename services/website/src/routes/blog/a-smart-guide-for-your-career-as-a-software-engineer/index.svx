@@ -3,7 +3,7 @@ title: "A smart guide for your career as a software engineer"
 slug: "a-smart-guide-for-your-career-as-a-software-engineer"
 summary: "Do you want to earn a six figure income, work from anywhere, live a lifestyle of your choosing and be a part of the people who develop the next generation software applications? Are you a software engineer already, but want to change jobs or advance in your current role to get promoted?"
 createdAt: 2020-12-31T19:29:05.822Z
-tags: [""]
+tags: ["career advice", "jobs"]
 layout: blog
 ---
 
