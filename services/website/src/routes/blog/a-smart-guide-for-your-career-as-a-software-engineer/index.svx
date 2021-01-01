@@ -11,9 +11,9 @@ layout: blog
   const assetsBasePath = `blog-posts/${slug}`;
 </script>
 
-You can buy the book at https://gum.co/a-smart-guide-for-your-career-as-a-software-engineer.
-
 If that is you, congratulations! The bad news is that there are thousands of other people just like you with more starting that journey every day. Each one of them is a potential competitor when you look for your next job. They may even be your co-worker and friend who also want to get promoted!
+
+You can buy the book at https://gum.co/a-smart-guide-for-your-career-as-a-software-engineer.
 
 **A Smart Guide for Your Career as a Software Engineer** is exactly the book you want to read. You learn what it takes to stand out among the crowd, how to impress the interviewers and most importantly, how to be an employee that gets promoted because you add value and come across as professional, well organized and energized.
 
