@@ -1,7 +1,7 @@
 ---
 title: "A smart guide for your career as a software engineer"
 slug: "a-smart-guide-for-your-career-as-a-software-engineer"
-summary: "Best practices, tips & tricks, advice and pitfalls to avoid based on 20+ years of experience. I have interviewed well over one hundred candidates, learn what worked and what did not, who stood out and who did not."
+summary: "Do you want to earn a six figure income, work from anywhere, live a lifestyle of your choosing and be a part of the people who develop the next generation software applications? Are you a software engineer already, but want to change jobs or advance in your current role to get promoted?"
 createdAt: 2020-12-31T19:29:05.822Z
 tags: [""]
 layout: blog
@@ -11,26 +11,21 @@ layout: blog
   const assetsBasePath = `blog-posts/${slug}`;
 </script>
 
-
 You can buy the book at https://gum.co/a-smart-guide-for-your-career-as-a-software-engineer.
 
-In August of 2020, I was kindly reminded by a person I shall not name that I reached a milestone in my career. It took me a moment to figure it out... Probably because once I realized what it was all about, my brain did not want to acknowledge the facts 😂.
+If that is you, congratulations! The bad news is that there are thousands of other people just like you with more starting that journey every day. Each one of them is a potential competitor when you look for your next job. They may even be your co-worker and friend who also want to get promoted!
 
-It was in August of 2000 when I started my education to become a software engineer. Yep, twenty entire years have passed and reflecting on that time, it is fair to say I have experienced a thing or two!
+**A Smart Guide for Your Career as a Software Engineer** is exactly the book you want to read. You learn what it takes to stand out among the crowd, how to impress the interviewers and most importantly, how to be an employee that gets promoted because you add value and come across as professional, well organized and energized.
 
-My career at a high-level:
-* I worked at small companies
-* I had my own business
-* I helped startups grow from an idea to a prototype to series A to getting acquired
-* I joined Google
+Throughout my career, I have had many job interviews as a candidate, interviewed well over a hundred candidates and saw even more resumes. I was fortunate to meet incredible human beings who have become good friends, but I also participated in interviews where I didn't quite understand what was happening 😆.
 
-Throughout my career, I have had many job interviews as a candidate, interviewed well over one hundred candidates and saw even more resumes. I was fortunate to meet incredible human beings who have become good friends, but I also participated in interviews where I didn't quite understand what was happening 😆.
 ❌ I've experienced things as bad as candidates yelling, walking out or telling us they were wasting their time talking to me and my team.
+
 ✅ On the other end of the spectrum, I've witnessed candidates who showed up well prepared, confident, and people who said "I don't know" a number of times and still got hired.
 
 ## What to expect
 
-The book is a guide you can follow as you look for a software engineering job. It is structured as follows:
+The book is structured around the following topics:
 * Why become a software engineer?
 * How to become a software engineer?
 * Job search
@@ -43,9 +38,16 @@ The book is a guide you can follow as you look for a software engineering job. I
 * Teamwork
 * Leaving the company
 
-If you already have a job in the software industry, you can read individual chapters as they fit your circumstances.
+Read it cover to cover or jump to the topic that most applies to your current situation. Armed with the knowledge, advice, tips & tricks and templates in this book, your chances of getting that next job or being promoted rather than your co-worker are significantly higher than without reading this book.
 
 All throughout the book, you find ✅ and ❌ to visually highlight things I recommend you do versus things you better avoid. **There are over 80 tips & tricks in the book!**
+
+## About the author
+I am Mike Nikles; I have led hundreds of job interviews and reviewed thousands of resumes over the last twenty years in my career as a software engineer. I also sat at the other side of the interview table plenty of times as [my LinkedIn profile](https://www.linkedin.com/in/mikenikles) proofs.
+
+I currently work at Google. Prior to that, I had my own business and worked at companies anywhere from two to hundreds of employees. I helped with critical first hires, tripled engineering teams and mentored others to become efficient hiring managers.
+
+You can learn more about me on Twitter [@mikenikles](https://twitter.com/mikenikles) or on my personal website [www.mikenikles.com](https://www.mikenikles.com).
 
 ## Templates
 
