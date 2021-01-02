@@ -1,5 +1,5 @@
 ---
-title: "2021 - My Objectives &amp; Key Results"
+title: "2021 - My Objectives & Key Results"
 slug: "2021-my-objectives-key-results"
 coverPhotoId: "2Sd1kYW3h1Y"
 summary: "Watch me succeed or fail at achieving my personal OKRs in 2021."
