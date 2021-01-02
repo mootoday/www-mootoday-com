@@ -31,7 +31,7 @@ I had two options as to what I could do with that extra time. Play video games, 
 In my first week at home earlier in 2020, I knew I had to get my WFH routine set up. The first step was to create objectives and key results for the rest of the year. I highly suggest you look into that as you wouldn't try to cross an ocean in a boat without GPS or a compass, so why live life without any clear direction?
 
 My top objectives I set for the year were:
-* ✅ Publish a technical book about modern web development ([Cloud Native Web Development](https://www.mikenikles.com/cloud-native-web-development))
+* ✅ Publish a technical book about modern web development ([Cloud Native Web Development](https://www.mikenikles.com/cloud-native-web-development) and [A Smart Guide for Your Career as a Software Engineer](https://gum.co/a-smart-guide-for-your-career-as-a-software-engineer))
 * ✅ Develop a SaaS product to experiment with new technologies ([Your Analytics](https://www.your-analytics.org))
 
 ### Svelte - a technology bet that paid out
