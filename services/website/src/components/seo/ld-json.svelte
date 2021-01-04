@@ -1,9 +1,8 @@
 <script>
   export let post;
 
-  const imageUrl = `https://www.mikenikles.com/blog-posts/${
-    post.metadata.createdAt.split("T")[0]
-  }-${post.metadata.slug}/cover-preview-lead.jpg`;
+  // Blog posts prior to PR 259 had their cover.jpg file stored in the `static` directory of this git repo.
+  const imageUrl = post.metadata.coverPhotoId ? `https://source.unsplash.com/${post.metadata.coverPhotoId}/1200x1000` : `https://www.mikenikles.com/blog-posts/${post.metadata.slug}/cover-preview-lead.jpg`;
 </script>
 
 {@html `
