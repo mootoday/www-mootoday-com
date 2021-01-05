@@ -5,7 +5,7 @@ summary: "眼前的一切像多年的堆積，與之共存的是看不見的已�
 createdAt: 2020-12-18T01:55:58.087Z
 tags: ["jess lau"]
 author: "Jess Lau"
-category: "Art note"
+category: ["Art note"]
 ---
 
 <script>

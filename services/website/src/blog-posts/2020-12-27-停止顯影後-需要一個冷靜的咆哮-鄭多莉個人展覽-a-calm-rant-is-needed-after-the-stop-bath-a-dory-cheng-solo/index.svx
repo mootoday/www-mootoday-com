@@ -5,7 +5,7 @@ summary: ""
 createdAt: 2020-12-27T10:12:34.292Z
 tags: [""]
 author: ""
-category: ""
+category: [""]
 type: "event"
 ---
 

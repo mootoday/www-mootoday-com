@@ -33,6 +33,16 @@
 						<a href="/teatime/tags/{t}" class="mx3 text-gray-600">#{t}</a>
 					{/each}
 				</p>
+				<p class="mt5">
+					作者：{post.metadata.author}
+				</p>
+				{#if post.metadata.category}
+				<p class="mt5">
+					{#each post.metadata.category as t}
+						<a href="/teatime/category/{t}" class="mx3 text-gray-600">#{t}</a>
+					{/each}
+				</p>
+				{/if}
 			</div>
 		</a>
 	</div>
