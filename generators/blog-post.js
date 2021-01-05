@@ -22,6 +22,24 @@ module.exports = (plop) => {
           "What's the createdAt time [YYYY-MM-DDTHH:mm:ss.sssZ]? (leave blank for now)",
         default: new Date().toISOString(),
       },
+      {
+        type: "checkbox",
+        name: "blogPostCategory",
+        message: "What's the category?",
+        choices: ['Art notes', 'Personally speaking', 'Seriously speaking', 'Coffee fantasia', 'Eat well drink well breath well', 'Field notes']
+      },
+      {
+        type: "list",
+        name: "postPostAuthor",
+        message: "Who is the author?",
+        choices: ['Linda Lai', 'LAI Wai-leung', 'Jess Lau', 'Kel Lok', 'Wong Chun Hoi', 'Cherry Wong', 'Vanessa Tsai', 'LAM Kin-choi', 'Sam Chan', 'FPC folks']
+      },
+      {
+        type: "input",
+        name: "postPostTags",
+        message: "Any tags? (Separate by comma) i.e. 'd-daman', 'childhood', 'children'",
+        default: ''
+      }
     ],
     actions: [
       {
