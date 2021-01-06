@@ -4,6 +4,7 @@
   "description": "Mike's personal website.",
   "scripts": {
     "generate": "plop --plopfile ./generators/index.js",
+    "generate:event": "EVENT=1 plop --plopfile ./generators/index.js",
     "postinstall": "run-p install:services:*",
     "install:services:website": "npm install --prefix services/website",
     "test": "echo \"Error: no test specified\" && exit 1"
