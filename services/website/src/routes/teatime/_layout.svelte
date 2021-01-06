@@ -11,7 +11,7 @@
 	export let categories
 </script>
 
-<div style="padding-top: 60px" class="max-w-screen-lg mx-auto">
+<div class="max-w-screen-lg mx-auto">
 	<div class="flex">
 		<div class="w-full" style="padding: 1em">
 			<slot></slot>

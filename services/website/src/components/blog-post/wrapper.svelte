@@ -1,31 +1,29 @@
 <script>
   import { fade } from "svelte/transition";
   import { headerStore } from "../../stores";
-  import Comments from "../comments.svelte";
   import Footer from "../footer.svelte";
   import Header from "../header/index.svelte";
   import ImageZoom from "./image-zoom.svelte";
   import SeoHeadPost from "../seo/head-post.svelte";
-  import Subscribe from "../subscribe.svelte";
 
   export let post;
 
-  const titleAction = node => {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        headerStore.setScrollBarProgressVisible(!entry.isIntersecting, post.metadata.readingTime)
-      });
-    });
-
-    observer.observe(node);
-
-    return {
-      destroy() {
-        headerStore.setScrollBarProgressVisible(false, {});
-        observer.disconnect();
+  const floatImage = (node) => {
+    const paragraphs = node.querySelectorAll('p')
+    paragraphs.forEach(p => {
+      const img = p.querySelector('img')
+      if (img) {
+        const img_title = img.title
+        if (img_title && img_title > 0) {
+          p.style.width = img_title + 'px'
+          p.style.float = 'right'
+          p.style.padding = '0 1em'
+          p.style.margin = '0'
+          img.style.margin = '0'
+        }
       }
-    };
-  };
+    })
+  }
 </script>
 
 <style>
@@ -39,45 +37,38 @@
   <link href="prism.css" rel="stylesheet" />
 </svelte:head>
 
-<div class="bg-gray-200 font-sans leading-normal tracking-normal">
-  <div class="text-center pt-16 md:pt-32">
-    <p class="text-sm md:text-base font-bold">
-      {new Date(post.metadata.createdAt).toLocaleDateString(undefined, {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      })}
-      <span class="text-gray-900">-</span>
-      <span class="uppercase">{post.metadata.tags.join(' | ')}</span>
-    </p>
-    <h1
-      use:titleAction
-      class="font-bold break-normal text-indigo-700 text-3xl md:text-5xl">
-      {post.metadata.title}
-    </h1>
-  </div>
-
+<div class="container max-w-6xl mx-auto px-4 mb-20">
   <div
-    class="container w-full max-w-6xl mx-auto bg-white bg-cover bg-center mt-8 rounded"
-    style="background-image:url('blog-posts/{post.metadata.createdAt.split('T')[0]}-{post.metadata.slug}/cover.jpg');
-    height: 75vh;" />
+          class="w-full max-w-6xl mx-auto bg-white bg-cover bg-center mt-8 rounded"
+          style="background-image:url('blog-posts/{post.metadata.createdAt.split('T')[0]}-{post.metadata.slug}/cover.jpg');
+      height: 75vh;" />
+  <div class="bg-white px-4 py-2 italic font-black">{post.metadata.coverCaption}</div>
 
-  <div class="container max-w-5xl mx-auto -mt-32">
-    <div class="mx-0 sm:mx-6">
-      <div
-        class="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800
-        leading-normal"
-        style="font-family:Georgia,serif;">
-        <p class="text-2xl md:text-3xl mb-5">{post.metadata.summary}</p>
-        <div class="prose lg:prose-xl content break-words">
-          <slot />
-        </div>
-        <Comments />
+  <div class="flex mt-20">
+    <div class="flex-shrink-0 w-40">
+      <img class="block h-32 rounded-full flex-shrink-0" src="/images/profile-pic.jpg" alt="Woman's Face">
+      <p class="text-black font-semibold ml-4">
+        {post.metadata.author}
+      </p>
+      <p>
+        {new Date(post.metadata.createdAt).toLocaleDateString(undefined, {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })}
+      </p>
+    </div>
+
+    <div class="flex-1">
+      <div class="prose lg:prose-xl content break-words mx-auto" use:floatImage>
+        <h2 class="text-xl">{post.metadata.title}</h2>
+        <slot />
       </div>
-      <Subscribe />
     </div>
   </div>
-  <ImageZoom />
-  <Footer />
+
 </div>
+
+<ImageZoom />
+<Footer />
