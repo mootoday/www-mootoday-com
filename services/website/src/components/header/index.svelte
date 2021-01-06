@@ -29,14 +29,14 @@
   ]
 </script>
 
-<a href="/">
-<h1 class="bold mb5 mt10 tac">FP</h1>
+<a href="/" class="mb-5 text-center">
+	<h1 class="text-3xl">FP</h1>
 </a>
-<div class="ac jc tac">
+<div class="flex justify-center text-center">
 	{#each items as item}
-		<a href="{item.href}" class="mx10">
+		<a href="{item.href}" class="mx-2">
 			<div>{item.name}</div>
-			<div>{item.name_en}</div>
+			<div class="text-sm">{item.name_en}</div>
 		</a>
 	{/each}
 </div>

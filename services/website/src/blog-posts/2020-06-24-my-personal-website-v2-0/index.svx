@@ -134,7 +134,7 @@ with [Svelte](https://svelte.dev/) mixed in wherever I want.
 
 Another example, taken from https://svelte.dev/examples:
 
-<Clock />
+<Clock>hi</Clock>
 
 In the blog post file, the following is what I write:
 
