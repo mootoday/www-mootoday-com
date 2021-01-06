@@ -3,6 +3,8 @@
   import A from "../ui-elements/a.svelte";
   import Logo from "./logo.svelte";
 
+  export let segment
+
   const { page } = stores();
 
   const items = [
@@ -34,7 +36,7 @@
 </a>
 <div class="flex justify-center text-center">
 	{#each items as item}
-		<a href="{item.href}" class="mx-2">
+		<a href="{item.href}" class="mx-2" class:text-blue-500={item.href === '/'+segment}>
 			<div>{item.name}</div>
 			<div class="text-sm">{item.name_en}</div>
 		</a>

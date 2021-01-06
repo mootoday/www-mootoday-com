@@ -7,7 +7,7 @@
 
 <TailwindCSS />
 
-<Header />
+<Header {segment}/>
 <main>
 	<slot></slot>
 </main>

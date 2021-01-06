@@ -26,7 +26,7 @@ export const get = (req, res) => {
 		} else if (type === 'author') {
 			return target_meta === slug
 		} else if (type === 'category') {
-			return target_meta === slug
+			return target_meta.indexOf(slug) > -1
 		}
 	})
 	if (filtered_post.length) {
