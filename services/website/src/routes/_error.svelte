@@ -35,8 +35,7 @@
 
         {#if status === 500}
           <div class="flex justify-center">
-            <a
-              href="javascript:window.location.reload(true)"
+            <a href="/"
               class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6
               focus:outline-none hover:bg-indigo-600 rounded text-lg">
               Click here to update the site
