@@ -12,12 +12,13 @@
 	export let posts
 
 	import { stores } from '@sapper/app';
+	import Preview from '../../../components/blog-post/previews/index.svelte'
 	const { preloading, page, session } = stores();
 </script>
 <h1>{$page.params.type}: <b>{$page.params.slug}</b></h1>
 {#if posts && posts.length}
-{#each posts as p}
-	{p.metadata.title}
+{#each posts as post}
+	<Preview {post}/>
 {/each}
 {:else}
 	not found
