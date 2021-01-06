@@ -9,7 +9,7 @@
 </script>
 
 <div class="mb-20">
-  <a href="blog/{post.metadata.slug}" class="flex">
+  <a href="events/{post.metadata.slug}" class="flex">
     <div class="flex-shrink-0 w-40">
       <img
               src={coverImageBasePath}

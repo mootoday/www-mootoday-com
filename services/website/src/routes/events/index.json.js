@@ -1,5 +1,4 @@
-import events from "../blog/_events.js";
-console.log('posts', events)
+import events from "./_posts";
 
 export const get = (req, res) => {
 	res.writeHead(200, {

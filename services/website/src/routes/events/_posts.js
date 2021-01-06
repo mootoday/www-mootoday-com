@@ -4,7 +4,7 @@ import readingTime from "reading-time";
 
 const generatePost = (dirent) => {
   const postContent = fs.readFileSync(
-    `./src/blog-posts/${dirent.name}/index.svx`,
+    `./src/event-posts/${dirent.name}/index.svx`,
     {
       encoding: "utf-8",
     }
@@ -19,7 +19,7 @@ const generatePost = (dirent) => {
   };
 };
 
-const names = fs.readdirSync("./src/blog-posts", { withFileTypes: true });
+const names = fs.readdirSync("./src/event-posts", { withFileTypes: true });
 const posts = names
   .filter((dirent) => dirent.isDirectory())
   .map(generatePost)
