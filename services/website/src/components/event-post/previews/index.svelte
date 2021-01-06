@@ -3,9 +3,9 @@
 
   export let post;
 
-  const coverImageBasePath = `blog-posts/${
+  const coverImageBasePath = `event-posts/${
     post.metadata.createdAt.split("T")[0]
-  }-${post.metadata.slug}/cover-preview`;
+  }-${post.metadata.slug}/cover-preview.jpg`;
 </script>
 
 <div class="mb-20">

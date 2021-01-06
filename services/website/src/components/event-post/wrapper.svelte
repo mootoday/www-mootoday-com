@@ -39,7 +39,7 @@
 <div class="container max-w-6xl mx-auto px-4 mb-20">
   <div
           class="w-full max-w-6xl mx-auto bg-white bg-cover bg-center mt-8 rounded"
-          style="background-image:url('blog-posts/{post.metadata.createdAt.split('T')[0]}-{post.metadata.slug}/cover.jpg');
+          style="background-image:url('event-posts/{post.metadata.createdAt.split('T')[0]}-{post.metadata.slug}/cover.jpg');
       height: 75vh;" />
   <div class="bg-white px-4 py-2 italic font-black">{post.metadata.coverCaption}</div>
 
