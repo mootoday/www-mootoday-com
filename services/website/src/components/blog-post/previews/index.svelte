@@ -35,7 +35,9 @@
 
       {#if post.metadata.author}
         <div class="flex items-center">
-          <img class="block h-10 rounded-full flex-shrink-0" src="/images/profile-pic.jpg" alt="Woman's Face">
+          <div class="avatar"
+               style="background-image: url('/authors/{post.metadata.author.slug}.jpg')"
+               alt={post.metadata.author.name}></div>
           <p class="text-black font-semibold ml-4">
             {post.metadata.author.name}
           </p>

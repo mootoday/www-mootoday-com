@@ -11,6 +11,10 @@
       @apply mr-2 px-4 bg-white border-solid border-2 rounded text-blue-800
   }
 
+  .avatar {
+		  @apply h-12 w-12 rounded-full bg-cover bg-center flex-shrink-0
+  }
+
   .prose img + em {
       margin-top: -2em;
       display: block;

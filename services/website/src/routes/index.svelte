@@ -7,7 +7,6 @@
 
 <script>
   import BlogPostPreview from "../components/blog-post/previews/index.svelte";
-  import BlogPostPreviewLead from "../components/blog-post/previews/lead.svelte";
   import Footer from "../components/footer.svelte";
   import Header from "../components/header/index.svelte";
   import SeoHead from "../components/seo/head.svelte";
