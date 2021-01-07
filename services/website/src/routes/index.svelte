@@ -2,12 +2,17 @@
   export async function preload({ params, query }) {
     const blog_promise = this.fetch(`blog.json`)
     const event_promise = this.fetch(`event.json`)
-	  const result = await Promise.all([blog_promise, event_promise])
+    const series_promise = this.fetch(`blog/tags/Quotidian%20diversions%20series.json`)
+
+	  const result = await Promise.all([blog_promise, event_promise, series_promise])
 	  const {posts} = await result[0].json()
 	  const {events} = await result[1].json()
+	  const res = await result[2].json()
+	  console.log(res.posts)
   	return {
 		  posts,
-		  events
+		  events,
+		  blog_series: res.posts
 	  }
   }
 </script>
@@ -18,10 +23,12 @@
 
   export let posts;
   export let events;
+  export let blog_series;
 
   // Without cloning the posts, it is an empty array when hydration kicks in.
   const postsArray = [...posts];
   const eventsArray = [...events]
+  const blog_series_Array = [...blog_series]
   const leadEvent = eventsArray.shift()
 
 	const getPostPreviewImage = post => `blog-posts/${
@@ -98,28 +105,33 @@
 </div>
 
 <div class="container mx-auto">
-	<div class="grid grid-cols-2 gap-4">
-		<div>
-			<p class="font-bold text-xs">重點項目：</p>
-			<h2 class="text-4xl mb-2 text-pink-800 font-bold">平地數碼</h2>
-			<p>《平地數碼》有三個重點。（1）以平易近人的「錄像文章」為焦點，建立一個具包容性的群體，（2）鼓勵發表，善用現成的媒體和個別的資源，開創新的表述語言，（3）於可發展、再用、延伸的在線虛擬環境，集合展館與存庫的功用，持續更生。</p>
-			<p>More</p>
+	<div class="grid grid-cols-3 gap-4">
+		<div class="col-span-2">
+			<div class="grid grid-cols-3 border-8 border-red-200">
+				<div class="bg-red-200 col-span-2 p-8">
+					<h2 style="font-size: 4em" class="mb-2 font-bold">平地數碼</h2>
+					<p>Video Essays as a Minor Literature</p>
+					<p class="mt-4">More</p>
+				</div>
+				<div class="bg-red-100">
+					{#each news as n}
+						<div class="flex items-center">
+							<div class="flex-shrink-0 w-16 text-center">
+								<div class="text-2xl text-red-400">
+									JAN
+								</div>
+								<div class="text-sm">
+									2021
+								</div>
+							</div>
+							<p class="p-4">{n.body}</p>
+						</div>
+					{/each}
+				</div>
+			</div>
 		</div>
 		<div>
-			<h3>News:</h3>
-			{#each news as n}
-				<div class="flex items-center">
-					<div class="flex-shrink-0 w-16 text-center">
-						<div class="text-2xl">
-							JAN
-						</div>
-						<div class="text-sm">
-							2021
-						</div>
-					</div>
-					<p class="p-4">{n.body}</p>
-				</div>
-			{/each}
+			<div>xx</div>
 		</div>
 	</div>
 </div>
@@ -136,6 +148,9 @@
 			</div>
 			<div>
 				series 02
+				{#each blog_series_Array as post}
+					<div>{post.metadata.title}</div>
+				{/each}
 			</div>
 		</div>
 	</div>
