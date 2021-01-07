@@ -1,0 +1,71 @@
+---
+title: "A calm rant is needed after the stop bath－ a Dory Cheng Solo"
+slug: "a-calm-rant-is-needed-after-the-stop-bath-a-dory-cheng-solo"
+summary: "那是她某天傳來的一句話。我估計她單純的因為成功以中途曝光（Solarization）沖曬了那張20“x 16“的棚架照片"
+createdAt: 2020-12-10
+category: ["artistic-production"]
+event_start_date: "2020-12-10"
+event_end_date: "2020-12-31"
+tags: []
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2020-12-10-${slug}`;
+</script>
+
+停止顯影後，需要一個冷靜的咆哮 －鄭多莉個人展覽
+A calm rant is needed after the stop bath－ a Dory Cheng Solo
+
+展期 Open-door Period:  2020/12/12 – 2020/12/31
+成像過程分享會 Imaging process sharing session: 2020/12/19  3pm – 6pm
+場地 Venue：Floating Projects 據點。句點
+地址 Address: L3-06D, Jockey Club Creative Arts Centre (JCCAC), 30 Pak Tin St, Shek Kip Mei, Kowloon 九龍石硤尾白田街30號 賽馬會創意藝術中心(JCCAC), L3-06D
+
+
+
+展覽緣由
+「我真係好開心（！）」
+
+那是她某天傳來的一句話。我估計她單純的因為成功以中途曝光（Solarization）沖曬了那張20“x 16“的棚架照片 (Outline of Darkness , 2020) ，成像後真的太高興了，於是急不及待要告訴我這個一直在跟她傾作品的人。那一刻我當然也很替她高興，相信她定必有過不少這些相似的時刻：從酸溜溜的黑房中走出來，在月亮下按捺不住地傻笑並心裡唸著「終於成功了，真係好開心」。
+
+鄭多莉還在修讀她在大學的第四(和第五)年。在這古怪之年的暑假來了我打工的公司做實習生。我一直期待著她把辦公室的某個角落製成針孔相機，然後實習完畢的那些散水餅禮儀或許會有一張過度曝光的相紙還是什麼。在我的桌子上，還放了她送我那混了石膏的珪藻土自製杯墊，上面有藍色的圖案，第一下拿起手就甩了色。杯墊上的白色粉未也有些掉落。直到現在，我一次也沒有用過這個杯墊，因為太脆，我覺得我會不小心太大力放杯子；因為遇水那藍色會甩掉；因為咖啡比白色深色… 我回想一下那個藍色，正正就是她做藍曬攝影的那種藍色。
+
+其後，她再給我看到更廣闊的藍色，並如數家珍地把沖曬的自製工具和成果逐一介紹：風琴摺法的黑色卡紙套；藍曬照片背後的藥水痕；臨時搭建的轉盤攝影工具；在黑房中術數的筆記；無數燒焦的試驗相紙；中途的意外發現；然後才是那張「成功了」的照片。
+
+機器的使用者總願意冒一點的險。他們親手使用、把玩，和照顧那些有自己「知識」的東西。
+
+「青春的不甘示弱與躁動」啊，好像只能用行動力證明。所以我也不敢怠慢。
+
+
+
+
+
+王鎮海 (策展伙伴）
+
+2020冬
+
+
+
+Introduction: a prequel to the show
+
+
+“I’m so happy (!)“
+
+That’s what Dory said the other day. I guess she was simply so happy that she had successfully developed the scaffolding scene with a solarization process on 20 “x16” photographic paper, a work now titledOutline of Darkness (2020). She couldn’t wait to bring this piece of good news to me, an occasional discussant of her art practice.  I was happy for her, too, at that moment. I’m sure she had many similar moments when she came out of a sour dark room, giggling under the moon and chanting, “I’m so happy I finally did it(!)”
+
+Dory is still in her fourth (and fifth) year of her undergraduate studies. During the summer of this weird year, she came to the company where I was working as an intern. I kept expecting her to make a pinhole camera somewhere in the office and probably an overexposed image on photo paper or something like that at some farewell cake ceremonies at the end of her internship. On my desk, I also put the homemade coaster she gave me with Diatomaceous earth mixed with plaster, which had a blue pattern on it. The first time I picked it up, the color was partly gone. Some of the white powder on the coaster also fell off.  I have not used the coaster even once because it was too brittle. I thought I would accidentally put too much pressure on it with a cup, and that the blue color would be lost when I touched it with water, or that  coffee is darker than white… I can see that blue color in my mind, and it was exactly the same blue color she used for her cyanotype print.
+
+Later on, she showed me a wider range of cyan, and introduced me to the homemade tools and results of her development one by one as if they were her treasures: the black cardboard sleeve with an organ folding pattern; the marks behind the cyanotype prints; the makeshift turntable camera tool; the notes from the dark room where she did her calculations; the countless burnt test print; the unexpected discoveries in the middle of the process; and then the “successful” photo.
+
+The users of the machine are always willing to take a little risk. They use, play with, and care for the kind of “knowledge” they have about their craft.
+
+It seems that the “reluctance to failure and restlessness of youth” can only be proved by practise. So I dare not slow down either.
+
+
+
+Wong Chun Hoi (Curatorial buddy)
+
+Winter 2020
+
+![彈珠人競技枱]({assetsBasePath}/1.jpg "400")
+*the image caption*

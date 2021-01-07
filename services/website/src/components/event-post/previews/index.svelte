@@ -5,7 +5,7 @@
 
   const coverImageBasePath = `event-posts/${
     post.metadata.createdAt.split("T")[0]
-  }-${post.metadata.slug}/cover-preview.jpg`;
+  }-${post.metadata.slug}/cover.jpg`;
 </script>
 
 <div class="mb-20">
