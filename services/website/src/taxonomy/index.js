@@ -64,4 +64,40 @@ export const authors = [
 	}
 ]
 
-const event_categories = []
+const event_categories = [
+	{
+		slug: 'artistic-production',
+		name: '實驗場',
+		name_en: 'Artistic Production'
+	},
+	{
+		slug: 'fp-outbound',
+		name: '句點在城中。據點外遊',
+		name_en: 'FP outbound'
+	},
+	{
+		slug: 'partnership',
+		name: '據點演繹 ',
+		name_en: 'Partnership'
+	},
+	{
+		slug: 'artistic-production',
+		name: '實驗場',
+		name_en: 'Artistic Production'
+	},
+	{
+		slug: 'stock-taking',
+		name: '點子上倉',
+		name_en: 'Stock taking'
+	},
+	{
+		slug: 'workshops',
+		name: '工作室',
+		name_en: 'Workshops'
+	},
+	{
+		slug: 'wip-inspection',
+		name: '句點。定期發表 ',
+		name_en: 'WIP Inspection'
+	}
+]
