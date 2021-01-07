@@ -21,7 +21,12 @@
 			<h3 class="text-2xl">Category:</h3>
 			<ul class="mb-20">
 				{#each categories as t}
-					<li><a href="/teatime/category/{t.slug}">{t.name} <br>{t.name_en}</a></li>
+					<li class="leading-none mb-4">
+						<a href="/teatime/category/{t.slug}">
+							<div class="pb-1">{t.name}</div>
+							<div class="text-sm text-gray-600">{t.name_en}</div>
+						</a>
+					</li>
 				{/each}
 			</ul>
 
