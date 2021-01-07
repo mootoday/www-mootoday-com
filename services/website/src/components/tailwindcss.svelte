@@ -33,6 +33,6 @@
   }
 
   .footnote {
-		  @apply text-sm bg-gray-200 p-8
+		  @apply text-sm bg-gray-200 p-8;
   }
 </style>

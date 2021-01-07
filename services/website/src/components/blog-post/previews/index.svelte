@@ -1,5 +1,6 @@
 <script>
   import A from "../../ui-elements/a.svelte";
+  import PostAuthor from './post-author.svelte'
 
   export let post;
 
@@ -33,15 +34,7 @@
         </p>
       {/if}
 
-      {#if post.metadata.author}
-        <div class="flex items-center">
-          <div class="avatar"
-               style="background-image: url('/authors/{post.metadata.author.slug}.jpg')"></div>
-          <p class="text-black font-semibold ml-4">
-            {post.metadata.author.name}
-          </p>
-        </div>
-      {/if}
+      <PostAuthor {post}/>
     </div>
   </a>
 </div>

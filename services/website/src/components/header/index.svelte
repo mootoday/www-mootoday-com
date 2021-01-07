@@ -33,7 +33,7 @@
 
 <div class="my-8">
 	<a href="/" class="mb-5 text-center">
-		<h1 class="text-3xl">FP</h1>
+		<img src="images/logo.png" alt="logo" class="mx-auto w-40 mb-8">
 	</a>
 	<div class="flex justify-center text-center">
 		{#each items as item}
