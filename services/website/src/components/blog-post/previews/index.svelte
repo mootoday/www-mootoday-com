@@ -5,7 +5,7 @@
 
   const coverImageBasePath = `blog-posts/${
     post.metadata.createdAt.split("T")[0]
-  }-${post.metadata.slug}/cover-preview`;
+  }-${post.metadata.slug}/cover.jpg`;
 </script>
 
 <div class="mb-20">
@@ -21,14 +21,14 @@
       <p class="mb-4 text-gray-700">{post.metadata.summary}</p>
       <p class="mb-4">
         {#each post.metadata.tags as t}
-          <a href="/teatime/tags/{t}" class="tag">#{t}</a>
+          <a href="/blog/tags/{t}" class="tag">#{t}</a>
         {/each}
       </p>
 
       {#if post.metadata.category}
         <p class="mb-4">
           {#each post.metadata.category as cat}
-            <a href="/teatime/category/{cat.slug}" class="tag">#{cat.name}</a>
+            <a href="/blog/category/{cat.slug}" class="tag">#{cat.name}</a>
           {/each}
         </p>
       {/if}
