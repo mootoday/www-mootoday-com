@@ -16,7 +16,7 @@
 	  {
 		  name: "打開門",
 		  name_en: "Floating events",
-		  href: "/events"
+		  href: "/event"
 	  },
 	  {
 		  name: "句點藝術群體",

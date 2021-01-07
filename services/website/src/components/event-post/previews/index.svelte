@@ -9,7 +9,7 @@
 </script>
 
 <div class="mb-20">
-  <a href="events/{post.metadata.slug}" class="flex">
+  <a href="event/{post.metadata.slug}" class="flex">
     <div class="flex-shrink-0 w-40">
       <img
               src={coverImageBasePath}
@@ -18,6 +18,7 @@
     </div>
     <div class="fw ml-10">
       <h4 class="text-2xl mb-4">{post.metadata.title}</h4>
+      <p>{post.metadata.event_start_date} to {post.metadata.event_end_date}</p>
       <p class="mb-4 text-gray-700">{post.metadata.summary}</p>
       <p class="mb-4">
         {#each post.metadata.tags as t}
@@ -27,18 +28,11 @@
 
       {#if post.metadata.category}
         <p class="mb-4">
-          {#each post.metadata.category as t}
-            <a href="/teatime/category/{t}" class="tag">#{t}</a>
+          {#each post.metadata.category as c}
+            <a href="/event/category/{c.slug}" class="tag">#{c.name}</a>
           {/each}
         </p>
       {/if}
-
-      <div class="flex items-center">
-        <img class="block h-10 rounded-full flex-shrink-0" src="/images/profile-pic.jpg" alt="Woman's Face">
-        <p class="text-black font-semibold ml-4">
-          {post.metadata.author}
-        </p>
-      </div>
     </div>
   </a>
 </div>

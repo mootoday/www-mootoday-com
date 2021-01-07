@@ -1,6 +1,6 @@
 <script context="module">
 	export function preload({ params, query }) {
-		return this.fetch(`events.json`)
+		return this.fetch(`event.json`)
 				.then(r => r.json());
 	}
 </script>

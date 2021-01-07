@@ -1,34 +1,23 @@
-import fs from "fs";
-import frontMatter from "front-matter";
-import readingTime from "reading-time";
+import getAllPosts from '../../helpers/get-all-post'
+import {categories, authors} from "../../taxonomy";
 
-const generatePost = (dirent) => {
-  const postContent = fs.readFileSync(
-    `./src/blog-posts/${dirent.name}/index.svx`,
-    {
-      encoding: "utf-8",
-    }
-  );
-  const postFrontMatter = frontMatter(postContent);
+const posts = getAllPosts.getAllPosts('./src/blog-posts');
 
-  return {
-    metadata: {
-      ...postFrontMatter.attributes,
-      readingTime: readingTime(postFrontMatter.body),
-    },
-  };
-};
+const joinCategory = post => {
+  if (post.metadata.category) {
+    post.metadata.category = post.metadata.category.map(slug => {
+      return categories.find(cat => cat.slug === slug) || {}
+    })
+  }
+}
 
-const names = fs.readdirSync("./src/blog-posts", { withFileTypes: true });
-const posts = names
-  .filter((dirent) => dirent.isDirectory())
-  .map(generatePost)
-  .sort((a, b) =>
-    a.metadata.createdAt > b.metadata.createdAt
-      ? -1
-      : a.metadata.createdAt < b.metadata.createdAt
-      ? 1
-      : 0
-  );
+const joinAuthor = post => {
+  if (post.metadata.author) {
+    post.metadata.author = authors.find(author => author.slug === post.metadata.author) || {}
+  }
+}
 
-export default posts;
+posts.forEach(p => joinCategory(p))
+posts.forEach(p => joinAuthor(p))
+
+export default posts

@@ -2,7 +2,7 @@ const fs = require("fs");
 
 const is_event = process.env.EVENT === '1'
 
-const type = process.env.EVENT === '1' ? 'events' : 'blog'
+const type = process.env.EVENT === '1' ? 'event' : 'blog'
 
 const categories = ['art-notes', 'coffee-fantasia', 'eat-well-drink-well-breathe-well', 'field-notes', 'personally-speaking', 'seriously-speaking']
 

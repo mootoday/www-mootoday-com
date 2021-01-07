@@ -64,7 +64,7 @@ export const authors = [
 	}
 ]
 
-const event_categories = [
+export const event_categories = [
 	{
 		slug: 'artistic-production',
 		name: '實驗場',

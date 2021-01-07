@@ -1,4 +1,4 @@
-import posts from "./_articles.js";
+import posts from "./_posts.js";
 
 export const get = (req, res) => {
   res.writeHead(200, {

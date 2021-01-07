@@ -1,4 +1,4 @@
-import events from "./_posts";
+import events from "./_events";
 
 export const get = (req, res) => {
 	res.writeHead(200, {

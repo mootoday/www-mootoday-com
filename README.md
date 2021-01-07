@@ -33,3 +33,9 @@ Check out the `v1.0.0` tag for the source code of the previous version, based on
    Until there's a fix, run `git restore static/blog-posts`. That's because the above script modifies all files and not
    just the new ones. There's a way to make this work by passing a parameter to that NPM script, but it took me more
    than 15 minutes to figure out and wasn't a priority.
+
+## TODO
+### generator
+1. Allow input array (tags, categories)
+   Now category must be input with one value only
+2. to slug function need to stripe chinese character
