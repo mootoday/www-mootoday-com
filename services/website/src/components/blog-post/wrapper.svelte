@@ -46,18 +46,28 @@
 
   <div class="flex mt-20">
     <div class="flex-shrink-0 w-40">
-      <img class="block h-32 rounded-full flex-shrink-0" src="/images/profile-pic.jpg" alt="Woman's Face">
-      <p class="text-black font-semibold ml-4">
-        {post.metadata.author.name}
-      </p>
-      <p>
-        {new Date(post.metadata.createdAt).toLocaleDateString(undefined, {
-          weekday: 'long',
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        })}
-      </p>
+      <div class="mx-auto">
+        <div class="avatar big mx-auto"
+             style="background-image: url('/authors/{post.metadata.author.slug}.jpg')"></div>
+        <p class="text-black font-bold mx-auto mt-4 text-center">
+          {post.metadata.author.name}
+        </p>
+
+        <p>
+          {#each post.metadata.category as cat}
+            <span class="tag">{cat.name}</span>
+          {/each}
+        </p>
+
+        <p>
+          {new Date(post.metadata.createdAt).toLocaleDateString(undefined, {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          })}
+        </p>
+      </div>
     </div>
 
     <div class="flex-1">
