@@ -27,18 +27,20 @@
 
       {#if post.metadata.category}
         <p class="mb-4">
-          {#each post.metadata.category as t}
-            <a href="/teatime/category/{t}" class="tag">#{t}</a>
+          {#each post.metadata.category as cat}
+            <a href="/teatime/category/{cat.slug}" class="tag">#{cat.name}</a>
           {/each}
         </p>
       {/if}
 
-      <div class="flex items-center">
-        <img class="block h-10 rounded-full flex-shrink-0" src="/images/profile-pic.jpg" alt="Woman's Face">
-        <p class="text-black font-semibold ml-4">
-          {post.metadata.author}
-        </p>
-      </div>
+      {#if post.metadata.author}
+        <div class="flex items-center">
+          <img class="block h-10 rounded-full flex-shrink-0" src="/images/profile-pic.jpg" alt="Woman's Face">
+          <p class="text-black font-semibold ml-4">
+            {post.metadata.author.name}
+          </p>
+        </div>
+      {/if}
     </div>
   </a>
 </div>

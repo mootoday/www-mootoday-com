@@ -24,9 +24,9 @@ export const get = (req, res) => {
 		if (type === 'tags') {
 			return target_meta.indexOf(slug) > -1
 		} else if (type === 'author') {
-			return target_meta === slug
+			return target_meta.slug === slug
 		} else if (type === 'category') {
-			return target_meta.indexOf(slug) > -1
+			return target_meta.some(cat => cat.slug === slug)
 		}
 	})
 	if (filtered_post.length) {

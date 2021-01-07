@@ -48,7 +48,7 @@
     <div class="flex-shrink-0 w-40">
       <img class="block h-32 rounded-full flex-shrink-0" src="/images/profile-pic.jpg" alt="Woman's Face">
       <p class="text-black font-semibold ml-4">
-        {post.metadata.author}
+        {post.metadata.author.name}
       </p>
       <p>
         {new Date(post.metadata.createdAt).toLocaleDateString(undefined, {

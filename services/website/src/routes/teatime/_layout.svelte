@@ -21,7 +21,7 @@
 			<h3 class="text-2xl">Category:</h3>
 			<ul class="mb-20">
 				{#each categories as t}
-					<li><a href="/teatime/category/{t}">{t}</a></li>
+					<li><a href="/teatime/category/{t.slug}">{t.name} <br>{t.name_en}</a></li>
 				{/each}
 			</ul>
 
@@ -40,7 +40,7 @@
 			<h3 class="text-2xl">Author:</h3>
 			<ul class="mb-20">
 				{#each authors as t}
-					<li><a href="/teatime/author/{t}">{t}</a></li>
+					<li><a href="/teatime/author/{t.slug}">{t.name}</a></li>
 				{/each}
 			</ul>
 		</div>

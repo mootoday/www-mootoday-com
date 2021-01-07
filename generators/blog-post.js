@@ -1,5 +1,7 @@
 const fs = require("fs");
 
+const categories = ['art-notes', 'coffee-fantasia', 'eat-well-drink-well-breathe-well', 'field-notes', 'personally-speaking', 'seriously-speaking']
+
 module.exports = (plop) => {
   return {
     description: "Generate a new blog post.",
@@ -26,13 +28,13 @@ module.exports = (plop) => {
         type: "checkbox",
         name: "blogPostCategory",
         message: "What's the category?",
-        choices: ['Art notes', 'Personally speaking', 'Seriously speaking', 'Coffee fantasia', 'Eat well drink well breath well', 'Field notes']
+        choices: categories
       },
       {
         type: "list",
         name: "postPostAuthor",
         message: "Who is the author?",
-        choices: ['Linda Lai', 'LAI Wai-leung', 'Jess Lau', 'Kel Lok', 'Wong Chun Hoi', 'Cherry Wong', 'Vanessa Tsai', 'LAM Kin-choi', 'Sam Chan', 'FPC folks']
+        choices: ['linda Lai', 'lai-wai-leung', 'jess-lau', 'kel-lok', 'wong-chun-hoi', 'wong-fuk-kuen']
       },
       {
         type: "input",
