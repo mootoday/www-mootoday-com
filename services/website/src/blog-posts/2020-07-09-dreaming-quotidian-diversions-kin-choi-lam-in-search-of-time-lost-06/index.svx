@@ -1,0 +1,27 @@
+---
+title: "DREAMING, “Quotidian Diversions: Kin-choi Lam in search of time lost” 06"
+slug: "dreaming-quotidian-diversions-kin-choi-lam-in-search-of-time-lost-06"
+summary: "「逆流索引」一：夢 | 林建才手繪  Quotidian Diversions: Kin-choi Lam in search of time lost 06: “Dreaming” | 2020.06.04 | 流水革命十月天完"
+createdAt: 2020-07-09
+category: ["personally-speaking"]
+author: "kin-choi-lam"
+tags: []
+coverCaption: ""
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2020-07-09-${slug}`;
+</script>
+
+<div class="text-blue-700">
+	write your introduction here... (text in blue)
+</div>
+
+main content here...
+
+![彈珠人競技枱]({assetsBasePath}/1.jpg "400")
+*the image caption*
+
+<div class="footnote">
+	write your footnote here...
+</div>

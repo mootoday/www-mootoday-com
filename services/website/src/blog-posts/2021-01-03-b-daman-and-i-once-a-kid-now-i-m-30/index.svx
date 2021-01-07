@@ -1,0 +1,71 @@
+---
+title: "WONG Fuk-kuen / 我與彈珠人：小孩的他和三十歲的他接軌了。 B-Daman and I: once a kid, now I’m 30"
+slug: "b-daman-and-i-once-a-kid-now-i-m-30"
+summary: "成年人眼中的沈溺，在一個小孩來說，或許是有他們的原因的，也可以是一生的能源的暗出口。"
+createdAt: 2021-01-03
+tags: []
+author: "wong-fuk-kuen"
+category: ["eat-well-drink-well-breathe-well"]
+coverCaption: "戰鬥火島PI-EX,黃福權在家中拍攝，背後依然是樂富中心和他以前就讀的小學，但內文中提及的福星玩具店已經不復存在。Fighting PheonixPI-EX at Wong’s home, with the Lok Fu shopping mall and the primary school he attended viewable from the window; the toy shop where he purchased this piece has gone."
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2021-01-03-${slug}`;
+</script>
+
+<div class="text-blue-700">
+「我跟彈珠人有一種緣份，跨越了二十多年時間，這種特殊的喜愛也是一樣的。無論在小學，還是到現在，相比其他漫畫，這個故事情節也「比較真實」，角色都是不會變成超人的小朋友，劇情中有小朋友比賽射汽水罐，當然誇大了很多倍，這對我來說是很合理的誇張。」（2017，黃福權）成年人眼中的沈溺，在一個小孩來說，或許是有他們的原因的，也可以是一生的能源的暗出口。Wong Fuk-kuen sees a clear linkage between the young kid and the adult of himself through the marble shooting toy B-Daman. Here, he speaks of the 20-something-year attachment. What adults consider obsessions in a kid could be a unique kind of resources.
+</div>
+
+> 等候時，我沒有不耐煩，因為遲些玩具店就會開，我就可以去購物。天助我也，今天醫生真是遲到，所以等到十一時才走。但是每一間店，戰鬥火鳥的價錢都很貴，賣$79 ，一些$75 ……我還以為要$50或者$60就可以買到，本來已經可以買，但是太貴，所以我沒有買。
+>
+> 星期六，我買了一隻超級戰鬥火鳥(PI-EX)。今天，我得到麻麻 [編註：即祖母] 的答應，都黃大仙中心購物，結果，和昨天一樣，很貴。我很不開心……。我想了一想，到樂富中心買好嗎？雖然違反了只准去黃大仙中心的命令，但是我非常想買那玩具，所以最終到了那裏，我先入福星*看看，嘩62元 ，比黃大仙中心，便宜了17元，我不用到第二間店比價錢，便立刻買了他。之後，我弄好它(按：砌好)，但是我弄破了他一部份 (按：是最重要的射擊核心零件._.)，所以他彈得很slow (按：射擊能力很弱)，不過幸好這是PI-EX*彈珠人，我可以更換它的部分 (按：更換發射部分的零件)。
+>
+> _~ 黃福權小五上學期時候的作文，1999年的冬天_
+
+<div class="text-xs">
+*福星玩具(樂富中心第一期S 22號舖)已結業
+
+*PIEX 系列的彈珠人，可以自由更換構成部件
+</div>
+
+---
+
+記得我在小學二年班的時候擁有了第一隻「彈珠人」(B-Daman) [1]，那是PI神風比利的，當時在黃大仙中心敘福樓旁邊的貓頭鷹書報社買的，但忘記了是誰送給我的。當時沒有同學間的渲染，也沒有接觸過在Coco連載的漫畫，我只是純粹被「彈珠」這個概念吸引，覺得我要買這個玩具。隨後四五年間一直到高小，伴隨着漫畫的發展，以及每一代新的系列，我都有買新的型號，也很熱衷於找同學對戰。我還記得千禧年除夕倒數的時候，我在家中拿着戰鬥火鳥，等待那一刻發射彈珠。
+
+我身邊的同學都沒有完整地投入在彈珠人中，也許爆扣連發沒有好像四驅車那般紅，在電視也沒有連載動畫，所以當我期望在找玩伴對戰時，他們都好像是「業餘」似的，他們也許只是買了一兩隻，而且是翻版，也許任何潮流都能輕易把他們的注意力放在其他玩意上。
+
+![彈珠人競技枱]({assetsBasePath}/1.jpg "400")
+*The front (up) and side view (down) of Fighting Phoenix PI-EX*
+
+彈珠人伴隨了我整個小學時代，但我相信他們不單單只是一片童年回憶：
+
+如果我在成年後才遇上你們，事情還會一樣嗎？我對你們的熱愛不只建基於童年的懷緬，這是肯定的，我熱衷的是這個遊戲本身，就好像乒乓球或者桌球沒兩樣，如果有些人喜歡在桌球枱上篤波，我是喜歡在桌上射波子而且。也許我如果活在再上一代，那個物質不富足的年代，我可能會喜歡那個用手指彈波子的遊戲。而爆球連發的系列發展出射彈珠的多樣性、創造出不同性格特色的彈珠人，真是一個進步。
+
+所以雖然我小時候也有玩四驅車和爆旋陀螺之類的玩具，但他們實在不及彈珠人，不在那個層次。
+
+甚麼是那個層次？我想就是不單單只是一個以擁有全個系列的彈珠人為目標的收藏家，而是更會積極思考這個遊戲能怎麼伸延的人，對，是一種創作的思維。彈珠人不只是存在於我過去的回憶，我更憧景的是他們的可塑性。我經常發夢在某些店的角落發現了一些絕版另類的彈珠人款式，他們配有我未見過的彈射裝置，當然夢醒後才發覺這是不存在的，但我就是經常夢見這些未存在的可能性。設計新的彈珠人比較遙遠難實踐，其實創作一張競技台更具必要性，而且創作空間非常大。
+
+彈珠人競技枱其實是整個遊戲的核心，彈珠人不是高達模型，是要落場競技的，競技是核心價值，所以不論彈珠人的設計怎麼巧妙，終歸也要一個理想的競技場，遊戲才算完整。一張理想的競技枱首先要解決幾個基本問題：很難判斷是否射中了對方，因為大家都在枱上迅速移動自己的彈珠人(自己的箭靶)，所以箭靶不應該是彈珠人本身，玩家只可以間接控制自己的箭靶(要用電子裝置)，這樣才能有一個客觀的射擊目標。另外，一些強勁的彈珠人射中對手的手會很痛，所以彈珠台的設計不能是一個平面。這張枱的基本要求聽起來很沉悶，但其實連官方都沒有提供符合這些要求的方案。
+
+| 今天的黃福權
+
+---
+
+![彈珠人競技枱]({assetsBasePath}/2.jpg)
+*「彈珠人競技枱其實是整個遊戲的核心，」A well designed table is central to the game.*
+
+<div class="footnote">
+**Notes:**
+
+[1]《彈珠人》（日语：ビーダマン，英语：B-Daman）又譯為彈珠超人或彈珠警察，是一種從腹部發射彈珠的二頭身人形玩具，參考《炸彈人》的機器人型狀設計而成， 1993年開始《炸彈人》在產品設定店發售後，Donkey Kong、ミュータントタートルズ、哥吉拉VS宇宙哥吉拉、魔法陣天使等的人物設定商品也陸續登場 。 2002年，金剛先生也出現在彈珠人的產品了。《彈珠人》由TAKARA（現名TAKARA TOMY）負責開發於1993年發售,後來陸續發展出數個系列並且衍生出動畫、漫畫和遊戲。台灣和香港都有代理。
+
+https://zh.wikipedia.org/wiki/%E5%BD%88%E7%8F%A0%E4%BA%BA
+
+“B-Daman (ビーダマン, Bīdaman) is a marble shooting toy produced in Japan by Takara. The blaster’s design is a humanoid figure at the centre, from which a specially made marble is launched (but even other marbles of the same size may be used). Different attachments are used to change a B-Daman’s accuracy, power, balance, control, and rapid fire. They are customizable and each have a special gimmick. [In] Battle B-Daman toys, the marbles are referred to as “B-Dama”. In all cases they are simply called “marbles” (Japanese: ビー玉; biidama, hence the name “B-Daman”) in Japan.”
+
+https://en.wikipedia.org/wiki/B-Daman
+</div>
+
+![彈珠人競技枱]({assetsBasePath}/3.jpg)
+*小學五年班的雙週記及當時學校的單行簿封面 Wong’s bi-weekly journal from his primary school and a scanned copy of his journal (see text in the beginning)*

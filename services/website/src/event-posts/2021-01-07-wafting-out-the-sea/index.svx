@@ -1,0 +1,58 @@
+---
+title: "Wafting Out The Sea"
+slug: "wafting-out-the-sea"
+summary: "dfs"
+createdAt: 2021-01-07
+category: ["partnership"]
+event_start_date: "2021-01-05"
+event_end_date: "2021-01-20"
+tags: []
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2021-01-07-${slug}`;
+</script>
+
+《在大海中飄散 Wafting out the Sea》
+
+「這次之後，我們還會相見嗎？」
+———————————————
+
+莫碧瑩 Shirley mok：
+在疫情之中，巨大的焦慮將我淹沒。以往認為社交媒體、通訊軟件簡直是人類瑰寶，可以分享
+和身邊人分享的每個瞬間。但當疫情來臨， 一切的活動都限於小小蝸居中，每天透過屏幕和
+人問好、打招呼⋯⋯
+我躺在床上，忽然之間在想，我有能確實地得到對方的信息？我有確實傳遞信息給對方？我有
+確實地感受到暖度？這一切都像是偶然發生的幻像，像海浪般似般無序的拍打起伏，不知道何
+時就會斷開。因為不安和焦躁，反讓我把唯一的聯繫也避開，我關上手機，捲縮一團，於無常
+的海洋中擁抱自己。沒有了網絡，如蒲谷英失去了和大地的連接，獨自漂泊於海中。
+但仍希望終有一天可以將種子飄散出去。
+In the pandemic, huge anxiety overwhelmed me· I regarded online communication platforms
+as human treasures, and you could share every moment you shared with people around
+you. But when the epidemic hits, all activities are limited to a small squared room, you could
+only greet others through the small screen every day…
+Lying on the bed, and one day I was wondering, the connection between us, just like a
+phantom.It flaps and undulates disorderly like a sea wave, without knowing when it will end.
+Or it will end in the next moment.
+Then, I chose to avoid the only connection. I turned off my phone, curled up, and embraced
+myself in the middle of the ocean. Without the network, Dandelion lost its connection with the
+earth and wandered in the sea alone.
+But I still hope that one day the seeds can be wafted out.
+
+梁穎珊 Cassia Leung：
+這一年，我在網絡的大海中浮沉並身陷其中。
+在這片海中，我與你的相遇都是偶然的，剎那的觸碰過後，就是別離，沒法再相遇。透過網絡
+與人通訊，是我唯一能在疫情之中連結他者的方法，但我卻感覺到與漸行漸遠，整個溝通似是
+被架空了，使我懷疑世界的真實性。
+學會由孑然一身到連結他人，是這個時代中需要學習的命題。此刻的我，想離開這片海，等待
+一度風的來臨，讓我飛越這裡。
+The internet is like the sea in some sense. And I have been floating on the sea for a year
+already, being led by the irresistible tides. All encounters happen accidentally here, just for
+an instant of touch, there is no way to meet again only after parting.
+Having dialogues through the Internet is the only way that I can link with others during the
+pandemic, like sending the text, photos, and videos, but that I get away from people since I
+cannot reach them physically. Communications seem to be emptied and vacuous which
+makes me doubt the authenticity of the reality.
+
+In this lonely era, connecting with others stands as a proposition for relief. I am waiting for
+the wind to fly me over here.
