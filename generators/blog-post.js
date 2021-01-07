@@ -44,6 +44,11 @@ const blog_prompts = [
     name: "author",
     message: "Who is the author?",
     choices: ['linda Lai', 'lai-wai-leung', 'jess-lau', 'kel-lok', 'wong-chun-hoi', 'wong-fuk-kuen']
+  },
+  {
+    type: "input",
+    name: "coverCaption",
+    message: "The caption for the cover image (if any)"
   }
 ]
 
