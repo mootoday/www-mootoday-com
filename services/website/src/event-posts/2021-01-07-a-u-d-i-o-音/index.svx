@@ -1,0 +1,19 @@
+---
+title: "A U D I O 音"
+slug: "a-u-d-i-o-音"
+summary: "A U D I O_ a pop-up exhibition on analog tapes and digital files. 一個關於錄音帶和數碼檔案的即興展覧"
+createdAt: 2021-01-07
+category: ["stock-taking"]
+event_start_date: "2020-10-10"
+event_end_date: "2020-10-25"
+tags: []
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2021-01-07-${slug}`;
+</script>
+
+event content..
+
+![彈珠人競技枱]({assetsBasePath}/1.jpg "400")
+*the image caption*

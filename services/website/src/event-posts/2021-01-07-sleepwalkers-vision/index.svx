@@ -1,0 +1,19 @@
+---
+title: "Sleepwalkers’ Vision"
+slug: "sleepwalkers-vision"
+summary: ""
+createdAt: 2021-01-07
+category: ["partnership"]
+event_start_date: "2020-11-20"
+event_end_date: "2020-12-05"
+tags: []
+---
+
+<script>
+  const assetsBasePath = `blog-posts/2021-01-07-${slug}`;
+</script>
+
+event content..
+
+![彈珠人競技枱]({assetsBasePath}/1.jpg "400")
+*the image caption*
