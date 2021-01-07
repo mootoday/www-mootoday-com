@@ -41,9 +41,9 @@ const blog_prompts = [
   category_prompt,
   {
     type: "list",
-    name: "author",
+    name: "blogPostAuthor",
     message: "Who is the author?",
-    choices: ['linda Lai', 'lai-wai-leung', 'jess-lau', 'kel-lok', 'wong-chun-hoi', 'wong-fuk-kuen']
+    choices: ['linda Lai', 'lai-wai-leung', 'jess-lau', 'kel-lok', 'wong-chun-hoi', 'wong-fuk-kuen', 'kin-choi-lam']
   },
   {
     type: "input",

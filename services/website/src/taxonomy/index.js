@@ -61,6 +61,10 @@ export const authors = [
 	{
 		slug: 'wong-fuk-kuen',
 		name: 'Wong Fuk Kuen'
+	},
+	{
+		slug: 'kin-choi-lam',
+		name: 'Kinchoi Lam'
 	}
 ]
 
