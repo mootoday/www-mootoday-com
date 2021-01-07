@@ -1,66 +1,89 @@
 const fs = require("fs");
 
+const is_event = process.env.EVENT === '1'
+
+const type = process.env.EVENT === '1' ? 'events' : 'blog'
+
 const categories = ['art-notes', 'coffee-fantasia', 'eat-well-drink-well-breathe-well', 'field-notes', 'personally-speaking', 'seriously-speaking']
+
+const event_categories = ['artistic-production', 'fp-outbound', 'partnership', 'artistic-production', 'stock-taking', 'workshops', 'wip-inspection']
+
+const title_prompt = {
+  type: "input",
+  name: "blogPostTitle",
+  message: "What's the title? (e.g. How to deploy a Sapper app to Cloud Run)",
+}
+
+const summary_prompt = {
+  type: "input",
+  name: "blogPostSummary",
+  message: "What's the summary? (e.g. Learn the steps necessary to ...)",
+}
+
+const create_date_prompt = {
+  type: "input",
+  name: "blogPostCreatedAt",
+  message: "What's the createdAt time [YYYY-MM-DD]? (leave blank for now)",
+  default: new Date().toISOString().split('T')[0],
+}
+
+const category_prompt = {
+  type: "list",
+  name: "blogPostCategory",
+  message: "What's the category?",
+  choices: is_event ? event_categories : categories
+}
+
+const blog_prompts = [
+  title_prompt,
+  summary_prompt,
+  create_date_prompt,
+  category_prompt,
+  {
+    type: "list",
+    name: "author",
+    message: "Who is the author?",
+    choices: ['linda Lai', 'lai-wai-leung', 'jess-lau', 'kel-lok', 'wong-chun-hoi', 'wong-fuk-kuen']
+  }
+]
+
+const event_prompts = [
+  title_prompt,
+  summary_prompt,
+  create_date_prompt,
+  category_prompt,
+  {
+    type: "input",
+    name: "eventStartDate",
+    message: "What's the event start date [YYYY-MM-DD]? (leave blank for now)",
+    default: new Date().toISOString().split('T')[0],
+  },
+  {
+    type: "input",
+    name: "eventEndDate",
+    message: "What's the event end date [YYYY-MM-DD]? (leave blank for single date event)"
+  }
+]
 
 module.exports = (plop) => {
   return {
     description: "Generate a new blog post.",
-    prompts: [
-      {
-        type: "input",
-        name: "blogPostTitle",
-        message:
-          "What's the title? (e.g. How to deploy a Sapper app to Cloud Run)",
-      },
-      {
-        type: "input",
-        name: "blogPostSummary",
-        message: "What's the summary? (e.g. Learn the steps necessary to ...)",
-      },
-      {
-        type: "input",
-        name: "blogPostCreatedAt",
-        message:
-          "What's the createdAt time [YYYY-MM-DDTHH:mm:ss.sssZ]? (leave blank for now)",
-        default: new Date().toISOString(),
-      },
-      {
-        type: "checkbox",
-        name: "blogPostCategory",
-        message: "What's the category?",
-        choices: categories
-      },
-      {
-        type: "list",
-        name: "postPostAuthor",
-        message: "Who is the author?",
-        choices: ['linda Lai', 'lai-wai-leung', 'jess-lau', 'kel-lok', 'wong-chun-hoi', 'wong-fuk-kuen']
-      },
-      {
-        type: "input",
-        name: "postPostTags",
-        message: "Any tags? (Separate by comma) i.e. 'd-daman', 'childhood', 'children'",
-        default: ''
-      }
-    ],
+    prompts: is_event ? event_prompts : blog_prompts,
     actions: [
       {
         type: "add",
-        path:
-          "../services/website/src/event-posts/{{convertDateIsoToYMD blogPostCreatedAt}}-{{dashCase blogPostTitle}}/index.svx",
-        templateFile: "../templates/event-post/index.svx.hbs",
+        path: `../services/website/src/${type}-posts/{{convertDateIsoToYMD blogPostCreatedAt}}-{{dashCase blogPostTitle}}/index.svx`,
+        templateFile: `../templates/${type}-post/index.svx.hbs`,
       },
       {
         type: "add",
-        path:
-          "../services/website/src/routes/events/{{dashCase blogPostTitle}}/index.svelte",
-        templateFile: "../templates/event-post/page.svelte.hbs",
+        path: `../services/website/src/routes/${type}/{{dashCase blogPostTitle}}/index.svelte`,
+        templateFile: `../templates/${type}-post/page.svelte.hbs`,
       },
       {
         type: "add",
-        path:
-          "../services/website/static/event-posts/{{convertDateIsoToYMD blogPostCreatedAt}}-{{dashCase blogPostTitle}}/cover.jpg",
-        templateFile: "../templates/event-post/cover.jpg",
+        path: `../services/website/static/${type}-posts/{{convertDateIsoToYMD blogPostCreatedAt}}-{{dashCase blogPostTitle}}/cover.jpg`,
+        templateFile: `../templates/${type}-post/cover.jpg`,
       },
     ],
   };

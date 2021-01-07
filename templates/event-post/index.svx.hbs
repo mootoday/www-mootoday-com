@@ -2,26 +2,18 @@
 title: "{{ blogPostTitle }}"
 slug: "{{ dashCase blogPostTitle }}"
 summary: "{{ blogPostSummary }}"
-createdAt: {{ blogPostCreatedAt }}
-tags: [{{postPostTags}}]
-author: "{{postPostAuthor}}"
-category: "{{blogPostCategory}}"
-type: "article"
+createdAt: {{ convertDateIsoToYMD blogPostCreatedAt }}
+category: ["{{blogPostCategory}}"]
+event_start_date: "{{eventStartDate}}"
+event_end_date: "{{eventEndDate}}"
+tags: []
 ---
 
 <script>
   const assetsBasePath = `blog-posts/{{convertDateIsoToYMD blogPostCreatedAt}}-${slug}`;
 </script>
 
-<div class="text-blue-700">
-	write your introduction here... (text in blue)
-</div>
-
-main content here...
+event content..
 
 ![彈珠人競技枱]({assetsBasePath}/1.jpg "400")
 *the image caption*
-
-<div class="footnote">
-	write your footnote here...
-</div>
