@@ -11,7 +11,7 @@
 	  {
 		  name: "據點一杯茶",
 		  name_en: "Floating teatime",
-		  href: "/teatime"
+		  href: "/blog"
 	  },
 	  {
 		  name: "打開門",
