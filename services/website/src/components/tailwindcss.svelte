@@ -20,6 +20,11 @@
       @apply h-32 w-32
   }
 
+  .bg-image {
+      @apply bg-cover bg-center rounded flex-shrink-0;
+		  padding-top: 56%;
+  }
+
   .prose img + em {
       margin-top: -2em;
       display: block;
