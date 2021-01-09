@@ -53,7 +53,7 @@ It supports different locales as well. Converting {exampleString} looks as follo
 
 We leverage the `Number.prototype.toLocaleString()` method ([docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)). Thanks to that, the Svelte component becomes very basic:
 
-```svelte
+```html
 <script>
   export let number;
   export let locale = "en";
@@ -79,7 +79,7 @@ It is important to make sure `number` is of type `Number`. If you pass a string,
 
 I highly recommend you enable Typescript for your Svelte project ([instructions](https://svelte.dev/blog/svelte-and-typescript)) and refactor the `FormattedNumber` component as follows:
 
-```svelte
+```html
 <script lang="ts">
   export let number: number;
   export let locale: string = "en";
