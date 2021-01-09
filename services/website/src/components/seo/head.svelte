@@ -14,6 +14,7 @@
   <meta name="author" content="Mike Nikles">
   <meta name="description" content="{description}" />
   <meta name="keywords" content="{keywords}" />
+  <link rel="alternate" type="application/rss+xml" title="Subscribe to new blog posts" href="https://mikenikles.com/rss" />
 
   <TwitterPreview {description} {image} {imageAlt} {title} />
   <OpenGraphPreview {description} {image} {title} />
