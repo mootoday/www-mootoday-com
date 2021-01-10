@@ -7,7 +7,7 @@
     "dev": "sapper dev --ext '.svelte .svx'",
     "build": "sapper build --ext '.svelte .svx'",
     "preexport": "run-s clean",
-    "export": "NODE_ENV=production sapper export --ext '.svelte .svx' --entry '/ /404 /cloud-native-web-development /markua-support'",
+    "export": "NODE_ENV=production sapper export --ext '.svelte .svx' --entry '/ /404 /cloud-native-web-development /markua-support /rss'",
     "export:move404": "mv __sapper__/export/404/index.html __sapper__/export/404.html && rm -r __sapper__/export/404",
     "postexport": "run-s export:move404 && node generate-sitemap.js",
     "start": "node __sapper__/build",
