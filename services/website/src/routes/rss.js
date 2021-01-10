@@ -1,8 +1,5 @@
-import fs from "fs";
-import frontMatter from "front-matter";
 import { formatRFC7231 } from "date-fns";
-
-const BLOG_POSTS_BASE_DIR = "./src/routes/blog";
+import { posts } from "./timeline/_blog";
 
 const escapeHtmlEntities = (raw) =>
   raw.replace(
@@ -15,30 +12,20 @@ const escapeHtmlEntities = (raw) =>
       }[tag])
   );
 
-const generateItem = (dirent) => {
-  const postContent = fs.readFileSync(
-    `${BLOG_POSTS_BASE_DIR}/${dirent.name}/index.svx`,
-    {
-      encoding: "utf-8",
-    }
-  );
-  const postFrontMatter = frontMatter(postContent);
+const generateItem = (postFrontMatter) => ({
+  title: escapeHtmlEntities(postFrontMatter.attributes.title),
+  description: escapeHtmlEntities(postFrontMatter.attributes.summary),
+  link: `http://www.mikenikles.com/blog/${postFrontMatter.attributes.slug}`,
+  guid: `http://www.mikenikles.com/blog/${postFrontMatter.attributes.slug}`,
+  pubDate: formatRFC7231(postFrontMatter.attributes.createdAt),
+});
 
-  return {
-    title: escapeHtmlEntities(postFrontMatter.attributes.title),
-    description: escapeHtmlEntities(postFrontMatter.attributes.summary),
-    link: `http://www.mikenikles.com/blog/${postFrontMatter.attributes.slug}`,
-    guid: `http://www.mikenikles.com/blog/${postFrontMatter.attributes.slug}`,
-    pubDate: formatRFC7231(postFrontMatter.attributes.createdAt),
-    timestamp: postFrontMatter.attributes.createdAt.getTime(), // Required to sort the array
-  };
-};
-
-const items = fs
-  .readdirSync(BLOG_POSTS_BASE_DIR, { withFileTypes: true })
-  .filter((dirent) => dirent.isDirectory())
-  .map(generateItem)
-  .sort((a, b) => b.timestamp - a.timestamp);
+const items = posts
+  .sort(
+    (a, b) =>
+      b.attributes.createdAt.getTime() - a.attributes.createdAt.getTime()
+  )
+  .map(generateItem);
 
 export const get = (req, res, next) => {
   res.setHeader("Content-Type", "application/rss+xml; charset=utf-8");
