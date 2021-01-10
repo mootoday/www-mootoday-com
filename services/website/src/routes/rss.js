@@ -6,10 +6,12 @@ const BLOG_POSTS_BASE_DIR = "./src/routes/blog";
 
 const escapeHtmlEntities = (raw) =>
   raw.replace(
-    /[&<>'"]/g,
+    /[&<>]/g,
     (tag) =>
       ({
         "&": "&amp;",
+        "<": "",
+        ">": "",
       }[tag])
   );
 
