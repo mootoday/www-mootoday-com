@@ -27,6 +27,15 @@ const items = posts
   )
   .map(generateItem);
 
+const printItem = (item) => `<item>${Object.entries(item)
+  .map(
+    ([key, value]) => `
+        <${key}>${value}</${key}>`
+  )
+  .join("")}
+      </item>
+      `;
+
 export const get = (req, res, next) => {
   res.setHeader("Content-Type", "application/rss+xml; charset=utf-8");
   res.end(`<?xml version="1.0" encoding="UTF-8" ?>
@@ -40,25 +49,7 @@ export const get = (req, res, next) => {
       )}</description>
       <link>http://www.mikenikles.com</link>
       <pubDate>${items[0].pubDate}</pubDate>
-      ${items
-        .map(({ title, description, link, guid, pubDate }) => ({
-          title,
-          description,
-          link,
-          guid,
-          pubDate,
-        }))
-        .map(
-          (item) => `<item>${Object.entries(item)
-            .map(
-              ([key, value]) => `
-        <${key}>${value}</${key}>`
-            )
-            .join("")}
-      </item>
-      `
-        )
-        .join("")}
+      ${items.map(printItem).join("")}
       </channel>
     </rss>`);
 };
