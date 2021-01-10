@@ -20,7 +20,7 @@ const generateItem = (postFrontMatter) => ({
   pubDate: formatRFC7231(postFrontMatter.attributes.createdAt),
 });
 
-const items = posts
+const sortedItems = posts
   .sort(
     (a, b) =>
       b.attributes.createdAt.getTime() - a.attributes.createdAt.getTime()
@@ -48,8 +48,8 @@ export const get = (req, res, next) => {
         "Software Architect 👷. Productivity ⏱️ & Team Morale 😊. Javascript, Typescript, Cloud Native ☁️. Author 📚 and Educator 🧑‍🏫."
       )}</description>
       <link>http://www.mikenikles.com</link>
-      <pubDate>${items[0].pubDate}</pubDate>
-      ${items.map(printItem).join("")}
+      <pubDate>${sortedItems[0].pubDate}</pubDate>
+      ${sortedItems.map(printItem).join("")}
       </channel>
     </rss>`);
 };
