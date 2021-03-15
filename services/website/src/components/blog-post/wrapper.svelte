@@ -62,7 +62,7 @@
   </div>
 
   <div
-    class="container w-full max-w-6xl mx-auto bg-white bg-cover bg-center mt-8 rounded"
+    class="container w-full max-w-full mx-auto bg-white bg-cover bg-center mt-8 rounded"
     style="background-image:url('{coverUrl}');
     height: 75vh;" />
 
