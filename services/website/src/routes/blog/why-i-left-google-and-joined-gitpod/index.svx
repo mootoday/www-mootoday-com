@@ -41,7 +41,7 @@ Read on to learn why I am that person.
 
 # Gitpod - The way we are all going to develop software
 
-It was in mid January when [Gitpod](https://www.gitpod.io) reached out to me, based on my InfoQ article I linked to above and my personal advocacy for their product. It had been well over a year since I started to use Gitpod and talk about it publicly. After an initial conversation and some back and forth, we agreed there is a good fit and working together would benefit both Gitpod and myself.
+It was in mid January when [Gitpod](https://www.gitpod.io) reached out to me, based on my InfoQ article I linked to above and my personal advocacy for their product. It had been well over a year since I started to use Gitpod and talk about it publicly. After an initial conversation and some back and forth, we agreed there was a good fit and working together would benefit both Gitpod and myself.
 
 Throughout my career, I developed software but also enjoyed mentoring, writing and sharing my work at meetups, conferences or in articles. At Gitpod, I get to focus on all that - a true win/win. On top of that, we have an opportunity to improve the developer experience for millions of developers around the world - many of them don't know yet how much more efficient they could be 🚀!
 
