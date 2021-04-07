@@ -2,7 +2,7 @@
 title: "Why I Left Google and Joined Gitpod"
 slug: "why-i-left-google-and-joined-gitpod"
 summary: "A short summary of my time at Google, 2020, and what convinced me to go back to the startup world."
-createdAt: 2021-03-15T11:09:36.481Z
+createdAt: 2021-04-07T05:09:36.481Z
 tags: ["gitpod", "development environment", "google"]
 layout: blog
 ---
