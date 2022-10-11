@@ -30,12 +30,6 @@ module.exports = (plop) => {
           "../services/website/src/routes/blog/{{dashCase blogPostTitle}}/index.svx",
         templateFile: "../templates/blog-post/index.svx.hbs",
       },
-      {
-        type: "add",
-        path:
-          "../services/website/static/blog-posts/{{dashCase blogPostTitle}}/cover.jpg",
-        templateFile: "../templates/blog-post/cover.jpg",
-      },
     ],
   };
 };
