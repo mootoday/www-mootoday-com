@@ -43,7 +43,7 @@
 </svelte:head>
 
 <div class="bg-gray-200 font-sans leading-normal tracking-normal">
-  <div class="text-center pt-16 md:pt-32">
+  <div class="text-center pt-16 md:pt-32 max-w-5xl mx-auto">
     <p class="text-sm md:text-base font-bold">
       {new Date(post.metadata.createdAt).toLocaleDateString(undefined, {
         weekday: 'long',
