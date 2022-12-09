@@ -1,0 +1,12 @@
+tasks:
+  - before: nvm install 18
+    init: npm install
+    command: npm run dev
+ports:
+  - port: 5173
+    onOpen: ignore
+
+vscode:
+  extensions:
+    - bradlc.vscode-tailwindcss
+    - svelte.svelte-vscode
