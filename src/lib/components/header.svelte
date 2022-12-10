@@ -1,13 +1,12 @@
 <script lang="ts">
   import { onMount } from "svelte";
+	import { writable } from "svelte/store";
+  import { page } from '$app/stores';
 
   import Avatar from "$lib/components/avatar/index.svelte";
   import AvatarContainer from "$lib/components/avatar/container.svelte";
   import MobileMenu from "$lib/components/mobile-menu.svelte";
   import ModeToggle from "$lib/components/mode-toggle.svelte";
-	import { writable } from "svelte/store";
-
-  export let isHomePage = false;
 
   let headerRef: HTMLDivElement;
   let avatarRef: HTMLDivElement;
@@ -15,6 +14,8 @@
   let isInitial = true;
   let upDelay = 64;
   let showMobileMenu = writable(false);
+  
+  $: isHomePage = $page.route.id === "/";
 
   const navigationItems = [{
     href: "/blog",
