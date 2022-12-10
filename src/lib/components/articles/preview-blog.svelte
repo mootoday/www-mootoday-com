@@ -6,7 +6,7 @@
       <div
         class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"
       />
-      <a href="/articles/crafting-a-design-system-for-a-multiplanetary-future"
+      <a href="/blog/crafting-a-design-system-for-a-multiplanetary-future"
         ><span
           class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"
         /><span class="relative z-10"
