@@ -3,7 +3,9 @@
 
   import Avatar from "$lib/components/avatar/index.svelte";
   import AvatarContainer from "$lib/components/avatar/container.svelte";
+  import MobileMenu from "$lib/components/mobile-menu.svelte";
   import ModeToggle from "$lib/components/mode-toggle.svelte";
+	import { writable } from "svelte/store";
 
   export let isHomePage = false;
 
@@ -12,6 +14,12 @@
 
   let isInitial = true;
   let upDelay = 64;
+  let showMobileMenu = writable(false);
+
+  const navigationItems = [{
+    href: "/blog",
+    label: "Blog"
+  }]
 
   const clamp = (number: number, a: number, b: number) => {
     let min = Math.min(a, b)
@@ -167,6 +175,7 @@
               <div class="flex flex-1 justify-end md:justify-center">
                 <div class="pointer-events-auto md:hidden" data-headlessui-state="">
                   <button
+                    on:click={() => $showMobileMenu = true}
                     class="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20"
                     id="headlessui-popover-button-:Rqb6:"
                     type="button"
@@ -185,41 +194,20 @@
                       /></svg
                     ></button
                   >
+                  <MobileMenu {navigationItems} {showMobileMenu} />
                 </div>
                 <nav class="pointer-events-auto hidden md:block">
                   <ul
                     class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10"
                   >
-                    <!-- <li>
-                      <a
-                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
-                        href="/about">About</a
-                      >
-                    </li> -->
-                    <li>
-                      <a
-                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
-                        href="/blog">Articles</a
-                      >
-                    </li>
-                    <!-- <li>
-                      <a
-                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
-                        href="/projects">Projects</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
-                        href="/speaking">Speaking</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
-                        href="/uses">Uses</a
-                      >
-                    </li> -->
+                    {#each navigationItems as {href, label}}
+                      <li>
+                        <a
+                          class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
+                          {href}>{label}</a
+                        >
+                      </li>
+                    {/each}
                   </ul>
                 </nav>
               </div>
