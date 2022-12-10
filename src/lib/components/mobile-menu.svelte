@@ -1,8 +1,13 @@
 <script lang="ts">
 	import type { Writable } from "svelte/store";
+	import { beforeNavigate } from "$app/navigation";
 
   export let showMobileMenu: Writable<boolean>;
 	export let navigationItems: {href: string; label: string;}[];
+
+	beforeNavigate(() => {
+		$showMobileMenu = false;
+	});
 </script>
 
 {#if $showMobileMenu}
