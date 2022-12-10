@@ -1,5 +1,9 @@
 <script lang="ts">
-	import ArticlePreview from "$lib/components/articles/preview-blog.svelte";
+  import type {PageData} from "./$types"
+
+	import ArticlePreview from "$lib/components/blog/preview-blog.svelte";
+
+  export let data: PageData;
 </script>
 
 <main>
@@ -21,9 +25,9 @@
 					<div class="mt-16 sm:mt-20">
 						<div class="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
 							<div class="flex max-w-3xl flex-col space-y-16">
-								<ArticlePreview />
-								<ArticlePreview />
-								<ArticlePreview />
+								{#each data.posts as post}
+									<ArticlePreview {post} />
+								{/each}
 							</div>
 						</div>
 					</div>
