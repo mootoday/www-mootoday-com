@@ -26,13 +26,13 @@ export async function load({ params, url }) {
 	}
 
 	const {
-		datePublished,
+		createdAt: datePublished,
 		featuredImage,
 		featuredImageAlt,
 		ogImage,
 		ogSquareImage,
-		postTitle,
-		seoMetaDescription,
+		title: postTitle,
+		summary: seoMetaDescription,
 		twitterImage,
 	} = metadata;
 
