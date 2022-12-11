@@ -6,6 +6,11 @@
   export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Blog posts - mikenikles.com</title>
+	<meta name="description" content="Content about developer experience, full-stack web development, tech careers, and whatever else crosses my mind.">
+</svelte:head>
+
 <main>
 	<div class="sm:px-8 mt-16 sm:mt-32">
 		<div class="mx-auto max-w-7xl lg:px-8">

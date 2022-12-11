@@ -7,26 +7,21 @@
 
 	const bannerImages = [{
 		alt: "Photo by Prateek Katyal: https://www.pexels.com/photo/black-and-white-laptop-2740956/",
-		width: "1280",
-		height: "853"
 	}, {
 		alt: "Photo by Alex Fu: https://www.pexels.com/photo/dream-big-signage-945966/",
-		width: "1280",
-		height: "720"
 	}, {
 		alt: "Photo by Anna Tarazevich: https://www.pexels.com/photo/welcome-lettering-text-on-black-background-5598288/",
-		width: "1280",
-		height: "853"
 	}, {
 		alt: "Photo by Polina Kovaleva: https://www.pexels.com/photo/uneven-cutouts-on-black-background-6185244/",
-		width: "1280",
-		height: "854"
 	}, {
 		alt: "Photo by Jorge Urosa: https://www.pexels.com/photo/motivational-quote-in-a-frame-9169913/",
-		width: "1280",
-		height: "853"
 	}, ];
 </script>
+
+<svelte:head>
+	<title>www.mikenikles.com</title>
+	<meta name="description" content="Content about developer experience, full-stack web development, tech careers, and whatever else crosses my mind.">
+</svelte:head>
 
 <main>
 	<div class="sm:px-8 mt-9">
@@ -89,20 +84,24 @@
 	</div>
 	<div class="mt-16 sm:mt-20">
 		<div class="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-			{#each bannerImages as {alt, height, width}, index}
+			{#each bannerImages as {alt}, index}
 				<div
 					class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2"
 				>
-					<img
-						{alt}
-						src="/banner-images/pexels-{index + 1}.jpeg"
-						{width}
-						{height}
-						decoding="async"
-						class="absolute inset-0 h-full w-full object-cover"
-						loading="lazy"
-						style="color:transparent"
-					/>
+        <picture>
+          <source
+            srcset="/banner-images/pexels-{index + 1}.webp"
+            type="image/webp"
+          /><img
+          {alt}
+          src="/banner-images/pexels-{index + 1}.jpeg"
+          width="288"
+          height="320"
+          decoding="async"
+          class="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+          style="color:transparent"
+        /></picture>
 				</div>
 			{/each}
 		</div>
