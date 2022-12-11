@@ -26,6 +26,11 @@
 
 <!-- <BlogPost {post} {imageData} /> -->
 
+<svelte:head>
+	<title>{data.post?.postTitle} - mikenikles.com</title>
+	<meta name="description" content="{data.post?.seoMetaDescription}">
+</svelte:head>
+
 <main>
 	<div class="sm:px-8 mt-16 lg:mt-32">
 		<div class="mx-auto max-w-7xl lg:px-8">
