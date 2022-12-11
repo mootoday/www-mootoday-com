@@ -19,7 +19,7 @@ In summary, she developed a feature that displays a content preview when a user 
 
 Below is an animated gif Ilona created to illustrate how this looks in practice:
 
-![Link content previewer in action](https://assets.mikenikles.com/2020/04/aukl8h6ktfl78xgehkt1.gif)
+![Link content previewer in action]({assetsBasePath}/1.gif)
 
 Link content previewer in action
 
