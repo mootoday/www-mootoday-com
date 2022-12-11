@@ -1,21 +1,12 @@
-image:
-  file: .gitpod.Dockerfile
 tasks:
-  - init: npm install
-    command: cd services/website && npm run dev
-  - command: |
-      gp ports await 3000
-      npm run generate
+  - before: nvm install 18
+    init: npm install
+    command: npm run dev
 ports:
-  - port: 3000
-    onOpen: ignore
-  - port: 5900
-    onOpen: ignore
-  - port: 6080
-    onOpen: ignore
-  - port: 10000
+  - port: 5173
     onOpen: ignore
 
 vscode:
   extensions:
     - bradlc.vscode-tailwindcss
+    - svelte.svelte-vscode

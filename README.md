@@ -1,35 +1,38 @@
-# Mike's blog
+# create-svelte
 
-The source code for www.mikenikles.com, version 2.0.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-Check out the `v1.0.0` tag for the source code of the previous version, based on Ghost.org.
+## Creating a project
 
-## Create a new blog post
+If you're seeing this, you've probably already done this step. Congrats!
 
-1. Use the following command:
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-   ```bash
-   npm run generate blog-post
-   ```
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-1. Write you content, with [mdsvex](https://mdsvex.com/) in:
+## Developing
 
-   ```
-   services/website/src/routes/blog/{slug}/index.svx
-   ```
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-1. Add your `cover.jpg` image and other assets to:
+```bash
+npm run dev
 
-   ```
-   services/website/static/blog-posts/{slug}/
-   ```
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-1. Navigate to `services/website` and run the following script to create images in WebP and JPEG 2000 formats:
+## Building
 
-   ```bash
-   npm run images
-   ```
+To create a production version of your app:
 
-   Until there's a fix, run `git restore static/blog-posts`. That's because the above script modifies all files and not
-   just the new ones. There's a way to make this work by passing a parameter to that NPM script, but it took me more
-   than 15 minutes to figure out and wasn't a priority.
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

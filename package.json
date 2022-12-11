@@ -1,29 +1,49 @@
 {
-  "name": "www-mikenikles-com",
-  "version": "2.0.0",
-  "description": "Mike's personal website.",
-  "scripts": {
-    "generate": "plop --plopfile ./generators/index.js",
-    "postinstall": "run-p install:services:*",
-    "install:services:website": "npm install --prefix services/website",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.com:mikenikles/www-mikenikles-com.git"
-  },
-  "author": "Mike, @mikenikles",
-  "license": "MIT",
-  "devDependencies": {
-    "husky": "^4.2.5",
-    "npm-run-all": "^4.1.5",
-    "plop": "^2.7.1",
-    "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1"
-  }
+	"name": "www-mikenikles-com",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test": "playwright test",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test:unit": "vitest",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write .",
+		"generate:images": "node ./generate-responsive-image-data.js"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.28.1",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"@tailwindcss/forms": "^0.5.2",
+		"@tailwindcss/typography": "^0.5.3",
+		"@typescript-eslint/eslint-plugin": "^5.45.0",
+		"@typescript-eslint/parser": "^5.45.0",
+		"autoprefixer": "^10.4.7",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"front-matter": "^4.0.2",
+		"mdsvex": "^0.10.6",
+		"postcss": "^8.4.14",
+		"postcss-load-config": "^4.0.1",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.8.1",
+		"reading-time": "^1.5.0",
+		"rehype-picture": "^4.0.2",
+		"sharp": "^0.31.2",
+		"svelte": "^3.53.1",
+		"svelte-check": "^2.9.2",
+		"svelte-preprocess": "^4.10.7",
+		"tailwindcss": "^3.1.5",
+		"tslib": "^2.4.1",
+		"typescript": "^4.9.3",
+		"vite": "^3.2.4",
+		"vite-imagetools": "^4.0.11",
+		"vitest": "^0.25.3"
+	},
+	"type": "module"
 }
