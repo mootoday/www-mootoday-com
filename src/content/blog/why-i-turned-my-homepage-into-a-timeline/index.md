@@ -8,6 +8,10 @@ tags: ["design", "tailwindcss"]
 layout: blog
 ---
 
+<script>
+  const assetsBasePath = `/blog/${slug}`;
+</script>
+
 Photo by [Félix Prado](https://unsplash.com/@fprado?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/line?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
 
 ## What has happened so far?
@@ -17,7 +21,7 @@ In summer of 2020, I launched [v2 of my website](/blog/my-personal-website-v2-0)
 
 As of v2, the homepage displayed a list of blog post previews.
 
-![v2 homepage screenshot](blog-posts/{slug}/1.jpg)
+![v2 homepage screenshot]({assetsBasePath}/1.jpg)
 
 That was great up until just about now, read December 2020.
 
@@ -25,12 +29,12 @@ That was great up until just about now, read December 2020.
 
 The latest evolution of the homepage looks as follows:
 
-![timeline homepage screenshot](blog-posts/{slug}/cover.jpg)
+![timeline homepage screenshot]({assetsBasePath}/cover.jpg)
 
 A lightweight version of the timeline is used on mobile:
 
-![Mobile intro](blog-posts/{slug}/2.jpg)
-![Mobile timeline](blog-posts/{slug}/3.jpg)
+![Mobile intro]({assetsBasePath}/2.jpg)
+![Mobile timeline]({assetsBasePath}/3.jpg)
 
 
 See [this Twitter thread](https://twitter.com/mikenikles/status/1334305377500925953) for progress updates and how the homepage came together.

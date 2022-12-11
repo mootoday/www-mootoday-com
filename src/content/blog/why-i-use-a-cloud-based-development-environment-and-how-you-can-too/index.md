@@ -7,6 +7,10 @@ tags: ["development", "cloud"]
 layout: blog
 ---
 
+<script>
+  const assetsBasePath = `/blog/${slug}`;
+</script>
+
 Photo by myself, [Sulsseeli](https://goo.gl/maps/tezxpewfmSGkNFme6) in Switzerland
 
 ## CPU, Memory & Storage on a laptop
@@ -18,7 +22,7 @@ The choice of integrated development environments, or IDEs for short, as a junio
 You better had a beefy machine to run this thing smoothly 💪. Over the years, IDEs continued to be fairly CPU & memory intensive. To support a more or less productive work style, it could result in purchasing a new laptop every two or three years.  
 In parallel, developing software required an increased storage capacity - initially because of `*.jar` file dependencies in the Java world and more recently due to `node_modules` directories that can quickly take up large amounts of disk space as illustrated in the following, academically absolutely correct (_not_) image:
 
-![A comparison of the universe's heaviest objects](blog-posts/{slug}/1.jpg)
+![A comparison of the universe's heaviest objects]({assetsBasePath}/1.jpg)
 
 A comparison of the universe's heaviest objects
 
@@ -43,13 +47,13 @@ A core principle of mine is productivity. Anything I can automate, I automate. A
 
 Let's illustrate life without and with Gitpod:
 
-![Development environment setup without Gitpod](blog-posts/{slug}/2.jpg)
+![Development environment setup without Gitpod]({assetsBasePath}/2.jpg)
 
 Development environment setup without Gitpod
 
 Now the Gitpod marketing team's magic... That entire circle is irrelevant!
 
-![Development environment setup with Gitpod](blog-posts/{slug}/3.jpg)
+![Development environment setup with Gitpod]({assetsBasePath}/3.jpg)
 
 Development environment setup with Gitpod
 

@@ -7,6 +7,10 @@ tags: ["webdev", "gitpod", "cypress", "sapper"]
 layout: blog
 ---
 
+<script>
+  const assetsBasePath = `/blog/${slug}`;
+</script>
+
 Photo by [Jessica Lewis](https://unsplash.com/@thepaintedsquare?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/virtual?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 ## Experience it for yourself
@@ -21,11 +25,11 @@ Once `npm install` completes automatically, a development server starts in one t
 
 The first browser tab shows the editor (the errors in the console can safely be ignore):
 
-![Gitpod editor](blog-posts/{slug}/1.jpg)
+![Gitpod editor]({assetsBasePath}/1.jpg)
 
 Whereas the second browser tab provides the Cypress UI (in this case, it's a default [Sapper](https://sapper.svelte.dev/) application):
 
-![Cypress UI](blog-posts/{slug}/2.jpg)
+![Cypress UI]({assetsBasePath}/2.jpg)
 
 ### Gitpod Disount
 

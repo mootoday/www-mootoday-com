@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-auto';
 import { mdsvex } from 'mdsvex';
+import rehypePicture from "rehype-picture";
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -8,7 +9,12 @@ const config = {
 	// for more information about preprocessors
 	extensions: ['.svelte', '.md'],
 	preprocess: [
-		mdsvex({ extensions: ['.md'] }),
+		mdsvex({ extensions: ['.md'], rehypePlugins: [[
+			rehypePicture,
+			{
+				jpg: { webp: "image/webp", jp2: "image/jp2" },
+			},
+		],] }),
 		preprocess({
 			postcss: true
 		})

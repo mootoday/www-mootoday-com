@@ -8,10 +8,8 @@ layout: blog
 ---
 
 <script>
-  const assetsBasePath = `blog-posts/${slug}`;
+  const assetsBasePath = `/blog/${slug}`;
 </script>
-
-<!-- Insert images with: ![alt]({assetsBasePath/1.jpg) -->
 
 **_tl;dr:_** After almost three years of working with global enterprises on their digital transformation at Google, I joined Gitpod ([www.gitpod.io](https://www.gitpod.io)) to help build the Developer & Community Success team. Gitpod caught my attention in 2019. It is clear to me that ephemeral, cloud-based development environments are going to be the default way of working and I want to be part of the team that shapes the future for millions of developers around the world!
 

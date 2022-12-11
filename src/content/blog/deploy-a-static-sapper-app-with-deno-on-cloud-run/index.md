@@ -7,6 +7,10 @@ tags: ["cloud", "cloudrun", "sapper", "deno"]
 layout: blog
 ---
 
+<script>
+  const assetsBasePath = `/blog/${slug}`;
+</script>
+
 Yesterday, Deno 1.0 was released. If Deno does not sound familiar, don't worry this is fine at this point. Please head over to [https://deno.land/v1](https://deno.land/v1) and once you've read that, come back here to learn how we can use this to deploy a static Sapper / Svelte application to Cloud Run.
 
 ## Source code

@@ -9,7 +9,7 @@ layout: blog
 ---
 
 <script>
-  const assetsBasePath = `blog-posts/${slug}`;
+  const assetsBasePath = `/blog/${slug}`;
 </script>
 
 Photo by [🇻🇪 Jose G. Ortega Castro 🇲🇽](https://unsplash.com/@j0rt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/notebook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)

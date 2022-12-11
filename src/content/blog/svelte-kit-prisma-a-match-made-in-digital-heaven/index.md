@@ -8,7 +8,7 @@ layout: blog
 ---
 
 <script>
-  const assetsBasePath = `blog-posts/${slug}`;
+  const assetsBasePath = `/blog/${slug}`;
 </script>
 
 **Key Takeaways**

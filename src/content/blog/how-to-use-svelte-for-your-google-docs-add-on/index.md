@@ -7,6 +7,10 @@ tags: ["svelte", "development"]
 layout: blog
 ---
 
+<script>
+  const assetsBasePath = `/blog/${slug}`;
+</script>
+
 A screenshot of a Svelte app rendered in a Google Doc's add-on sidebar
 
 ## Introduction

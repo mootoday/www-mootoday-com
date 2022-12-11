@@ -7,7 +7,7 @@ tags: [""]
 ---
 
 <script>
-  const assetsBasePath = `blog-posts/2020-08-20-${slug}`;
+  const assetsBasePath = `/blog/${slug}`;
 </script>
 
 Photo credit: [NeONBRAND](https://unsplash.com/@neonbrand?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)

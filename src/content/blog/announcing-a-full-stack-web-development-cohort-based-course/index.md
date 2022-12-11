@@ -9,10 +9,8 @@ layout: blog
 ---
 
 <script>
-  const assetsBasePath = `blog-posts/${slug}`;
+  const assetsBasePath = `/blog/${slug}`;
 </script>
-
-<!-- Insert images with: ![alt]({assetsBasePath/1.jpg) -->
 
 Photo by [Charles Deluvio](https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/course?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

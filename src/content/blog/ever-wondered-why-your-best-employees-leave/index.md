@@ -7,6 +7,10 @@ tags: ["team", "morale"]
 layout: blog
 ---
 
+<script>
+  const assetsBasePath = `/blog/${slug}`;
+</script>
+
 Take off your rose-coloured sunglasses and be excellent to your employees
 
 At some point in my tech career, I worked at a company that did really well. So well in fact, they proudly displayed some of the world’s most well known logos under their “Our Customers” section on the website. The team increased from a dozen or so great engineers to a multitude of that, even beyond the engineering department. All in all, a picture-perfect startup success story. __Until… there were bugs, servers crashed, excellent staff quit and customers didn’t renew contracts.__ What happened?
@@ -15,7 +19,7 @@ At some point in my tech career, I worked at a company that did really well. So 
 
 ## The early days, when you wear your rose-coloured glasses
 
-![Red, heart-shaped glasses](blog-posts/{slug}/cover.jpg)
+![Red, heart-shaped glasses]({assetsBasePath}/cover.jpg)
 
 Source: [https://www.pinterest.com/pin/108649409739409722/](https://www.pinterest.com/pin/108649409739409722/)
 
@@ -27,7 +31,7 @@ You attend conferences, share your success, investors notice you. 💥, you land
 
 ### Or so you thought…
 
-![Broken glasses](blog-posts/{slug}/1.jpg)
+![Broken glasses]({assetsBasePath}/1.jpg)
 
 Source: [http://www.truthdig.com/cartoon/item/rose-colored\_glasses\_20150105](http://www.truthdig.com/cartoon/item/rose-colored_glasses_20150105)
 
@@ -46,7 +50,7 @@ These are just a few issues that slowly creeped upon us. Emails were sent, meeti
 
 ### In times of crisis, we depend on leaders
 
-![A mountain, with a boss on top and a leader half way up, helping many others climb the mountain](blog-posts/{slug}/2.jpg)
+![A mountain, with a boss on top and a leader half way up, helping many others climb the mountain]({assetsBasePath}/2.jpg)
 
 So there we were, 💩 hit the fan. Our system wasn’t scalable, it needed to be rebuilt, a task two guys worked on, gave their 👍 and nobody questioned that decision. Why would we? They were senior.  
 Less than two weeks later, servers crashed. They were gone, unresponsive. 10k+ end users who relied on our product were left in the dark.

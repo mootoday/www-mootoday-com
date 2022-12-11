@@ -8,7 +8,7 @@ layout: blog
 ---
 
 <script>
-  const assetsBasePath = `blog-posts/${slug}`;
+  const assetsBasePath = `/blog/${slug}`;
 </script>
 
 If that is you, congratulations! The bad news is that there are thousands of other people just like you with more starting that journey every day. Each one of them is a potential competitor when you look for your next job. They may even be your co-worker and friend who also want to get promoted!

@@ -11,7 +11,7 @@ layout: blog
   import Clock from "./clock.svelte";
   import Timer from "./timer.svelte";
 
-  const assetsBasePath = `blog-posts/${slug}`;
+  const assetsBasePath = `blog/${slug}`;
 </script>
 
 Photo credit: [Thought Catalog](https://unsplash.com/@thoughtcatalog?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)

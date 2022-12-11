@@ -7,13 +7,17 @@ tags: ["googlecloud", "sapper", "svelte", "firebase", "cloudrun", "serverless", 
 layout: blog
 ---
 
+<script>
+  const assetsBasePath = `/blog/${slug}`;
+</script>
+
 Sapper on Cloud Run with static assets hosted on Firebase Hosting Architecture
 
 This is a follow-up post to [Sapper, Google Cloud Run, Continuous Deployment - A boilerplate template](https://www.mikenikles.com/blog/sapper-google-cloud-run-continuous-deployment-a-boilerplate-template).
 
 In this second part, we are going to optimize how static assets are hosted and delivered to the browser. The final architecture for this post is going to be like this:
 
-![Sapper on Cloud Run with Firebase Hosting](blog-posts/{slug}/1.jpg)
+![Sapper on Cloud Run with Firebase Hosting]({assetsBasePath}/1.jpg)
 
 Sapper on Cloud Run with Firebase Hosting
 
@@ -174,11 +178,11 @@ An extra 41 lines of code, including some NPM scripts for convenience, we manage
 
 To compare, here are the WebPageTest results without Firebase Hosting (i.e. what we developed in the previous blog post):
 
-![WebPageTest results without Firebase Hosting](blog-posts/{slug}/2.jpg)
+![WebPageTest results without Firebase Hosting]({assetsBasePath}/2.jpg)
 
 And here the WebPageTest results with Firebase Hosting (i.e. what we developed in this blog post):
 
-![WebPageTest results with Firebase Hosting](blog-posts/{slug}/3.jpg)
+![WebPageTest results with Firebase Hosting]({assetsBasePath}/3.jpg)
 
 ### I'm writing a book, Cloud Native Web Development
 

@@ -7,6 +7,10 @@ tags: ["series-monorepo"]
 layout: blog
 ---
 
+<script>
+  const assetsBasePath = `/blog/${slug}`;
+</script>
+
 Photo by [Priscilla Du Preez](https://unsplash.com/@priscilladupreez?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/solid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 ### Don’t document what you can automate

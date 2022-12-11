@@ -7,6 +7,10 @@ tags: ["googlecloud", "sapper", "svelte", "cloudrun", "serverless", "webdev"]
 layout: blog
 ---
 
+<script>
+  const assetsBasePath = `/blog/${slug}`;
+</script>
+
 Sapper on Cloud Run Architecture
 
 For a while now I have used [Sapper](https://sapper.svelte.dev/) / [Svelte](https://svelte.dev/) for my evening and weekend projects and deployed these web applications to Google Cloud Platform.
@@ -17,7 +21,7 @@ A boilerplate repository is available at [https://github.com/mikenikles/sapper-o
 
 To get started, click the **Use this template** button:
 
-![GitHub Use this template screenshot](blog-posts/{slug}/1.jpg)
+![GitHub Use this template screenshot]({assetsBasePath}/1.jpg)
 
 ## What you will learn
 
@@ -98,7 +102,7 @@ Let's see how we can use the SSR approach, but make sure we have minimal work to
 
 The overall architecture we are going to create looks like this:
 
-![Continuous Deployment of a Sapper web application to Cloud Run](blog-posts/{slug}/2.jpg)
+![Continuous Deployment of a Sapper web application to Cloud Run]({assetsBasePath}/2.jpg)
 
 Continuous Deployment of a Sapper web application to Cloud Run
 

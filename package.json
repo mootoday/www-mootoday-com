@@ -33,6 +33,7 @@
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"reading-time": "^1.5.0",
+		"rehype-picture": "^4.0.2",
 		"sharp": "^0.31.2",
 		"svelte": "^3.53.1",
 		"svelte-check": "^2.9.2",
