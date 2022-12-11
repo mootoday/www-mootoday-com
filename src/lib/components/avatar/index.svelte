@@ -11,7 +11,7 @@
 			srcset="/headshot.webp"
 			type="image/webp"
 		/><img
-			src="/headshot.jpg"
+			src="/headshot.png"
 			alt="Mike's headshot"
 			class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
 			class:h-16={large}
