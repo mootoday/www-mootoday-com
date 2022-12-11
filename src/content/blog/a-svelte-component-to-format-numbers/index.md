@@ -31,7 +31,7 @@ layout: blog
   }
 </style>
 
-Photo by [Nick Hiller](https://unsplash.com/@nhillier?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/notebook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+<!-- Photo by [Nick Hiller](https://unsplash.com/@nhillier?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/notebook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) -->
 
 Let's develop a [Svelte](https://svelte.dev) component that formats numbers in a human readable way.
 

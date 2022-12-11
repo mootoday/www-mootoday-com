@@ -11,7 +11,7 @@ layout: blog
   const assetsBasePath = `/blog/${slug}`;
 </script>
 
-Photo by [JJ Ying](https://unsplash.com/@jjying?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/link?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+<!-- Photo by [JJ Ying](https://unsplash.com/@jjying?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/link?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) -->
 
 The inspiration for this post came from reading [Ilona](https://dev.to/ilonacodes)'s fantastic post on dev.to titled "[Frontend Shorts: How to create link content previewer with React, Vue, and Vanilla JavaScript](https://dev.to/ilonacodes/frontend-shorts-how-to-create-link-content-previewer-with-react-vue-and-vanilla-javascript-1pm1)". She did an amazing job explaining all the details, for VanillaJS, React and Vue. Please have a look at her post for full details.
 

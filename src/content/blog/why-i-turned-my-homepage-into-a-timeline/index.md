@@ -12,7 +12,7 @@ layout: blog
   const assetsBasePath = `/blog/${slug}`;
 </script>
 
-Photo by [Félix Prado](https://unsplash.com/@fprado?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/line?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+<!-- Photo by [Félix Prado](https://unsplash.com/@fprado?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/line?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) -->
 
 ## What has happened so far?
 

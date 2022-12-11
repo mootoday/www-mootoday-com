@@ -12,7 +12,7 @@ layout: blog
   const assetsBasePath = `/blog/${slug}`;
 </script>
 
-Photo by [🇻🇪 Jose G. Ortega Castro 🇲🇽](https://unsplash.com/@j0rt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/notebook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+<!-- Photo by [🇻🇪 Jose G. Ortega Castro 🇲🇽](https://unsplash.com/@j0rt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/notebook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) -->
 
 **tl;dr**: *My personal 2021 OKRs are [publicly available](https://www.notion.so/mikenikles/OKRs-73a4619b8b8f487ca18c6c3d5ee7570f).*
 

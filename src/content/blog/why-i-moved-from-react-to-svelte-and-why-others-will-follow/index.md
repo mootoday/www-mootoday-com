@@ -11,7 +11,7 @@ layout: blog
   const assetsBasePath = `/blog/${slug}`;
 </script>
 
-Photo by [Aryan Singh](https://unsplash.com/@wuzclicks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/bird-migration?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+<!-- Photo by [Aryan Singh](https://unsplash.com/@wuzclicks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/bird-migration?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) -->
 
 ## React was my go-to choice for many years
 

@@ -11,7 +11,7 @@ layout: blog
   const assetsBasePath = `/blog/${slug}`;
 </script>
 
-Photo by myself, [Sulsseeli](https://goo.gl/maps/tezxpewfmSGkNFme6) in Switzerland
+<!-- Photo by myself, [Sulsseeli](https://goo.gl/maps/tezxpewfmSGkNFme6) in Switzerland -->
 
 ## CPU, Memory & Storage on a laptop
 

@@ -11,7 +11,7 @@ layout: blog
   const assetsBasePath = `/blog/${slug}`;
 </script>
 
-Photo by [Paul Hanaoka](https://unsplash.com/@plhnk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/book-cover?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+<!-- Photo by [Paul Hanaoka](https://unsplash.com/@plhnk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/book-cover?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) -->
 
 On February 28, 2020 I decided to write a book - that was 10 weeks ago. Due to the COVID-19 lockdown, I did not have many opportunities to leave home and spent a good amount of my spare time writing a book and all the source code that comes with it.
 

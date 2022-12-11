@@ -12,7 +12,7 @@ layout: blog
   const assetsBasePath = `/blog/${slug}`;
 </script>
 
-Photo by [Charles Deluvio](https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/course?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+<!-- Photo by [Charles Deluvio](https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/course?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) -->
 
 With 100,000+ views 🎉 in the first week since its launch, my "Full Stack Web Development in the Cloud Course"<sup><a href="/blog/{slug}#link-1">1</a></sup> showed me that there is a need for end-to-end software development workshops.
 

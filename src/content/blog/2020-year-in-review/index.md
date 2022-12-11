@@ -12,7 +12,7 @@ layout: blog
   const assetsBasePath = `/blog/${slug}`;
 </script>
 
-Photo by [Kelly Sikkema](https://unsplash.com/@kellysikkema?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/notebook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+<!-- Photo by [Kelly Sikkema](https://unsplash.com/@kellysikkema?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/notebook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) -->
 
 That's a wrap for 2020, the most unpredictable year in a long time. There has been, and continues to be, tragedy and suffering for many people globally. So much of that could likely be avoided with a bit of common sense and wearing a mask… 😷
 
