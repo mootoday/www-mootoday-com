@@ -20,7 +20,10 @@
   const navigationItems = [{
     href: "/blog",
     label: "Blog"
-  }]
+  }, {
+    href: "/projects",
+    label: "Projects"
+  },]
 
   const clamp = (number: number, a: number, b: number) => {
     let min = Math.min(a, b)
