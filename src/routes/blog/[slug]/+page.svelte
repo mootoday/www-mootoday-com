@@ -5,6 +5,7 @@
 	// import '$lib/styles/index.scss';
 	// import '$lib/styles/normalise.css';
 	// import lazyload from 'vanilla-lazyload';
+	import ContentLayout from "$lib/components/content-layout.svelte";
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -31,36 +32,18 @@
 	<meta name="description" content="{data.post?.seoMetaDescription}">
 </svelte:head>
 
-<main>
-	<div class="sm:px-8 mt-16 lg:mt-32">
-		<div class="mx-auto max-w-7xl lg:px-8">
-			<div class="relative px-4 sm:px-8 lg:px-12">
-				<div class="mx-auto max-w-2xl lg:max-w-5xl">
-					<div class="xl:relative">
-						<div class="mx-auto max-w-2xl">
-							<article>
-								<header class="flex flex-col">
-									<h1
-										class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
-									>
-										{data.post?.postTitle}
-									</h1>
-									<time
-										datetime="{datePublishedYYYYMMDD}"
-										class="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
-										><span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" /><span
-											class="ml-3">{datePublishedDisplay}</span
-										></time
-									>
-								</header>
-								<div class="mt-8 prose dark:prose-invert">
-									<svelte:component this={data.page} />
-								</div>
-							</article>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+<ContentLayout title={data.post?.postTitle}>
+	<svelte:fragment slot="subtitle">
+		<time
+			datetime="{datePublishedYYYYMMDD}"
+			class="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
+			><span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" /><span
+				class="ml-3">{datePublishedDisplay}</span
+			></time
+		>
+
+	</svelte:fragment>
+	<div class="mt-8 prose dark:prose-invert">
+		<svelte:component this={data.page} />
 	</div>
-</main>
+</ContentLayout>
