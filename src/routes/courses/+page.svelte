@@ -1,25 +1,19 @@
 <script lang="ts">
 	import ContentLayout from '$lib/components/content-layout.svelte';
 
-  const projects = [{
-    logo: "webstone-education",
-    href: "https://www.webstone.app/",
-    hrefDisplayText: "webstone.app",
-    name: "Webstone Education",
-    description: "Interactive courses. You choose your tech stack. We provide continuous course updates."
-  }, {
-    logo: "webstone-app",
-    href: "https://github.com/webstonehq/webstone",
-    hrefDisplayText: "github.com/webstonehq/webstone",
-    name: "Webstone - App Framework",
-    description: "Webstone provides an ecosystem of plugins for your full-stack web application."
-  }, {
-    logo: "your-analytics",
-    href: "https://www.your-analytics.org/",
-    hrefDisplayText: "your-analytics.org",
-    name: "Your Analytics",
-    description: "An open source, privacy-focused web analytics platform."
-  }];
+  const courses = [{
+    logo: "",
+    href: "https://www.youtube.com/watch?v=OUzaUJ3gEug",
+    hrefDisplayText: "youtube.com",
+    name: "Full Stack Web Development in the Cloud",
+    description: "From `npm init` to production deployment – 7+ hours of detailed lessons."
+  },{
+    logo: "",
+    href: "https://www.educative.io/courses/cloud-native-development",
+    hrefDisplayText: "educative.io",
+    name: "Cloud Native Development with Tailwind, Google Cloud and Firebase",
+    description: "Based on my book, a hands-on course with lessons, quizzes, etc."
+  },];
 </script>
 
 <svelte:head>
@@ -31,28 +25,20 @@
 </svelte:head>
 
 <ContentLayout
-	title="SaaS, tools, frameworks"
+	title="Hands-on, on demand courses & videos"
 >
 	<svelte:fragment slot="intro">
-    <strong class="text-teal-500">Software projects</strong> I've created. Mostly written in Typescript, Node.js, Svelte / SvelteKit, Prisma, PostgreSQL.
+    <strong class="text-teal-500">Online courses</strong> I authored about full-stack web development.
 	</svelte:fragment>
 	<ul class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-    {#each projects as {logo, href, hrefDisplayText, name, description}}
+    {#each courses as {href, hrefDisplayText, name, description}}
       <li class="group relative flex flex-col items-start">
         <div
           class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
         >
-          <img
-            alt=""
-            src="/projects/{logo}.svg"
-            width="32"
-            height="32"
-            decoding="async"
-            data-nimg="1"
-            class="h-8 w-8"
-            loading="lazy"
-            style="color: transparent;"
-          />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+          </svg>        
         </div>
         <h2 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
           <div

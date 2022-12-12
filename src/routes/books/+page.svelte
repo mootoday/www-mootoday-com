@@ -1,25 +1,19 @@
 <script lang="ts">
 	import ContentLayout from '$lib/components/content-layout.svelte';
 
-  const projects = [{
-    logo: "webstone-education",
-    href: "https://www.webstone.app/",
-    hrefDisplayText: "webstone.app",
-    name: "Webstone Education",
-    description: "Interactive courses. You choose your tech stack. We provide continuous course updates."
-  }, {
-    logo: "webstone-app",
-    href: "https://github.com/webstonehq/webstone",
-    hrefDisplayText: "github.com/webstonehq/webstone",
-    name: "Webstone - App Framework",
-    description: "Webstone provides an ecosystem of plugins for your full-stack web application."
-  }, {
-    logo: "your-analytics",
-    href: "https://www.your-analytics.org/",
-    hrefDisplayText: "your-analytics.org",
-    name: "Your Analytics",
-    description: "An open source, privacy-focused web analytics platform."
-  }];
+  const books = [{
+    logo: "",
+    href: "https://mikenikles.gumroad.com/l/cloud-native-web-development",
+    hrefDisplayText: "mikenikles.gumroad.com",
+    name: "Cloud Native Web Development",
+    description: "From zero to production: A hands-on guidebook."
+  },{
+    logo: "",
+    href: "https://mikenikles.gumroad.com/l/a-smart-guide-for-your-career-as-a-software-engineer?layout=profile",
+    hrefDisplayText: "mikenikles.gumroad.com",
+    name: "A Smart Guide for Your Career as a Software Engineer",
+    description: "Everything I learned in my 20 years as a software engineer - including all mistakes."
+  },];
 </script>
 
 <svelte:head>
@@ -31,28 +25,20 @@
 </svelte:head>
 
 <ContentLayout
-	title="SaaS, tools, frameworks"
+	title="Digital books, self-published"
 >
 	<svelte:fragment slot="intro">
-    <strong class="text-teal-500">Software projects</strong> I've created. Mostly written in Typescript, Node.js, Svelte / SvelteKit, Prisma, PostgreSQL.
+    <strong class="text-teal-500">Digital books</strong> I've written and self-published over the years.
 	</svelte:fragment>
 	<ul class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-    {#each projects as {logo, href, hrefDisplayText, name, description}}
+    {#each books as {href, hrefDisplayText, name, description}}
       <li class="group relative flex flex-col items-start">
         <div
           class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
         >
-          <img
-            alt=""
-            src="/projects/{logo}.svg"
-            width="32"
-            height="32"
-            decoding="async"
-            data-nimg="1"
-            class="h-8 w-8"
-            loading="lazy"
-            style="color: transparent;"
-          />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+          </svg>
         </div>
         <h2 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
           <div

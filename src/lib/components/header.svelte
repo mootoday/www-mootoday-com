@@ -23,6 +23,12 @@
   }, {
     href: "/projects",
     label: "Projects"
+  }, {
+    href: "/books",
+    label: "Books"
+  }, {
+    href: "/courses",
+    label: "Courses"
   },]
 
   const clamp = (number: number, a: number, b: number) => {
