@@ -21,6 +21,13 @@
 			{#each data.posts as post}
 				<ArticlePreview {post} />
 			{/each}
+			<ArticlePreview post={{
+				datePublished: "2019-12-29T11:30:30",
+				lastUpdated: "2019-12-29T11:30:30",
+				postTitle: "Read many more articles on Medium",
+				seoMetaDescription: "",
+				slug: "medium-posts"
+			}} />
 		</div>
 	</div>
 </ContentLayout>

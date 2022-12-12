@@ -12,5 +12,5 @@ export const load: PageLoad = async () => {
 			})
 	))
 	.sort((a, b) => Date.parse(b.datePublished) - Date.parse(a.datePublished));
-	return { posts };
+	return { postsTotal: posts.length, posts: posts.slice(0, 3) };
 };
