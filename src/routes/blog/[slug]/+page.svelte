@@ -5,6 +5,7 @@
 	// import '$lib/styles/index.scss';
 	// import '$lib/styles/normalise.css';
 	// import lazyload from 'vanilla-lazyload';
+	import Comments from "$lib/components/comments.svelte";
 	import ContentLayout from "$lib/components/content-layout.svelte";
 
 	/** @type {import('./$types').PageData} */
@@ -45,5 +46,6 @@
 	</svelte:fragment>
 	<div class="mt-8 prose dark:prose-invert">
 		<svelte:component this={data.page} />
+		<Comments />
 	</div>
 </ContentLayout>
