@@ -137,6 +137,8 @@ If you worry about service availability, can you self-host the product? GitHub C
 
 Regardless of these rumours, even for the currently available self-hosted offering, Gitpod does not provide instructions for a production-ready, highly available setup. I let you draw your own conclusions as to how difficult it may be to run Gitpod on your own.
 
+**Update - December 12, 2022**: Confirmed. [Ending support for Self Hosted and moving our source code to the open-source AGPL licence](https://www.gitpod.io/blog/introducing-gitpod-dedicated#ending-support-for-self-hosted-and-moving-our-source-code-to-the-open-source-agpl-licence). The related Hackernews discussion can be found [here](https://news.ycombinator.com/item?id=33907897).
+
 ### Supported tools & frameworks
 
 You would think a SaaS business which claims they run your dev environment in the cloud supported whatever tools & frameworks you need.
