@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let title: string;
+  export let title: string = "";
 </script>
 
 <main>
@@ -14,9 +14,11 @@
               {title}
 						</h1>
             <slot name="subtitle" />
-						<p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-							<slot name="intro" />
-						</p>
+						{#if $$slots.intro}
+							<p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+								<slot name="intro" />
+							</p>
+						{/if}
 					</header>
 					<div class="mt-16 sm:mt-20">
             <slot />
