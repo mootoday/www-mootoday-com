@@ -18,6 +18,9 @@
   $: isHomePage = $page.route.id === "/";
 
   const navigationItems = [{
+    href: "/about",
+    label: "About"
+  }, {
     href: "/blog",
     label: "Blog"
   }, {
