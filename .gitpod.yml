@@ -10,3 +10,4 @@ vscode:
   extensions:
     - bradlc.vscode-tailwindcss
     - svelte.svelte-vscode
+    - statelyai.stately-vscode
