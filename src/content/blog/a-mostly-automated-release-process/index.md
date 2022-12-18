@@ -8,7 +8,8 @@ layout: blog
 ---
 
 <script>
-  const assetsBasePath = `/blog/${slug}`;
+  export let data;
+  const assetsBasePath = `/blog/${data.slug}`;
 </script>
 
 <!-- Photo by [Alex Knight](https://unsplash.com/@agkdesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/automation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) -->

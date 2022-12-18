@@ -7,7 +7,8 @@ tags: [""]
 ---
 
 <script>
-  const assetsBasePath = `/blog/${slug}`;
+  export let data;
+  const assetsBasePath = `/blog/${data.slug}`;
 </script>
 
 Photo credit: [NeONBRAND](https://unsplash.com/@neonbrand?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)

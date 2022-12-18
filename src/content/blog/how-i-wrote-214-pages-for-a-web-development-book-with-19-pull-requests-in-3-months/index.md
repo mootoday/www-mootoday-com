@@ -8,7 +8,8 @@ layout: blog
 ---
 
 <script>
-  const assetsBasePath = `/blog/${slug}`;
+  export let data;
+  const assetsBasePath = `/blog/${data.slug}`;
 </script>
 
 Photo credit: [Florian Klauer](https://unsplash.com/@florianklauer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
