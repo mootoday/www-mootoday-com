@@ -7,10 +7,9 @@ export const load: PageLoad = async () => {
 				.map(async (path) => {
 				const slug = path.split('/').at(-2);
 				const { metadata } = await mdModules[path]();
-				const { createdAt: datePublished, lastUpdated, title: postTitle, summary: seoMetaDescription } = metadata;
-				return { datePublished, lastUpdated, postTitle, seoMetaDescription, slug };
+				return { slug, ...metadata };
 			})
 	))
-	.sort((a, b) => Date.parse(b.datePublished) - Date.parse(a.datePublished));
+	.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
 	return { postsTotal: posts.length, posts: posts.slice(0, 3) };
 };

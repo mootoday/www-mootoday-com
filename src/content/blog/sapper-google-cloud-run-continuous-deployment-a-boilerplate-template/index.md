@@ -8,7 +8,8 @@ layout: blog
 ---
 
 <script>
-  const assetsBasePath = `/blog/${slug}`;
+  export let data;
+  const assetsBasePath = `/blog/${data.slug}`;
 </script>
 
 Sapper on Cloud Run Architecture

@@ -1,17 +1,16 @@
 <script lang="ts">
 	export let post: {
-		datePublished: string;
-		lastUpdated: string;
-		postTitle: string;
-		seoMetaDescription: string;
+		createdAt: string;
+		title: string;
+		summary: string;
 		slug: string;
 	};
 
-  const datePublishedDisplay = new Date(Date.parse(post.datePublished)).toLocaleDateString(undefined, {
+  const datePublishedDisplay = new Date(Date.parse(post.createdAt)).toLocaleDateString(undefined, {
     dateStyle: "long"
   });
 
-  const datePublishedYYYYMMDD = new Date(Date.parse(post.datePublished)).toLocaleDateString(undefined, {
+  const datePublishedYYYYMMDD = new Date(Date.parse(post.createdAt)).toLocaleDateString(undefined, {
     dateStyle: "short"
   });
 </script>
@@ -23,7 +22,7 @@
 		/>
 		<a href="/blog/{post.slug}"
 			><span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl" /><span
-				class="relative z-10">{post.postTitle}</span
+				class="relative z-10">{post.title}</span
 			></a
 		>
 	</h2>
@@ -35,7 +34,7 @@
 		>{datePublishedDisplay}</time
 	>
 	<p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-		{post.seoMetaDescription}
+		{post.summary}
 	</p>
 	<div
 		aria-hidden="true"

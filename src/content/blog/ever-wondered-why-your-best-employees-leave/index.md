@@ -8,7 +8,8 @@ layout: blog
 ---
 
 <script>
-  const assetsBasePath = `/blog/${slug}`;
+  export let data;
+  const assetsBasePath = `/blog/${data.slug}`;
 </script>
 
 Take off your rose-coloured sunglasses and be excellent to your employees

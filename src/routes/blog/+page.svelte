@@ -22,10 +22,9 @@
 				<ArticlePreview {post} />
 			{/each}
 			<ArticlePreview post={{
-				datePublished: "2019-12-29T11:30:30",
-				lastUpdated: "2019-12-29T11:30:30",
-				postTitle: "Read many more articles on Medium",
-				seoMetaDescription: "",
+				createdAt: "2019-12-29T11:30:30",
+				title: "Read many more articles on Medium",
+				summary: "",
 				slug: "medium-posts"
 			}} />
 		</div>
