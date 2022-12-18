@@ -2,7 +2,7 @@ const typography = require('@tailwindcss/typography');
 const forms = require('@tailwindcss/forms');
 
 const config = {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte,ts,md}'],
   darkMode: 'class',
 	theme: {
     fontSize: {
