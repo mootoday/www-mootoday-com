@@ -6,7 +6,6 @@ createdAt: 2022-12-08T04:03:13.067Z
 
 <script>
   export let data;
-  console.log({data})
   const assetsBasePath = `/blog/${data.slug}`;
 </script>
 
