@@ -1,4 +1,3 @@
-// Credit: https://github.com/rodneylab/sveltekit-blog-mdx/blob/main/src/routes/%5Bslug%5D/%2Bpage.js
 import type { PageLoad } from "./$types";
 
 export const load: PageLoad = async ({ params, data }) => {
@@ -16,9 +15,9 @@ export const load: PageLoad = async ({ params, data }) => {
 		metadata: {
 			slug,
 			...metadata,
-			videoMetadata: {
-				...data.videoMetadata,
-			}
+			// videoMetadata: {
+			// 	...data.videoMetadata,
+			// }
 		},
 		page,
 	};

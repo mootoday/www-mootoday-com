@@ -19,5 +19,6 @@ videoPlaybackIds: ["BO6wueby01o169Ih003gA53BuufuW4n6znZV8hC8GN1y8"]
 * Learning the concepts and XState comes with a (somewhat steep) learning curve
 
 <div class="mx-auto md:only:w-1/2">
-  <VideoPlayer playbackId="{data.videoPlaybackIds[0]}" title="Show, copy, & hide email address" muxBlurHashData="{data.videoMetadata}" />
+  <!-- <VideoPlayer playbackId="{data.videoPlaybackIds[0]}" title="Show, copy, & hide email address" muxBlurHashData="{data.videoMetadata}" /> -->
+  <VideoPlayer playbackId="{data.videoPlaybackIds[0]}" title="Show, copy, & hide email address" />
 </div>
