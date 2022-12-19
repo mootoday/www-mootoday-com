@@ -1,8 +1,8 @@
 import { assign, createMachine } from 'xstate';
 
 type Context = {
-  emailValue: string;
-}
+	emailValue: string;
+};
 
 const emailValueDefault = '************************';
 
@@ -18,12 +18,12 @@ export const emailMachine = createMachine(
 				entry: ['hideEmailAddress'],
 				on: {
 					SHOW: {
-						actions: 'showEmailAddress',
 						target: 'visible'
 					}
 				}
 			},
 			visible: {
+				entry: ['showEmailAddress'],
 				on: {
 					COPY: {
 						target: 'copying'

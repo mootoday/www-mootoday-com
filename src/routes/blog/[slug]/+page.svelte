@@ -18,6 +18,7 @@
 <svelte:head>
 	<title>{data.metadata?.title} - mikenikles.com</title>
 	<meta name="description" content="{data.metadata?.summary}">
+	<link href="/prism.css" rel="stylesheet" />
 </svelte:head>
 
 <ContentLayout title={data.metadata?.title}>
