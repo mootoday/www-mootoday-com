@@ -558,8 +558,22 @@ Here is one more benefit of defining state with XState: You can visualize your s
 
 Also check out XState's visual editor at [stately.ai/editor](https://stately.ai/editor) to get started with your first example in a visual way.
 
+## Wrap up
+
+While XState comes with a somewhat steep learning curve, I believe it may be worth it in the long run as a project evolves and becomes more complex. This is still early days for me, but I am going to give it a try for a few more use cases to see how it plays out in real-world scenarios.
+
+This all can get pretty complex too, for example [this number input state machine](https://state-machine-viz.vercel.app/number-input) :). To be fair, I would argue this interactive visualization is a lot simpler to reason about than whatever its equivalent without XState may look like.
+
+As with any library, you always must consider its weight and what impact this has for your website visitors. XState itself is massive, way too big for what I use it for on [`/about`](/about). There is `@xstate/fsm` which weighs 1/10 of the full version, but comes with some tradeoffs<sup>3</sup>.
+
+Do you use XState or similar libraries? If not, why not?
+
+👋
+
 **References**
 
 &nbsp;<sup>1</sup> [github.com/statelyai/xstate](https://github.com/statelyai/xstate)
 
 &nbsp;<sup>2</sup> [xstate.js.org/docs](https://xstate.js.org/docs/#why)
+
+&nbsp;<sup>3</sup> [github.com/statelyai/xstate/tree/main/packages/xstate-fsm](https://github.com/statelyai/xstate/tree/main/packages/xstate-fsm)
