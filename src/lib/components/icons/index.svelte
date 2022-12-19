@@ -1,6 +1,7 @@
 <script lang="ts">
   import clipboardDocumentCheck from "./clipboard-document-check.svelte";
   import documentDuplicate from "./document-duplicate.svelte";
+  import envelopeSolid from "./envelope-solid.svelte";
   import eyeSlash from "./eye-slash.svelte";
 
   let clazz = "";
@@ -9,6 +10,7 @@
   const icons = {
     clipboardDocumentCheck,
     documentDuplicate,
+    envelopeSolid,
     eyeSlash,
   };
 
