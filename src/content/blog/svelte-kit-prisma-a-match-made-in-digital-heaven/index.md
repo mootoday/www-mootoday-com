@@ -1,10 +1,8 @@
 ---
 title: "SvelteKit & Prisma - A match made in digital heaven"
-slug: "svelte-kit-prisma-a-match-made-in-digital-heaven"
 summary: "At some point,  your SvelteKit app needs to persist data. Learn how to use Prisma to achieve exactly that."
 createdAt: 2021-08-03T03:06:14.591Z
-tags: [""]
-layout: blog
+featured: true
 ---
 
 <script>

@@ -2,6 +2,7 @@
 title: "Dev environments in the cloud are a half-baked solution"
 summary: "Cloud-only dev environments are fundamentally interested in charging you for writing code. Instead, we need a hybrid solution that automates local dev environments AND let's you run them in the cloud, should you choose to do so."
 createdAt: 2022-12-08T04:03:13.067Z
+featured: true
 ---
 
 <script>

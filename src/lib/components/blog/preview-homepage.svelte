@@ -4,6 +4,7 @@
 		title: string;
 		summary: string;
 		slug: string;
+		featured?: boolean;
 	};
 
   const datePublishedDisplay = new Date(Date.parse(post.createdAt)).toLocaleDateString(undefined, {
@@ -22,8 +23,12 @@
 		/>
 		<a href="/blog/{post.slug}"
 			><span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl" /><span
-				class="relative z-10">🔥 {post.title}</span
-			></a
+				class="relative z-10">
+				{#if post.featured}
+				🔥&nbsp;
+				{/if}
+				{post.title}
+			</span></a
 		>
 	</h2>
 	<time
