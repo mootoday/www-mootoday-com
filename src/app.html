@@ -5,38 +5,46 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="monetization" content="$ilp.uphold.com/9MzbR3KHRjd4" />
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="RSS Feed for www.mikenikles.com"
+			href="https://www.mikenikles.com/rss.xml"
+		/>
 		<script>
-			let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+			let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-			updateMode()
-			darkModeMediaQuery.addEventListener('change', updateModeWithoutTransitions)
-			window.addEventListener('storage', updateModeWithoutTransitions)
+			updateMode();
+			darkModeMediaQuery.addEventListener('change', updateModeWithoutTransitions);
+			window.addEventListener('storage', updateModeWithoutTransitions);
 
 			function updateMode() {
-				let isSystemDarkMode = darkModeMediaQuery.matches
-				let isDarkMode = window.localStorage.isDarkMode === 'true' || (!('isDarkMode' in window.localStorage) && isSystemDarkMode)
+				let isSystemDarkMode = darkModeMediaQuery.matches;
+				let isDarkMode =
+					window.localStorage.isDarkMode === 'true' ||
+					(!('isDarkMode' in window.localStorage) && isSystemDarkMode);
 
 				if (isDarkMode) {
-					document.documentElement.classList.add('dark')
+					document.documentElement.classList.add('dark');
 				} else {
-					document.documentElement.classList.remove('dark')
+					document.documentElement.classList.remove('dark');
 				}
 
 				if (isDarkMode === isSystemDarkMode) {
-					delete window.localStorage.isDarkMode
+					delete window.localStorage.isDarkMode;
 				}
 			}
 
 			function disableTransitionsTemporarily() {
-				document.documentElement.classList.add('[&_*]:!transition-none')
+				document.documentElement.classList.add('[&_*]:!transition-none');
 				window.setTimeout(() => {
-					document.documentElement.classList.remove('[&_*]:!transition-none')
-				}, 0)
+					document.documentElement.classList.remove('[&_*]:!transition-none');
+				}, 0);
 			}
 
 			function updateModeWithoutTransitions() {
-				disableTransitionsTemporarily()
-				updateMode()
+				disableTransitionsTemporarily();
+				updateMode();
 			}
 		</script>
 		%sveltekit.head%

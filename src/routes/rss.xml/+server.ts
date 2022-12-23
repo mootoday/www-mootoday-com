@@ -9,7 +9,7 @@ export const GET:RequestHandler = async () => {
 	const feed = new RSS({
 		title: "www.mikenikles.com - RSS Feed",
 		site_url: "https://www.mikenikles.com/",
-		feed_url: "https://www.mikenikles.com//rss.xml"
+		feed_url: "https://www.mikenikles.com/rss.xml"
 	});
 
 	const posts = await getPosts();
