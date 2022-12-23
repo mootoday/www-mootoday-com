@@ -1,0 +1,30 @@
+import type { RequestHandler } from "@sveltejs/kit"
+
+import RSS from "rss";
+import { posts } from "$lib/server/posts";
+
+export const prerender = true;
+
+export const GET:RequestHandler = async () => {
+	const feed = new RSS({
+		title: "www.mikenikles.com - RSS Feed",
+		site_url: "https://www.mikenikles.com/",
+		feed_url: "https://www.mikenikles.com//rss.xml"
+	});
+
+	posts.forEach((posts) => {
+		feed.item({
+			title: posts.title,
+			url: `https://www.mikenikles.com/blog/${posts.slug}`,
+			date: posts.createdAt,
+			description: posts.summary
+		});
+	});
+
+	return new Response(feed.xml({ indent: true }), {
+		headers: {
+			'Cache-Control': `max-age=0, s-maxage=${60 * 10}`,
+			'Content-Type': 'application/rss+xml'
+		}
+	});
+};
