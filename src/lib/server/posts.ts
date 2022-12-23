@@ -1,5 +1,5 @@
 const mdModules = import.meta.glob('../../content/blog/**/index.md');
-export const posts = (
+export const getPosts = async () => (
 	await Promise.all(
 		Object.keys(mdModules).map(async (path) => {
 			const slug = path.split('/').at(-2);

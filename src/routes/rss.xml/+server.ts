@@ -1,7 +1,7 @@
 import type { RequestHandler } from "@sveltejs/kit"
 
 import RSS from "rss";
-import { posts } from "$lib/server/posts";
+import { getPosts } from "$lib/server/posts";
 
 export const prerender = true;
 
@@ -12,6 +12,7 @@ export const GET:RequestHandler = async () => {
 		feed_url: "https://www.mikenikles.com//rss.xml"
 	});
 
+	const posts = await getPosts();
 	posts.forEach((posts) => {
 		feed.item({
 			title: posts.title,
