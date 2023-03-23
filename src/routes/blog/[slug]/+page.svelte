@@ -3,6 +3,7 @@
 	import type { PageData } from "./$types";
 	import Comments from "$lib/components/comments.svelte";
 	import ContentLayout from "$lib/components/content-layout.svelte";
+	import FeedbackWidget from "$lib/components/feedback/widget.svelte";
 
 	export let data: PageData;
 
@@ -33,6 +34,7 @@
 	</svelte:fragment>
 	<div class="mt-8 prose dark:prose-invert">
 		<svelte:component this={data.page} data={{...data.metadata}} />
+		<FeedbackWidget />
 		<Comments />
 	</div>
 </ContentLayout>

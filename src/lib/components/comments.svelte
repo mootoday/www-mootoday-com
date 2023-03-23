@@ -3,5 +3,5 @@
   </script>
 </svelte:head>
 
-<h2>Comments, Feedback, Thoughts</h2>
+<h2>Comments, Thoughts</h2>
 <div id="commento" />
