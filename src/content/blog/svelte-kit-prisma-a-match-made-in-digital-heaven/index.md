@@ -16,6 +16,12 @@ featured: true
 * This all even works if JavaScript is disabled in the browser.
 * Template GitHub repo: https://github.com/mikenikles/sveltekit-prisma
 
+> 📣&nbsp; **SvelteKit & Prisma video course**
+>
+> Hold on a sec ✋! [Josh Nussbaum](https://twitter.com/joshnuss) created [a 33-lesson video course](https://joshuanussbaum.podia.com/data-driven-sveltekit-with-prisma/1qm7q) all about the topic you are interested in - SvelteKit & Prisma.
+>
+> If this is of interest to you, read my summary below and head over to [Josh's course](https://joshuanussbaum.podia.com/data-driven-sveltekit-with-prisma/1qm7q) to dive deeper.
+
 ## What are you going to learn?
 
 We are going to start with a default SvelteKit application. Once initialized, we will learn how to install and configure Prisma before we will use the PrismaClient to perform create, read, update & delete (CRUD) actions against a local SQLite database.
