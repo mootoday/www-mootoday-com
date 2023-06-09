@@ -1,0 +1,10 @@
+{
+  "packages": [
+    "nodejs@18"
+  ],
+  "shell": {
+    "init_hook": [
+      "npm install"
+    ]
+  }
+}
