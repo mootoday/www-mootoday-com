@@ -1,0 +1,11 @@
+{
+  "packages": [
+    "nodejs@18",
+    "lsof@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "sh ./.config/devbox/init.sh"
+    ]
+  }
+}
