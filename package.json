@@ -15,6 +15,7 @@
 		"generate:images": "node ./generate-responsive-image-data.js"
 	},
 	"devDependencies": {
+		"@howisit/svelte": "^0.0.5",
 		"@mux/blurhash": "^0.1.2",
 		"@mux/mux-player": "^1.5.1",
 		"@playwright/test": "^1.28.1",
