@@ -1,3 +1,3 @@
 kv_namespaces = [
-  { binding = mikenikles-com-feed, id = "b9ac70c7a63242599f4d0510fc70fa78" }
+  { binding = "MIKENIKLES_COM_FEED", id = "b9ac70c7a63242599f4d0510fc70fa78" }
 ]
