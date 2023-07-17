@@ -7,7 +7,7 @@ export const load = (async ({locals}) => {
             entries
         };
     } catch (error) {
-        console.error(error)
+        console.error(JSON.stringify(error))
     }
     return {
         entries: [],
