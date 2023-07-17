@@ -1,6 +1,8 @@
 <script lang="ts">
   import ContentLayout from '$lib/components/content-layout.svelte';
   import Entry from "$lib/components/feed/entry.svelte";
+
+	export let data;
 </script>
 
 <svelte:head>
@@ -15,10 +17,10 @@
 	title="Short-form content"
 >
 	<svelte:fragment slot="intro">
-    <strong class="text-teal-500">Online courses</strong> I authored about full-stack web development.
+    <strong class="text-teal-500">Food for thought & opinions</strong> I have about software engineering.
 	</svelte:fragment>
 
-    {#each new Array(3) as entry}
+    {#each data.entries as entry}
         <Entry />
     {/each}
 </ContentLayout>

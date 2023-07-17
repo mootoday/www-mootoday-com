@@ -5,5 +5,9 @@ declare namespace App {
 	// interface Error {}
 	// interface Locals {}
 	// interface PageData {}
-	// interface Platform {}
+	interface Platform {
+		env?: {
+			MIKENIKLES_COM_FEED: KVNamespace
+		}
+	}
 }
