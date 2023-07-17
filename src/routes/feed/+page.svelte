@@ -21,6 +21,6 @@
 	</svelte:fragment>
 
     {#each data.entries as entry}
-        <Entry />
+        <Entry {entry} />
     {/each}
 </ContentLayout>

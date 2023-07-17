@@ -3,11 +3,13 @@
 // and what to do when importing types
 declare namespace App {
 	// interface Error {}
-	// interface Locals {}
+	interface Locals {
+		D1: D1Database;
+	}
 	// interface PageData {}
 	interface Platform {
 		env: {
-			DB: D1Database;
+			D1: D1Database;
 		};
 		context: {
 			waitUntil(promise: Promise<any>): void;

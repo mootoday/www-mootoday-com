@@ -1,3 +1,12 @@
+<script lang="ts">
+  export let entry: {
+    id: string;
+    slug: string;
+    content: string;
+    created_on: string;
+  };
+</script>
+
 <div class="flex flex-shrink-0 p-4 pb-0">
       <a href="#" class="group block flex-shrink-0">
         <div class="flex items-center">
@@ -7,7 +16,7 @@
           <div class="ml-2">
             <p class="text-base font-medium leading-6 text-white">
               Mike Nikles
-              <span class="text-sm font-medium leading-5 text-gray-400 transition duration-150 ease-in-out group-hover:text-gray-300"> • July 15, 2023 </span>
+              <span class="text-sm font-medium leading-5 text-gray-400 transition duration-150 ease-in-out group-hover:text-gray-300"> • {entry.created_on} </span>
             </p>
           </div>
         </div>
@@ -16,8 +25,7 @@
 
     <div class="pl-16">
       <p class="width-auto flex-shrink text-base font-medium text-white">
-        First day of my own Twitter-like timeline for short-form content over at <span class="text-blue-400">mikenikles.com</span>.
-        <span class="text-blue-400"> #TwitterExit</span>
+        {entry.content}
       </p>
 
       <div class="pr-6 pt-3 md:flex-shrink">

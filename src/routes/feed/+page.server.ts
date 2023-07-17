@@ -1,19 +1,13 @@
 import type { PageServerLoad } from './$types';
 
-export const load = (async ({platform}) => {
-    console.log(platform);
-    console.log(platform?.env);
-    console.log(JSON.stringify(platform?.env.D1));
+export const load = (async ({locals}) => {
     try {
-        const entries = await platform?.env.D1.prepare(`SELECT * FROM entries`).run();
+        const {results: entries} = await locals.D1.prepare(`SELECT * FROM entries`).all();
         return {
             entries
         };
     } catch (error) {
-        console.error({
-            message: error.message,
-            cause: error.cause.message,
-        });
+        console.error(error)
     }
     return {
         entries: [],

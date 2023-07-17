@@ -9,3 +9,4 @@ node_modules
 spotlight
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+wrangler/.wrangler
