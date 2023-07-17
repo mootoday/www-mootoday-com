@@ -6,8 +6,12 @@ declare namespace App {
 	// interface Locals {}
 	// interface PageData {}
 	interface Platform {
-		env?: {
-			MIKENIKLES_COM_FEED: KVNamespace
-		}
+		env: {
+			DB: D1Database;
+		};
+		context: {
+			waitUntil(promise: Promise<any>): void;
+		};
+		caches: CacheStorage & { default: Cache };
 	}
 }

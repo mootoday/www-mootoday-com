@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev -- --d1=D1",
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "playwright test",
