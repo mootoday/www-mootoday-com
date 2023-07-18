@@ -1,0 +1,8 @@
+name = "dev-wrangler"
+main = "src/worker.ts"
+compatibility_date = "2023-07-10"
+
+[[d1_databases]]
+binding = "D1"
+database_name = "mikenikles-com-feed"
+database_id = "4a2d4006-a374-4214-93bd-e90813e979ad"

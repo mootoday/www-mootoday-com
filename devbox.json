@@ -1,7 +1,8 @@
 {
   "packages": [
     "nodejs@18",
-    "lsof@latest"
+    "lsof@latest",
+    "python@latest"
   ],
   "shell": {
     "init_hook": [

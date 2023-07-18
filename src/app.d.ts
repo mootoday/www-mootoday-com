@@ -3,7 +3,17 @@
 // and what to do when importing types
 declare namespace App {
 	// interface Error {}
-	// interface Locals {}
+	interface Locals {
+		D1: D1Database;
+	}
 	// interface PageData {}
-	// interface Platform {}
+	interface Platform {
+		env: {
+			D1: D1Database;
+		};
+		context: {
+			waitUntil(promise: Promise<any>): void;
+		};
+		caches: CacheStorage & { default: Cache };
+	}
 }
