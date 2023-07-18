@@ -53,7 +53,7 @@
 				/>
 			</div>
 			<div class="ml-2">
-				<p class="text-base font-medium leading-6 text-white">
+				<p class="text-base font-medium leading-6 text-black dark:text-white">
 					Mike Nikles
 					<a href="/feed/{new Date(+entry.id).getTime()}">
 						<span
@@ -68,7 +68,7 @@
 	</div>
 
 	<div class="pl-16">
-		<p class="content width-auto flex-shrink text-base font-medium text-white">
+		<p class="content width-auto flex-shrink text-base font-medium text-black dark:text-white">
 			<SvelteMarkdown source={entry.content} options={{
 				gfm: true,
 				breaks: true,
