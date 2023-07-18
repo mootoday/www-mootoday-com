@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { writable } from 'svelte/store';
+	import { fade } from 'svelte/transition';
 
 	import ContentLayout from '$lib/components/content-layout.svelte';
 	import Add from '$lib/components/feed/add.svelte';
@@ -7,7 +8,7 @@
 
 	export let data;
 
-	const newContent = writable<string>("");
+	const newContent = writable<string>('');
 </script>
 
 <svelte:head>
@@ -22,10 +23,14 @@
 	<div class="mx-auto md:w-1/2">
 		<Add {newContent} />
 		{#if $newContent}
-			<Entry entry={{
-				id: `${new Date(new Date().getTime() + 1 * 60000).getTime()}`,
-				content: $newContent,
-			}} />
+			<div transition:fade>
+				<Entry
+					entry={{
+						id: `${new Date(new Date().getTime() + 1 * 60000).getTime()}`,
+						content: $newContent
+					}}
+				/>
+			</div>
 		{/if}
 		{#each data.entries as entry}
 			<Entry {entry} />
