@@ -68,8 +68,11 @@
 	</div>
 
 	<div class="pl-16">
-		<p class="width-auto flex-shrink text-base font-medium text-white">
-			<SvelteMarkdown source={entry.content} />
+		<p class="content width-auto flex-shrink text-base font-medium text-white">
+			<SvelteMarkdown source={entry.content} options={{
+				gfm: true,
+				breaks: true,
+			}} />
 		</p>
 
 		<!-- <div class="pt-3 md:flex-shrink">
@@ -127,3 +130,9 @@
 	</div>
 	<hr class="border-gray-600 mt-4" />
 </div>
+
+<style lang="postcss">
+	.content :global(a) {
+		@apply text-teal-500;
+	}
+</style>
