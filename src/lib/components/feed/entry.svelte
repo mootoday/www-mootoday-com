@@ -1,9 +1,9 @@
 <script lang="ts">
+	import SvelteMarkdown from "svelte-markdown";
+
 	export let entry: {
 		id: string;
-		slug: string;
 		content: string;
-		created_on: Date;
 	};
 
 	const getRelativeTimeString = (date: Date | number) => {
@@ -42,45 +42,44 @@
 	const rtf1 = new Intl.RelativeTimeFormat('en', { style: 'short' });
 </script>
 
-<div class="flex flex-shrink-0 p-4 pb-0">
-	<!-- <a href="#" class="group block flex-shrink-0"> -->
-	<div class="flex items-center">
-		<div>
+<div class="mb-8">
+	<div class="flex flex-shrink-0 p-4 pb-0">
+		<div class="flex items-center">
+			<div>
+				<img
+					class="inline-block h-10 w-10 rounded-full"
+					src="https://pbs.twimg.com/profile_images/1255590513035665408/uV0_K_3T_x96.jpg"
+					alt=""
+				/>
+			</div>
+			<div class="ml-2">
+				<p class="text-base font-medium leading-6 text-white">
+					Mike Nikles
+					<a href="/feed/{new Date(+entry.id).getTime()}">
+						<span
+							class="text-sm font-medium leading-5 text-gray-400 transition duration-150 ease-in-out"
+						>
+							• {getRelativeTimeString(new Date(+entry.id))}
+						</span>
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="pl-16">
+		<p class="width-auto flex-shrink text-base font-medium text-white">
+			<SvelteMarkdown source={entry.content} />
+		</p>
+
+		<!-- <div class="pt-3 md:flex-shrink">
 			<img
-				class="inline-block h-10 w-10 rounded-full"
-				src="https://pbs.twimg.com/profile_images/1255590513035665408/uV0_K_3T_x96.jpg"
-				alt=""
+				class="h-64 w-full rounded-lg"
+				src="https://images.unsplash.com/photo-1561715608-5659baeccfb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2873&q=80"
+				alt="An emergency exit light on a call"
 			/>
-		</div>
-		<div class="ml-2">
-			<p class="text-base font-medium leading-6 text-white">
-				Mike Nikles
-				<a href="/feed/{new Date(+entry.id).getTime()}">
-					<span
-						class="text-sm font-medium leading-5 text-gray-400 transition duration-150 ease-in-out"
-					>
-						• {getRelativeTimeString(new Date(+entry.id))}
-					</span>
-				</a>
-			</p>
-		</div>
-	</div>
-	<!-- </a> -->
-</div>
-
-<div class="pl-16">
-	<p class="width-auto flex-shrink text-base font-medium text-white">
-		{entry.content}
-	</p>
-
-	<div class="pt-3 md:flex-shrink">
-		<img
-			class="h-64 w-full rounded-lg"
-			src="https://images.unsplash.com/photo-1561715608-5659baeccfb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2873&q=80"
-			alt="An emergency exit light on a call"
-		/>
-	</div>
-	<div class="flex">
+		</div> -->
+		<div class="flex">
 		<div class="w-full">
 			<div class="flex items-center">
 				<div class="text-center">
@@ -125,5 +124,6 @@
 			</div>
 		</div>
 	</div>
+	</div>
+	<hr class="border-gray-600 mt-4" />
 </div>
-<hr class="border-gray-600" />
