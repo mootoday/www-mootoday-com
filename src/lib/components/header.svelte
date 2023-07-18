@@ -21,6 +21,9 @@
     href: "/about",
     label: "About"
   }, {
+    href: "/feed",
+    label: "Feed"
+  }, {
     href: "/blog",
     label: "Blog"
   }, {
