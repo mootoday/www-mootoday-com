@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { writable } from 'svelte/store';
 	import { fade } from 'svelte/transition';
+	import { page } from '$app/stores';
 
 	import ContentLayout from '$lib/components/content-layout.svelte';
 	import Add from '$lib/components/feed/add.svelte';
@@ -8,7 +9,7 @@
 
 	export let data;
 
-	const newContent = writable<string>('');
+	const newContent = writable<string>($page.form?.content || '');
 </script>
 
 <svelte:head>
@@ -22,8 +23,14 @@
 	</svelte:fragment>
 	<div class="mx-auto md:w-1/2">
 		<Add {newContent} />
+		{#if $page.form?.unauthorized}<p class="text-red-500">It was worth a try 😅</p>{/if}
 		{#if $newContent}
-			<div transition:fade>
+			<div
+				transition:fade
+				class:border={$page.form?.unauthorized}
+				class:border-red-500={$page.form?.unauthorized}
+				class:rounded-lg={$page.form?.unauthorized}
+			>
 				<Entry
 					entry={{
 						id: `${new Date(new Date().getTime() + 1 * 60000).getTime()}`,

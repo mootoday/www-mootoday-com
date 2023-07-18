@@ -2,11 +2,16 @@
 	import type { Writable } from "svelte/store";
 
   export let newContent: Writable<string>;
+
+  const setAuthorization = (node: HTMLInputElement) => {
+    node.value = window.localStorage.getItem("authorization") || "";
+  }
 </script>
 
 <div class="flex items-start space-x-4 mb-8">
   <div class="min-w-0 flex-1">
     <form method="post" class="relative">
+      <input type="hidden" name="authorization" use:setAuthorization>
       <div class="overflow-hidden rounded-lg shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-teal-500">
         <label for="content" class="sr-only">What's up?</label>
         <textarea rows="3" name="content" id="content" bind:value={$newContent} class="block w-full resize-none border-0 bg-transparent py-1.5 text-gray-400 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="What's up? Markdown supported"></textarea>
