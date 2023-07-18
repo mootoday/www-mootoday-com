@@ -55,11 +55,11 @@
 		<div class="ml-2">
 			<p class="text-base font-medium leading-6 text-white">
 				Mike Nikles
-				<a href="/feed/{new Date(entry.created_on).getTime()}">
+				<a href="/feed/{new Date(+entry.id).getTime()}">
 					<span
 						class="text-sm font-medium leading-5 text-gray-400 transition duration-150 ease-in-out"
 					>
-						• {getRelativeTimeString(new Date(`${entry.created_on}Z`))}
+						• {getRelativeTimeString(new Date(+entry.id))}
 					</span>
 				</a>
 			</p>

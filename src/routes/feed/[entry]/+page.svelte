@@ -12,7 +12,7 @@
 
 <ContentLayout title="">
 	<svelte:fragment slot="intro">
-		<strong class="text-teal-500"><a href="/feed">More content like this</a></strong> on my feed.
+		<strong class="text-teal-500"><a href="/feed">More content like this on my feed.</a></strong>
 	</svelte:fragment>
 	<div class="mx-auto md:w-1/2">
     <Entry entry={data.entry} />
