@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import SvelteMarkdown from 'svelte-markdown';
 
@@ -9,19 +10,20 @@
 
 	const share = async () => {
 		if (typeof navigator.share === 'undefined') {
-			alert('Web Share API not available.');
+			alert('Web Share API not available. Please copy the URL of this page.');
+			if ($page.route.id === '/feed') {
+				goto(`/feed/${entry.id}`);
+			}
 		} else {
 			try {
 				await navigator.share({
-					text: entry.content,
-					title: "Food for thought",
 					url:
 						$page.route.id === '/feed'
 							? `${window.location.href}/${entry.id}`
 							: window.location.href
 				});
 			} catch (error) {
-				alert(`Sharing failed due to: ${error}`);
+				// Ignored, this could be due to the user cancelling the share activity
 			}
 		}
 	};
