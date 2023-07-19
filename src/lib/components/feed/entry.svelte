@@ -1,9 +1,29 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import SvelteMarkdown from 'svelte-markdown';
 
 	export let entry: {
 		id: string;
 		content: string;
+	};
+
+	const share = async () => {
+		if (typeof navigator.share === 'undefined') {
+			alert('Web Share API not available.');
+		} else {
+			try {
+				await navigator.share({
+					text: entry.content,
+					title: "Food for thought",
+					url:
+						$page.route.id === '/feed'
+							? `${window.location.href}/${entry.id}`
+							: window.location.href
+				});
+			} catch (error) {
+				alert(`Sharing failed due to: ${error}`);
+			}
+		}
 	};
 
 	const getRelativeTimeString = (date: Date | number) => {
@@ -38,8 +58,6 @@
 		const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
 		return rtf.format(Math.floor(deltaSeconds / divisor), units[unitIndex]);
 	};
-
-	const rtf1 = new Intl.RelativeTimeFormat('en', { style: 'short' });
 </script>
 
 <div class="mb-8">
@@ -69,10 +87,13 @@
 
 	<div class="pl-16">
 		<p class="content width-auto flex-shrink text-base font-medium text-black dark:text-white">
-			<SvelteMarkdown source={entry.content} options={{
-				gfm: true,
-				breaks: true,
-			}} />
+			<SvelteMarkdown
+				source={entry.content}
+				options={{
+					gfm: true,
+					breaks: true
+				}}
+			/>
 		</p>
 
 		<!-- <div class="pt-3 md:flex-shrink">
@@ -82,10 +103,10 @@
 				alt="An emergency exit light on a call"
 			/>
 		</div> -->
-		<!-- <div class="flex">
+		<div class="flex">
 			<div class="w-full">
 				<div class="flex items-center">
-					<div class="text-center">
+					<!-- <div class="text-center">
 						<a
 							href="#"
 							class="group mt-1 flex w-12 items-center rounded-full px-3 py-2 text-base font-medium leading-6 text-gray-500 hover:bg-teal-800 hover:text-teal-300"
@@ -103,9 +124,9 @@
 								/></svg
 							>
 						</a>
-					</div>
+					</div> -->
 
-					<div class="m-2 py-2 text-center">
+					<!-- <div class="m-2 py-2 text-center">
 						<a
 							href="#"
 							class="group mt-1 flex w-12 items-center rounded-full px-3 py-2 text-base font-medium leading-6 text-gray-500 hover:bg-teal-800 hover:text-teal-300"
@@ -123,10 +144,28 @@
 								/></svg
 							>
 						</a>
+					</div> -->
+
+					<div class="flex-1 text-center py-2 my-2">
+						<button
+							on:click={share}
+							class="w-12 mt-1 group flex items-center text-gray-500 px-3 py-2 text-base leading-6 font-medium rounded-full hover:bg-teal-800 hover:text-teal-300"
+						>
+							<svg
+								class="text-center h-7 w-6"
+								fill="none"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg
+							>
+						</button>
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 	<hr class="border-gray-600 mt-4" />
 </div>
