@@ -23,7 +23,7 @@
 	</svelte:fragment>
 	<div class="mx-auto md:w-1/2">
 		<Add {newContent} />
-		{#if $page.form?.unauthorized}<p class="text-red-500">It was worth a try 😅</p>{/if}
+		{#if $page.form?.unauthorized}<p class="text-red-500">Oops, you're not Mike. It was worth a try though 😅</p>{/if}
 		{#if $newContent}
 			<div
 				transition:fade
