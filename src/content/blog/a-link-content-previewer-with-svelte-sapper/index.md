@@ -1,9 +1,9 @@
 ---
-title: "A Link Content Previewer with Svelte & Sapper"
-slug: "a-link-content-previewer-with-svelte-sapper"
+title: 'A Link Content Previewer with Svelte & Sapper'
+slug: 'a-link-content-previewer-with-svelte-sapper'
 summary: "Develop a <LinkPreview> Svelte component to display a link's content in a preview card."
 createdAt: 2020-04-18T00:00:00.000Z
-tags: ["svelte", "sapper", "web", "development"]
+tags: ['svelte', 'sapper', 'web', 'development']
 layout: blog
 ---
 
@@ -27,15 +27,16 @@ Link content previewer in action
 With all code in place as described in her post, the solution can be used as follows:
 
 ```html
-<a href="https://dev.to"
-  onmouseover="showLinkPreview()"
-  onmouseleave="hideLinkPreview()"
-  class="link-with-preview"
-  data-image="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png"
-  data-title="DEV Community 👩‍💻👨‍💻"
-  data-text="Where programmers share ideas and help each other grow—A constructive and inclusive social network."
+<a
+	href="https://dev.to"
+	onmouseover="showLinkPreview()"
+	onmouseleave="hideLinkPreview()"
+	class="link-with-preview"
+	data-image="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png"
+	data-title="DEV Community 👩‍💻👨‍💻"
+	data-text="Where programmers share ideas and help each other grow—A constructive and inclusive social network."
 >
-  dev.to.
+	dev.to.
 </a>
 ```
 
@@ -68,34 +69,36 @@ In a [Sapper](https://sapper.svelte.dev/) application, we can use [server routes
 All we need is the following server route at `src/routes/link-preview.json.js`:
 
 ```js
-import got from "got";
-import * as cheerio from "cheerio";
+import got from 'got';
+import * as cheerio from 'cheerio';
 
 // TODO: Expand to include other meta tags (e.g. Facebook, Twitter, etc.)
-const getTitle = ($) => $("head title").text()
-const getDescription = ($) => $("meta[name=description]").attr("content")
-const getImgSrc = ($) => $("meta[property='og:image']").attr("content")
+const getTitle = ($) => $('head title').text();
+const getDescription = ($) => $('meta[name=description]').attr('content');
+const getImgSrc = ($) => $("meta[property='og:image']").attr('content');
 
 export const get = async (req, res) => {
-  const { href } = req.query;
-  const fetchResponse = await got(href);
-  const $ = cheerio.load(fetchResponse.body);
+	const { href } = req.query;
+	const fetchResponse = await got(href);
+	const $ = cheerio.load(fetchResponse.body);
 
-  res.setHeader('Content-Type', 'application/json');
-  res.end(JSON.stringify({
-    title: getTitle($),
-    description: getDescription($),
-    imgSrc: getImgSrc($)
-  }));
-}
+	res.setHeader('Content-Type', 'application/json');
+	res.end(
+		JSON.stringify({
+			title: getTitle($),
+			description: getDescription($),
+			imgSrc: getImgSrc($)
+		})
+	);
+};
 ```
 
 It exports a `get` function, which maps to a GET request to `/link-preview.json`. Since that endpoints is served from the same domain as the frontend application, we have no CORS issues.
 
 We need two libraries:
 
-* [`got`](https://www.npmjs.com/package/got): A request library for Node.js
-* [`cheerio`](https://www.npmjs.com/package/cheerio): An implementation of core jQuery designed for the server
+- [`got`](https://www.npmjs.com/package/got): A request library for Node.js
+- [`cheerio`](https://www.npmjs.com/package/cheerio): An implementation of core jQuery designed for the server
 
 In the `get` function, we first read the `href` request query parameter. The frontend can provide that when calling the endpoint with `/link-preview.json?href=https://dev.to`.
 
@@ -124,8 +127,8 @@ Expressed as a [user story](https://en.wikipedia.org/wiki/User_story):
 With these goals in mind, let's start with a new `src/components/link-preview.svelte` file:
 
 ```html
-<a href={$$props.href} {...$$props}>
-  <slot />
+<a href="{$$props.href}" {...$$props}>
+	<slot />
 </a>
 ```
 
@@ -138,34 +141,33 @@ We could modify the existing `link-preview.svelte` component and add the HTML fo
 Create a `src/components/link-preview-card.svelte` file with basic Svelte boilerplate, plus the card HTML and CSS Ilona provided in her blog post:
 
 ```html
-<script>
-</script>
+<script></script>
 
 <style>
-  .card {
-    width: 150px;
-    font-size: 10px;
-    color: black;
-    position: absolute;
-    z-index: 100;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .card img {
-    width: 150px;
-  }
-  .card-title {
-    font-size: 14px;
-  }
+	.card {
+		width: 150px;
+		font-size: 10px;
+		color: black;
+		position: absolute;
+		z-index: 100;
+		bottom: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.card img {
+		width: 150px;
+	}
+	.card-title {
+		font-size: 14px;
+	}
 </style>
 
 <div class="card">
-  <img src="" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title"></h5>
-    <p class="card-text"></p>
-  </div>
+	<img src="" class="card-img-top" />
+	<div class="card-body">
+		<h5 class="card-title"></h5>
+		<p class="card-text"></p>
+	</div>
 </div>
 ```
 
@@ -173,21 +175,21 @@ Next, let's define the `title`, `description` and `imgSrc` variables. For now, t
 
 ```html
 <script>
-  let title = "";
-  let description;
-  let imgSrc;
+	let title = '';
+	let description;
+	let imgSrc;
 </script>
 
 <style>
-  ...
+	...;
 </style>
 
 <div class="card">
-  <img src={imgSrc} alt={title} class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">{title}</h5>
-    <p class="card-text">{description}</p>
-  </div>
+	<img src="{imgSrc}" alt="{title}" class="card-img-top" />
+	<div class="card-body">
+		<h5 class="card-title">{title}</h5>
+		<p class="card-text">{description}</p>
+	</div>
 </div>
 ```
 
@@ -197,20 +199,20 @@ We start with Svelte's `onMount()` lifecycle method to call the backend service.
 
 ```html
 <script>
-  import { onMount } from "svelte";
-  
-  export let href;
-  
-  ...
-  
-  onMount(() => {
-    fetch("/link-preview.json?href=" + href)
-      .then(response => response.json())
-      .then(linkData => {
-        title = linkData.title;
-        description = linkData.description;
-        imgSrc = linkData.imgSrc;
-      });
+	 import { onMount } from "svelte";
+
+	 export let href;
+
+	 ...
+
+	 onMount(() => {
+	   fetch("/link-preview.json?href=" + href)
+	     .then(response => response.json())
+	     .then(linkData => {
+	       title = linkData.title;
+	       description = linkData.description;
+	       imgSrc = linkData.imgSrc;
+	     });
 	});
 </script>
 ```
@@ -221,15 +223,15 @@ Now, the HTML needs a few updates for better user experience. Not every website 
 
 ```html
 <div class="card">
-  {#if imgSrc}
-    <img src={imgSrc} alt={title} class="card-img-top">
-  {/if}
-  <div class="card-body">
-    <h5 class="card-title">{title}</h5>
-    {#if description}
-      <p class="card-text">{description}</p>
-    {/if}
-  </div>
+	{#if imgSrc}
+	<img src="{imgSrc}" alt="{title}" class="card-img-top" />
+	{/if}
+	<div class="card-body">
+		<h5 class="card-title">{title}</h5>
+		{#if description}
+		<p class="card-text">{description}</p>
+		{/if}
+	</div>
 </div>
 ```
 
@@ -237,26 +239,26 @@ To wrap up the development of this component, we need to indicate whether to sho
 
 ```html
 <script>
-  ...
-  
-  export href;
-  export show = false;
-  
-  ...
+	...
+
+	export href;
+	export show = false;
+
+	...
 </script>
 
 {#if show}
-  <div class="card">
-    {#if imgSrc}
-  	  <img src={imgSrc} alt={title} class="card-img-top">
-    {/if}
-    <div class="card-body">
-      <h5 class="card-title">{title}</h5>
-      {#if description}
-        <p class="card-text">{description}</p>
-      {/if}
-    </div>
-  </div>
+<div class="card">
+	{#if imgSrc}
+	<img src="{imgSrc}" alt="{title}" class="card-img-top" />
+	{/if}
+	<div class="card-body">
+		<h5 class="card-title">{title}</h5>
+		{#if description}
+		<p class="card-text">{description}</p>
+		{/if}
+	</div>
+</div>
 {/if}
 ```
 
@@ -268,12 +270,12 @@ Back in the `src/components/link-preview.svelte` component, we need to import th
 
 ```html
 <script>
-  import LinkPreviewCard from "./link-preview-card.svelte";
+	import LinkPreviewCard from './link-preview-card.svelte';
 </script>
 
-<a href={$$props.href} {...$$props}>
-  <slot />
-  <LinkPreviewCard href={$$props.href} />
+<a href="{$$props.href}" {...$$props}>
+	<slot />
+	<LinkPreviewCard href="{$$props.href}" />
 </a>
 ```
 
@@ -283,9 +285,9 @@ To properly style the preview card, the `<a>` tag needs a tiny bit of styling:
 
 ```html
 <style>
-  a {
-    position: relative;
-  }
+	a {
+		position: relative;
+	}
 </style>
 ```
 
@@ -295,9 +297,9 @@ Lastly, the preview card needs to be displayed when the mouse is over a link and
 
 ```html
 <script>
-  ...
-  
-  let showPreviewCard = false;
+	...
+
+	let showPreviewCard = false;
 </script>
 ```
 
@@ -319,12 +321,12 @@ The `<LinkPreview>` component can now be used anywhere in the application, for e
 
 ```html
 <script>
-  import LinkPreview from "../components/link-preview.svelte";
+	import LinkPreview from '../components/link-preview.svelte';
 </script>
 
 <p>
-  Move your mouse over the following link to see a preview of the link's content:
-  <LinkPreview href="https://dev.to">dev.to.</LinkPreview>
+	Move your mouse over the following link to see a preview of the link's content:
+	<LinkPreview href="https://dev.to">dev.to.</LinkPreview>
 </p>
 ```
 

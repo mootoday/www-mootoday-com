@@ -1,12 +1,6 @@
 {
-  "packages": [
-    "nodejs@18",
-    "lsof@latest",
-    "python@latest"
-  ],
-  "shell": {
-    "init_hook": [
-      "sh ./.config/devbox/init.sh"
-    ]
-  }
+	"packages": ["nodejs@18", "lsof@latest", "python@latest"],
+	"shell": {
+		"init_hook": ["sh ./.config/devbox/init.sh"]
+	}
 }

@@ -1,9 +1,9 @@
 ---
-title: "Our approach to software development consistency"
-slug: "our-approach-to-software-development-consistency"
+title: 'Our approach to software development consistency'
+slug: 'our-approach-to-software-development-consistency'
 summary: "Don't document what you can automate."
 createdAt: 2018-01-03T00:00:00.000Z
-tags: ["series-monorepo"]
+tags: ['series-monorepo']
 layout: blog
 ---
 
@@ -18,10 +18,10 @@ layout: blog
 
 _This blog post is part of a series where I share our migration from monolithical applications (each with their own source repository) deployed on AWS to a distributed services architecture (with all source code hosted in a monorepo) deployed on Google Cloud Platform._
 
-* _Part 1 (this post): “A monorepo, GitHub Flow and automation FTW”_
-* _Part 2: “One vs. many — Why we moved from multiple git repos to a monorepo and how we set it up”_
-* _Part 3: “A (mostly) automated release process”_
-* _Part 4: “Our approach to software development consistency”_
+- _Part 1 (this post): “A monorepo, GitHub Flow and automation FTW”_
+- _Part 2: “One vs. many — Why we moved from multiple git repos to a monorepo and how we set it up”_
+- _Part 3: “A (mostly) automated release process”_
+- _Part 4: “Our approach to software development consistency”_
 
 ## What is consistency in software development?
 
@@ -31,18 +31,18 @@ It applies to all aspects of development: Code style, comments, tools, onboardin
 
 Let’s take the “creation of new packages and services” case of my current project where we migrate from monolithical applications to smaller, independent and distributed services. Here’s how we created the first 3 services:
 
-* **Service 1**: 100% hand-crafted, trial & error, many dead ends.
-* **Service 2**: Copy & paste service 1, tweak where necessary, replace old business logic with new one relevant to service 2. Repeat until hopefully everything somehow works.
-* **Service 3**: Copy & paste … __what on earth are we doing?__
+- **Service 1**: 100% hand-crafted, trial & error, many dead ends.
+- **Service 2**: Copy & paste service 1, tweak where necessary, replace old business logic with new one relevant to service 2. Repeat until hopefully everything somehow works.
+- **Service 3**: Copy & paste … **what on earth are we doing?**
 
-Can you spot the consistency? Correct, __Copy & paste__ looks pretty consistent. What happens when people who spent a week building service 1 move on? Who knows what needs to be tweaked to create service 8? Imagine the nightmare when a fundamental bug occurs and impacts all services… 👻.
+Can you spot the consistency? Correct, **Copy & paste** looks pretty consistent. What happens when people who spent a week building service 1 move on? Who knows what needs to be tweaked to create service 8? Imagine the nightmare when a fundamental bug occurs and impacts all services… 👻.
 
-Now the question is, how do we make this more consistent? I asked a few friends and many replied: ****Document the process****.
+Now the question is, how do we make this more consistent? I asked a few friends and many replied: \***\*Document the process\*\***.
 
-* **Service 1**: 100% hand-crafted, trial & error, a few swear words here and there.
-* **__Document the process__**
-* **Service 2**: Copy & paste service 1, follow the documentation checklist to update the new service.
-* **Service 3**: Follow the steps above, as long as nothing has changed and the documentation is still up-to-date 🤞.
+- **Service 1**: 100% hand-crafted, trial & error, a few swear words here and there.
+- ****Document the process****
+- **Service 2**: Copy & paste service 1, follow the documentation checklist to update the new service.
+- **Service 3**: Follow the steps above, as long as nothing has changed and the documentation is still up-to-date 🤞.
 
 ## Don’t document what you can automate
 
@@ -54,9 +54,9 @@ Every new package or service has a certain shape that’s fairly similar among a
 
 Imagine the following procedure to create 3 services:
 
-* **Service 1**: Run service generator, provide service-specific values, hit Enter.
-* **Service 2**: Run service generator, provide service-specific values, hit Enter.
-* **Service 4**: Run service generator, provide service-specific values, hit Enter.
+- **Service 1**: Run service generator, provide service-specific values, hit Enter.
+- **Service 2**: Run service generator, provide service-specific values, hit Enter.
+- **Service 4**: Run service generator, provide service-specific values, hit Enter.
 
 ## Automate the process
 
@@ -68,8 +68,8 @@ Our tool of choice is [Plop](https://plopjs.com/). A popular alternative is [Yeo
 
 We currently have two generators:
 
-* Package
-* Service
+- Package
+- Service
 
 All template files live in a `_templates` folder. The directory structure is:
 
@@ -105,71 +105,70 @@ const {doSomething} = require('./helpers')
 module.exports = plop => {
   plop.setGenerator('package', require('./packages/'))
   plop.setGenerator('service', require('./services/'))
-  
+
   // Helpers
   plop.setHelper('myHelper', aParameter => doSomething(aParameter))
 ava
 ```
 
 ```javascript
-const {PKG_TYPES, getFullPkgName, getPkgRoot, getType} = require('../helpers')
+const { PKG_TYPES, getFullPkgName, getPkgRoot, getType } = require('../helpers');
 
 const validatePkgName = (newName, data) => {
-  try {
-    // validatePkgNamePattern(newName)
-    // validatePkgNameDoesNotExist(newName, data)
-  } catch (error) {
-    return error.message
-  }
-  return true
-}
+	try {
+		// validatePkgNamePattern(newName)
+		// validatePkgNameDoesNotExist(newName, data)
+	} catch (error) {
+		return error.message;
+	}
+	return true;
+};
 
 module.exports = {
-  description: 'Generate a new package (`iso-*`, `web-*`, etc.)',
-  prompts: [
-    {
-      type: 'list',
-      name: 'pkgTypeLabel',
-      message: 'What type of package would you like to create?',
-      choices: PKG_TYPES
-    },
-    {
-      type: 'input',
-      name: 'pkgName',
-      message:
-        'What is the name of your package? (E.g. "logging" or "components-buttons", etc.',
-      validate: validatePkgName
-    },
-    {
-      type: 'input',
-      name: 'pkgDescription',
-      message: 'What is the description of your package?'
-    }
-  ],
-  actions: data => {
-    const {pkgName, pkgTypeLabel} = data
-    const pkgType = getType(pkgTypeLabel)
-    const fullPkgName = getFullPkgName(pkgTypeLabel, pkgName)
+	description: 'Generate a new package (`iso-*`, `web-*`, etc.)',
+	prompts: [
+		{
+			type: 'list',
+			name: 'pkgTypeLabel',
+			message: 'What type of package would you like to create?',
+			choices: PKG_TYPES
+		},
+		{
+			type: 'input',
+			name: 'pkgName',
+			message: 'What is the name of your package? (E.g. "logging" or "components-buttons", etc.',
+			validate: validatePkgName
+		},
+		{
+			type: 'input',
+			name: 'pkgDescription',
+			message: 'What is the description of your package?'
+		}
+	],
+	actions: (data) => {
+		const { pkgName, pkgTypeLabel } = data;
+		const pkgType = getType(pkgTypeLabel);
+		const fullPkgName = getFullPkgName(pkgTypeLabel, pkgName);
 
-    return [
-      {
-        // Add the package template
-        type: 'addMany',
-        abortOnFail: true,
-        base: `../../_templates/packages/${pkgType}`,
-        destination: `../../${getPkgRoot(pkgType)}/${fullPkgName}/`,
-        templateFiles: `../../_templates/packages/${pkgType}/**/**`
-      },
-      {
-        // Add the README.md
-        type: 'add',
-        abortOnFail: true,
-        path: `../../${getPkgRoot(pkgType)}/${fullPkgName}/README.md`,
-        templateFile: `../../_templates/packages/README.md`
-      }
-    ]
-  }
-}
+		return [
+			{
+				// Add the package template
+				type: 'addMany',
+				abortOnFail: true,
+				base: `../../_templates/packages/${pkgType}`,
+				destination: `../../${getPkgRoot(pkgType)}/${fullPkgName}/`,
+				templateFiles: `../../_templates/packages/${pkgType}/**/**`
+			},
+			{
+				// Add the README.md
+				type: 'add',
+				abortOnFail: true,
+				path: `../../${getPkgRoot(pkgType)}/${fullPkgName}/README.md`,
+				templateFile: `../../_templates/packages/README.md`
+			}
+		];
+	}
+};
 ```
 
 The service generators are a bit more complex since they also take care of some additional service setup, such as [creating a RuntimeConfig resource in GCP](https://cloud.google.com/deployment-manager/runtime-configurator/create-and-delete-runtimeconfig-resources#creating_a_config), [creating a channel in Slack](https://api.slack.com/methods/channels.create), [adding a new component in Jira](https://developer.atlassian.com/cloud/jira/platform/rest/#api-api-2-component-post), etc.
@@ -180,12 +179,12 @@ The generator can be nicely bundled into a NPM script in the repository’s root
 
 ```json
 {
-  "scripts": {
-    "generate": "plop --plopfile ./scripts/generators/index.js"
-  },
-  "devDependencies": {
-    "plop": "^1.9.1"
-  }
+	"scripts": {
+		"generate": "plop --plopfile ./scripts/generators/index.js"
+	},
+	"devDependencies": {
+		"plop": "^1.9.1"
+	}
 }
 ```
 

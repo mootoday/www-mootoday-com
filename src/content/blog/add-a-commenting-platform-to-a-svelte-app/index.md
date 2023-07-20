@@ -1,9 +1,9 @@
 ---
-title: "Add a commenting platform to a Svelte app"
-slug: "add-a-commenting-platform-to-a-svelte-app"
-summary: "A short intro on how to add a commenting platform to a Svelte app using commento.io."
+title: 'Add a commenting platform to a Svelte app'
+slug: 'add-a-commenting-platform-to-a-svelte-app'
+summary: 'A short intro on how to add a commenting platform to a Svelte app using commento.io.'
 createdAt: 2020-01-01T00:00:00.000Z
-tags: ["web", "development", "svelte"]
+tags: ['web', 'development', 'svelte']
 layout: blog
 ---
 
@@ -29,7 +29,7 @@ The component is as simple as this ([corresponding pull request](https://github.
 
 ```svelte
 <svelte:head>
-  <script src="https://cdn.commento.io/js/commento.js"></script>
+	<script src="https://cdn.commento.io/js/commento.js"></script>
 </svelte:head>
 
 <h2>Comments, Feedback, Thoughts</h2>
@@ -41,7 +41,10 @@ The component is as simple as this ([corresponding pull request](https://github.
 You can style the commenting platform by providing a `data-css-override` attribute to the `script` tag, for example:
 
 ```html
-<script src="https://cdn.commento.io/js/commento.js" data-css-override="http://example.com/my-custom-styling.css"></script>
+<script
+	src="https://cdn.commento.io/js/commento.js"
+	data-css-override="http://example.com/my-custom-styling.css"
+></script>
 ```
 
 Additional configuration options can be found in [the documentation](https://docs.commento.io/configuration/frontend/).

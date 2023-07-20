@@ -10,8 +10,8 @@ export const emailMachine = createMachine(
 	{
 		id: 'Email',
 		context: {
-      emailValue: emailValueDefault
-    },
+			emailValue: emailValueDefault
+		},
 		initial: 'hidden',
 		states: {
 			hidden: {

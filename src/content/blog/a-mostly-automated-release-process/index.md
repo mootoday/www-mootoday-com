@@ -1,9 +1,9 @@
 ---
-title: "A (mostly) automated release process"
-slug: "a-mostly-automated-release-process"
-summary: "Automate whatever you can automate and share the responsibility for the remaining tasks."
+title: 'A (mostly) automated release process'
+slug: 'a-mostly-automated-release-process'
+summary: 'Automate whatever you can automate and share the responsibility for the remaining tasks.'
 createdAt: 2017-12-26T00:00:00.000Z
-tags: ["series-monorepo"]
+tags: ['series-monorepo']
 layout: blog
 ---
 
@@ -18,10 +18,10 @@ layout: blog
 
 _This blog post is part of a series where I share our migration from monolithical applications (each with their own source repository) deployed on AWS to a distributed services architecture (with all source code hosted in a monorepo) deployed on Google Cloud Platform._
 
-*   _Part 1 (this post): “A monorepo, GitHub Flow and automation FTW”_
-*   _Part 2: “One vs. many — Why we moved from multiple git repos to a monorepo and how we set it up”_
-*   _Part 3: “A (mostly) automated release process”_
-*   _Part 4: “Our approach to software development consistency”_
+- _Part 1 (this post): “A monorepo, GitHub Flow and automation FTW”_
+- _Part 2: “One vs. many — Why we moved from multiple git repos to a monorepo and how we set it up”_
+- _Part 3: “A (mostly) automated release process”_
+- _Part 4: “Our approach to software development consistency”_
 
 ## What is a “release process”?
 
@@ -37,14 +37,14 @@ A slightly less verbose way of putting it:
 
 In the end, it’s all about code and along the journey we want to do certain things to or with the code. Such as:
 
-*   [KISS](https://en.wikipedia.org/wiki/KISS_principle); tools like [ESLint](https://eslint.org/docs/about/) can help with that.
-*   Keep consistent formatting. [Prettier](https://prettier.io/) is your must-have tool here.
-*   Run tests.
-*   Bundle reusable code into packages and deploy them to NPM.
-*   Build services that leverage the aforementioned packages.
-*   Give stakeholders a chance to review code in some more or less safe environment, often referred to as “staging”.
-*   Take that reviewed code and deploy it to where it really matters: 🥁 …  
-    the production environment 🎉
+- [KISS](https://en.wikipedia.org/wiki/KISS_principle); tools like [ESLint](https://eslint.org/docs/about/) can help with that.
+- Keep consistent formatting. [Prettier](https://prettier.io/) is your must-have tool here.
+- Run tests.
+- Bundle reusable code into packages and deploy them to NPM.
+- Build services that leverage the aforementioned packages.
+- Give stakeholders a chance to review code in some more or less safe environment, often referred to as “staging”.
+- Take that reviewed code and deploy it to where it really matters: 🥁 …  
+  the production environment 🎉
 
 ## Why “automated”?
 
@@ -56,15 +56,15 @@ As a rule of thumb,
 
 Here’s why: Passionate software engineers want to spend their time dealing with more important situations. Automating mundane tasks should be a priority for anyone in the software industry. Let’s do some math and see why:
 
-*   Manually deploying a new feature to your staging environment takes 21 minutes, give or take.
-*   You do that once a day, five days a week.
-*   Here’s the math: 21 minutes x 5 days per week = 105 minutes per week x 4 weeks = 420 minutes per month.
+- Manually deploying a new feature to your staging environment takes 21 minutes, give or take.
+- You do that once a day, five days a week.
+- Here’s the math: 21 minutes x 5 days per week = 105 minutes per week x 4 weeks = 420 minutes per month.
 
 ![420 minutes equal to 7 hours]({assetsBasePath}/1.jpg)
 
 Source: [Google](https://www.google.ca/search?ei=5j4_Wv2MOpiajwOvjLz4CQ&q=400+minutes+to+hours&oq=400+minutes+to+hours&gs_l=psy-ab.3..0j0i5i10i30k1j0i5i30k1j0i8i30k1l2.126360.126360.0.126726.1.1.0.0.0.0.176.176.0j1.1.0....0...1.1.64.psy-ab..0.1.175....0.Tsb9aXPHVHE)
 
-Seven hours per month is ****1 full business day****. As an exercise for the reader, you could add the time it takes to deploy to production plus dealing with potential hotfix deployments.
+Seven hours per month is \***\*1 full business day\*\***. As an exercise for the reader, you could add the time it takes to deploy to production plus dealing with potential hotfix deployments.
 
 Let’s say you end up with 2 to 3 business days as the grand total. Instead of spending that time month after month, invest it into writing automation scripts. In the second month, you’ll have 2 to 3 extra business days where you can mentor a more junior team member or organize a lunch & learn to share the ins and outs of your release automation script with the community in your city 🙌.
 

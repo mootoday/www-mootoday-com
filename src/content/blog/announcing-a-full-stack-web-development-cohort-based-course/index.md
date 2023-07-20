@@ -1,10 +1,10 @@
 ---
-title: "Announcing a Full-Stack Web Development cohort-based course"
-slug: "announcing-a-full-stack-web-development-cohort-based-course"
-coverPhotoId: "Lks7vei-eAg"
-summary: "Today, I am excited to announce a hands-on, live, project-based course with a small, highly motivated group of professional software engineers."
+title: 'Announcing a Full-Stack Web Development cohort-based course'
+slug: 'announcing-a-full-stack-web-development-cohort-based-course'
+coverPhotoId: 'Lks7vei-eAg'
+summary: 'Today, I am excited to announce a hands-on, live, project-based course with a small, highly motivated group of professional software engineers.'
 createdAt: 2021-12-21T17:47:18.144Z
-tags: [""]
+tags: ['']
 layout: blog
 ---
 
@@ -19,7 +19,7 @@ With 100,000+ views 🎉 in the first week since its launch, my "Full Stack Web 
 
 Besides the video course, I write on my blog<sup><a href="/blog/{slug}#link-2">2</a></sup>, published two books<sup><a href="/blog/{slug}#link-3">3</a></sup>, release open source projects<sup><a href="/blog/{slug}#link-4">4</a></sup> and launched an interactive full-stack course<sup><a href="/blog/{slug}#link-5">5</a></sup>.
 
-I am going to take this one step further.  
+I am going to take this one step further.
 
 **Today, I am excited to announce a hands-on, live, project-based course with a small, highly motivated group of professional software engineers.** We are going from the frontend via APIs to server-side business logic all the way to persistence in databases, wrapping it all up with automated deployments to production.
 
@@ -32,38 +32,43 @@ This is _not_ your regular "How do I develop a web application?" course. This is
 **Let's fast-track your career with this 4-week course.** Why figure it all out on your own when you can work with me and the other attendees to grow collaboratively in a fraction of the time it would take you on your own!?
 
 **In this course, you will learn how to:**
-* Develop a frontend application
-* Interact with a server through an API (REST and/or GraphQL)
-* Create services to deal with business logic
-* Persist data in SQL or NoSQL databases
-* Write end-to-end tests
-* Deploy the entire application to a production environment
-* Implement monitoring & alerts
+
+- Develop a frontend application
+- Interact with a server through an API (REST and/or GraphQL)
+- Create services to deal with business logic
+- Persist data in SQL or NoSQL databases
+- Write end-to-end tests
+- Deploy the entire application to a production environment
+- Implement monitoring & alerts
 
 **The technology stack for this project includes:**
-* Svelte & SvelteKit with Typescript<sup><a href="/blog/{slug}#link-7">7</a></sup>
-* Tailwind CSS<sup><a href="/blog/{slug}#link-8">8</a></sup>
-* Prisma<sup><a href="/blog/{slug}#link-9">9</a></sup>
-* Gitpod<sup><a href="/blog/{slug}#link-10">10</a></sup>
+
+- Svelte & SvelteKit with Typescript<sup><a href="/blog/{slug}#link-7">7</a></sup>
+- Tailwind CSS<sup><a href="/blog/{slug}#link-8">8</a></sup>
+- Prisma<sup><a href="/blog/{slug}#link-9">9</a></sup>
+- Gitpod<sup><a href="/blog/{slug}#link-10">10</a></sup>
 
 **Course requirements**
-* Minimum of 2 years experience with HTML, CSS & Javascript
-* Highly motivated, this won't be a walk in the park
+
+- Minimum of 2 years experience with HTML, CSS & Javascript
+- Highly motivated, this won't be a walk in the park
 
 **Artifacts**
-* This course is a hands-on experience. At the end, you:
-* Have a blueprint you can apply to your existing or next projects
-* Make better decisions and are more productive in your daily work
-* Are part of a community you can reach out to and collaborate with well beyond the timeframe of the course
-* Belong to a private GitHub organization with source code, discussions and various code snippets you can apply to your projects
+
+- This course is a hands-on experience. At the end, you:
+- Have a blueprint you can apply to your existing or next projects
+- Make better decisions and are more productive in your daily work
+- Are part of a community you can reach out to and collaborate with well beyond the timeframe of the course
+- Belong to a private GitHub organization with source code, discussions and various code snippets you can apply to your projects
 
 **Details & Pricing**
-* 4 weeks, 2 times per week, 90-minute sessions live with me and the cohort
-* Ongoing chat-based Q&A
-* Bring (or build) your own project with a demo day in the last week
-* Life-time access to a private Discord community to meet other software engineers with the same goals, challenges and a variety of experiences
-* 3 months of Gitpod's Professional plan included
-* A seat in the first cohort is discounted at $3,000 whereas future cohort seats are going to be $4,000+. (_Ask your employer to support you since the course will have a direct impact on your daily productivity._)
+
+- 4 weeks, 2 times per week, 90-minute sessions live with me and the cohort
+- Ongoing chat-based Q&A
+- Bring (or build) your own project with a demo day in the last week
+- Life-time access to a private Discord community to meet other software engineers with the same goals, challenges and a variety of experiences
+- 3 months of Gitpod's Professional plan included
+- A seat in the first cohort is discounted at $3,000 whereas future cohort seats are going to be $4,000+. (_Ask your employer to support you since the course will have a direct impact on your daily productivity._)
 
 > Please <a href="https://522jmrzdfht.typeform.com/to/dd8grv5v" target="_blank">fill out this form</a> if you're interested in this course.
 
@@ -75,13 +80,13 @@ Mike 👋
 
 **Links**
 
-* <sup>1</sup> <a id="link-1" href="https://www.youtube.com/watch?v=OUzaUJ3gEug" target="_blank">https://www.youtube.com/watch?v=OUzaUJ3gEug</a>
-* <sup>2</sup> <a id ="link-2" href="https://www.mikenikles.com" target="_blank">https://www.mikenikles.com</a>
-* <sup>3</sup> <a id ="link-3" href="https://mikenikles.gumroad.com" target="_blank">https://mikenikles.gumroad.com</a>
-* <sup>4</sup> <a id ="link-4" href="https://github.com/mikenikles" target="_blank">https://github.com/mikenikles</a>
-* <sup>5</sup> <a id ="link-5" href="https://www.educative.io/courses/cloud-native-development" target="_blank">https://www.educative.io/courses/cloud-native-development</a>
-* <sup>6</sup> <a id ="link-6" href="https://www.linkedin.com/in/mikenikles" target="_blank">https://www.linkedin.com/in/mikenikles</a>
-* <sup>7</sup> <a id ="link-7" href="https://svelte.dev" target="_blank">https://svelte.dev</a> & <a href="https://kit.svelte.dev" target="_blank">https://kit.svelte.dev</a>
-* <sup>8</sup> <a id ="link-8" href="https://tailwindcss.com" target="_blank">https://tailwindcss.com</a>
-* <sup>9</sup> <a id ="link-9" href="https://www.prisma.io" target="_blank">https://www.prisma.io</a>
-* <sup>10</sup> <a id ="link-10" href="https://www.gitpod.io" target="_blank">https://www.gitpod.io</a>
+- <sup>1</sup> <a id="link-1" href="https://www.youtube.com/watch?v=OUzaUJ3gEug" target="_blank">https://www.youtube.com/watch?v=OUzaUJ3gEug</a>
+- <sup>2</sup> <a id ="link-2" href="https://www.mikenikles.com" target="_blank">https://www.mikenikles.com</a>
+- <sup>3</sup> <a id ="link-3" href="https://mikenikles.gumroad.com" target="_blank">https://mikenikles.gumroad.com</a>
+- <sup>4</sup> <a id ="link-4" href="https://github.com/mikenikles" target="_blank">https://github.com/mikenikles</a>
+- <sup>5</sup> <a id ="link-5" href="https://www.educative.io/courses/cloud-native-development" target="_blank">https://www.educative.io/courses/cloud-native-development</a>
+- <sup>6</sup> <a id ="link-6" href="https://www.linkedin.com/in/mikenikles" target="_blank">https://www.linkedin.com/in/mikenikles</a>
+- <sup>7</sup> <a id ="link-7" href="https://svelte.dev" target="_blank">https://svelte.dev</a> & <a href="https://kit.svelte.dev" target="_blank">https://kit.svelte.dev</a>
+- <sup>8</sup> <a id ="link-8" href="https://tailwindcss.com" target="_blank">https://tailwindcss.com</a>
+- <sup>9</sup> <a id ="link-9" href="https://www.prisma.io" target="_blank">https://www.prisma.io</a>
+- <sup>10</sup> <a id ="link-10" href="https://www.gitpod.io" target="_blank">https://www.gitpod.io</a>

@@ -7,13 +7,13 @@
 		featured?: boolean;
 	};
 
-  const datePublishedDisplay = new Date(Date.parse(post.createdAt)).toLocaleDateString(undefined, {
-    dateStyle: "long"
-  });
+	const datePublishedDisplay = new Date(Date.parse(post.createdAt)).toLocaleDateString(undefined, {
+		dateStyle: 'long'
+	});
 
-  const datePublishedYYYYMMDD = new Date(Date.parse(post.createdAt)).toLocaleDateString(undefined, {
-    dateStyle: "short"
-  });
+	const datePublishedYYYYMMDD = new Date(Date.parse(post.createdAt)).toLocaleDateString(undefined, {
+		dateStyle: 'short'
+	});
 </script>
 
 <article class="group relative flex flex-col items-start">
@@ -23,9 +23,10 @@
 		/>
 		<a href="/blog/{post.slug}"
 			><span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl" /><span
-				class="relative z-10">
+				class="relative z-10"
+			>
 				{#if post.featured}
-				🔥&nbsp;
+					🔥&nbsp;
 				{/if}
 				{post.title}
 			</span></a
@@ -33,7 +34,7 @@
 	</h2>
 	<time
 		class="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5"
-		datetime="{datePublishedYYYYMMDD}"
+		datetime={datePublishedYYYYMMDD}
 		><span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true"
 			><span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" /></span
 		>{datePublishedDisplay}</time

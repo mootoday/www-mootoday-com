@@ -23,7 +23,9 @@
 	</svelte:fragment>
 	<div class="mx-auto md:w-1/2">
 		<Add {newContent} />
-		{#if $page.form?.unauthorized}<p class="text-red-500">Oops, you're not Mike. It was worth a try though 😅</p>{/if}
+		{#if $page.form?.unauthorized}<p class="text-red-500">
+				Oops, you're not Mike. It was worth a try though 😅
+			</p>{/if}
 		{#if $newContent}
 			<div
 				transition:fade
@@ -36,11 +38,12 @@
 						id: `${new Date(new Date().getTime() + 1 * 60000).getTime()}`,
 						content: $newContent
 					}}
+					replies={[]}
 				/>
 			</div>
 		{/if}
 		{#each data.entries as entry}
-			<Entry {entry} />
+			<Entry {entry} replies={data.replies.filter((reply) => reply.entryId === entry.id)} />
 		{/each}
 	</div>
 </ContentLayout>

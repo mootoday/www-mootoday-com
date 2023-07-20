@@ -1,9 +1,9 @@
 ---
-title: "Sapper, Google Cloud Run, Continuous Deployment - A boilerplate template"
-slug: "sapper-google-cloud-run-continuous-deployment-a-boilerplate-template"
-summary: "Deploy a Sapper / Svelte web application to Google Cloud Run with continuous deployment using Cloud Build and Artifact Registry."
+title: 'Sapper, Google Cloud Run, Continuous Deployment - A boilerplate template'
+slug: 'sapper-google-cloud-run-continuous-deployment-a-boilerplate-template'
+summary: 'Deploy a Sapper / Svelte web application to Google Cloud Run with continuous deployment using Cloud Build and Artifact Registry.'
 createdAt: 2020-04-28T01:00:00.000Z
-tags: ["googlecloud", "sapper", "svelte", "cloudrun", "serverless", "webdev"]
+tags: ['googlecloud', 'sapper', 'svelte', 'cloudrun', 'serverless', 'webdev']
 layout: blog
 ---
 
@@ -28,10 +28,10 @@ To get started, click the **Use this template** button:
 
 In this post, you will:
 
-*   Understand what SSR (server-side rendering) and SSG (static site generator) is and what benefits / drawbacks each has.
-*   Create a Docker image for your SSR Sapper application.
-*   Deploy that image to [Cloud Run](https://cloud.google.com/run/), where it runs as a serverless service.
-*   Create a continuous deployment pipeline to automate the entire process.
+- Understand what SSR (server-side rendering) and SSG (static site generator) is and what benefits / drawbacks each has.
+- Create a Docker image for your SSR Sapper application.
+- Deploy that image to [Cloud Run](https://cloud.google.com/run/), where it runs as a serverless service.
+- Create a continuous deployment pipeline to automate the entire process.
 
 The assumption in this post is that you use the Sapper template as documented on the website and started your project with the following commands:
 
@@ -52,8 +52,8 @@ To start with, let's discuss SSR vs SSG.
 
 There are two main options for the deployment:
 
-*   SSR as in server-side rendering
-*   SSG as in static site generator
+- SSR as in server-side rendering
+- SSG as in static site generator
 
 ### Server-side rendering
 
@@ -184,7 +184,7 @@ If you were to build an image based on the instructions in the `Dockerfile` now,
 !/package-lock.json
 !/rollup.config.js
 !/src
-!/static 
+!/static
 ```
 
 Let me explain my approach. The first line _ignores everything_. Then I selectively define what not (!) to ignore. It sounds a bit complex, but hear me out. The alternative would be to ignore what is not needed in the Docker image. The `.dockerignore` file would look something like this:
@@ -207,15 +207,15 @@ Alright, we have a `Dockerfile` in place, which is a key milestone in getting th
 
 We have two steps left:
 
-*   Deploy that image to Cloud Run, where it runs as a serverless service.
-*   Create a continuous deployment pipeline to automate the entire process.
+- Deploy that image to Cloud Run, where it runs as a serverless service.
+- Create a continuous deployment pipeline to automate the entire process.
 
 To achieve this, we will flip the steps and start with developing the continuous deployment process, which will then deploy to Cloud Run.
 
 We need a place to store the Docker image. This is referred to as a registry and the likely most well known one is Docker Hub at [https://hub.docker.com](https://hub.docker.com). Given we want to deploy to Cloud Run on Google Cloud Platform (GCP), it makes sense to use services that are in close proximity to each other. We have two options at the moment:
 
-*   [Container Registry](https://cloud.google.com/container-registry)
-*   [Artifact Registry](https://cloud.google.com/artifact-registry) (in beta as of spring 2020)
+- [Container Registry](https://cloud.google.com/container-registry)
+- [Artifact Registry](https://cloud.google.com/artifact-registry) (in beta as of spring 2020)
 
 Let's use Artifact Registry as its website states "The next generation of Container Registry". We need to create a repository first:
 
@@ -234,9 +234,15 @@ Let's start with a new `cloudbuild.yaml` configuration file. In the file, we are
 
 ```yaml
 steps:
- # build the container image
- - name: 'gcr.io/cloud-builders/docker'
-   args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/docker-repository/sapper-on-cloud-run:$COMMIT_SHA', '.']
+  # build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'us-central1-docker.pkg.dev/$PROJECT_ID/docker-repository/sapper-on-cloud-run:$COMMIT_SHA',
+        '.'
+      ]
 ```
 
 We define a name of a builder, this can be any Docker image. In this case, we use a builder that has `docker` installed. The `args` are the same arguments you would pass to the `docker` command locally. The tag (`-t`) argument defines the Artifact Registry repository we created earlier, plus the name of the image and a tag, in our case `$COMMIT_SHA`. This variable is provided by Cloud Build at runtime and makes sure images are identifiable with their corresponding git commit SHA.
@@ -245,8 +251,12 @@ With the docker image built, we need to push it to the registry:
 
 ```yaml
 # push the container image to Artifact Registry
- - name: 'gcr.io/cloud-builders/docker'
-   args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/docker-repository/sapper-on-cloud-run:$COMMIT_SHA']
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+    [
+      'push',
+      'us-central1-docker.pkg.dev/$PROJECT_ID/docker-repository/sapper-on-cloud-run:$COMMIT_SHA'
+    ]
 ```
 
 Lastly, we can tell Cloud Run that the image is available and a new revision of the service can be deployed:

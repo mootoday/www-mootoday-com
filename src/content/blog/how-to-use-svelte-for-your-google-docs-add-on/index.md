@@ -1,9 +1,9 @@
 ---
-title: "How to use Svelte for your Google Docs add-on"
-slug: "how-to-use-svelte-for-your-google-docs-add-on"
-summary: "Develop Google Docs add-on sidebars with Svelte and Typescript."
+title: 'How to use Svelte for your Google Docs add-on'
+slug: 'how-to-use-svelte-for-your-google-docs-add-on'
+summary: 'Develop Google Docs add-on sidebars with Svelte and Typescript.'
 createdAt: 2020-03-28T00:00:00.000Z
-tags: ["svelte", "development"]
+tags: ['svelte', 'development']
 layout: blog
 ---
 
@@ -68,19 +68,17 @@ The Apps Script types assist with autocomplete in editors and I highly recommend
  */
 
 const onOpen = (e) => {
-  DocumentApp.getUi().createAddonMenu()
-    .addItem("Show sidebar", "showSidebar")
-    .addToUi();
-}
+	DocumentApp.getUi().createAddonMenu().addItem('Show sidebar', 'showSidebar').addToUi();
+};
 
 const onInstall = (e) => {
-  onOpen(e);
-}
+	onOpen(e);
+};
 
 const showSidebar = () => {
-  // TODO: Display the sidebar
-  Logger.log("TODO: Display the sidebar.");
-}
+	// TODO: Display the sidebar
+	Logger.log('TODO: Display the sidebar.');
+};
 ```
 
 1.  Later when we deploy the add-on, we want to publish only what's absolutely necessary - which isn't much. Let's instruct `clasp` accordingly with a `.claspignore` file:
@@ -95,15 +93,15 @@ const showSidebar = () => {
 
 ```json
 {
-  "timeZone": "America/New_York",
-  "dependencies": {},
-  "exceptionLogging": "STACKDRIVER",
-  "runtimeVersion": "V8",
-  "oauthScopes": [
-    "https://www.googleapis.com/auth/documents.currentonly",
-    "https://www.googleapis.com/auth/script.container.ui"
-  ]
-} 
+	"timeZone": "America/New_York",
+	"dependencies": {},
+	"exceptionLogging": "STACKDRIVER",
+	"runtimeVersion": "V8",
+	"oauthScopes": [
+		"https://www.googleapis.com/auth/documents.currentonly",
+		"https://www.googleapis.com/auth/script.container.ui"
+	]
+}
 ```
 
 The two `oauthScopes` you see ask for permissions when users install the add-on. They're saying "I the add-on promise to only access the current document and I would like to show you a UI (the custom sidebar)".
@@ -142,12 +140,12 @@ Standard Svelte commands as [documented](https://svelte.dev). Once you verified 
 
 Alright... looks interesting... What's going on there?
 
-*   `build`: Deletes old artifacts and kicks off two build processes, sequentially.
-*   `build:ui`: Changes directory to the `sidebar`, our Svelte app, and runs the `build` command defined in `sidebar/package.json`. This command compiles the Svelte app into static assets in `sidebar/public/build`.
-*   `build:ui:generate`: Uses `npm-run-all` to execute all `build:ui:generate:*` commands in parallel.
-*   `build:ui:generate:css`: Not as fancy as it looks, it basically writes a `src/stylesheet.html` that contains a `<style>` tag with the Svelte-generated CSS.
-*   `build:ui:generate:js`: The same as above for CSS, but this time for JavaScript.  
-    With that, we now have a `src/stylesheet.html` and a `src/javascript.html` file which we need to load into the custom sidebar HTML.
+- `build`: Deletes old artifacts and kicks off two build processes, sequentially.
+- `build:ui`: Changes directory to the `sidebar`, our Svelte app, and runs the `build` command defined in `sidebar/package.json`. This command compiles the Svelte app into static assets in `sidebar/public/build`.
+- `build:ui:generate`: Uses `npm-run-all` to execute all `build:ui:generate:*` commands in parallel.
+- `build:ui:generate:css`: Not as fancy as it looks, it basically writes a `src/stylesheet.html` that contains a `<style>` tag with the Svelte-generated CSS.
+- `build:ui:generate:js`: The same as above for CSS, but this time for JavaScript.  
+  With that, we now have a `src/stylesheet.html` and a `src/javascript.html` file which we need to load into the custom sidebar HTML.
 
 1.  Since these two files are generated, we don't want them in source control. The following two lines in `.gitignore` help with that:
 
@@ -180,9 +178,11 @@ const include = (filename: string) => HtmlService.createHtmlOutputFromFile(filen
 
 ```ts
 const showSidebar = () => {
-  const ui = HtmlService.createTemplateFromFile('src/sidebar').evaluate().setTitle("My Svelte Sidebar");
-  DocumentApp.getUi().showSidebar(ui);
-}
+	const ui = HtmlService.createTemplateFromFile('src/sidebar')
+		.evaluate()
+		.setTitle('My Svelte Sidebar');
+	DocumentApp.getUi().showSidebar(ui);
+};
 ```
 
 With all that in place, `npm run build` now builds the sidebar Svelte app, copies the generated CSS and JS to HTML files we can include in the sidebar HTML used by the Google Docs add-on.

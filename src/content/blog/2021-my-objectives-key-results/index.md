@@ -1,10 +1,10 @@
 ---
-title: "2021 - My Objectives & Key Results"
-slug: "2021-my-objectives-key-results"
-coverPhotoId: "2Sd1kYW3h1Y"
-summary: "Watch me succeed or fail at achieving my personal OKRs in 2021."
+title: '2021 - My Objectives & Key Results'
+slug: '2021-my-objectives-key-results'
+coverPhotoId: '2Sd1kYW3h1Y'
+summary: 'Watch me succeed or fail at achieving my personal OKRs in 2021.'
 createdAt: 2021-01-02T16:59:57.817Z
-tags: ["OKRs", "Goals"]
+tags: ['OKRs', 'Goals']
 layout: blog
 ---
 
@@ -15,7 +15,7 @@ layout: blog
 
 <!-- Photo by [🇻🇪 Jose G. Ortega Castro 🇲🇽](https://unsplash.com/@j0rt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/notebook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) -->
 
-**tl;dr**: *My personal 2021 OKRs are [publicly available](https://www.notion.so/mikenikles/OKRs-73a4619b8b8f487ca18c6c3d5ee7570f).*
+**tl;dr**: _My personal 2021 OKRs are [publicly available](https://www.notion.so/mikenikles/OKRs-73a4619b8b8f487ca18c6c3d5ee7570f)._
 
 I briefly touched on Objectives & Key Results (OKRs) in my [2020 - Year in Review](https://www.mikenikles.com/blog/2020-year-in-review) blog post. Below, I will dive deeper into what I have planned for 2021.
 
@@ -26,9 +26,10 @@ At the company level, an objective may be to have 500 new customers by the end o
 A high Lighthouse score leads to a better user experience and hence, a higher conversion rate whereas the marketing team shares what's new with the world - both result in getting a step closer to 500 new customers.
 
 Your objectives must be clearly defined and your 3 - 5 key results must be measurable as seen in the two examples above. To contrast, here are two bad key results:
-* Marketing team: "Introduce new features"
-* Development team: "Improve Lighthouse score"
-These are bad key results because you cannot measure their progress or success. "Introduce how many features? How often?" and "Improve the Lighthouse score by how much?"
+
+- Marketing team: "Introduce new features"
+- Development team: "Improve Lighthouse score"
+  These are bad key results because you cannot measure their progress or success. "Introduce how many features? How often?" and "Improve the Lighthouse score by how much?"
 
 If you can assign a progress percentage to your key results, you likely have a good key result.
 
@@ -47,9 +48,10 @@ Towards the end of each quarter, I will plan the key results for the upcoming qu
 First of all, you can find my OKRs [available here](https://www.notion.so/mikenikles/OKRs-73a4619b8b8f487ca18c6c3d5ee7570f).
 
 I see three benefits:
-* Encourage others
-* Personal accountability
-* See me fail in public - maybe
+
+- Encourage others
+- Personal accountability
+- See me fail in public - maybe
 
 ### Encourage others
 

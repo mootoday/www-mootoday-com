@@ -70,12 +70,13 @@ First, we develop the email component's structure and add some Tailwind CSS clas
 
 ```svelte
 <script lang="ts">
-	import Icon from "$lib/components/icons/index.svelte";
+	import Icon from '$lib/components/icons/index.svelte';
 </script>
 
 <div class="flex">
 	<span
-		class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
+		class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+	>
 		<Icon
 			name="envelopeSolid"
 			class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500"
@@ -158,6 +159,7 @@ This gives us the following component behavior:
 <EmailWithoutXStateStep1 />
 
 You notice we are missing a few features:
+
 - Show the email address after the first click
 - Copy the email address to the clipboard after the second click
 - Automatically hide the email address and change the icon one second after we copied the email address to the clipboard
@@ -269,7 +271,7 @@ We start with a new `email-machine.ts` file where we are going to define the sta
 ```ts
 import { assign, createMachine } from 'xstate';
 
-type Context = {}
+type Context = {};
 
 export const emailMachine = createMachine(
 	{
@@ -298,6 +300,7 @@ export const emailMachine = createMachine(
 ```
 
 Three things to note for now:
+
 1. `states` defines the possible states our state machine can be in. That's `hidden`, `visible`, and `copied` here
 1. `initial` defines the initial state, `hidden` in this case
 1. `schema.events` defines the possible events, `SHOW` and `COPY` respectively
@@ -333,6 +336,7 @@ As with the example earlier without XState, let's start by showing a single icon
 ```
 
 In plain English, these states read as follows:
+
 - If the current state is `hidden` and a `SHOW` event is sent to the state machine, the current state changes to `visible`
 - If the current state is `visible` and a `COPY` event is sent to the state machine, the current state changes to `copied`
 
@@ -340,11 +344,11 @@ With that in place, we can leverage the state machine in the UI component:
 
 ```svelte
 <script lang="ts">
-	import {interpret} from 'xstate';
+	import { interpret } from 'xstate';
 
-	import Icon from "$lib/components/icons/index.svelte";
-	import {emailMachine} from './email-machine-step-1';
-	
+	import Icon from '$lib/components/icons/index.svelte';
+	import { emailMachine } from './email-machine-step-1';
+
 	const emailService = interpret(emailMachine).start();
 </script>
 
@@ -544,7 +548,6 @@ We introduced a new `copying` state which leverages XState's built-in support fo
 Notice after you click the <Icon name="documentDuplicate" class="inline w-6 h-6" /> icon above, your clipboard contains `mike@abc.com`.
 
 You can find the source code for the individual steps above [on GitHub](https://github.com/mikenikles/www-mikenikles-com/tree/master/src/content/blog/svelte-and-xstate/with-xstate).
-
 
 ### Conclusion – With XState
 

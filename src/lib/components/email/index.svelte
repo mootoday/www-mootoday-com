@@ -1,9 +1,9 @@
 <script lang="ts">
-	import {interpret} from 'xstate';
+	import { interpret } from 'xstate';
 
-	import Icon from "$lib/components/icons/index.svelte";
-	import {emailMachine} from './email-machine';
-	
+	import Icon from '$lib/components/icons/index.svelte';
+	import { emailMachine } from './email-machine';
+
 	const emailService = interpret(emailMachine).start();
 </script>
 

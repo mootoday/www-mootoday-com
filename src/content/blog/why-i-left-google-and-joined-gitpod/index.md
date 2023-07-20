@@ -1,9 +1,9 @@
 ---
-title: "Why I Left Google and Joined Gitpod"
-slug: "why-i-left-google-and-joined-gitpod"
-summary: "A short summary of my time at Google, 2020, and what convinced me to go back to the startup world."
+title: 'Why I Left Google and Joined Gitpod'
+slug: 'why-i-left-google-and-joined-gitpod'
+summary: 'A short summary of my time at Google, 2020, and what convinced me to go back to the startup world.'
 createdAt: 2021-04-07T05:09:36.481Z
-tags: ["gitpod", "development environment", "google"]
+tags: ['gitpod', 'development environment', 'google']
 layout: blog
 ---
 
@@ -24,11 +24,12 @@ After two years, I started to work with a very large customer and repetition kic
 # 2020
 
 Without commute and no business travel in 2020, I had a very productive year to focus on my personal interests:
-* Book #1: [Cloud Native Web Development](https://gum.co/cloud-native-web-development)
-* Book #2: [A Smart Guide for Your Career as a Software Engineer](https://gum.co/a-smart-guide-for-your-career-as-a-software-engineer)
-* SaaS #1: [your-analytics.org](https://www.your-analytics.org)
-* Gitpod article #1: [Cloud Based Development - from Dream to Reality](https://www.infoq.com/articles/cloud-based-development)
-* Gitpod article #2: [Why I use a cloud-based development environment and how you can too](https://www.mikenikles.com/blog/why-i-use-a-cloud-based-development-environment-and-how-you-can-too)
+
+- Book #1: [Cloud Native Web Development](https://gum.co/cloud-native-web-development)
+- Book #2: [A Smart Guide for Your Career as a Software Engineer](https://gum.co/a-smart-guide-for-your-career-as-a-software-engineer)
+- SaaS #1: [your-analytics.org](https://www.your-analytics.org)
+- Gitpod article #1: [Cloud Based Development - from Dream to Reality](https://www.infoq.com/articles/cloud-based-development)
+- Gitpod article #2: [Why I use a cloud-based development environment and how you can too](https://www.mikenikles.com/blog/why-i-use-a-cloud-based-development-environment-and-how-you-can-too)
 
 Book #1, both articles, the SaaS product, and [my personal website](https://www.mikenikles.com) all relate to Gitpod ([www.gitpod.io](https://www.gitpod.io)).
 
@@ -46,7 +47,7 @@ Throughout my career, I developed software but also enjoyed mentoring, writing a
 
 ## Why join Gitpod?
 
-I remember my excitement when jQuery, Bootstrap and React were in their very early days. I had a gut feeling these frontend frameworks would take the world by storm - and they sure did. 
+I remember my excitement when jQuery, Bootstrap and React were in their very early days. I had a gut feeling these frontend frameworks would take the world by storm - and they sure did.
 About two years ago, I experienced the same with [Svelte](https://www.svelte.dev) and [Tailwind CSS](https://tailwindcss.com). They are still in their early days, but make no mistake they only just got started.
 
 When I learned about Gitpod in 2019, my gut feeling was back, even stronger than when I heard of the technologies mentioned above.
@@ -72,6 +73,7 @@ As a developer, think about all the time you spend setting up a new project or w
 With Gitpod, you work in an ephemeral development environment for each feature, bug fix or code review. Even better, it all happens in a browser and requires minimal compute power on your laptop. Any and all changes to the development environment setup are reviewed, tested and versioned like all your other code.
 
 **Hey, don't take my word for it. Do me favour please 🙏🏻**
+
 1. Open your browser and navigate to your GitHub, GitLab or Bitbucket project.
 1. Prefix the URL with `gitpod.io/#` end hit Enter.
 

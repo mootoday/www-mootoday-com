@@ -1,9 +1,9 @@
 ---
-title: "Firebase Hosting for static assets of a Sapper web app on Cloud Run"
-slug: "firebase-hosting-for-static-assets-of-a-sapper-web-app-on-cloud-run"
-summary: "Use Firebase Hosting for static assets of a Sapper web application deployed on Cloud Run."
+title: 'Firebase Hosting for static assets of a Sapper web app on Cloud Run'
+slug: 'firebase-hosting-for-static-assets-of-a-sapper-web-app-on-cloud-run'
+summary: 'Use Firebase Hosting for static assets of a Sapper web application deployed on Cloud Run.'
 createdAt: 2020-04-28T00:00:00.000Z
-tags: ["googlecloud", "sapper", "svelte", "firebase", "cloudrun", "serverless", "webdev"]
+tags: ['googlecloud', 'sapper', 'svelte', 'firebase', 'cloudrun', 'serverless', 'webdev']
 layout: blog
 ---
 
@@ -117,7 +117,7 @@ There's no need to create a NPM script similarly to how we did that for the logi
 
 The `init` command provides an interactive interface to configure the Firebase CLI. When you're asked which Firebase CLI features you want to set up, select the following:
 
-*   Hosting: Configure and deploy Firebase Hosting sites
+- Hosting: Configure and deploy Firebase Hosting sites
 
 Press **Enter** to confirm your selection.
 
