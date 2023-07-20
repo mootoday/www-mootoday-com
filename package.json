@@ -27,7 +27,7 @@
 		"@typescript-eslint/eslint-plugin": "^6.1.0",
 		"@typescript-eslint/parser": "^6.1.0",
 		"autoprefixer": "^10.4.7",
-		"cf-workers-proxy": "^0.2.0",
+		"cf-workers-proxy": "^0.0.5",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"front-matter": "^4.0.2",
