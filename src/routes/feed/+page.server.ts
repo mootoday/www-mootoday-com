@@ -1,6 +1,7 @@
 import type { PageServerLoad } from './$types';
 
 import { fail, redirect } from '@sveltejs/kit';
+import { dev } from '$app/environment';
 import { FEED_AUTHORIZATION } from '$env/static/private';
 
 export const load = (async ({ locals }) => {
@@ -28,7 +29,7 @@ export const actions = {
 		const content = await data.get('content');
 		const authorization = await data.get('authorization');
 
-		if (authorization !== FEED_AUTHORIZATION) {
+		if (!dev && authorization !== FEED_AUTHORIZATION) {
 			return fail(400, { content, unauthorized: true });
 		}
 
