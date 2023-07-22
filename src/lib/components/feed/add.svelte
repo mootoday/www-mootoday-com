@@ -1,5 +1,7 @@
 <script lang="ts">
 	import type { Writable } from 'svelte/store';
+	
+	import { enhance } from '$app/forms';
 
 	export let newContent: Writable<string>;
 
@@ -10,7 +12,7 @@
 
 <div class="flex items-start space-x-4 mb-8">
 	<div class="min-w-0 flex-1">
-		<form method="post" action="?/addEntry" class="relative">
+		<form method="post" action="?/addEntry" use:enhance class="relative">
 			<input type="hidden" name="authorization" use:setAuthorization />
 			<div
 				class="overflow-hidden rounded-lg shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-teal-500"
