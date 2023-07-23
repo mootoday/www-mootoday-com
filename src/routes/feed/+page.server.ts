@@ -61,8 +61,10 @@ export const actions = {
 
 		for (let i = 0; i < files.length; i++) {
 			const file = files[i];
-			await platform?.env?.R2.put(filesMetadata[i].name, file, {
-				httpMetadata: request.headers,
+			await platform?.env?.R2.put(filesMetadata[i].name, file.stream, {
+				httpMetadata: {
+					contentType: file.type,
+				},
 			});
 		}
 
