@@ -9,3 +9,8 @@ database_id = "4a2d4006-a374-4214-93bd-e90813e979ad"
 # Preview
 #database_name = "mikenikles-com-feed-preview"
 preview_database_id = "c81dc208-960e-4aef-b931-fa2b362f788f"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "mikenikles-com-feed"
+preview_bucket_name = "mikenikles-com-feed-preview"
