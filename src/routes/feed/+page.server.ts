@@ -1,8 +1,25 @@
 import type { PageServerLoad } from './$types';
 
-import { fail, redirect } from '@sveltejs/kit';
+import { fail, redirect, type Actions } from '@sveltejs/kit';
 import { dev } from '$app/environment';
 import { FEED_AUTHORIZATION } from '$env/static/private';
+
+const generateUUID = (): string => {
+  const hexDigits = '0123456789abcdef';
+  const sections = [8, 4, 4, 4, 12]; // Number of characters in each section
+  let uuid = '';
+
+  for (const section of sections) {
+    for (let i = 0; i < section; i++) {
+      uuid += hexDigits[Math.floor(Math.random() * 16)];
+    }
+    if (section !== 12) {
+      uuid += '-';
+    }
+  }
+
+  return uuid;
+};
 
 export const load = (async ({ locals }) => {
 	try {
@@ -26,16 +43,25 @@ export const load = (async ({ locals }) => {
 export const actions = {
 	addEntry: async ({ locals, request }) => {
 		const data = await request.formData();
-		const content = await data.get('content');
-		const authorization = await data.get('authorization');
+		const content = data.get('content');
+		const files = data.getAll('files') as File[];
+		const authorization = data.get('authorization');
+		const entryId = new Date().getTime();
+
+		const filesMetadata = files.map(file => ({
+			name: `${new Date().getTime()}_${generateUUID()}`,
+			type: file.type,
+			size: file.size,
+			lastModified: file.lastModified,
+		}));
 
 		if (!dev && authorization !== FEED_AUTHORIZATION) {
 			return fail(400, { content, unauthorized: true });
 		}
 
 		try {
-			const result = await locals.D1.prepare(`INSERT INTO entries (id, content) VALUES (?1, ?2)`)
-				.bind(`${new Date().getTime()}`, content)
+			const result = await locals.D1.prepare(`INSERT INTO entries (id, content, files) VALUES (?1, ?2, ?3)`)
+				.bind(`${entryId}`, content, JSON.stringify(filesMetadata))
 				.run();
 			console.log({ result });
 		} catch (error) {
@@ -44,10 +70,10 @@ export const actions = {
 	},
 	addReply: async ({ locals, request }) => {
 		const data = await request.formData();
-		const entryId = await data.get('entry');
-		const content = await data.get('content');
+		const entryId = data.get('entry');
+		const content = data.get('content');
 
-		if (content?.length > 300) {
+		if (content?.length && content.length > 300) {
 			return fail(400, { content, tooLong: true });
 		}
 

@@ -12,7 +12,7 @@
 
 <div class="flex items-start space-x-4 mb-8">
 	<div class="min-w-0 flex-1">
-		<form method="post" action="?/addEntry" use:enhance class="relative">
+		<form method="post" action="?/addEntry" use:enhance enctype="multipart/form-data" class="relative">
 			<input type="hidden" name="authorization" use:setAuthorization />
 			<div
 				class="overflow-hidden rounded-lg shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-teal-500"
@@ -39,7 +39,7 @@
 			<div class="absolute inset-x-0 bottom-0 flex justify-between py-2 pl-3 pr-2">
 				<div class="flex items-center space-x-5">
 					<div class="flex items-center">
-						<button
+						<label
 							type="button"
 							class="-m-2.5 flex h-10 w-10 items-center justify-center rounded-full text-gray-400 hover:text-gray-500"
 						>
@@ -51,7 +51,15 @@
 								/>
 							</svg>
 							<span class="sr-only">Attach a file</span>
-						</button>
+							<input
+								class="hidden"
+								type="file"
+								id="files"
+								name="files"
+								accept=".jpg,.jpeg,.png,.webp"
+								multiple
+							/>
+						</label>
 					</div>
 				</div>
 				<div class="flex-shrink-0">
