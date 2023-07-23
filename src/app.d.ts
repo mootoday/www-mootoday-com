@@ -10,6 +10,7 @@ declare namespace App {
 	interface Platform {
 		env: {
 			D1: D1Database;
+			R2: R2
 		};
 		context: {
 			waitUntil(promise: Promise<any>): void;

@@ -41,12 +41,16 @@ export const load = (async ({ locals }) => {
 }) satisfies PageServerLoad;
 
 export const actions = {
-	addEntry: async ({ locals, request }) => {
+	addEntry: async ({ locals, request, platform }) => {
 		const data = await request.formData();
 		const content = data.get('content');
 		const files = data.getAll('files') as File[];
 		const authorization = data.get('authorization');
 		const entryId = new Date().getTime();
+
+		if (!dev && authorization !== FEED_AUTHORIZATION) {
+			return fail(400, { content, unauthorized: true });
+		}
 
 		const filesMetadata = files.map(file => ({
 			name: `${new Date().getTime()}_${generateUUID()}`,
@@ -55,8 +59,9 @@ export const actions = {
 			lastModified: file.lastModified,
 		}));
 
-		if (!dev && authorization !== FEED_AUTHORIZATION) {
-			return fail(400, { content, unauthorized: true });
+		for (let i = 0; i < files.length; i++) {
+			const file = files[i];
+			platform?.env?.R2.put(filesMetadata[i].name, file);
 		}
 
 		try {
