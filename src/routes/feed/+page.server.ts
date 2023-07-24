@@ -56,7 +56,7 @@ export const actions = {
 		}
 
 		const filesMetadata = files.map(file => ({
-			name: `${new Date().getTime()}/${generateUUID()}.${getFileExtension(file.name)}`,
+			name: `${new Date().getTime()}/${generateUUID()}${getFileExtension(file.name)}`,
 			type: file.type,
 			size: file.size,
 			lastModified: file.lastModified,
