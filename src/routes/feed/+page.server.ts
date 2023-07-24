@@ -5,21 +5,24 @@ import { dev } from '$app/environment';
 import { FEED_AUTHORIZATION } from '$env/static/private';
 
 const generateUUID = (): string => {
-  const hexDigits = '0123456789abcdef';
-  const sections = [8, 4, 4, 4, 12]; // Number of characters in each section
-  let uuid = '';
+	const hexDigits = '0123456789abcdef';
+	const sections = [8, 4, 4, 4, 12]; // Number of characters in each section
+	let uuid = '';
 
-  for (const section of sections) {
-    for (let i = 0; i < section; i++) {
-      uuid += hexDigits[Math.floor(Math.random() * 16)];
-    }
-    if (section !== 12) {
-      uuid += '-';
-    }
-  }
+	for (const section of sections) {
+		for (let i = 0; i < section; i++) {
+			uuid += hexDigits[Math.floor(Math.random() * 16)];
+		}
+		if (section !== 12) {
+			uuid += '-';
+		}
+	}
 
-  return uuid;
+	return uuid;
 };
+
+const getFileExtension = (fileName: string): string => (fileName.match(/\.[0-9a-z]+$/i) || [''])[0].toLowerCase();
+
 
 export const load = (async ({ locals }) => {
 	try {
@@ -53,7 +56,7 @@ export const actions = {
 		}
 
 		const filesMetadata = files.map(file => ({
-			name: `${new Date().getTime()}/${generateUUID()}`,
+			name: `${new Date().getTime()}/${generateUUID()}.${getFileExtension(file.name)}`,
 			type: file.type,
 			size: file.size,
 			lastModified: file.lastModified,
