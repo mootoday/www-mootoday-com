@@ -1,18 +1,44 @@
 <script lang="ts">
 	import type { Writable } from 'svelte/store';
-	
+
 	import { enhance } from '$app/forms';
 
 	export let newContent: Writable<string>;
 
+	let files: FileList;
+
 	const setAuthorization = (node: HTMLInputElement) => {
 		node.value = window.localStorage.getItem('authorization') || '';
 	};
+
+	const getFileSource = async (file: File) => {
+		return await new Promise((resolve) => {
+			const reader = new FileReader();
+			reader.readAsDataURL(file);
+			reader.onload = (e) => {
+				resolve(e.target?.result);
+			};
+		});
+	};
+
+	const processWindowPasteEvent = (e: ClipboardEvent) => {
+		if (e.clipboardData?.files) {
+			files = e.clipboardData.files;
+		}
+	};
 </script>
+
+<svelte:window on:paste={processWindowPasteEvent} />
 
 <div class="flex items-start space-x-4 mb-8">
 	<div class="min-w-0 flex-1">
-		<form method="post" action="?/addEntry" use:enhance enctype="multipart/form-data" class="relative">
+		<form
+			method="post"
+			action="?/addEntry"
+			use:enhance
+			enctype="multipart/form-data"
+			class="relative"
+		>
 			<input type="hidden" name="authorization" use:setAuthorization />
 			<div
 				class="overflow-hidden rounded-lg shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-teal-500"
@@ -40,7 +66,6 @@
 				<div class="flex items-center space-x-5">
 					<div class="flex items-center">
 						<label
-							type="button"
 							class="-m-2.5 flex h-10 w-10 items-center justify-center rounded-full text-gray-400 hover:text-gray-500"
 						>
 							<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -52,6 +77,7 @@
 							</svg>
 							<span class="sr-only">Attach a file</span>
 							<input
+								bind:files
 								class="hidden"
 								type="file"
 								id="files"
@@ -71,5 +97,21 @@
 				</div>
 			</div>
 		</form>
+
+		{#if files}
+			<ul
+				role="list"
+				class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+			>
+				{#each files as file}
+					{@const fileSourcePromise = getFileSource(file)}
+					{#await fileSourcePromise then src}
+						<li>
+							<img class="aspect-[3/2] w-full rounded-2xl object-cover" {src} alt="" />
+						</li>
+					{/await}
+				{/each}
+			</ul>
+		{/if}
 	</div>
 </div>

@@ -11,13 +11,9 @@
 	export let dialog: ReturnType<typeof createDialog>;
 
 	const {
-		trigger,
 		portal,
 		overlay,
 		content: dialogContent,
-		title,
-		description,
-		close,
 		open
 	} = dialog;
 </script>
