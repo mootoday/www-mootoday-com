@@ -1,9 +1,9 @@
 ---
-title: "What was the biggest blunder in your career as a developer?"
-slug: "what-was-the-biggest-blunder-in-your-career-as-a-developer"
-summary: "A twenty year tech career retrospective of what I would do differently and why."
+title: 'What was the biggest blunder in your career as a developer?'
+slug: 'what-was-the-biggest-blunder-in-your-career-as-a-developer'
+summary: 'A twenty year tech career retrospective of what I would do differently and why.'
 createdAt: 2020-08-20T12:47:18.287Z
-tags: [""]
+tags: ['']
 ---
 
 <script>
@@ -11,7 +11,7 @@ tags: [""]
   const assetsBasePath = `/blog/${data.slug}`;
 </script>
 
-Photo credit: [NeONBRAND](https://unsplash.com/@neonbrand?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+Photo credit: [NeONBRAND](https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 ## What inspired this blog post?
 
@@ -23,7 +23,7 @@ My snarky response was that Twitter doesn't provide enough characters to answer 
 
 I am going to expand on the question and include things I generally handled badly and would not let happen again.
 
-*4 years ago, I wrote a related blog post: [Ever wondered why your best employees leave?](https://www.mikenikles.com/blog/ever-wondered-why-your-best-employees-leave)*
+_4 years ago, I wrote a related blog post: [Ever wondered why your best employees leave?](https://www.mikenikles.com/blog/ever-wondered-why-your-best-employees-leave)_
 
 ## Non-technical
 
@@ -82,14 +82,15 @@ At the time my younger sister graduated, I lived far away (2 flights, 15 hour tr
 ## Technical
 
 I am not going to attempt to list what I messed up from a technical perspective. Think of something someone could mess up and I've likely messed it up at some point in my career. A few highlights for the curious among you:
-* Deleted a production database?
-    * *Yep*, had to pick up a backup tape from the physical vault and re-apply the previous day's backup.
-* Deployed a staging config to production, shutting down prod?
-    * *Yep*, that one led us to spend some time following the [Twelve Factor App](https://12factor.net/) guidelines and develop automation to mitigate that issue.
-* Ran SQL queries without or invalid `WHERE` clauses?
-    * *Yep*, that ended in a seamingly endless session with the DBA to restore data.
-* Sent an internal email to a customer?
-    * *Yep*, that one ended up quite well because I was outlining challenges I saw with the customer's environment. They read the email, agreed and we had constructive discussions on how to improve their environment.
+
+- Deleted a production database?
+  - _Yep_, had to pick up a backup tape from the physical vault and re-apply the previous day's backup.
+- Deployed a staging config to production, shutting down prod?
+  - _Yep_, that one led us to spend some time following the [Twelve Factor App](https://12factor.net/) guidelines and develop automation to mitigate that issue.
+- Ran SQL queries without or invalid `WHERE` clauses?
+  - _Yep_, that ended in a seamingly endless session with the DBA to restore data.
+- Sent an internal email to a customer?
+  - _Yep_, that one ended up quite well because I was outlining challenges I saw with the customer's environment. They read the email, agreed and we had constructive discussions on how to improve their environment.
 
 **The most important lesson** I learned throughout my career when it comes to technical blunders is:
 

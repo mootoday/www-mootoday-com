@@ -1,9 +1,47 @@
 <script lang="ts">
+	import { createDialog } from '@melt-ui/svelte';
 	import SvelteMarkdown from 'svelte-markdown';
+
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+
+	import CommentDialog from './comment-dialog.svelte';
+	import FileDialog from './file-dialog.svelte';
 
 	export let entry: {
 		id: string;
 		content: string;
+		files: string;
+	};
+	export let replies: {
+		id: string;
+		entryId: string;
+		content: string;
+	}[];
+
+	const commentDialog = createDialog();
+	const { trigger: commentTrigger } = commentDialog;
+	const fileDialog = createDialog();
+	const { trigger: fileTrigger } = fileDialog;
+
+	const share = async () => {
+		if (typeof navigator.share === 'undefined') {
+			alert('Web Share API not available. Please copy the URL of this page.');
+			if ($page.route.id === '/feed') {
+				goto(`/feed/${entry.id}`);
+			}
+		} else {
+			try {
+				await navigator.share({
+					url:
+						$page.route.id === '/feed'
+							? `${window.location.href}/${entry.id}`
+							: window.location.href
+				});
+			} catch (error) {
+				// Ignored, this could be due to the user cancelling the share activity
+			}
+		}
 	};
 
 	const getRelativeTimeString = (date: Date | number) => {
@@ -38,8 +76,6 @@
 		const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
 		return rtf.format(Math.floor(deltaSeconds / divisor), units[unitIndex]);
 	};
-
-	const rtf1 = new Intl.RelativeTimeFormat('en', { style: 'short' });
 </script>
 
 <div class="mb-8">
@@ -69,43 +105,55 @@
 
 	<div class="pl-16">
 		<p class="content width-auto flex-shrink text-base font-medium text-black dark:text-white">
-			<SvelteMarkdown source={entry.content} options={{
-				gfm: true,
-				breaks: true,
-			}} />
+			<SvelteMarkdown
+				source={entry.content}
+				options={{
+					gfm: true,
+					breaks: true
+				}}
+			/>
 		</p>
 
-		<!-- <div class="pt-3 md:flex-shrink">
-			<img
-				class="h-64 w-full rounded-lg"
-				src="https://images.unsplash.com/photo-1561715608-5659baeccfb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2873&q=80"
-				alt="An emergency exit light on a call"
-			/>
-		</div> -->
-		<!-- <div class="flex">
+		<div class="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none">
+			{#each JSON.parse(entry.files || '[]') as file}
+				{@const src = 'https://feed.assets.mikenikles.com/{file.name}'}
+				<button {...$fileTrigger} use:fileTrigger>
+					<img class="aspect-[3/2] w-full rounded-2xl object-cover" {src} alt="" />
+				</button>
+				<FileDialog dialog={fileDialog} {src} />
+			{/each}
+		</div>
+		<div class="flex">
 			<div class="w-full">
 				<div class="flex items-center">
-					<div class="text-center">
-						<a
-							href="#"
-							class="group mt-1 flex w-12 items-center rounded-full px-3 py-2 text-base font-medium leading-6 text-gray-500 hover:bg-teal-800 hover:text-teal-300"
+					<div class="text-center flex relative">
+						<button
+							{...$commentTrigger}
+							use:commentTrigger
+							class="group flex w-12 items-center rounded-full px-3 py-2 text-base font-medium leading-6 text-gray-500 hover:bg-teal-800 hover:text-teal-300"
 						>
 							<svg
-								class="h-6 w-6 text-center"
+								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								stroke="currentColor"
 								viewBox="0 0 24 24"
-								><path
-									d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-								/></svg
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-6 h-6 text-center"
 							>
-						</a>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"
+								/>
+							</svg>
+						</button>
+						<span
+							class="absolute inline-flex items-center justify-center w-5 h-5 text-[0.6rem] font-bold text-white bg-teal-500 border-2 border-white rounded-full -top-1 -right-1 dark:border-gray-900"
+							>{replies.length}</span
+						>
 					</div>
 
-					<div class="m-2 py-2 text-center">
+					<!-- <div class="m-2 py-2 text-center">
 						<a
 							href="#"
 							class="group mt-1 flex w-12 items-center rounded-full px-3 py-2 text-base font-medium leading-6 text-gray-500 hover:bg-teal-800 hover:text-teal-300"
@@ -123,13 +171,37 @@
 								/></svg
 							>
 						</a>
+					</div> -->
+
+					<div class="flex-1 text-center py-2 my-2">
+						<button
+							on:click={share}
+							class="w-12 group flex items-center text-gray-500 px-3 py-2 text-base leading-6 font-medium rounded-full hover:bg-teal-800 hover:text-teal-300"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-6 h-7"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+								/>
+							</svg>
+						</button>
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 	<hr class="border-gray-600 mt-4" />
 </div>
+
+<CommentDialog {entry} dialog={commentDialog} />
 
 <style lang="postcss">
 	.content :global(a) {

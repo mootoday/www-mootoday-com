@@ -1,9 +1,9 @@
 ---
-title: "A smart guide for your career as a software engineer"
-slug: "a-smart-guide-for-your-career-as-a-software-engineer"
-summary: "Do you want to earn a six figure income, work from anywhere, live a lifestyle of your choosing and be a part of the people who develop the next generation software applications? Are you a software engineer already, but want to change jobs or advance in your current role to get promoted?"
+title: 'A smart guide for your career as a software engineer'
+slug: 'a-smart-guide-for-your-career-as-a-software-engineer'
+summary: 'Do you want to earn a six figure income, work from anywhere, live a lifestyle of your choosing and be a part of the people who develop the next generation software applications? Are you a software engineer already, but want to change jobs or advance in your current role to get promoted?'
 createdAt: 2020-12-31T19:29:05.822Z
-tags: ["career advice", "jobs"]
+tags: ['career advice', 'jobs']
 layout: blog
 ---
 
@@ -27,23 +27,25 @@ Throughout my career, I have had many job interviews as a candidate, interviewed
 ## What to expect
 
 The book is structured around the following topics:
-* Why become a software engineer?
-* How to become a software engineer?
-* Job search
-* Resume / Curriculum Vitae (CV)
-* Interviews
-* Offer negotiations
-* First day
-* First 100 days
-* Promotions
-* Teamwork
-* Leaving the company
+
+- Why become a software engineer?
+- How to become a software engineer?
+- Job search
+- Resume / Curriculum Vitae (CV)
+- Interviews
+- Offer negotiations
+- First day
+- First 100 days
+- Promotions
+- Teamwork
+- Leaving the company
 
 Read it cover to cover or jump to the topic that most applies to your current situation. Armed with the knowledge, advice, tips & tricks and templates in this book, your chances of getting that next job or being promoted rather than your co-worker are significantly higher than without reading this book.
 
 All throughout the book, you find ✅ and ❌ to visually highlight things I recommend you do versus things you better avoid. **There are over 80 tips & tricks in the book!**
 
 ## About the author
+
 I am Mike Nikles; I have led hundreds of job interviews and reviewed thousands of resumes over the last twenty years in my career as a software engineer. I also sat at the other side of the interview table plenty of times as [my LinkedIn profile](https://www.linkedin.com/in/mikenikles) proofs.
 
 I currently work at Google. Prior to that, I had my own business and worked at companies anywhere from two to hundreds of employees. I helped with critical first hires, tripled engineering teams and mentored others to become efficient hiring managers.
@@ -53,11 +55,12 @@ You can learn more about me on Twitter [@mikenikles](https://twitter.com/mikenik
 ## Templates
 
 Optionally, I provide templates in Google Doc / Sheet and Notion.so format for the following:
-* Job search tracking
-* 1:1 meeting notes template
-* Personal development plan template
-* "People I Met" spreadsheet
-* Promotion tracking
+
+- Job search tracking
+- 1:1 meeting notes template
+- Personal development plan template
+- "People I Met" spreadsheet
+- Promotion tracking
 
 In the book, I describe what each template does and how you can develop your own. The templates are available if you want to save time and use what I have been battle-testing personally.
 
@@ -80,6 +83,7 @@ I'm excited to announce a purchasing power parity policy (wow… that's a lot of
 The main goal of this book is to help as many people as possible with their career as a software engineer. I can only reach so many people through my network, so here is my offer to you: Help me spread the word and earn 30% of your sales!
 
 **How does it work?** I need you to follow these steps:
+
 1. Create a Gumroad.com account (so you can get paid)
 1. Contact me via Twitter @mikenikles and let me know you are interested in helping me spread the word about the book
 1. Provide me with your Gumroad email address and I will create a unique link for you to share with your network. Every time someone buys a book through your link, you earn 30% of the sale.

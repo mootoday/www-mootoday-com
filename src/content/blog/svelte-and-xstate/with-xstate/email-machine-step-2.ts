@@ -1,6 +1,6 @@
 import { assign, createMachine } from 'xstate';
 
-type Context = {}
+type Context = {};
 
 export const emailMachine = createMachine(
 	{
@@ -25,7 +25,7 @@ export const emailMachine = createMachine(
 			copied: {
 				after: {
 					'1000': {
-						target: 'hidden',
+						target: 'hidden'
 					}
 				}
 			}

@@ -1,9 +1,9 @@
 ---
-title: "Why I use a cloud-based development environment and how you can too"
-slug: "why-i-use-a-cloud-based-development-environment-and-how-you-can-too"
-summary: "JBuilder, Eclipse, WebStorm, Atom, VS Code - The evolution of my development IDEs before I moved to the cloud. Learn why I did and how you can too!"
+title: 'Why I use a cloud-based development environment and how you can too'
+slug: 'why-i-use-a-cloud-based-development-environment-and-how-you-can-too'
+summary: 'JBuilder, Eclipse, WebStorm, Atom, VS Code - The evolution of my development IDEs before I moved to the cloud. Learn why I did and how you can too!'
 createdAt: 2020-03-31T00:00:00.000Z
-tags: ["development", "cloud"]
+tags: ['development', 'cloud']
 layout: blog
 ---
 
@@ -104,8 +104,8 @@ To put this into perspective: A 13-inch MacBook Pro costs $1,299. A Pixelbook Go
 
 It's important to be fully transparent and list two gotchas that come to mind.
 
-*   **Online only**: Yep, you need internet access to work on your code.
-*   **Startup time**: Yep, there's a startup time of a few seconds when you open a workspace. I've used Gitpod for a few weeks now and that never bothered me in the slightest. You may feel differently, but for me it's well worth all the benefits I get out of Gitpod.
+- **Online only**: Yep, you need internet access to work on your code.
+- **Startup time**: Yep, there's a startup time of a few seconds when you open a workspace. I've used Gitpod for a few weeks now and that never bothered me in the slightest. You may feel differently, but for me it's well worth all the benefits I get out of Gitpod.
 
 ## Summary
 

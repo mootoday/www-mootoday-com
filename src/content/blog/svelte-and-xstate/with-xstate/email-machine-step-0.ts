@@ -1,6 +1,6 @@
 import { assign, createMachine } from 'xstate';
 
-type Context = {}
+type Context = {};
 
 export const emailMachine = createMachine(
 	{

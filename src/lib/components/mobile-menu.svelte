@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Writable } from "svelte/store";
-	import { beforeNavigate } from "$app/navigation";
+	import type { Writable } from 'svelte/store';
+	import { beforeNavigate } from '$app/navigation';
 
-  export let showMobileMenu: Writable<boolean>;
-	export let navigationItems: {href: string; label: string;}[];
+	export let showMobileMenu: Writable<boolean>;
+	export let navigationItems: { href: string; label: string }[];
 
 	beforeNavigate(() => {
 		$showMobileMenu = false;
@@ -13,7 +13,9 @@
 {#if $showMobileMenu}
 	<div>
 		<div
-			on:click={() => { $showMobileMenu = false; }}
+			on:click={() => {
+				$showMobileMenu = false;
+			}}
 			class="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80 opacity-100"
 			id="headlessui-popover-overlay-:r9:"
 			aria-hidden="true"
@@ -25,7 +27,9 @@
 		>
 			<div class="flex flex-row-reverse items-center justify-between">
 				<button
-					on:click={() => { $showMobileMenu = false; }}
+					on:click={() => {
+						$showMobileMenu = false;
+					}}
 					aria-label="Close menu"
 					class="-m-1 p-1"
 					type="button"
@@ -50,7 +54,7 @@
 				<ul
 					class="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300"
 				>
-					{#each navigationItems as {href, label}}
+					{#each navigationItems as { href, label }}
 						<li><a class="block py-2" {href}>{label}</a></li>
 					{/each}
 				</ul>

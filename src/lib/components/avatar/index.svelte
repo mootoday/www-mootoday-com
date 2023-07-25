@@ -7,10 +7,7 @@
 
 <a href="/" aria-label="Home" class="pointer-events-auto {clazz}" {style} {...$$props}>
 	<picture>
-		<source
-			srcset="/headshot-small.webp"
-			type="image/webp"
-		/><img
+		<source srcset="/headshot-small.webp" type="image/webp" /><img
 			src="/headshot-small.png"
 			alt="Mike's headshot"
 			class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
@@ -20,6 +17,6 @@
 			class:w-9={!large}
 			style:transform="var(--transform)"
 			decoding="async"
-			/></picture
+		/></picture
 	>
 </a>

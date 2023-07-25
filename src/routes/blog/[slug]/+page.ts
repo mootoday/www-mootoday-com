@@ -1,4 +1,4 @@
-import type { PageLoad } from "./$types";
+import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params, data }) => {
 	const { slug } = params;
@@ -7,18 +7,18 @@ export const load: PageLoad = async ({ params, data }) => {
 
 	if (!page) {
 		return {
-			status: 404,
+			status: 404
 		};
 	}
 
 	return {
 		metadata: {
 			slug,
-			...metadata,
+			...metadata
 			// videoMetadata: {
 			// 	...data.videoMetadata,
 			// }
 		},
-		page,
+		page
 	};
-}
+};

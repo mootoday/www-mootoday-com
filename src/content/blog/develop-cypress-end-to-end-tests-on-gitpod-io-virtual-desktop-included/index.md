@@ -1,9 +1,9 @@
 ---
-title: "Develop Cypress end-to-end tests on Gitpod.io - Virtual Desktop included"
-slug: "develop-cypress-end-to-end-tests-on-gitpod-io-virtual-desktop-included"
-summary: "Run the Cypress UI on Gitpod.io without the need of a local development environment."
+title: 'Develop Cypress end-to-end tests on Gitpod.io - Virtual Desktop included'
+slug: 'develop-cypress-end-to-end-tests-on-gitpod-io-virtual-desktop-included'
+summary: 'Run the Cypress UI on Gitpod.io without the need of a local development environment.'
 createdAt: 2020-05-02T00:00:00.000Z
-tags: ["webdev", "gitpod", "cypress", "sapper"]
+tags: ['webdev', 'gitpod', 'cypress', 'sapper']
 layout: blog
 ---
 

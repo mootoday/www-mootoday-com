@@ -1,5 +1,5 @@
 ---
-title: "Dev environments in the cloud are a half-baked solution"
+title: 'Dev environments in the cloud are a half-baked solution'
 summary: "Cloud-only dev environments are fundamentally interested in charging you for writing code. Instead, we need a hybrid solution that automates local dev environments AND let's you run them in the cloud, should you choose to do so."
 createdAt: 2022-12-08T04:03:13.067Z
 featured: true
@@ -11,15 +11,17 @@ featured: true
 </script>
 
 **Key takeaways**
-* Developer environments in the cloud have existed for years
-* Everything turns into SaaS, but should your dev environment, really?
-* Service availability can never match localhost
-* Pay-as-you-go pricing is for privileged people only and locks out many
-* The fully baked solution is a hybrid that works offline
+
+- Developer environments in the cloud have existed for years
+- Everything turns into SaaS, but should your dev environment, really?
+- Service availability can never match localhost
+- Pay-as-you-go pricing is for privileged people only and locks out many
+- The fully baked solution is a hybrid that works offline
 
 **Thanks**: I've meant to write about this topic for a few weeks, but didn't get to it until Mo [asked me to share my thoughts](https://twitter.com/codingmoh/status/1591276103129235457). A big shout out to him also for the blog post feedback and discussions about the topic 🙏.
 
 ## What are development environments in the cloud?
+
 At a high-level, it's simple:
 
 > Instead of developing software on your local computer, you leverage CPU, storage, and networking in a cloud-hosted environment.
@@ -37,6 +39,7 @@ If you need to debug your app at the exact state it was six months ago, start a 
 We have tools to create pull request previews, especially in the context of web applications. Isolated, branch-specific deployments of the code as it gets pushed to a pull request. They are great for collecting feedback, collaborating, or demo a new feature or bug fix.
 
 Take this concept and apply it to dev environments. This enables a variety of exciting use cases:
+
 - Share your dev environment with colleagues to pair-program
 - Work on changes in real time as you demo a project to your client
 - If you run a workshop, help your students right in their own environment
@@ -48,7 +51,7 @@ Dev environments in the cloud improve how we work. By far the best demonstration
 
 > Each task you work on happens in an isolated dev environment. You start it, you do your work, you commit and push, you forget about that particular dev environment.
 
-**Note**: *Other than the workflow demonstration with Codeflow, StackBlitz is limited to Node.js development and is by no means a product that falls in the dev environments in the cloud category.*
+**Note**: _Other than the workflow demonstration with Codeflow, StackBlitz is limited to Node.js development and is by no means a product that falls in the dev environments in the cloud category._
 
 ## Challenges
 
@@ -74,12 +77,12 @@ Even if you do have connectivity to your cloud-hosted dev environment, if the se
 
 To put this into perspective, here is some food for thought about publicly reported service availability for Codespaces and Gitpod, a product with a workflow similar to StackBlitz's Codeflow, but hosted in two data centers.
 
-|| Codespaces | Gitpod |
-|--|--|--|
-| November 2022 | 5 incidents | 6 incidents |
-| October 2022 | 5 incidents | 21 incidents |
-| September 2022 | 2 incidents | 14 incidents |
-| August 2022 | 11 incidents | 7 incidents |
+|                | Codespaces   | Gitpod       |
+| -------------- | ------------ | ------------ |
+| November 2022  | 5 incidents  | 6 incidents  |
+| October 2022   | 5 incidents  | 21 incidents |
+| September 2022 | 2 incidents  | 14 incidents |
+| August 2022    | 11 incidents | 7 incidents  |
 
 Sources: [Codespaces](https://www.githubstatus.com/history), [Gitpod](https://www.gitpodstatus.com/history)
 
@@ -101,10 +104,10 @@ If you type a character and it takes 100+ milliseconds for that action to reach 
 
 Latency depends on the geographical availability of your dev environment relative to where you are physically located. To stick to our two providers, GitHub Codespaces and Gitpod, the table below lists their geographical availability.
 
-| Provider | Regions |
-|--|--|
+| Provider   | Regions                                           |
+| ---------- | ------------------------------------------------- |
 | Codespaces | 4 (US West, US East, Europe West, Southeast Asia) |
-| Gitpod | 2 (Europe, US) |
+| Gitpod     | 2 (Europe, US)                                    |
 
 Gitpod has failed to expand to additional geographical regions for two years and counting. As of November 17, 2022 the official status update is that expansion is not straightforward ([source](https://github.com/gitpod-io/gitpod/issues/7489)).
 To check your latency to Gitpod's EU or US data center, check [gcping.com](https://gcping.com) and look for the "europe-west1" or "us-west1" region.
@@ -120,6 +123,7 @@ We mitigate that with open standards such as Docker images. Don't like AWS? Take
 Why would you worry less about SaaS businesses who provide dev environments in the cloud? You should worry at least as much as with your production workloads!
 
 I see two aspects of importance to evaluating how much lock-in there is:
+
 1. Configuration
 1. Self-hosting
 
@@ -155,9 +159,9 @@ You cannot sugarcoat this, no matter how you phrase it.
 
 > Local development has a one-time upfront cost to buy your computer whereas dev environments in the cloud have usage-based pricing. **The more you work, the more you pay.**
 
-This applies to students as well: the more you study and experiment, the more you pay*.
+This applies to students as well: the more you study and experiment, the more you pay\*.
 
-\* *As of November 21, 2022, Gitpod no longer supports student plans to reduce complexity and admin costs 🤷, as [mentioned in their Discord server](https://discord.com/channels/816244985187008514/879914823570309160/1044281777688154112), but nowhere else publicly.*
+\* _As of November 21, 2022, Gitpod no longer supports student plans to reduce complexity and admin costs 🤷, as [mentioned in their Discord server](https://discord.com/channels/816244985187008514/879914823570309160/1044281777688154112), but nowhere else publicly._
 
 Just like cloud providers, companies which offer dev environments in the cloud cash in by the second/minute/hour your dev environment(s) run. Forgot to shut one down? You will get charged until you remember to turn it off, or it may turn off automatically at some point.
 
@@ -170,8 +174,8 @@ For mid to large size companies, there are hard-to-measure cost savings thanks t
 To give you a visual representation of how isolated writing code is for most developers, let's look at a 5-stage software development lifecycle (SDLC) diagram:
 
 ![A pie chart with 5 slices. Requirements, Design, Implementation, Test, Maintenance whereas Implementation is highlighted in red.]({assetsBasePath}/1.webp)
- 
-*Source: Myself on InfoQ, June 2020 ([article](https://www.infoq.com/articles/cloud-based-development))*
+
+_Source: Myself on InfoQ, June 2020 ([article](https://www.infoq.com/articles/cloud-based-development))_
 
 As I wrote in my InfoQ article in 2020 ([link](https://www.infoq.com/articles/cloud-based-development)), four out of five stages already happen in the cloud, why not implementation?
 The question is, should implementation really happen in the cloud?
@@ -200,7 +204,7 @@ Both GitHub Codespaces and Gitpod provide custom architectures.
 
 This school of thought is outdated. As an industry, we already defined a widely-adopted solution for installing dependencies and creating isolated, reproducible environments: Nix ([nixos.org](https://nixos.org/)).
 
-*Talking about Nix, if [this conversation](https://twitter.com/grhmc/status/1591631927999696897) is any indication, it is exciting to imagine Nix support on Codespaces!*
+_Talking about Nix, if [this conversation](https://twitter.com/grhmc/status/1591631927999696897) is any indication, it is exciting to imagine Nix support on Codespaces!_
 
 > **Step 1: The fully baked solution for dev environments in the cloud must be based on Nix.**
 
@@ -226,7 +230,7 @@ What we really want is something like this:
 
 ```json
 {
-  "packages": ["nodejs-18_x"]
+	"packages": ["nodejs-18_x"]
 }
 ```
 
@@ -244,15 +248,8 @@ For the sake of this example, let's say we develop a full-stack web application 
 
 ```json
 {
-  "packages": [
-    "nodejs-18_x",
-    "postgresql_14"
-  ],
-  "init_hook": [
-    "npm install",
-    "sh ./scripts/start-database.sh",
-    "npm run dev"
-  ]
+	"packages": ["nodejs-18_x", "postgresql_14"],
+	"init_hook": ["npm install", "sh ./scripts/start-database.sh", "npm run dev"]
 }
 ```
 
@@ -293,10 +290,11 @@ A dev environment which is only accessible when you have internet access or when
 Developers should be able to run their dev environment locally just like they have been doing for decades. Same configuration, same ports, same automation.
 
 If a developer chooses to work offline, they lose access to features such as
-* sharing their dev environment with team members
-* GPUs
-* automated environment snapshots
-* multiple environments in parallel
+
+- sharing their dev environment with team members
+- GPUs
+- automated environment snapshots
+- multiple environments in parallel
 
 However, working offline without these features should be their choice, not something that is impossible because their dev environment is cloud-only.
 
@@ -327,18 +325,20 @@ We cannot simply show up and dictate how we develop software. Decades of muscle 
 Instead, we need an evolution where we fix the most critical challenges first: automation and reproducibility - at no cost to developers.
 
 This acts as the foundation to introduce additional features with dev environments in the cloud:
-* share with team members & other stakeholders
-* take advantage of cloud compute, storage, and network speed
-* run multiple environments in parallel
-* automated environment snapshots to drop dependency installation wait time to close to zero
+
+- share with team members & other stakeholders
+- take advantage of cloud compute, storage, and network speed
+- run multiple environments in parallel
+- automated environment snapshots to drop dependency installation wait time to close to zero
 
 In summary:
-* **Step 1: The fully baked solution for dev environments in the cloud must be based on Nix.**
-* **Step 2: Completely abstract the Nix package manager and the Nix language.**
-* **Step 3: Provide lifecycle hooks to automate all aspects of the dev environment.**
-* **Step 4: Run dev environments on an edge network.**
-* **Step 5: Use SQLite, globally replicated.**
-* **Step 6: Transparently run a dev environment locally.**
+
+- **Step 1: The fully baked solution for dev environments in the cloud must be based on Nix.**
+- **Step 2: Completely abstract the Nix package manager and the Nix language.**
+- **Step 3: Provide lifecycle hooks to automate all aspects of the dev environment.**
+- **Step 4: Run dev environments on an edge network.**
+- **Step 5: Use SQLite, globally replicated.**
+- **Step 6: Transparently run a dev environment locally.**
 
 ### My bet on who has the best shot at building a hybrid in your backyard
 
@@ -366,13 +366,8 @@ We can extend the `devbox.json` file as follows to install dependencies and star
 
 ```json
 {
-  "packages": [
-    "nodejs-18_x"
-  ],
-  "init_hook": [
-    "npm install",
-    "npm run dev"
-  ]
+	"packages": ["nodejs-18_x"],
+	"init_hook": ["npm install", "npm run dev"]
 }
 ```
 

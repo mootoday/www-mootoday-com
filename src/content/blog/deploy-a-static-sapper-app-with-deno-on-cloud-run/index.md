@@ -1,9 +1,9 @@
 ---
-title: "Deploy a static Sapper app with Deno on Cloud Run"
-slug: "deploy-a-static-sapper-app-with-deno-on-cloud-run"
-summary: "Deploy a static Sapper / Svelte application to Cloud Run, served by Deno."
+title: 'Deploy a static Sapper app with Deno on Cloud Run'
+slug: 'deploy-a-static-sapper-app-with-deno-on-cloud-run'
+summary: 'Deploy a static Sapper / Svelte application to Cloud Run, served by Deno.'
 createdAt: 2020-05-14T00:00:00.000Z
-tags: ["cloud", "cloudrun", "sapper", "deno"]
+tags: ['cloud', 'cloudrun', 'sapper', 'deno']
 layout: blog
 ---
 
@@ -30,17 +30,17 @@ First, add a `.dockerignore` file with the following content:
 !/package-lock.json
 !/rollup.config.js
 !/src
-!/static 
+!/static
 ```
 
 It ignores everything, except the files and directories listed. To learn more about that, please review [my previous blog post](https://www.mikenikles.com/blog/sapper-google-cloud-run-continuous-deployment-a-boilerplate-template).
 
 Next, here's the `Dockerfile` that does the following:
 
-* Install NPM dependencies
-* Export the Sapper web application as a static site
-* Create a runtime Docker stage based on `hayd/alpine-deno`
-* Use the `file_server.ts` to serve the static web app
+- Install NPM dependencies
+- Export the Sapper web application as a static site
+- Create a runtime Docker stage based on `hayd/alpine-deno`
+- Use the `file_server.ts` to serve the static web app
 
 ```Dockerfile
 # This stage exports the sapper application.
@@ -53,10 +53,10 @@ RUN npm run export
 # This stage runs Deno and serves the static site
 FROM hayd/alpine-deno:1.0.0
 COPY --from=export-app /app/__sapper__/export .
-CMD ["run", "--allow-read", "--allow-net", "https://deno.land/std/http/file_server.ts"] 
+CMD ["run", "--allow-read", "--allow-net", "https://deno.land/std/http/file_server.ts"]
 ```
 
-I had to get a [tiny PR](https://github.com/denoland/deno/pull/5367) merged into Deno and within minutes, the team merged it. No need to wait for a new Deno release since the change is immediately available in the latest version of Deno's Standard Library at [https://deno.land/std/http/file\_server.ts](https://deno.land/std/http/file_server.ts).
+I had to get a [tiny PR](https://github.com/denoland/deno/pull/5367) merged into Deno and within minutes, the team merged it. No need to wait for a new Deno release since the change is immediately available in the latest version of Deno's Standard Library at [https://deno.land/std/http/file_server.ts](https://deno.land/std/http/file_server.ts).
 
 Lastly, to make deployment a bit more seamless, we let's use a `deploy.sh` file:
 
@@ -67,7 +67,7 @@ IMAGE="deno-sapper-cloud-run"
 REGION="us-central1"
 
 gcloud builds submit --tag gcr.io/$GCP_PROJECT/$IMAGE
-gcloud run deploy $IMAGE --image gcr.io/$GCP_PROJECT/$IMAGE --port 4507 --platform managed --allow-unauthenticated --region $REGION 
+gcloud run deploy $IMAGE --image gcr.io/$GCP_PROJECT/$IMAGE --port 4507 --platform managed --allow-unauthenticated --region $REGION
 ```
 
 Make sure you're satisfied with the environment variables before you run the script. Also, you need `gcloud` installed and configured with a default project to make this work.

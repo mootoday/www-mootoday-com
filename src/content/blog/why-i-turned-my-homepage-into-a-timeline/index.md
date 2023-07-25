@@ -1,10 +1,10 @@
 ---
-title: "Why I turned my homepage into a timeline"
-slug: "why-i-turned-my-homepage-into-a-timeline"
-coverPhotoId: "nbKaLT4cmRM"
-summary: "A short explanation of why I streamlined the homepage into a timeline showcasing my blog posts, Twitter stats, YouTube videos, and projects."
+title: 'Why I turned my homepage into a timeline'
+slug: 'why-i-turned-my-homepage-into-a-timeline'
+coverPhotoId: 'nbKaLT4cmRM'
+summary: 'A short explanation of why I streamlined the homepage into a timeline showcasing my blog posts, Twitter stats, YouTube videos, and projects.'
 createdAt: 2020-12-06T20:21:32.999Z
-tags: ["design", "tailwindcss"]
+tags: ['design', 'tailwindcss']
 layout: blog
 ---
 
@@ -37,10 +37,10 @@ A lightweight version of the timeline is used on mobile:
 ![Mobile intro]({assetsBasePath}/2.jpg)
 ![Mobile timeline]({assetsBasePath}/3.jpg)
 
-
 See [this Twitter thread](https://twitter.com/mikenikles/status/1334305377500925953) for progress updates and how the homepage came together.
 
 The reason to show a timeline is twofold and inspired by [Florin Pop's timeline on his website](https://www.florin-pop.com/timeline):
+
 1. Simplicity
 1. It's about more than blog posts
 

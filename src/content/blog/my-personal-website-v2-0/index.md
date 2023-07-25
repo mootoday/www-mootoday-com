@@ -1,9 +1,9 @@
 ---
-title: "My personal website v2.0"
-slug: "my-personal-website-v2-0"
+title: 'My personal website v2.0'
+slug: 'my-personal-website-v2-0'
 summary: "A complete rewrite of my personal website and blog with Svelte, Sapper, mdsvex and Tailwind CSS. Blog posts can be reviewed on a preview URL and discussed in a pull request. The site follows best practices; accessibility (a11y), top Lighthouse score, Google's web vitals, and SEO."
 createdAt: 2020-06-24T13:48:01.764Z
-tags: ["svelte", "sapper", "web development", "mdsvex", "tailwind css"]
+tags: ['svelte', 'sapper', 'web development', 'mdsvex', 'tailwind css']
 layout: blog
 ---
 
@@ -14,7 +14,7 @@ layout: blog
   const assetsBasePath = `blog/${slug}`;
 </script>
 
-Photo credit: [Thought Catalog](https://unsplash.com/@thoughtcatalog?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+Photo credit: [Thought Catalog](https://unsplash.com/@thoughtcatalog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 ## Let's first talk about v1.0
 
@@ -32,12 +32,13 @@ The architecture looked like this:
 **Publication process**
 
 To publish a new blog post, I had to:
+
 1. Start the Cloud SQL databaes used by Ghost.
-    * It's worth noting I have could left that turned on, but the point was not to have a database at runtime ;-)
+   - It's worth noting I have could left that turned on, but the point was not to have a database at runtime ;-)
 1. Log in to the Ghost instance.
 1. Write the post and upload assets.
-    * Asking for reviews was tricky. I would have to give reviewers access to Ghost and they would see
-      the blog post displayed in Ghost, not the way it will look once deployed.
+   - Asking for reviews was tricky. I would have to give reviewers access to Ghost and they would see
+     the blog post displayed in Ghost, not the way it will look once deployed.
 1. Publish the post.
 1. Wait for the static website to be generated and deployed to Firebase Hosting.
 1. Shut down the Cloud SQL instance.
@@ -62,10 +63,11 @@ scripts I needed to get this to work also came at a performance cost I want to a
 ## The goals for v2.0
 
 Before starting the project, I defined the following goals:
-* Open
-* Best practices
-* Automation
-* Low operating costs
+
+- Open
+- Best practices
+- Automation
+- Low operating costs
 
 ### Open
 
@@ -110,17 +112,19 @@ It's **a lot** simpler:
 Diagram source: https://excalidraw.com/#json=5406435517136896,jY4N1Wo4Vgqn45E9uxUqPA
 
 All we've got is:
-* [Gitpod.io](https://gitpod.io/) for my cloud-based development environment.
-    * PS: Get 30% off your Gitpod subscription with my **coupon code** `mikenikles`.
-* [GitHub](https://github.com/mikenikles/www-mikenikles-com) for the blog posts, source code and workflow automation.
-* [Vercel](https://vercel.com/) for hosting.
+
+- [Gitpod.io](https://gitpod.io/) for my cloud-based development environment.
+  - PS: Get 30% off your Gitpod subscription with my **coupon code** `mikenikles`.
+- [GitHub](https://github.com/mikenikles/www-mikenikles-com) for the blog posts, source code and workflow automation.
+- [Vercel](https://vercel.com/) for hosting.
 
 The publication process now looks like this:
+
 1. Write the blog post and add assets.
 1. `git push` it to GitHub and open a pull request.
 1. Share the draft URL with reviewers; iterate on the post.
 1. Merge the PR.
-    * Deployment to production then happens automatically.
+   - Deployment to production then happens automatically.
 
 ### Interactive blog posts written in `mdsvex`
 
@@ -141,11 +145,10 @@ In the blog post file, the following is what I write:
 
 ```html
 <script>
-  import Clock from "./clock.svelte";
+	import Clock from './clock.svelte';
 </script>
 
-...
-Another example, taken from https://svelte.dev/examples:
+... Another example, taken from https://svelte.dev/examples:
 
 <Clock />
 ```

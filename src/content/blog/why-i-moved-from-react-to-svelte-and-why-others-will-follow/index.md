@@ -1,6 +1,6 @@
 ---
-title: "Why I moved from React to Svelte and why others will follow"
-summary: "A post about my React experience, why Svelte impressed me and code snippets to compare React with Svelte."
+title: 'Why I moved from React to Svelte and why others will follow'
+summary: 'A post about my React experience, why Svelte impressed me and code snippets to compare React with Svelte.'
 createdAt: 2019-12-26T00:00:00.000Z
 featured: true
 ---
@@ -44,16 +44,16 @@ I mentored web developers at that time and had spent quite a bit of time bringin
 
 ```svelte
 <script>
-  let name = 'world';
+	let name = 'world';
 </script>
 
-<style>
-  h1 {
-    color: blue;
-  }
-</style>
-
 <h1>Hello {name}!</h1>
+
+<style>
+	h1 {
+		color: blue;
+	}
+</style>
 ```
 
 App.svelte
@@ -82,8 +82,8 @@ See the code snippet above.
 
 ```svelte
 <script>
-  let seconds = 0;
-  setInterval(() => seconds += 1, 1000);
+	let seconds = 0;
+	setInterval(() => (seconds += 1), 1000);
 </script>
 
 Seconds: {seconds}
@@ -100,38 +100,33 @@ Svelte: 6 lines
 
 ```svelte
 <script>
-  import TodoList from './TodoList.svelte';
-	
-  let items = [];
-  let text = '';
-	
-  const handleSubmit = () => {
-    if (!text.length) {
-      return
-    }
-    const newItem = {
-      text,
-      id: Date.now(),
-    };
-    items = items.concat(newItem);
-  }
+	import TodoList from './TodoList.svelte';
+
+	let items = [];
+	let text = '';
+
+	const handleSubmit = () => {
+		if (!text.length) {
+			return;
+		}
+		const newItem = {
+			text,
+			id: Date.now()
+		};
+		items = items.concat(newItem);
+	};
 </script>
 
 <div>
-  <h3>TODO</h3>
-  <TodoList {items} />
-  <form on:submit|preventDefault={handleSubmit}>
-    <label for="new-todo">
-      What needs to be done?
-    </label>
-    <input
-      id="new-todo"
-      bind:value={text}
-      />
-    <button>
-      Add #{items.length + 1}
-    </button>
-  </form>
+	<h3>TODO</h3>
+	<TodoList {items} />
+	<form on:submit|preventDefault={handleSubmit}>
+		<label for="new-todo"> What needs to be done? </label>
+		<input id="new-todo" bind:value={text} />
+		<button>
+			Add #{items.length + 1}
+		</button>
+	</form>
 </div>
 ```
 
@@ -139,13 +134,13 @@ App.svelte
 
 ```svelte
 <script>
-  export let items = [];
+	export let items = [];
 </script>
 
 <ul>
-  {#each items as item}
-    <li key={item.id}>{item.text}</li>
-  {/each}
+	{#each items as item}
+		<li key={item.id}>{item.text}</li>
+	{/each}
 </ul>
 ```
 
@@ -160,28 +155,22 @@ Svelte: 43 lines
 
 ```svelte
 <script>
-  const md = new window.remarkable.Remarkable();
-  let value = 'Hello, **world**!';
+	const md = new window.remarkable.Remarkable();
+	let value = 'Hello, **world**!';
 </script>
 
 <svelte:head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.0/remarkable.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.0/remarkable.min.js"></script>
 </svelte:head>
 
 <div className="MarkdownEditor">
-  <h3>Input</h3>
-  <label htmlFor="markdown-content">
-    Enter some markdown
-  </label>
-  <textarea
-    id="markdown-content"
-    bind:value={value}
-  />
-  <h3>Output</h3>
-  <div
-    className="content">
-      {@html md.render(value)}
-  </div>
+	<h3>Input</h3>
+	<label htmlFor="markdown-content"> Enter some markdown </label>
+	<textarea id="markdown-content" bind:value />
+	<h3>Output</h3>
+	<div className="content">
+		{@html md.render(value)}
+	</div>
 </div>
 ```
 
@@ -202,16 +191,17 @@ Another powerful feature is _[reactive declarations](https://svelte.dev/tutorial
 
 ```svelte
 <script>
-  let count = 0;
-  $: doubled = count * 2;
+	let count = 0;
+	$: doubled = count * 2;
 
-  function handleClick() {
-    count += 1;
-  }
+	function handleClick() {
+		count += 1;
+	}
 </script>
 
 <button on:click={handleClick}>
-  Clicked {count} {count === 1 ? 'time' : 'times'}
+	Clicked {count}
+	{count === 1 ? 'time' : 'times'}
 </button>
 
 <p>{count} doubled is {doubled}</p>
@@ -235,34 +225,32 @@ Alright, this one is a quite elegant. Let's start with the code ([interactive de
 
 ```svelte
 <script>
-  let githubRepoInfoPromise;
-  let repoName = 'mikenikles/ghost-v3-google-cloud-storage';
+	let githubRepoInfoPromise;
+	let repoName = 'mikenikles/ghost-v3-google-cloud-storage';
 
-  const loadRepoInfo = async () => {
-    const response = await fetch(`https://api.github.com/repos/${repoName}`);
-    if (response.status === 200) {
-      return await response.json();
-    } else {
-      throw new Error(response.statusText);
-    }
-  }
-	
-  const handleClick = () => {
-    githubRepoInfoPromise = loadRepoInfo();
-  }
+	const loadRepoInfo = async () => {
+		const response = await fetch(`https://api.github.com/repos/${repoName}`);
+		if (response.status === 200) {
+			return await response.json();
+		} else {
+			throw new Error(response.statusText);
+		}
+	};
+
+	const handleClick = () => {
+		githubRepoInfoPromise = loadRepoInfo();
+	};
 </script>
 
 <input type="text" placeholder="user/repo" bind:value={repoName} />
-<button on:click={handleClick}>
-  load Github repo info
-</button>
+<button on:click={handleClick}> load Github repo info </button>
 
 {#await githubRepoInfoPromise}
-  <p>...loading</p>
+	<p>...loading</p>
 {:then apiResponse}
-  <p>{apiResponse ? `${apiResponse.full_name} is written in ${apiResponse.language}` : ''}</p>
+	<p>{apiResponse ? `${apiResponse.full_name} is written in ${apiResponse.language}` : ''}</p>
 {:catch error}
-  <p style="color: red">{error.message}</p>
+	<p style="color: red">{error.message}</p>
 {/await}
 ```
 
@@ -294,16 +282,16 @@ That brings me to the second part of this blog's title, "why others will follow.
 
 ```svelte
 <script>
-  let name = 'world';
+	let name = 'world';
 </script>
 
-<style>
-  h1 {
-    color: blue;
-  }
-</style>
-
 <h1>Hello {name}!</h1>
+
+<style>
+	h1 {
+		color: blue;
+	}
+</style>
 ```
 
 Do hit me up on Twitter [@mikenikles](https://twitter.com/mikenikles/status/1210185500159594496) with your feedback.

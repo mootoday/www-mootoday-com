@@ -1,6 +1,6 @@
 ---
-title: "SvelteKit & Prisma - A match made in digital heaven"
-summary: "At some point,  your SvelteKit app needs to persist data. Learn how to use Prisma to achieve exactly that."
+title: 'SvelteKit & Prisma - A match made in digital heaven'
+summary: 'At some point,  your SvelteKit app needs to persist data. Learn how to use Prisma to achieve exactly that.'
 createdAt: 2021-08-03T03:06:14.591Z
 featured: true
 ---
@@ -11,10 +11,11 @@ featured: true
 </script>
 
 **Key Takeaways**
-* Most production applications need to persist & retrieve data. Prisma is a pretty genius way to achieve that.
-* With SvelteKit, you get client & server-side data fetching - the best of both worlds.
-* This all even works if JavaScript is disabled in the browser.
-* Template GitHub repo: https://github.com/mikenikles/sveltekit-prisma
+
+- Most production applications need to persist & retrieve data. Prisma is a pretty genius way to achieve that.
+- With SvelteKit, you get client & server-side data fetching - the best of both worlds.
+- This all even works if JavaScript is disabled in the browser.
+- Template GitHub repo: https://github.com/mikenikles/sveltekit-prisma
 
 > 📣&nbsp; **SvelteKit & Prisma video course**
 >
@@ -29,9 +30,10 @@ We are going to start with a default SvelteKit application. Once initialized, we
 ## Things you need to know
 
 In order to get the most out of this post, I expect you are aware of the following technologies:
-* [Svelte](https://svelte.dev/)
-* [SvelteKit](https://kit.svelte.dev/)
-* [Prisma](https://www.prisma.io/)
+
+- [Svelte](https://svelte.dev/)
+- [SvelteKit](https://kit.svelte.dev/)
+- [Prisma](https://www.prisma.io/)
 
 ## The foundation
 
@@ -44,10 +46,11 @@ npm init svelte@next svelte-with-prisma
 ```
 
 When prompted, select the following options:
-* "Which Svelte app template?" `SvelteKit demo app`
-* "Use TypeScript?" `Yes`
-* "Add ESLint for code linting?" `No`
-* "Add Prettier for code formatting?" `Yes`
+
+- "Which Svelte app template?" `SvelteKit demo app`
+- "Use TypeScript?" `Yes`
+- "Add ESLint for code linting?" `No`
+- "Add Prettier for code formatting?" `Yes`
 
 When complete, please follow the "Next steps" listed in the terminal to install dependencies and start the SvelteKit demo app.
 
@@ -170,11 +173,11 @@ The following code:
 
 ```typescript
 const res = await fetch(`${base}/${resource}`, {
-  method: request.method,
-  headers: {
-    'content-type': 'application/json'
-  },
-  body: data && JSON.stringify(data)
+	method: request.method,
+	headers: {
+		'content-type': 'application/json'
+	},
+	body: data && JSON.stringify(data)
 });
 ```
 
@@ -184,40 +187,40 @@ needs to be replaced with this:
 let body = {};
 let status = 500;
 switch (request.method.toUpperCase()) {
-  case "DELETE":
-    await prisma.todo.delete({
-      where: {
-        uid: resource.split("/").pop()
-      }
-    });
-    status = 200;
-    break;
-  case "GET":
-    body = await prisma.todo.findMany();
-    status = 200;
-    break;
-  case "PATCH":
-    body = await prisma.todo.update({
-      data: {
-        done: data.done,
-        text: data.text
-      },
-      where: {
-        uid: resource.split("/").pop()
-      }
-    });
-    status = 200;
-    break;
-  case "POST":
-    body = await prisma.todo.create({
-      data: {
-        created_at: new Date(),
-        done: false,
-        text: data.text,
-      }
-    });
-    status = 201;
-    break;
+	case 'DELETE':
+		await prisma.todo.delete({
+			where: {
+				uid: resource.split('/').pop()
+			}
+		});
+		status = 200;
+		break;
+	case 'GET':
+		body = await prisma.todo.findMany();
+		status = 200;
+		break;
+	case 'PATCH':
+		body = await prisma.todo.update({
+			data: {
+				done: data.done,
+				text: data.text
+			},
+			where: {
+				uid: resource.split('/').pop()
+			}
+		});
+		status = 200;
+		break;
+	case 'POST':
+		body = await prisma.todo.create({
+			data: {
+				created_at: new Date(),
+				done: false,
+				text: data.text
+			}
+		});
+		status = 201;
+		break;
 }
 ```
 
@@ -227,8 +230,8 @@ Lastly, change the `return` statement to the following:
 
 ```typescript
 return {
-  status,
-  body
+	status,
+	body
 };
 ```
 

@@ -1,9 +1,9 @@
 ---
-title: "Ever wondered why your best employees leave"
-slug: "ever-wondered-why-your-best-employees-leave"
-summary: "Thoughts on why top employees leave their jobs."
+title: 'Ever wondered why your best employees leave'
+slug: 'ever-wondered-why-your-best-employees-leave'
+summary: 'Thoughts on why top employees leave their jobs.'
 createdAt: 2016-04-11T00:00:00.000Z
-tags: ["team", "morale"]
+tags: ['team', 'morale']
 layout: blog
 ---
 
@@ -14,9 +14,9 @@ layout: blog
 
 Take off your rose-coloured sunglasses and be excellent to your employees
 
-At some point in my tech career, I worked at a company that did really well. So well in fact, they proudly displayed some of the world’s most well known logos under their “Our Customers” section on the website. The team increased from a dozen or so great engineers to a multitude of that, even beyond the engineering department. All in all, a picture-perfect startup success story. __Until… there were bugs, servers crashed, excellent staff quit and customers didn’t renew contracts.__ What happened?
+At some point in my tech career, I worked at a company that did really well. So well in fact, they proudly displayed some of the world’s most well known logos under their “Our Customers” section on the website. The team increased from a dozen or so great engineers to a multitude of that, even beyond the engineering department. All in all, a picture-perfect startup success story. **Until… there were bugs, servers crashed, excellent staff quit and customers didn’t renew contracts.** What happened?
 
-* * *
+---
 
 ## The early days, when you wear your rose-coloured glasses
 
@@ -34,18 +34,18 @@ You attend conferences, share your success, investors notice you. 💥, you land
 
 ![Broken glasses]({assetsBasePath}/1.jpg)
 
-Source: [http://www.truthdig.com/cartoon/item/rose-colored\_glasses\_20150105](http://www.truthdig.com/cartoon/item/rose-colored_glasses_20150105)
+Source: [http://www.truthdig.com/cartoon/item/rose-colored_glasses_20150105](http://www.truthdig.com/cartoon/item/rose-colored_glasses_20150105)
 
 That company I worked at in a previous life was in that exact situation and, as many entrepreneurs would do too, they hired. Not one, not two, not ten new engineers. They went all out and tripled their team, geez I think it was even close to 4x.
 
 A month passed, the office was buzzing. A few more months passed; still a great atmosphere and everybody was excited to ride on a success train.  
 Then, reality hit. It hit hard, but it hit the wrong people. Engineers, QA and configuration specialists (yeah, that exists) were among the first who started to raise awareness:
 
-* Regression bugs
-* Repetitive work that could easily be automated if two teams collaborated
-* Major architectural issues
-* A lack of proper tools (never blame tools, unless they’re so bad, it really causes problems)
-* The list goes on, unfortunately
+- Regression bugs
+- Repetitive work that could easily be automated if two teams collaborated
+- Major architectural issues
+- A lack of proper tools (never blame tools, unless they’re so bad, it really causes problems)
+- The list goes on, unfortunately
 
 These are just a few issues that slowly creeped upon us. Emails were sent, meetings arranged and soon, fingers were pointed. The once unbreakable team broke into pieces, silos formed and individuals turned into “survival mode”.
 
@@ -62,7 +62,7 @@ At this point, more team members realized the company had issues. Discussions, r
 
 > This is when leaders come into play.
 
-Unless, leaders are overwhelmed as well and try to calm the situation with positive words, but no actions. Repeatedly, employees were told that “__we are in a difficult time, but we have a great team and do everything we can do improve the situation.__”
+Unless, leaders are overwhelmed as well and try to calm the situation with positive words, but no actions. Repeatedly, employees were told that “**we are in a difficult time, but we have a great team and do everything we can do improve the situation.**”
 
 > Walk the walk, don’t talk the talk
 
@@ -70,7 +70,7 @@ Talking the talk is easy, nobody needs to be a leader to do that.
 
 ### Great leaders, however, they walk the walk
 
-Any leader of a business understands that no matter how awesome he or she is, it’s impossible to make decisions without consulting their team. By __team__ I mean the people who work with the system on a daily basis, not the others on the management team.
+Any leader of a business understands that no matter how awesome he or she is, it’s impossible to make decisions without consulting their team. By **team** I mean the people who work with the system on a daily basis, not the others on the management team.
 
 That did not happen and within weeks, engineers across the organization quit and moved to companies where leaders are leaders, not bosses.
 

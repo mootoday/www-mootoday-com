@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ContentLayout from '$lib/components/content-layout.svelte';
-	import Email from "$lib/components/email/index.svelte";
+	import Email from '$lib/components/email/index.svelte';
 </script>
 
 <svelte:head>

@@ -5,22 +5,31 @@
 
 	export let data: PageData;
 
-	const bannerImages = [{
-		alt: "Photo by Prateek Katyal: https://www.pexels.com/photo/black-and-white-laptop-2740956/",
-	}, {
-		alt: "Photo by Alex Fu: https://www.pexels.com/photo/dream-big-signage-945966/",
-	}, {
-		alt: "Photo by Anna Tarazevich: https://www.pexels.com/photo/welcome-lettering-text-on-black-background-5598288/",
-	}, {
-		alt: "Photo by Polina Kovaleva: https://www.pexels.com/photo/uneven-cutouts-on-black-background-6185244/",
-	}, {
-		alt: "Photo by Jorge Urosa: https://www.pexels.com/photo/motivational-quote-in-a-frame-9169913/",
-	}, ];
+	const bannerImages = [
+		{
+			alt: 'Photo by Prateek Katyal: https://www.pexels.com/photo/black-and-white-laptop-2740956/'
+		},
+		{
+			alt: 'Photo by Alex Fu: https://www.pexels.com/photo/dream-big-signage-945966/'
+		},
+		{
+			alt: 'Photo by Anna Tarazevich: https://www.pexels.com/photo/welcome-lettering-text-on-black-background-5598288/'
+		},
+		{
+			alt: 'Photo by Polina Kovaleva: https://www.pexels.com/photo/uneven-cutouts-on-black-background-6185244/'
+		},
+		{
+			alt: 'Photo by Jorge Urosa: https://www.pexels.com/photo/motivational-quote-in-a-frame-9169913/'
+		}
+	];
 </script>
 
 <svelte:head>
 	<title>www.mikenikles.com</title>
-	<meta name="description" content="Content about developer experience, full-stack web development, tech careers, and whatever else crosses my mind.">
+	<meta
+		name="description"
+		content="Content about developer experience, full-stack web development, tech careers, and whatever else crosses my mind."
+	/>
 </svelte:head>
 
 <main>
@@ -35,7 +44,8 @@
 							Always learn, always grow.
 						</h1>
 						<p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-							Mike's space. Content about developer experience, full-stack web development, tech careers, and whatever else crosses my mind.
+							Mike's space. Content about developer experience, full-stack web development, tech
+							careers, and whatever else crosses my mind.
 						</p>
 						<div class="mt-6 flex gap-6">
 							<a
@@ -84,24 +94,22 @@
 	</div>
 	<div class="mt-16 sm:mt-20">
 		<div class="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-			{#each bannerImages as {alt}, index}
+			{#each bannerImages as { alt }, index}
 				<div
 					class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2"
 				>
-        <picture>
-          <source
-            srcset="/banner-images/pexels-{index + 1}.webp"
-            type="image/webp"
-          /><img
-          {alt}
-          src="/banner-images/pexels-{index + 1}.jpeg"
-          width="288"
-          height="320"
-          decoding="async"
-          class="absolute inset-0 h-full w-full object-cover"
-          loading="lazy"
-          style="color:transparent"
-        /></picture>
+					<picture>
+						<source srcset="/banner-images/pexels-{index + 1}.webp" type="image/webp" /><img
+							{alt}
+							src="/banner-images/pexels-{index + 1}.jpeg"
+							width="288"
+							height="320"
+							decoding="async"
+							class="absolute inset-0 h-full w-full object-cover"
+							loading="lazy"
+							style="color:transparent"
+						/></picture
+					>
 				</div>
 			{/each}
 		</div>
@@ -115,11 +123,22 @@
 							{#each data.posts as post}
 								<ArticlePreview {post} />
 							{/each}
-              <a href="/blog">
-                <div class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500">
-                  Read {data.postsTotal} more articles<svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current"><path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                </div>
-              </a>
+							<a href="/blog">
+								<div class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500">
+									Read {data.postsTotal} more articles<svg
+										viewBox="0 0 16 16"
+										fill="none"
+										aria-hidden="true"
+										class="ml-1 h-4 w-4 stroke-current"
+										><path
+											d="M6.75 5.75 9.25 8l-2.5 2.25"
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/></svg
+									>
+								</div>
+							</a>
 						</div>
 						<div class="space-y-10 lg:pl-16 xl:pl-24">
 							<form

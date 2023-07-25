@@ -1,9 +1,9 @@
 ---
-title: "I am writing a book: Cloud Native Web Development"
-slug: "i-am-writing-a-book-cloud-native-web-development"
-summary: "I am writing a hands-on guidebook on how to develop cloud-native web applications."
+title: 'I am writing a book: Cloud Native Web Development'
+slug: 'i-am-writing-a-book-cloud-native-web-development'
+summary: 'I am writing a hands-on guidebook on how to develop cloud-native web applications.'
 createdAt: 2020-05-10T00:00:00.000Z
-tags: ["webdev", "cloud", "book", "javascript"]
+tags: ['webdev', 'cloud', 'book', 'javascript']
 layout: blog
 ---
 
@@ -34,13 +34,13 @@ Links to additional resources such as videos, blog posts and articles are provid
 
 The book starts with introductions to technologies used throughout the book and explains what alternatives are available.
 
-* [Svelte](https://svelte.dev/) to develop the web application
-* [Sapper](https://sapper.svelte.dev/) as a static site generator
-* [Tailwind CSS](https://tailwindcss.com/) for styling
-* [Firebase Hosting](https://firebase.google.com/docs/hosting) to host the web app
-* [Cypress](https://www.cypress.io/) for component and end-to-end testing
-* [Node.js](https://nodejs.org/en/) services deployed to [Cloud Run](https://cloud.run/) on [Google Cloud Platform](https://cloud.google.com/) to deal with asynchronous tasks (e.g. send a welcome email to new users)
-* [Cloud Firestore](https://firebase.google.com/docs/firestore) for data persistence
+- [Svelte](https://svelte.dev/) to develop the web application
+- [Sapper](https://sapper.svelte.dev/) as a static site generator
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Firebase Hosting](https://firebase.google.com/docs/hosting) to host the web app
+- [Cypress](https://www.cypress.io/) for component and end-to-end testing
+- [Node.js](https://nodejs.org/en/) services deployed to [Cloud Run](https://cloud.run/) on [Google Cloud Platform](https://cloud.google.com/) to deal with asynchronous tasks (e.g. send a welcome email to new users)
+- [Cloud Firestore](https://firebase.google.com/docs/firestore) for data persistence
 
 The second part is hands-on, with pull requests that correspond to individual chapters in the book. All readers are part of a community and can collaborate among themselves and with the author.
 
@@ -78,17 +78,13 @@ I'm leaving you with the entire table of contents as it stands at the time of th
 
 ### Stay Informed
 
-Part 1: Technologies, Tools & Processes
-=======================================
+# Part 1: Technologies, Tools & Processes
 
-Topics you will learn
----------------------
+## Topics you will learn
 
-What is cloud-native?
----------------------
+## What is cloud-native?
 
-Guiding Principles
-------------------
+## Guiding Principles
 
 ### 1\. User experience
 
@@ -108,8 +104,7 @@ Guiding Principles
 
 #### CI / CD
 
-Development Environment
------------------------
+## Development Environment
 
 ### gitpod.io
 
@@ -119,8 +114,7 @@ Development Environment
 
 #### Alternatives
 
-Frontend
---------
+## Frontend
 
 ### Svelte
 
@@ -140,8 +134,7 @@ Frontend
 
 #### Alternatives
 
-Backend
--------
+## Backend
 
 ### Sapper
 
@@ -153,8 +146,7 @@ Backend
 
 #### Alternatives
 
-Database
---------
+## Database
 
 ### Cloud Firestore
 
@@ -162,8 +154,7 @@ Database
 
 #### Alternatives
 
-CI / CD
--------
+## CI / CD
 
 ### GitHub Actions
 
@@ -171,8 +162,7 @@ CI / CD
 
 #### Alternatives
 
-Testing
--------
+## Testing
 
 ### Cypress
 
@@ -186,21 +176,17 @@ Testing
 
 #### Alternatives
 
-Monorepo
---------
+## Monorepo
 
 #### Why?
 
 #### Alternatives
 
-Part 2: Develop a foundation
-============================
+# Part 2: Develop a foundation
 
-Introduction
-------------
+## Introduction
 
-A monorepo template to start with
----------------------------------
+## A monorepo template to start with
 
 ### Monorepo directory structure
 
@@ -208,8 +194,7 @@ A monorepo template to start with
 
 ### Summary
 
-Add the Sapper template
------------------------
+## Add the Sapper template
 
 ### Clone the repository
 
@@ -221,8 +206,7 @@ Add the Sapper template
 
 ### Summary
 
-Hosting on Firebase
--------------------
+## Hosting on Firebase
 
 ### Create a Firebase project
 
@@ -248,8 +232,7 @@ Hosting on Firebase
 
 ### Summary
 
-Set up the continuous deployment pipeline
------------------------------------------
+## Set up the continuous deployment pipeline
 
 ### Why now? We haven't developed anything yet
 
@@ -257,7 +240,7 @@ Set up the continuous deployment pipeline
 
 ### Set up GitHub Actions
 
-#### Create a FIREBASE\_TOKEN secret
+#### Create a FIREBASE_TOKEN secret
 
 #### Create an encrypted secret on GitHub
 
@@ -267,13 +250,11 @@ Set up the continuous deployment pipeline
 
 ### Summary
 
-Local Development
------------------
+## Local Development
 
 ### Summary
 
-Feature Toggles
----------------
+## Feature Toggles
 
 ### What are feature toggles?
 
@@ -295,8 +276,7 @@ Feature Toggles
 
 ### Summary
 
-Production monitoring
----------------------
+## Production monitoring
 
 ### Create an uptime check
 
@@ -304,15 +284,13 @@ Production monitoring
 
 ### Summary
 
-Rollbacks
----------
+## Rollbacks
 
 ### Fix Forward
 
 ### Summary
 
-Testing
--------
+## Testing
 
 ### End-to-end tests
 

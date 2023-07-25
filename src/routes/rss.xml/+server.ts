@@ -1,15 +1,15 @@
-import type { RequestHandler } from "@sveltejs/kit"
+import type { RequestHandler } from '@sveltejs/kit';
 
-import RSS from "rss";
-import { getPosts } from "$lib/server/posts";
+import RSS from 'rss';
+import { getPosts } from '$lib/server/posts';
 
 export const prerender = true;
 
-export const GET:RequestHandler = async () => {
+export const GET: RequestHandler = async () => {
 	const feed = new RSS({
-		title: "www.mikenikles.com - RSS Feed",
-		site_url: "https://www.mikenikles.com/",
-		feed_url: "https://www.mikenikles.com/rss.xml"
+		title: 'www.mikenikles.com - RSS Feed',
+		site_url: 'https://www.mikenikles.com/',
+		feed_url: 'https://www.mikenikles.com/rss.xml'
 	});
 
 	const posts = await getPosts();

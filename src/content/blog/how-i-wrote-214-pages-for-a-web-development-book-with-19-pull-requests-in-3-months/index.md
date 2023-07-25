@@ -1,9 +1,9 @@
 ---
-title: "How I wrote 214 pages for a web development book with 19 pull requests in 3 months"
-slug: "how-i-wrote-214-pages-for-a-web-development-book-with-19-pull-requests-in-3-months"
-summary: "An in-depth journey report of the last three months when I wrote the Cloud Native Web Development book. Why did I write it? How did I develop the source code? Why do I self-publish? What has the post-publication experience been like?"
+title: 'How I wrote 214 pages for a web development book with 19 pull requests in 3 months'
+slug: 'how-i-wrote-214-pages-for-a-web-development-book-with-19-pull-requests-in-3-months'
+summary: 'An in-depth journey report of the last three months when I wrote the Cloud Native Web Development book. Why did I write it? How did I develop the source code? Why do I self-publish? What has the post-publication experience been like?'
 createdAt: 2020-07-03T20:26:33.694Z
-tags: ["book", "cloud", "cloud-native", "web", "development", "webdev", "community", "self-publish"]
+tags: ['book', 'cloud', 'cloud-native', 'web', 'development', 'webdev', 'community', 'self-publish']
 layout: blog
 ---
 
@@ -12,7 +12,7 @@ layout: blog
   const assetsBasePath = `/blog/${data.slug}`;
 </script>
 
-Photo credit: [Florian Klauer](https://unsplash.com/@florianklauer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+Photo credit: [Florian Klauer](https://unsplash.com/@florianklauer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 ## About the book
 
@@ -48,8 +48,9 @@ it's challenging to know where to start.
 
 With COVID-19 spreading across the globe and governments putting countries into lockdown, it became immediately
 apparent that this is not like a previous pandemic. I had two options:
-* worry, feel anxious, be unsure what to do
-* look at it as an opportunity
+
+- worry, feel anxious, be unsure what to do
+- look at it as an opportunity
 
 I was privileged enough not to worry, not to feel anxious. So I went for the second option and decided to make
 the best of the situation.

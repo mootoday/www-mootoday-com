@@ -1,7 +1,7 @@
 <script lang="ts">
-	let clazz = "";
+	let clazz = '';
 	export { clazz as class };
-	export let style = "";
+	export let style = '';
 </script>
 
 <div
