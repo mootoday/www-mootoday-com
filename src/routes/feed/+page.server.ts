@@ -48,6 +48,7 @@ export const actions = {
 		const data = await request.formData();
 		const content = data.get('content');
 		const files = data.getAll('files') as File[];
+		console.log({files});
 		const authorization = data.get('authorization');
 		const entryId = new Date().getTime();
 
