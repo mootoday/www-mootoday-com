@@ -116,7 +116,7 @@
 
 		<div class="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none">
 			{#each JSON.parse(entry.files || '[]') as file}
-				{@const src = 'https://feed.assets.mikenikles.com/{file.name}'}
+				{@const src = `https://feed.assets.mikenikles.com/${file.name}`}
 				<button {...$fileTrigger} use:fileTrigger>
 					<img class="aspect-[3/2] w-full rounded-2xl object-cover" {src} alt="" />
 				</button>
