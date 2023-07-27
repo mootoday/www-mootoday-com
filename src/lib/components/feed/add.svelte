@@ -2,6 +2,7 @@
 	import type { Writable } from 'svelte/store';
 
 	import { enhance } from '$app/forms';
+	import type { SubmitFunction } from '@sveltejs/kit';
 
 	export let newContent: Writable<string>;
 
@@ -23,9 +24,26 @@
 
 	const processWindowPasteEvent = (e: ClipboardEvent) => {
 		if (e.clipboardData?.files) {
-			files = e.clipboardData.files;
+			const dataTransfer = new DataTransfer();
+			for (const file of files || []) {
+				dataTransfer.items.add(file);
+			}
+			for (const file of e.clipboardData.files) {
+				dataTransfer.items.add(file);
+			}
+			files = dataTransfer.files;
 		}
 	};
+
+	const submit = (({formData}) => {
+		formData.delete("files"); // For some reason, there's a 0kb application/octet-stream file in this array. Let's clear that and only append what we need.
+		for (const file of files || []) {
+			formData.append("files", file);
+		}
+		return ({update}) => {
+			update();
+		};
+	}) satisfies SubmitFunction;
 </script>
 
 <svelte:window on:paste={processWindowPasteEvent} />
@@ -35,7 +53,7 @@
 		<form
 			method="post"
 			action="?/addEntry"
-			use:enhance
+			use:enhance={submit}
 			enctype="multipart/form-data"
 			class="relative"
 		>
