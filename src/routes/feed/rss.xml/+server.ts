@@ -2,8 +2,6 @@ import type { RequestHandler } from '@sveltejs/kit';
 
 import RSS from 'rss';
 
-export const prerender = true;
-
 export const GET: RequestHandler = async ({ locals }) => {
 	const feed = new RSS({
 		title: 'www.mikenikles.com - Short-form content',
