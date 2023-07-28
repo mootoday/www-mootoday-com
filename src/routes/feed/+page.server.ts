@@ -23,7 +23,6 @@ const generateUUID = (): string => {
 
 const getFileExtension = (fileName: string): string => (fileName.match(/\.[0-9a-z]+$/i) || [''])[0].toLowerCase();
 
-
 export const load = (async ({ locals }) => {
 	try {
 		const { results: entries } = await locals.D1.prepare(
