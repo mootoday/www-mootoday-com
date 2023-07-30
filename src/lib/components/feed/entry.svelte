@@ -118,7 +118,7 @@
 			{#each JSON.parse(entry.files || '[]') as file}
 				{@const src = `https://assets-feed.mikenikles.com/${file.name}`}
 				<button {...$fileTrigger} use:fileTrigger>
-					<img class="aspect-[3/2] w-full rounded-2xl object-cover" {src} alt="" />
+					<img class="w-full rounded-2xl object-cover" {src} alt="" />
 				</button>
 				<FileDialog dialog={fileDialog} {src} />
 			{/each}
