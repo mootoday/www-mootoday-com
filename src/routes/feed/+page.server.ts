@@ -95,9 +95,9 @@ export const actions = {
 				.bind(`${new Date().getTime()}`, entryId, content)
 				.run();
 			console.log({ result });
-			throw redirect(303, `/feed/${entryId}`);
 		} catch (error) {
 			console.error(error);
 		}
+		throw redirect(303, `/feed/${entryId}`);
 	}
 } satisfies Actions;
