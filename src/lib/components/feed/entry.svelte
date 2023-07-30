@@ -52,9 +52,9 @@
 		<div class="flex items-center">
 			<div>
 				<img
-					class="inline-block h-10 w-10 rounded-full"
-					src="https://pbs.twimg.com/profile_images/1255590513035665408/uV0_K_3T_x96.jpg"
-					alt=""
+					class="inline-block h-10 w-10 rounded-full object-cover"
+					src="/headshot-small.png"
+					alt="Mike's headshot"
 				/>
 			</div>
 			<div class="ml-2">
