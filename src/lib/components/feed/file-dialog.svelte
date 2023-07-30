@@ -17,7 +17,7 @@
 			{...$content}
 			use:content
 		>
-			<img class="aspect-[3/2] w-full rounded-2xl object-cover" {src} alt="" />
+			<img class="w-full rounded-2xl object-cover" {src} alt="" />
 		</div>
 	{/if}
 </div>
