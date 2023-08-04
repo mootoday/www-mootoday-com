@@ -12,7 +12,7 @@ featured: false
 
 **Key takeaways**
 
-- I've don it, you've done it, you're team member has done it: A dozen git commits that read `fix github action, for real this time`
+- I've done it, you've done it, you're team member has done it: A dozen git commits that read `fix github action, for real this time`
 - With `act`, we have a solution to test GitHub Actions locally, no need to commit & push to GitHub (wait... what??)
 - Combine this with `devbox` and anyone who works on your project is ready to go, no instructions required
 
