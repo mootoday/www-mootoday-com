@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"dev:startCloudflareProxy": "npm run --prefix wrangler dev",
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "playwright test",
