@@ -137,7 +137,7 @@ If that is the case, you can fix it by exporting the correct `DOCKER_HOME` envir
 export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 ```
 
-If you use Devbox as documented in the "Project setup" chapter above, add this command to your `init_hook` in `devbox.json`:
+If you use Devbox as documented in the "Project setup" chapter above, add the environment variable to the `env` object in `devbox.json`:
 
 ```json
 {
@@ -145,9 +145,11 @@ If you use Devbox as documented in the "Project setup" chapter above, add this c
     "act@latest",
     "colima@latest"
   ],
+  "env": {
+    "DOCKER_HOST": "unix://${HOME}/.colima/default/docker.soc"
+  },
   "shell": {
     "init_hook": [
-      "export DOCKER_HOST=\\"unix://${HOME}/.colima/default/docker.sock\\"",
       "colima start &"
     ]
   }
