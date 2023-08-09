@@ -110,7 +110,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v3
     - run: npm install
     - run: npm test
 ```
@@ -146,7 +146,7 @@ If you use Devbox as documented in the "Project setup" chapter above, add the en
     "colima@latest"
   ],
   "env": {
-    "DOCKER_HOST": "unix://${HOME}/.colima/default/docker.soc"
+    "DOCKER_HOST": "unix://${HOME}/.colima/default/docker.sock"
   },
   "shell": {
     "init_hook": [
