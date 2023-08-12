@@ -16,6 +16,10 @@ featured: false
 - With `act`, we have a solution to test GitHub Actions locally, no need to commit & push to GitHub (wait... what??)
 - Combine this with `devbox` and anyone who works on your project is ready to go, no instructions required
 
+**Project source code**
+
+You can find the source code for this project in the [`mikenikles/devbox-github-actions-locally`](https://github.com/mikenikles/devbox-github-actions-locally) GitHub repository. Please refer to [PR #1](https://github.com/mikenikles/devbox-github-actions-locally/pull/1) to see how you can configure [Devbox](https://github.com/jetpack-io/devbox) to automate your development environment setup.
+
 ## What's the challenge with GitHub Actions?
 
 > A picture is worth more than a thousand words.
