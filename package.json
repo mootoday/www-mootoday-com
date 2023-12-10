@@ -16,6 +16,7 @@
 		"generate:images": "node ./generate-responsive-image-data.js"
 	},
 	"devDependencies": {
+		"@ethercorps/sveltekit-og": "^2.0.2",
 		"@howisit/svelte": "^0.0.6",
 		"@melt-ui/svelte": "^0.24.0",
 		"@mux/blurhash": "^0.1.2",

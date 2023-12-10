@@ -4,6 +4,7 @@
 	import Comments from '$lib/components/comments.svelte';
 	import ContentLayout from '$lib/components/content-layout.svelte';
 	import { FeedbackWidget } from '@howisit/svelte';
+	import { page } from '$app/stores';
 
 	export let data: PageData;
 
@@ -24,7 +25,23 @@
 
 <svelte:head>
 	<title>{data.metadata?.title} - mikenikles.com</title>
-	<meta name="description" content={data.metadata?.summary} />
+	<meta name="description" content="{data.metadata?.summary}" />
+
+	<!-- Facebook Meta Tags -->
+  <meta property="og:url" content="{$page.url}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{data.metadata?.title}">
+  <meta property="og:description" content="{data.metadata?.summary}">
+  <meta property="og:image" content="{$page.url}/card.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="{$page.url.host}">
+  <meta property="twitter:url" content="{$page.url}">
+  <meta name="twitter:title" content="{data.metadata?.title}">
+  <meta name="twitter:description" content="{data.metadata?.summary}">
+  <meta name="twitter:image" content="{$page.url}/card.png">
+
 	<link href="/prism.css" rel="stylesheet" />
 </svelte:head>
 
