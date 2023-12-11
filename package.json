@@ -16,11 +16,13 @@
 		"generate:images": "node ./generate-responsive-image-data.js"
 	},
 	"devDependencies": {
+		"@ethercorps/sveltekit-og": "^2.0.2",
 		"@howisit/svelte": "^0.0.6",
 		"@melt-ui/svelte": "^0.24.0",
 		"@mux/blurhash": "^0.1.2",
 		"@mux/mux-player": "^1.5.1",
 		"@playwright/test": "^1.28.1",
+		"@resvg/resvg-js": "^2.6.0",
 		"@sveltejs/adapter-cloudflare": "^2.3.1",
 		"@sveltejs/kit": "^1.0.0",
 		"@tailwindcss/forms": "^0.5.2",
@@ -28,7 +30,6 @@
 		"@typescript-eslint/eslint-plugin": "^6.1.0",
 		"@typescript-eslint/parser": "^6.1.0",
 		"autoprefixer": "^10.4.7",
-		"cf-workers-proxy": "^0.0.5",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"front-matter": "^4.0.2",
@@ -40,6 +41,7 @@
 		"reading-time": "^1.5.0",
 		"rehype-picture": "^4.0.2",
 		"rss": "^1.2.2",
+		"satori": "^0.10.11",
 		"sharp": "^0.32.3",
 		"svelte": "^4.1.0",
 		"svelte-check": "^3.4.6",
@@ -48,10 +50,12 @@
 		"tailwindcss": "^3.1.5",
 		"tslib": "^2.4.1",
 		"typescript": "^5.1.6",
+		"url": "^0.11.3",
 		"vite": "^4.0.1",
 		"vite-imagetools": "^5.0.5",
 		"vitest": "^0.33.0",
 		"wrangler": "^3.2.0",
+		"wrangler-proxy": "^2.2.2",
 		"xstate": "^4.35.0"
 	},
 	"type": "module"

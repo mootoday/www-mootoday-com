@@ -1,6 +1,6 @@
 import type { Handle } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
-import { createD1 } from 'cf-workers-proxy';
+import { connectD1 } from 'wrangler-proxy';
 
 const handleCurl = (async ({ event, resolve }) => {
 	if (event.url.pathname === "/" && event.request.headers.get("user-agent")?.startsWith("curl")) {
@@ -13,9 +13,9 @@ const handleCurl = (async ({ event, resolve }) => {
 	return await resolve(event);
 }) satisfies Handle;
 
-const handleCloudflareD1 = (async ({ event, resolve }) => {
-	event.locals.D1 = event.platform?.env?.D1 ?? createD1('D1');
-	return await resolve(event);
+const handleCloudflareD1 = (({ event, resolve }) => {
+	event.locals.D1 = event.platform?.env?.D1 ?? connectD1('D1');
+	return resolve(event);
 }) satisfies Handle;
 
 export const handle = sequence(handleCurl, handleCloudflareD1);

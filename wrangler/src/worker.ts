@@ -1,3 +1,3 @@
-import { createWorker } from 'cf-workers-proxy';
+import { createWorker } from 'wrangler-proxy';
 
 export default createWorker();
