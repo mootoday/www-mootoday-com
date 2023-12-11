@@ -6,6 +6,7 @@
 		"dev": "vite dev",
 		"dev:startCloudflareProxy": "npm run --prefix wrangler dev",
 		"build": "vite build",
+		"postbuild": "pwd && ls -ltra ./.svelte-kit/cloudflare/",
 		"preview": "vite preview",
 		"test": "playwright test",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
