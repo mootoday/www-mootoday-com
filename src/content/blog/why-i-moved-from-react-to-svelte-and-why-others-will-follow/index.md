@@ -294,6 +294,6 @@ That brings me to the second part of this blog's title, "why others will follow.
 </style>
 ```
 
-Do hit me up on Twitter [@mikenikles](https://twitter.com/mikenikles/status/1210185500159594496) with your feedback.
+Do hit me up on X [@mootoday](https://x.com/mootoday/status/1210185500159594496) with your feedback.
 
 👋

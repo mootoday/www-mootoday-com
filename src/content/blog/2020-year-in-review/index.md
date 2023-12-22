@@ -40,12 +40,12 @@ In my first week at home earlier in 2020, I knew I had to get my WFH routine set
 
 My top objectives I set for the year were:
 
-- ✅ Publish a technical book about modern web development ([Cloud Native Web Development](https://www.mikenikles.com/cloud-native-web-development) and [A Smart Guide for Your Career as a Software Engineer](https://gum.co/a-smart-guide-for-your-career-as-a-software-engineer))
+- ✅ Publish a technical book about modern web development ([Cloud Native Web Development](https://www.mootoday.com/cloud-native-web-development) and [A Smart Guide for Your Career as a Software Engineer](https://gum.co/a-smart-guide-for-your-career-as-a-software-engineer))
 - ✅ Develop a SaaS product to experiment with new technologies ([Your Analytics](https://www.your-analytics.org))
 
 ### Svelte - a technology bet that paid out
 
-Over two years ago, I learned about [www.svelte.dev](https://svelte.dev). I spent some time to understand how it worked and it was clear to me that Rich Harris was onto something. I dropped React and started to use Svelte ([Why I moved from React to Svelte and why others will follow](https://www.mikenikles.com/blog/why-i-moved-from-react-to-svelte-and-why-others-will-follow)). I received quite a bit of push back from people when I started to recommend Svelte back then, just the same way I received push back when I recommended React before people talked about it.
+Over two years ago, I learned about [www.svelte.dev](https://svelte.dev). I spent some time to understand how it worked and it was clear to me that Rich Harris was onto something. I dropped React and started to use Svelte ([Why I moved from React to Svelte and why others will follow](https://www.mootoday.com/blog/why-i-moved-from-react-to-svelte-and-why-others-will-follow)). I received quite a bit of push back from people when I started to recommend Svelte back then, just the same way I received push back when I recommended React before people talked about it.
 
 Svelte's daily downloads [increased by 10x this year](https://npm-stat.com/charts.html?package=svelte&from=2020-01-01&to=2020-12-31), from ~2k to ~20k. Companies such as Disney and IKEA and [many others](https://twitter.com/SvelteSociety/status/1260209026563858432) now use Svelte and the trend is clear.
 

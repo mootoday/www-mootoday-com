@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog posts - mikenikles.com</title>
+	<title>Blog posts - mootoday.com</title>
 	<meta
 		name="description"
 		content="Content about developer experience, full-stack web development, tech careers, and whatever else crosses my mind."
@@ -17,8 +17,8 @@
 
 <ContentLayout title="Short and long-form content.">
 	<svelte:fragment slot="intro">
-		For hot takes on anything tech, follow me on Twitter <a href="https://twitter.com/mikenikles"
-			>@mikenikles</a
+		For hot takes on anything tech, follow me on X <a href="https://x.com/mootoday"
+			>@mootoday</a
 		>.
 	</svelte:fragment>
 	<div class="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">

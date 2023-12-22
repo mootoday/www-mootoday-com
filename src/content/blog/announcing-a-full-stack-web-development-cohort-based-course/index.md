@@ -27,7 +27,7 @@ If this interests you, please apply below and read the rest of the announcement 
 
 > Please <a href="https://522jmrzdfht.typeform.com/to/dd8grv5v" target="_blank">fill out this form</a> if you're interested in this course.
 
-This is _not_ your regular "How do I develop a web application?" course. This is me teaching you everything I have learned in 20+ years<sup><a href="/blog/{slug}#link-6">6</a></sup>! Lessons learned and mistakes I have made as an individual contributor, as an engineering manager at multiple companies and as a technical advisor to CTOs of European airlines as part of my time at Google Cloud.
+This is _not_ your regular "How do I develop a web application?" course. This is me teaching you everything I have learned in 20+ years! Lessons learned and mistakes I have made as an individual contributor, as an engineering manager at multiple companies and as a technical advisor to CTOs of European airlines as part of my time at Google Cloud.
 
 **Let's fast-track your career with this 4-week course.** Why figure it all out on your own when you can work with me and the other attendees to grow collaboratively in a fraction of the time it would take you on your own!?
 
@@ -43,10 +43,10 @@ This is _not_ your regular "How do I develop a web application?" course. This is
 
 **The technology stack for this project includes:**
 
-- Svelte & SvelteKit with Typescript<sup><a href="/blog/{slug}#link-7">7</a></sup>
-- Tailwind CSS<sup><a href="/blog/{slug}#link-8">8</a></sup>
-- Prisma<sup><a href="/blog/{slug}#link-9">9</a></sup>
-- Gitpod<sup><a href="/blog/{slug}#link-10">10</a></sup>
+- Svelte & SvelteKit with Typescript<sup><a href="/blog/{slug}#link-7">6</a></sup>
+- Tailwind CSS<sup><a href="/blog/{slug}#link-8">7</a></sup>
+- Prisma<sup><a href="/blog/{slug}#link-9">8</a></sup>
+- Gitpod<sup><a href="/blog/{slug}#link-10">9</a></sup>
 
 **Course requirements**
 
@@ -81,12 +81,11 @@ Mike 👋
 **Links**
 
 - <sup>1</sup> <a id="link-1" href="https://www.youtube.com/watch?v=OUzaUJ3gEug" target="_blank">https://www.youtube.com/watch?v=OUzaUJ3gEug</a>
-- <sup>2</sup> <a id ="link-2" href="https://www.mikenikles.com" target="_blank">https://www.mikenikles.com</a>
+- <sup>2</sup> <a id ="link-2" href="https://www.mootoday.com" target="_blank">https://www.mootoday.com</a>
 - <sup>3</sup> <a id ="link-3" href="https://mikenikles.gumroad.com" target="_blank">https://mikenikles.gumroad.com</a>
 - <sup>4</sup> <a id ="link-4" href="https://github.com/mikenikles" target="_blank">https://github.com/mikenikles</a>
 - <sup>5</sup> <a id ="link-5" href="https://www.educative.io/courses/cloud-native-development" target="_blank">https://www.educative.io/courses/cloud-native-development</a>
-- <sup>6</sup> <a id ="link-6" href="https://www.linkedin.com/in/mikenikles" target="_blank">https://www.linkedin.com/in/mikenikles</a>
-- <sup>7</sup> <a id ="link-7" href="https://svelte.dev" target="_blank">https://svelte.dev</a> & <a href="https://kit.svelte.dev" target="_blank">https://kit.svelte.dev</a>
-- <sup>8</sup> <a id ="link-8" href="https://tailwindcss.com" target="_blank">https://tailwindcss.com</a>
-- <sup>9</sup> <a id ="link-9" href="https://www.prisma.io" target="_blank">https://www.prisma.io</a>
-- <sup>10</sup> <a id ="link-10" href="https://www.gitpod.io" target="_blank">https://www.gitpod.io</a>
+- <sup>6</sup> <a id ="link-7" href="https://svelte.dev" target="_blank">https://svelte.dev</a> & <a href="https://kit.svelte.dev" target="_blank">https://kit.svelte.dev</a>
+- <sup>7</sup> <a id ="link-8" href="https://tailwindcss.com" target="_blank">https://tailwindcss.com</a>
+- <sup>8</sup> <a id ="link-9" href="https://www.prisma.io" target="_blank">https://www.prisma.io</a>
+- <sup>9</sup> <a id ="link-10" href="https://www.gitpod.io" target="_blank">https://www.gitpod.io</a>

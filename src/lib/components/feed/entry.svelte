@@ -59,7 +59,7 @@
 			</div>
 			<div class="ml-2">
 				<p class="text-base font-medium leading-6 text-black dark:text-white">
-					Mike Nikles
+					Mike
 					<a href="/feed/{new Date(+entry.id).getTime()}">
 						<span
 							class="text-sm font-medium leading-5 text-gray-400 transition duration-150 ease-in-out"

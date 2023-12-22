@@ -12,7 +12,7 @@ featured: false
 **Key takeaways**
 
 - Streamline CLI installations with `curl https://your-domain.com | sh`
-- Try it out: `curl https://mikenikles.com | sh`
+- Try it out: `curl https://mootoday.com | sh`
 - Serve HTML for browsers, a shell script for `curl` requests
 
 **Source code**
@@ -34,7 +34,7 @@ curl https://your-domain.com | sh
 To see what this looks like in action, try the following command:
 
 ```sh
-curl https://mikenikles.com | sh
+curl https://mootoday.com | sh
 ```
 
 So... did you execute the above command 😰? You didn't, right? If you did, no harm was done since I'm a kind person and as of this writing, my domain hasn't been hacked.
@@ -46,7 +46,7 @@ Needless to say there could be major security implications by downloading and ru
 If you want to check what a script is about (which is what I do before I execute any `curl ... | sh` command):
 
 ```sh
-curl https://mikenikles.com | cat
+curl https://mootoday.com | cat
 ```
 
 Voilà, this prints the content of that shell script so you can verify its content before you run it.
@@ -61,7 +61,7 @@ In short, it's a string that tells the web server what kind of application sent 
 
 <UserAgent />
 
-When someone uses `curl https://mikenikles.com`, the `User-Agent` is something like this:
+When someone uses `curl https://mootoday.com`, the `User-Agent` is something like this:
 
 <code>curl/8.1.2</code>
 
@@ -80,8 +80,8 @@ const handleCurl = (async ({ event, resolve }) => {
 		event.url.pathname === "/" &&
 		event.request.headers.get("user-agent")?.startsWith("curl")
 	) {
-		const shellScript = import.meta.glob("../static/mikenikles.sh", { as: "raw" });
-		const shellScriptContent = await shellScript["../static/mikenikles.sh"]();
+		const shellScript = import.meta.glob("../static/mootoday.sh", { as: "raw" });
+		const shellScriptContent = await shellScript["../static/mootoday.sh"]();
 		return new Response(shellScriptContent, {
 			status: 200,
 		});

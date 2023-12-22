@@ -16,7 +16,7 @@ layout: blog
 
 Happy new year!
 
-I recently [relaunched](https://www.mikenikles.com/blog/migrating-from-medium-to-my-own-blog) my personal blog at www.mikenikles.com using Svelte ([learn why](https://www.mikenikles.com/blog/why-i-moved-from-react-to-svelte-and-why-others-will-follow)).
+I recently [relaunched](https://www.mootoday.com/blog/migrating-from-medium-to-my-own-blog) my personal blog at www.mootoday.com using Svelte ([learn why](https://www.mootoday.com/blog/why-i-moved-from-react-to-svelte-and-why-others-will-follow)).
 
 Initial feedback was to allow visitors to leave comments and have discussions. I took that feedback and found www.commento.io which looked lightweight enough and straitforward to implement.
 

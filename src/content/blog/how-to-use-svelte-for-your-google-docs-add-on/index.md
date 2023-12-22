@@ -34,7 +34,7 @@ While reading the documentation to familiarze myself with Apps Script and custom
 
 I wondered... "If it's HTML, CSS and JavaScript, there must be a way to use [Svelte](https://svelte.dev/)! 🤔"
 
-If you're curious why I prefer Svelte over React, please check out [why I moved from React to Svelte](https://www.mikenikles.com/blog/why-i-moved-from-react-to-svelte-and-why-others-will-follow).
+If you're curious why I prefer Svelte over React, please check out [why I moved from React to Svelte](https://www.mootoday.com/blog/why-i-moved-from-react-to-svelte-and-why-others-will-follow).
 
 The default Svelte template provides a `build` NPM script that compiles Svelte components into static HTML pages. Let's see how we can take advantage of that.
 

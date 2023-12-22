@@ -339,6 +339,6 @@ There is a lot more to this architecture, such as traffic splitting, rollbacks, 
 
 ### I'm writing a book, Cloud Native Web Development
 
-If you want to learn how to develop modern, cloud-native web applications end-to-end, please sign up for updates at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles) or follow me on Twitter [@mikenikles](https://twitter.com/mikenikles). I am currently writing a book with detailed instructions.
+If you want to learn how to develop modern, cloud-native web applications end-to-end, please sign up for updates at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles) or follow me on X [@mootoday](https://x.com/mootoday). I am currently writing a book with detailed instructions.
 
 👋

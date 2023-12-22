@@ -32,10 +32,6 @@ Whereas the second browser tab provides the Cypress UI (in this case, it's a def
 
 ![Cypress UI]({assetsBasePath}/2.jpg)
 
-### Gitpod Disount
-
-If you like the simplicity of a one-click development environment, you can use the coupon code `MIKENIKLES` to get 30% off for the first 3 months of your Gitpod subscription.
-
 ## What is required to make it work? ([Pull Request](https://github.com/mikenikles/cypress-on-gitpod/pull/1))
 
 The source code is available at [https://github.com/mikenikles/cypress-on-gitpod](https://github.com/mikenikles/cypress-on-gitpod).
@@ -111,6 +107,6 @@ A few lines of configuration and we're up and running with Cypress on Gitpod.io.
 
 ### I'm writing a book, Cloud Native Web Development
 
-If you want to learn how to develop modern, cloud-native web applications end-to-end, please sign up for updates at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles) or follow me on Twitter [@mikenikles](https://twitter.com/mikenikles). The book features content such as this blog post with more details and additional stories based on my two decades of experience in developing software.
+If you want to learn how to develop modern, cloud-native web applications end-to-end, please sign up for updates at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles) or follow me on X [@mootoday](https://x.com/mootoday). The book features content such as this blog post with more details and additional stories based on my two decades of experience in developing software.
 
 👋

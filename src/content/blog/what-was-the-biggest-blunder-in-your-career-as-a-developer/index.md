@@ -23,7 +23,7 @@ My snarky response was that Twitter doesn't provide enough characters to answer 
 
 I am going to expand on the question and include things I generally handled badly and would not let happen again.
 
-_4 years ago, I wrote a related blog post: [Ever wondered why your best employees leave?](https://www.mikenikles.com/blog/ever-wondered-why-your-best-employees-leave)_
+_4 years ago, I wrote a related blog post: [Ever wondered why your best employees leave?](https://www.mootoday.com/blog/ever-wondered-why-your-best-employees-leave)_
 
 ## Non-technical
 
