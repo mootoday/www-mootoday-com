@@ -40,7 +40,7 @@
 		"reading-time": "^1.5.0",
 		"rehype-picture": "^4.0.2",
 		"rss": "^1.2.2",
-		"sharp": "^0.32.3",
+		"sharp": "^0.32.6",
 		"svelte": "^4.1.0",
 		"svelte-check": "^3.4.6",
 		"svelte-markdown": "^0.2.3",
