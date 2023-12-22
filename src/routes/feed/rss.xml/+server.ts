@@ -11,8 +11,8 @@ const formatDateToRFC822 = (date: Date): string => {
 const createItem = (entry) => `<item>
 <title><![CDATA[${entry.content}]]></title>
 <description><![CDATA[${entry.content}]]></description>
-<link>https://www.mikenikles.com/feed/${entry.id}</link>
-<guid isPermaLink="true">https://www.mikenikles.com/feed/${entry.id}</guid>
+<link>https://www.mootoday.com/feed/${entry.id}</link>
+<guid isPermaLink="true">https://www.mootoday.com/feed/${entry.id}</guid>
 <pubDate>${formatDateToRFC822(new Date(+entry.id))}</pubDate>
 </item>`;
 
@@ -23,11 +23,11 @@ export const GET: RequestHandler = async ({ locals }) => {
 
 	const rss = `<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
 	<channel>
-			<title><![CDATA[www.mikenikles.com - Short-form content]]></title>
-			<description><![CDATA[www.mikenikles.com - Short-form content]]></description>
-			<link>https://www.mikenikles.com/feed</link>
+			<title><![CDATA[www.mootoday.com - Short-form content]]></title>
+			<description><![CDATA[www.mootoday.com - Short-form content]]></description>
+			<link>https://www.mootoday.com/feed</link>
 			<lastBuildDate>${formatDateToRFC822(new Date())}</lastBuildDate>
-			<atom:link href="https://www.mikenikles.com/feed/rss.xml" rel="self" type="application/rss+xml"/>
+			<atom:link href="https://www.mootoday.com/feed/rss.xml" rel="self" type="application/rss+xml"/>
 			${entries.map(createItem).join("")}
 	</channel>
 </rss>`;

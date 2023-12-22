@@ -42,7 +42,7 @@ The video below shows what we are going to develop:
   <!-- <VideoPlayer playbackId="{data.videoPlaybackIds[0]}" title="Show, copy, & hide email address" /> -->
 </div>
 
-You can find a live example on the [`/about`](https://www.mikenikles.com/about) page or interact with it below:
+You can find a live example on the [`/about`](https://www.mootoday.com/about) page or interact with it below:
 
 <EmailWithoutXStateStep4 />
 

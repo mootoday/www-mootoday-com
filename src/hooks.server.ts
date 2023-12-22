@@ -4,8 +4,8 @@ import { createD1 } from 'cf-workers-proxy';
 
 const handleCurl = (async ({ event, resolve }) => {
 	if (event.url.pathname === "/" && event.request.headers.get("user-agent")?.startsWith("curl")) {
-		const shellScript = import.meta.glob("../static/mikenikles.sh", { as: "raw" });
-		const shellScriptContent = await shellScript["../static/mikenikles.sh"]();
+		const shellScript = import.meta.glob("../static/mootoday.sh", { as: "raw" });
+		const shellScriptContent = await shellScript["../static/mootoday.sh"]();
 		return new Response(shellScriptContent, {
 			status: 200,
 		});

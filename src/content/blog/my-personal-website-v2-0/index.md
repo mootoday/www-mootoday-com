@@ -78,13 +78,13 @@ Each blog post will be released as a pull request. Anyone can access drafts and 
 gives me the flexibility to potentially allow for community contributions such as translations etc.
 
 In addition, I will make the website's analytics available publicly as part of a project later in 2020. Stay
-tuned for that by following me on Twitter [@mikenikles](https://www.twitter.com/mikenikles).
+tuned for that by following me on X [@mootoday](https://www.x.com/mootoday).
 
 ### Best practices
 
 As it has always been the case, my personal website is a place for me to experiment with new technologies.
 If I get asked "How would you ...?" in relation to web development, I want my answer to be "Have a look at
-www.mikenikles.com".
+www.mootoday.com".
 
 A perfect Lighthouse score, fully accessible, top SEO ratings, works without JavaScript, etc.
 
@@ -114,7 +114,6 @@ Diagram source: https://excalidraw.com/#json=5406435517136896,jY4N1Wo4Vgqn45E9ux
 All we've got is:
 
 - [Gitpod.io](https://gitpod.io/) for my cloud-based development environment.
-  - PS: Get 30% off your Gitpod subscription with my **coupon code** `mikenikles`.
 - [GitHub](https://github.com/mikenikles/www-mikenikles-com) for the blog posts, source code and workflow automation.
 - [Vercel](https://vercel.com/) for hosting.
 
@@ -176,7 +175,5 @@ is going to be on small enhancements and experiments as I see fit.
 On June 28, 2020, I (will release) released my book [Cloud Native Web Development](https://www.gum.co/cloud-native-web-development).
 It's two decades of web development experience packed into 200+ pages and 19 pull requests. It's a hands-on
 guidebook from zero to production and anything in between!
-
-**Use coupon code `mikenikles-com` for a 25% discount!**
 
 👋

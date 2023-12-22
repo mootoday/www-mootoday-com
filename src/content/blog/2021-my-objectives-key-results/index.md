@@ -15,9 +15,7 @@ layout: blog
 
 <!-- Photo by [🇻🇪 Jose G. Ortega Castro 🇲🇽](https://unsplash.com/@j0rt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/notebook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) -->
 
-**tl;dr**: _My personal 2021 OKRs are [publicly available](https://www.notion.so/mikenikles/OKRs-73a4619b8b8f487ca18c6c3d5ee7570f)._
-
-I briefly touched on Objectives & Key Results (OKRs) in my [2020 - Year in Review](https://www.mikenikles.com/blog/2020-year-in-review) blog post. Below, I will dive deeper into what I have planned for 2021.
+I briefly touched on Objectives & Key Results (OKRs) in my [2020 - Year in Review](https://www.mootoday.com/blog/2020-year-in-review) blog post. Below, I will dive deeper into what I have planned for 2021.
 
 ## What is OKR?
 
@@ -35,7 +33,7 @@ If you can assign a progress percentage to your key results, you likely have a g
 
 ## Why create personal OKRs?
 
-I used personal OKRs for the first time in 2020 and despite everything that happened in the world, I had one of the most productive and successful years in my life. Check my [2020 - Year in Review](https://www.mikenikles.com/blog/2020-year-in-review) blog post for full details.
+I used personal OKRs for the first time in 2020 and despite everything that happened in the world, I had one of the most productive and successful years in my life. Check my [2020 - Year in Review](https://www.mootoday.com/blog/2020-year-in-review) blog post for full details.
 
 Without goals and concrete, small steps towards these goals, living life is like driving a ship in the ocean without navigational assistance. You move (read: you get older), but you don't really know which way you go or whether you actually make progress.
 
@@ -44,8 +42,6 @@ Without goals and concrete, small steps towards these goals, living life is like
 Towards the end of each quarter, I will plan the key results for the upcoming quarter. Check back frequently at the link below to see what quarterly OKRs I define and whether I achieved the current quarter's OKRs. See me succeed or fail 😀.
 
 ## Why share my OKRs publicly?
-
-First of all, you can find my OKRs [available here](https://www.notion.so/mikenikles/OKRs-73a4619b8b8f487ca18c6c3d5ee7570f).
 
 I see three benefits:
 

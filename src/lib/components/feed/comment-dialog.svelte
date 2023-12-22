@@ -38,7 +38,7 @@
 						/>
 					</div>
 					<div class="ml-2">
-						<p class="text-base font-medium leading-6 text-black dark:text-white">Mike Nikles</p>
+						<p class="text-base font-medium leading-6 text-black dark:text-white">Mike</p>
 					</div>
 				</div>
 			</div>

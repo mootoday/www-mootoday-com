@@ -7,16 +7,16 @@ export const prerender = true;
 
 export const GET: RequestHandler = async () => {
 	const feed = new RSS({
-		title: 'www.mikenikles.com - RSS Feed',
-		site_url: 'https://www.mikenikles.com/',
-		feed_url: 'https://www.mikenikles.com/rss.xml'
+		title: 'www.mootoday.com - RSS Feed',
+		site_url: 'https://www.mootoday.com/',
+		feed_url: 'https://www.mootoday.com/rss.xml'
 	});
 
 	const posts = await getPosts();
 	posts.forEach((posts) => {
 		feed.item({
 			title: posts.title,
-			url: `https://www.mikenikles.com/blog/${posts.slug}`,
+			url: `https://www.mootoday.com/blog/${posts.slug}`,
 			date: posts.createdAt,
 			description: posts.summary
 		});

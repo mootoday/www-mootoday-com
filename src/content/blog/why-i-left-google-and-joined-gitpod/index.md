@@ -29,9 +29,9 @@ Without commute and no business travel in 2020, I had a very productive year to 
 - Book #2: [A Smart Guide for Your Career as a Software Engineer](https://gum.co/a-smart-guide-for-your-career-as-a-software-engineer)
 - SaaS #1: [your-analytics.org](https://www.your-analytics.org)
 - Gitpod article #1: [Cloud Based Development - from Dream to Reality](https://www.infoq.com/articles/cloud-based-development)
-- Gitpod article #2: [Why I use a cloud-based development environment and how you can too](https://www.mikenikles.com/blog/why-i-use-a-cloud-based-development-environment-and-how-you-can-too)
+- Gitpod article #2: [Why I use a cloud-based development environment and how you can too](https://www.mootoday.com/blog/why-i-use-a-cloud-based-development-environment-and-how-you-can-too)
 
-Book #1, both articles, the SaaS product, and [my personal website](https://www.mikenikles.com) all relate to Gitpod ([www.gitpod.io](https://www.gitpod.io)).
+Book #1, both articles, the SaaS product, and [my personal website](https://www.mootoday.com) all relate to Gitpod ([www.gitpod.io](https://www.gitpod.io)).
 
 These projects motivated me and were without a doubt a lot of fun. Most importantly, they aligned with my personal goals. I knew I needed to align my day job with something I cared about and believed in. I knew my time at Google was coming to an end.
 
@@ -94,6 +94,6 @@ I talked to many people about this decision and once I presented Gitpod, the fee
 
 I have no doubt the future of how we develop software is going to be based in the cloud. The amount of time we waste globally across all local development environments is simply not sustainable going forward. Developer experience is going to become a competitive advantage not only for hiring the best talent, but also to compete by improving productivity and reducing time to market.
 
-Please reach out to me via Twitter [@mikenikles](https://twitter.com/mikenikles) or find me in the Gitpod community at https://community.gitpod.io. I would love to dive deeper into Gitpod and work with you to enable the next generation of software development environment for your project & team.
+Please reach out to me via X [@mootoday](https://x.com/mootoday) or find me in the Gitpod community at https://community.gitpod.io. I would love to dive deeper into Gitpod and work with you to enable the next generation of software development environment for your project & team.
 
 👋

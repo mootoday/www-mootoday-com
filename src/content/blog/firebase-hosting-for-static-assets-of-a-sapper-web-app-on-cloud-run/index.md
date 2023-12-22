@@ -14,7 +14,7 @@ layout: blog
 
 Sapper on Cloud Run with static assets hosted on Firebase Hosting Architecture
 
-This is a follow-up post to [Sapper, Google Cloud Run, Continuous Deployment - A boilerplate template](https://www.mikenikles.com/blog/sapper-google-cloud-run-continuous-deployment-a-boilerplate-template).
+This is a follow-up post to [Sapper, Google Cloud Run, Continuous Deployment - A boilerplate template](https://www.mootoday.com/blog/sapper-google-cloud-run-continuous-deployment-a-boilerplate-template).
 
 In this second part, we are going to optimize how static assets are hosted and delivered to the browser. The final architecture for this post is going to be like this:
 
@@ -24,7 +24,7 @@ Sapper on Cloud Run with Firebase Hosting
 
 ## A note about the content of this blog post
 
-What you are about to read is an exact copy of a few chapters of my upcoming book called **Cloud Native Web Development**. If you are interested in this kind of content, please follow me on Twitter [@mikenikles](https://twitter.com/mikenikles) or at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles).
+What you are about to read is an exact copy of a few chapters of my upcoming book called **Cloud Native Web Development**. If you are interested in this kind of content, please follow me on X [@mootoday](https://x.com/mootoday) or at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles).
 
 ## What is the challenge here?
 
@@ -100,8 +100,6 @@ Before we can initialize the Firebase project, we need to authenticate. To simpl
 ```
 
 _If you use a cloud-based development environment such as Gitpod.io, you can use the `--no-localhost` argument, as in `firebase login --no-localhost`. Then follow the instructions on the screen when you run the `firebase:login` script._
-
-Should you want to try [www.gitpod.io](https://www.gitpod.io), you can get 30% off for the first three months with my coupon code MIKENIKLES.
 
 Let's log in. Run `npm run firebase:login` in your terminal and follow the instructions. Once completed, you are now successfully logged in to Firebase and we can initialize the project.
 
@@ -187,6 +185,6 @@ And here the WebPageTest results with Firebase Hosting (i.e. what we developed i
 
 ### I'm writing a book, Cloud Native Web Development
 
-If you want to learn how to develop modern, cloud-native web applications end-to-end, please sign up for updates at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles) or follow me on Twitter [@mikenikles](https://twitter.com/mikenikles). I am currently writing a book with detailed instructions.
+If you want to learn how to develop modern, cloud-native web applications end-to-end, please sign up for updates at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles) or follow me on X [@mootoday](https://x.com/mootoday). I am currently writing a book with detailed instructions.
 
 👋

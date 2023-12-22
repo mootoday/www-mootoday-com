@@ -37,7 +37,7 @@ A lightweight version of the timeline is used on mobile:
 ![Mobile intro]({assetsBasePath}/2.jpg)
 ![Mobile timeline]({assetsBasePath}/3.jpg)
 
-See [this Twitter thread](https://twitter.com/mikenikles/status/1334305377500925953) for progress updates and how the homepage came together.
+See [this X thread](https://x.com/mootoday/status/1334305377500925953) for progress updates and how the homepage came together.
 
 The reason to show a timeline is twofold and inspired by [Florin Pop's timeline on his website](https://www.florin-pop.com/timeline):
 

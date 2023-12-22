@@ -13,13 +13,13 @@
 </script>
 
 <svelte:head>
-	<title>Feed - mikenikles.com</title>
+	<title>Feed - mootoday.com</title>
 	<meta name="description" content="Short-form content" />
 	<link
 		rel="alternate"
 		type="application/rss+xml"
-		title="RSS Feed for www.mikenikles.com/feed"
-		href="https://www.mikenikles.com/feed/rss.xml"
+		title="RSS Feed for www.mootoday.com/feed"
+		href="https://www.mootoday.com/feed/rss.xml"
 	/>
 </svelte:head>
 

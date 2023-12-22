@@ -1,8 +1,8 @@
 #!/bin/sh
 
-echo '              ___                   ___  __  
- |\/| | |__/ |__  |\ | | |__/ |    |__  /__` 
- |  | | |  \ |___ | \| | |  \ |___ |___ .__/ 
+echo '       __   __  ___  __   __           
+ |\/| /  \ /  \  |  /  \ |  \  /\  \ / 
+ |  | \__/ \__/  |  \__/ |__/ /~~\  |  
                                              
 ';
 
@@ -17,8 +17,8 @@ typewriter_effect() {
     printf "\n"
 }
 
-echo "Web: https://www.mikenikles.com";
-echo "X  : @mikenikles";
+echo "Web: https://www.mootoday.com";
+echo "X  : @mootoday";
 echo "";
 typewriter_effect "PS: Don't run 'curl https://... | sh' for URLs you don't trust."
 echo "";

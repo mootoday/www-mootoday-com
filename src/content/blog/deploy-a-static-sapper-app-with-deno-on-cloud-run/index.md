@@ -33,7 +33,7 @@ First, add a `.dockerignore` file with the following content:
 !/static
 ```
 
-It ignores everything, except the files and directories listed. To learn more about that, please review [my previous blog post](https://www.mikenikles.com/blog/sapper-google-cloud-run-continuous-deployment-a-boilerplate-template).
+It ignores everything, except the files and directories listed. To learn more about that, please review [my previous blog post](https://www.mootoday.com/blog/sapper-google-cloud-run-continuous-deployment-a-boilerplate-template).
 
 Next, here's the `Dockerfile` that does the following:
 

@@ -88,8 +88,6 @@ That's [supported](https://www.gitpod.io/docs/vscode-extensions/) in beta. Once 
 
 ## Oh wait... it costs money... monthly?!
 
-> You can use coupon code MIKENIKLES to get 30% off for the first 3 months.
-
 The overall feedback from my post reviewers was about Gitpod's monthly subscription fee, so it's worth I address that before I publish.
 
 To start, there's a free (as in, the same cost as your local development IDE) version for open source projects that gives you 50 hours / month.

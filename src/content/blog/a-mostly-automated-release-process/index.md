@@ -33,7 +33,7 @@ Woah… That’s one long-a\*\* sentence, it reminds me of German sentences I wr
 A slightly less verbose way of putting it:
 
 > “How to get code from my laptop to production.”  
-> Source: [Me](https://twitter.com/mikenikles)
+> Source: [Me](https://x.com/mootoday)
 
 In the end, it’s all about code and along the journey we want to do certain things to or with the code. Such as:
 
