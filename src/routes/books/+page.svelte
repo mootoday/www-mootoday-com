@@ -4,15 +4,15 @@
 	const books = [
 		{
 			logo: '',
-			href: 'https://mikenikles.gumroad.com/l/cloud-native-web-development',
-			hrefDisplayText: 'mikenikles.gumroad.com',
+			href: 'https://x.com/mootoday',
+			hrefDisplayText: 'Contact me for access',
 			name: 'Cloud Native Web Development',
 			description: 'From zero to production: A hands-on guidebook.'
 		},
 		{
 			logo: '',
-			href: 'https://mikenikles.gumroad.com/l/a-smart-guide-for-your-career-as-a-software-engineer?layout=profile',
-			hrefDisplayText: 'mikenikles.gumroad.com',
+			href: 'https://x.com/mootoday',
+			hrefDisplayText: 'Contact me for access',
 			name: 'A Smart Guide for Your Career as a Software Engineer',
 			description:
 				'Everything I learned in my 20 years as a software engineer - including all mistakes.'
