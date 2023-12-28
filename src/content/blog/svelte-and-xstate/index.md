@@ -33,7 +33,7 @@ videoPlaybackIds: ['BO6wueby01o169Ih003gA53BuufuW4n6znZV8hC8GN1y8']
 
 ## What are we developing?
 
-In this article, I am going to explain how you can use XState ([xstate.js.org](https://xstate.js.org)) in your Svelte(Kit) ([kit.svelte.dev](https://kit.svelte.dev)) application. I initially shared a [Twitter thread](https://twitter.com/mikenikles/status/1603561280479952897) about that and when it reached 10k+ impressions and the video was watched 4k+ times, I decided to elaborate in more detail on how it's done.
+In this article, I am going to explain how you can use XState ([xstate.js.org](https://xstate.js.org)) in your Svelte(Kit) ([kit.svelte.dev](https://kit.svelte.dev)) application. I initially shared a [Twitter thread](https://twitter.com/mootoday/status/1603561280479952897) about that and when it reached 10k+ impressions and the video was watched 4k+ times, I decided to elaborate in more detail on how it's done.
 
 The video below shows what we are going to develop:
 

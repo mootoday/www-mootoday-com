@@ -337,7 +337,3 @@ Thanks to Ilona for posting the initial blog post on this topic!
 As we saw in my addition, with a simple backend service, it is possible to load a link's preview dynamically. The benefit of that is an always up-to-date preview even when a website we link to changes their title, description or main image.
 
 If you like this kind of content, make sure to follow me on X [@mootoday](https://x.com/mootoday) to get notified of new blog posts.
-
-### I'm writing a book, Cloud Native Web Development
-
-If you want to learn how to develop modern, cloud-native web applications end-to-end, please sign up for updates at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles). I am currently writing a book with detailed instructions.

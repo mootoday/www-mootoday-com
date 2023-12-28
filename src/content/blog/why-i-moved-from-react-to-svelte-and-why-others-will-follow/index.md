@@ -226,7 +226,7 @@ Alright, this one is a quite elegant. Let's start with the code ([interactive de
 ```svelte
 <script>
 	let githubRepoInfoPromise;
-	let repoName = 'mikenikles/ghost-v3-google-cloud-storage';
+	let repoName = 'mootoday/ghost-v3-google-cloud-storage';
 
 	const loadRepoInfo = async () => {
 		const response = await fetch(`https://api.github.com/repos/${repoName}`);

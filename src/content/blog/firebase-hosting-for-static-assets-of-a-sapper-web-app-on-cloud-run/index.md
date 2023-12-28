@@ -22,10 +22,6 @@ In this second part, we are going to optimize how static assets are hosted and d
 
 Sapper on Cloud Run with Firebase Hosting
 
-## A note about the content of this blog post
-
-What you are about to read is an exact copy of a few chapters of my upcoming book called **Cloud Native Web Development**. If you are interested in this kind of content, please follow me on X [@mootoday](https://x.com/mootoday) or at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles).
-
 ## What is the challenge here?
 
 In the previous post, the Sapper application's `static` directory is hosted within the Docker image. When a user visits the web application and requests the `/favicon.ico` file for example, that request goes to Cloud Run and the server responds with the icon.  
@@ -182,9 +178,5 @@ To compare, here are the WebPageTest results without Firebase Hosting (i.e. what
 And here the WebPageTest results with Firebase Hosting (i.e. what we developed in this blog post):
 
 ![WebPageTest results with Firebase Hosting]({assetsBasePath}/3.jpg)
-
-### I'm writing a book, Cloud Native Web Development
-
-If you want to learn how to develop modern, cloud-native web applications end-to-end, please sign up for updates at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles) or follow me on X [@mootoday](https://x.com/mootoday). I am currently writing a book with detailed instructions.
 
 👋

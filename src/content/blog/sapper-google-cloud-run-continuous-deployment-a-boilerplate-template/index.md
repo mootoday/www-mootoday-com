@@ -291,7 +291,7 @@ gcloud services enable cloudbuild.googleapis.com
 # Create a build trigger
 gcloud beta builds triggers create github \
 --repo-name=sapper-on-cloud-run \
---repo-owner=mikenikles \
+--repo-owner=mootoday \
 --branch-pattern="^master$" \
 --build-config=cloudbuild.yaml
 ```
@@ -324,7 +324,7 @@ Every time a new revision of the web application is deployed to Cloud Run, a new
 ```bash
 gcloud beta run domain-mappings create \
   --service sapper-on-cloud-run \
-  --domain sapper-on-cloud-run.mikenikles.com \
+  --domain sapper-on-cloud-run.mootoday.com \
   --region us-central1 \
   --platform managed
 ```
@@ -336,9 +336,5 @@ gcloud beta run domain-mappings create \
 Once all files are committed and pushed to the `master` branch, Cloud Build takes the latest code, builds a Docker image, pushes it to the Artifact Registry and instructs Cloud Run to deploy a new revision with the latest image.
 
 There is a lot more to this architecture, such as traffic splitting, rollbacks, etc we may look at in a later post.
-
-### I'm writing a book, Cloud Native Web Development
-
-If you want to learn how to develop modern, cloud-native web applications end-to-end, please sign up for updates at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles) or follow me on X [@mootoday](https://x.com/mootoday). I am currently writing a book with detailed instructions.
 
 👋

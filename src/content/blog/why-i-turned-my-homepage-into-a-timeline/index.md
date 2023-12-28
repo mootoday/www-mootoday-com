@@ -17,7 +17,7 @@ layout: blog
 
 ## What has happened so far?
 
-On December 21, 2019 I migrated my blog from Medium to my own infrastructure ([this blog post has more details](https://dev.to/mikenikles/migrating-from-medium-to-my-own-blog-1nj8)). The main reason was to own my content rather than leaving it on servers owned by a company. It also gives me more flexibility should the need arise to provide my content in other formats, e.g. RSS feed.
+On December 21, 2019 I migrated my blog from Medium to my own infrastructure. The main reason was to own my content rather than leaving it on servers owned by a company. It also gives me more flexibility should the need arise to provide my content in other formats, e.g. RSS feed.
 In summer of 2020, I launched [v2 of my website](/blog/my-personal-website-v2-0) in preparation for the publication of my first book, [Cloud Native Web Development](/cloud-native-web-development). The main goal of v2 was to significantly simplify the architecture.
 
 As of v2, the homepage displayed a list of blog post previews.
@@ -46,7 +46,7 @@ The reason to show a timeline is twofold and inspired by [Florin Pop's timeline 
 
 ### Simplicity
 
-A bit over 1,000 visitors per month read a single blog post where I explain why I moved from React to Svelte, according to [my public website analytics](https://your-analytics.org/mikenikles.com?preset=30days).
+A bit over 1,000 visitors per month read a single blog post where I explain why I moved from React to Svelte.
 The second most visited page is the homepage with roughly 800 visitors per month. While the previous version was colorful and had nice images and blog post summaries, I received feedback from people saying they look at the titles and if anything sounds interesting, they click and read the blog post.
 
 The new timeline view reflects that and only displays a blog post's title, with a call to action to read the post.

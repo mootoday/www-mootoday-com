@@ -16,7 +16,7 @@ A screenshot of a Svelte app rendered in a Google Doc's add-on sidebar
 
 ## Introduction
 
-I recently found myself in a situation where I needed a Google Docs add-on to help with authoring my upcoming book, **[Cloud Native Web Development](https://gumroad.com/mikenikles)**.
+I recently found myself in a situation where I needed a Google Docs add-on to help with authoring my upcoming book.
 
 If you're not familiar with these add-ons, they are "customized extensions of G Suite productivity applications such as Gmail, Google Sheets and Google Docs." You can learn more by reading [the official documentation](https://developers.google.com/gsuite/add-ons/overview).
 
@@ -237,4 +237,4 @@ This opens the Svelte sidebar.
 
 This is out of scope for this blog post, but the template contains an example of how a button in the sidebar can insert text into the document. Please refer to [pull request #3](https://github.com/mootoday/google-docs-addon-svelte-template/pull/3/files) for details.
 
-Please let me know what you think and if that's helpful. You can reach me on Twitter [@mikenikles](https://twitter.com/mikenikles).
+Please let me know what you think and if that's helpful. You can reach me on X [@mootoday](https://x.com/mootoday).
