@@ -71,7 +71,7 @@ Before starting the project, I defined the following goals:
 
 ### Open
 
-I want all aspects of my website to be open. The [source code](https://github.com/mikenikles/www-mikenikles-com)
+I want all aspects of my website to be open. The [source code](https://github.com/mootoday/www-mootoday-com)
 including project management, pull requests, issues, etc.
 
 Each blog post will be released as a pull request. Anyone can access drafts and provide feedback. This also
@@ -114,7 +114,7 @@ Diagram source: https://excalidraw.com/#json=5406435517136896,jY4N1Wo4Vgqn45E9ux
 All we've got is:
 
 - [Gitpod.io](https://gitpod.io/) for my cloud-based development environment.
-- [GitHub](https://github.com/mikenikles/www-mikenikles-com) for the blog posts, source code and workflow automation.
+- [GitHub](https://github.com/mootoday/www-mootoday-com) for the blog posts, source code and workflow automation.
 - [Vercel](https://vercel.com/) for hosting.
 
 The publication process now looks like this:
@@ -156,7 +156,7 @@ I'm looking forward to taking advantage of that as I get back into more frequent
 
 ### Draft preview URLs
 
-Have a look at the [recently closed blog post pull requests](https://github.com/mikenikles/www-mikenikles-com/pulls?q=is%3Apr+is%3Aclosed+label%3A%22blog+post%22),
+Have a look at the [recently closed blog post pull requests](https://github.com/mootoday/www-mootoday-com/pulls?q=is%3Apr+is%3Aclosed+label%3A%22blog+post%22),
 open one and find the preview URLs to see how the post looked when it was in draft.
 
 With the blog post's content available in the pull request, reviewers can comment on individual lines
@@ -167,7 +167,7 @@ copy & paste from shared Google Docs.
 
 ### Personal website & blog
 
-I track the v2+ project [on GitHub](https://github.com/mikenikles/www-mikenikles-com/projects/2). The focus
+I track the v2+ project [on GitHub](https://github.com/mootoday/www-mootoday-com/projects/2). The focus
 is going to be on small enhancements and experiments as I see fit.
 
 ### Book: Cloud Native Web Development

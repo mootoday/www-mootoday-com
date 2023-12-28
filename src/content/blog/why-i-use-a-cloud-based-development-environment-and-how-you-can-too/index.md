@@ -107,7 +107,7 @@ It's important to be fully transparent and list two gotchas that come to mind.
 
 ## Summary
 
-I most recently developed [https://github.com/mikenikles/markua-docs-addon](https://github.com/mikenikles/markua-docs-addon) entirely in Gitpod. The efficiency and convenience of this experience led me to write this post and to share my experience with a wider audience.
+I most recently developed [https://github.com/mootoday/markua-docs-addon](https://github.com/mootoday/markua-docs-addon) entirely in Gitpod. The efficiency and convenience of this experience led me to write this post and to share my experience with a wider audience.
 
 There is a lot more to how I work, reduce friction and increase productivity especially when it comes to web development. If you're interested, please head over to [the book's detail page](/cloud-native-web-development) to learn more and purchase **Cloud Native Web Development**.
 

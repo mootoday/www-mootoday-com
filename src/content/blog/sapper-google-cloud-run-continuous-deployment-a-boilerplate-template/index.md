@@ -18,7 +18,7 @@ For a while now I have used [Sapper](https://sapper.svelte.dev/) / [Svelte](http
 
 ## Source code
 
-A boilerplate repository is available at [https://github.com/mikenikles/sapper-on-cloud-run](https://github.com/mikenikles/sapper-on-cloud-run). It contains the default Sapper template, scripts to set up Google Cloud Platform, a `Dockerfile` and a `cloudbuild.yaml` file you can adjust for your needs.
+A boilerplate repository is available at [https://github.com/mootoday/sapper-on-cloud-run](https://github.com/mootoday/sapper-on-cloud-run). It contains the default Sapper template, scripts to set up Google Cloud Platform, a `Dockerfile` and a `cloudbuild.yaml` file you can adjust for your needs.
 
 To get started, click the **Use this template** button:
 
@@ -109,7 +109,7 @@ Continuous Deployment of a Sapper web application to Cloud Run
 
 The diagram shows two aspects; one being the end user on the left who visits a Sapper SSR web application. The other being a developer on the right who makes a code change, opens a pull request and gets that merged into the `master` branch.
 
-### Containerize the Sapper application ([Pull Request](https://github.com/mikenikles/sapper-on-cloud-run/pull/2))
+### Containerize the Sapper application ([Pull Request](https://github.com/mootoday/sapper-on-cloud-run/pull/2))
 
 The first step is to create a `Dockerfile`. The aim is to keep the final size of the Docker image as small and as lean as possible.
 
@@ -201,7 +201,7 @@ As the project grows and more team members join, someone at some point inevitabl
 
 With the the `.dockerignore` file in place, the final docker image size is 46.9MB. A small difference, but it will forever include only exactly what the Sapper application needs and never accidentally any unnecessary files or directories.
 
-### Deploy to Cloud Run ([Pull Request](https://github.com/mikenikles/sapper-on-cloud-run/pull/4))
+### Deploy to Cloud Run ([Pull Request](https://github.com/mootoday/sapper-on-cloud-run/pull/4))
 
 Alright, we have a `Dockerfile` in place, which is a key milestone in getting the Sapper web application deployed to Cloud Run.
 
@@ -291,7 +291,7 @@ gcloud services enable cloudbuild.googleapis.com
 # Create a build trigger
 gcloud beta builds triggers create github \
 --repo-name=sapper-on-cloud-run \
---repo-owner=mikenikles \
+--repo-owner=mootoday \
 --branch-pattern="^master$" \
 --build-config=cloudbuild.yaml
 ```
@@ -324,7 +324,7 @@ Every time a new revision of the web application is deployed to Cloud Run, a new
 ```bash
 gcloud beta run domain-mappings create \
   --service sapper-on-cloud-run \
-  --domain sapper-on-cloud-run.mikenikles.com \
+  --domain sapper-on-cloud-run.mootoday.com \
   --region us-central1 \
   --platform managed
 ```
@@ -336,9 +336,5 @@ gcloud beta run domain-mappings create \
 Once all files are committed and pushed to the `master` branch, Cloud Build takes the latest code, builds a Docker image, pushes it to the Artifact Registry and instructs Cloud Run to deploy a new revision with the latest image.
 
 There is a lot more to this architecture, such as traffic splitting, rollbacks, etc we may look at in a later post.
-
-### I'm writing a book, Cloud Native Web Development
-
-If you want to learn how to develop modern, cloud-native web applications end-to-end, please sign up for updates at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles) or follow me on X [@mootoday](https://x.com/mootoday). I am currently writing a book with detailed instructions.
 
 👋

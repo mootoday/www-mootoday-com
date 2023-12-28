@@ -44,7 +44,7 @@ With all code in place as described in her post, the solution can be used as fol
 
 This was my first thought when I read the blog post and looked at the source code. What if we fetched the link's `href` source in the `onmouseover` handler and dynamically set the title, text and image?
 
-A sample Sapper application is available on my Github profile at [https://github.com/mikenikles/sapper-link-preview](https://github.com/mikenikles/sapper-link-preview).
+A sample Sapper application is available on my Github profile at [https://github.com/mootoday/sapper-link-preview](https://github.com/mootoday/sapper-link-preview).
 
 Shouldn't be too hard, eh? Use the browser's built-in `fetch` in the `onmouseover` handler, parse the returned HTML and look for the page's `<title>`, some sort of meta tag for the text and image.
 
@@ -337,7 +337,3 @@ Thanks to Ilona for posting the initial blog post on this topic!
 As we saw in my addition, with a simple backend service, it is possible to load a link's preview dynamically. The benefit of that is an always up-to-date preview even when a website we link to changes their title, description or main image.
 
 If you like this kind of content, make sure to follow me on X [@mootoday](https://x.com/mootoday) to get notified of new blog posts.
-
-### I'm writing a book, Cloud Native Web Development
-
-If you want to learn how to develop modern, cloud-native web applications end-to-end, please sign up for updates at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles). I am currently writing a book with detailed instructions.

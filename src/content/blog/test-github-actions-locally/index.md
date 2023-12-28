@@ -18,7 +18,7 @@ featured: false
 
 **Project source code**
 
-You can find the source code for this project in the [`mikenikles/devbox-github-actions-locally`](https://github.com/mikenikles/devbox-github-actions-locally) GitHub repository. Please refer to [PR #1](https://github.com/mikenikles/devbox-github-actions-locally/pull/1) to see how you can configure [Devbox](https://github.com/jetpack-io/devbox) to automate your development environment setup.
+You can find the source code for this project in the [`mootoday/devbox-github-actions-locally`](https://github.com/mootoday/devbox-github-actions-locally) GitHub repository. Please refer to [PR #1](https://github.com/mootoday/devbox-github-actions-locally/pull/1) to see how you can configure [Devbox](https://github.com/jetpack-io/devbox) to automate your development environment setup.
 
 ## What's the challenge with GitHub Actions?
 

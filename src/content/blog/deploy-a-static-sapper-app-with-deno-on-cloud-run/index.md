@@ -14,10 +14,6 @@ layout: blog
 
 Yesterday, Deno 1.0 was released. If Deno does not sound familiar, don't worry this is fine at this point. Please head over to [https://deno.land/v1](https://deno.land/v1) and once you've read that, come back here to learn how we can use this to deploy a static Sapper / Svelte application to Cloud Run.
 
-## Source code
-
-The source code is available on my GitHub profile at [https://github.com/mikenikles/deno-sapper-cloud-run](https://github.com/mikenikles/deno-sapper-cloud-run). If you only care about the changes I made to the default Sapper template, please look at [PR #1](https://github.com/mikenikles/deno-sapper-cloud-run/pull/1).
-
 ## Code review
 
 Let's review what changes are necessary and how you can apply it to your project, if you use Sapper to deploy a static web application. **It does not work if you use Sapper for server-side rendering**.

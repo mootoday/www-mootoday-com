@@ -25,7 +25,7 @@ What I did:
 1.  Sign up at www.commento.io
 2.  Create a Svelte component that displays comments
 
-The component is as simple as this ([corresponding pull request](https://github.com/mikenikles/www-mikenikles-com/pull/4/files)):
+The component is as simple as this:
 
 ```svelte
 <svelte:head>

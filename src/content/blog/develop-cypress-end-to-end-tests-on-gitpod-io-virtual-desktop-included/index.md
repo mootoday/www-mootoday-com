@@ -18,7 +18,7 @@ layout: blog
 
 Before we go into the details, you can experience Cypress end-to-end tests running in a virtual environment in your browser with the following link:
 
-> [https://gitpod.io/#https://github.com/mikenikles/cypress-on-gitpod](https://gitpod.io/#https://github.com/mikenikles/cypress-on-gitpod)
+> [https://gitpod.io/#https://github.com/mootoday/cypress-on-gitpod](https://gitpod.io/#https://github.com/mootoday/cypress-on-gitpod)
 
 Click the "**Login with GitHub & Launch Workspace**" button, follow the instructions and you will be up and running in a moment.
 
@@ -32,9 +32,9 @@ Whereas the second browser tab provides the Cypress UI (in this case, it's a def
 
 ![Cypress UI]({assetsBasePath}/2.jpg)
 
-## What is required to make it work? ([Pull Request](https://github.com/mikenikles/cypress-on-gitpod/pull/1))
+## What is required to make it work? ([Pull Request](https://github.com/mootoday/cypress-on-gitpod/pull/1))
 
-The source code is available at [https://github.com/mikenikles/cypress-on-gitpod](https://github.com/mikenikles/cypress-on-gitpod).
+The source code is available at [https://github.com/mootoday/cypress-on-gitpod](https://github.com/mootoday/cypress-on-gitpod).
 
 The first thing is to add `cypress` as a dev dependency with `npm i -D cypress`. This ensures it gets installed like any other dependency when `npm install` runs.
 
@@ -103,10 +103,6 @@ We use a base image [provided by Gitpod](https://github.com/gitpod-io/workspace-
 
 ## Conclusion
 
-A few lines of configuration and we're up and running with Cypress on Gitpod.io. Make sure you have a look at the [pull request](https://github.com/mikenikles/cypress-on-gitpod/pull/1) where I provided a few annotations in the code.
-
-### I'm writing a book, Cloud Native Web Development
-
-If you want to learn how to develop modern, cloud-native web applications end-to-end, please sign up for updates at [https://gumroad.com/mikenikles](https://gumroad.com/mikenikles) or follow me on X [@mootoday](https://x.com/mootoday). The book features content such as this blog post with more details and additional stories based on my two decades of experience in developing software.
+A few lines of configuration and we're up and running with Cypress on Gitpod.io. Make sure you have a look at the [pull request](https://github.com/mootoday/cypress-on-gitpod/pull/1) where I provided a few annotations in the code.
 
 👋

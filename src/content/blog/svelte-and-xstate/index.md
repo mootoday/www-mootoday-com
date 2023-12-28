@@ -33,7 +33,7 @@ videoPlaybackIds: ['BO6wueby01o169Ih003gA53BuufuW4n6znZV8hC8GN1y8']
 
 ## What are we developing?
 
-In this article, I am going to explain how you can use XState ([xstate.js.org](https://xstate.js.org)) in your Svelte(Kit) ([kit.svelte.dev](https://kit.svelte.dev)) application. I initially shared a [Twitter thread](https://twitter.com/mikenikles/status/1603561280479952897) about that and when it reached 10k+ impressions and the video was watched 4k+ times, I decided to elaborate in more detail on how it's done.
+In this article, I am going to explain how you can use XState ([xstate.js.org](https://xstate.js.org)) in your Svelte(Kit) ([kit.svelte.dev](https://kit.svelte.dev)) application. I initially shared a [Twitter thread](https://twitter.com/mootoday/status/1603561280479952897) about that and when it reached 10k+ impressions and the video was watched 4k+ times, I decided to elaborate in more detail on how it's done.
 
 The video below shows what we are going to develop:
 
@@ -66,7 +66,7 @@ Let's look at the email component without and with XState.
 
 ## HTML & Styling
 
-First, we develop the email component's structure and add some Tailwind CSS classes for styling. **Note**: The `<Icon />` component is omitted from this article, but you can find its implementation [on GitHub](https://github.com/mikenikles/www-mikenikles-com/blob/master/src/lib/components/icons/index.svelte).
+First, we develop the email component's structure and add some Tailwind CSS classes for styling. **Note**: The `<Icon />` component is omitted from this article, but you can find its implementation [on GitHub](https://github.com/mootoday/www-mootoday-com/blob/master/src/lib/components/icons/index.svelte).
 
 ```svelte
 <script lang="ts">
@@ -250,7 +250,7 @@ Notice after you click the <Icon name="documentDuplicate" class="inline w-6 h-6"
 
 For simplicity, we ignore errors that may occur when we copying the email address to the clipboard. You could extend this code with additional error handling to display an error to your website visitor.
 
-You can find the source code for the individual steps above [on GitHub](https://github.com/mikenikles/www-mikenikles-com/tree/master/src/content/blog/svelte-and-xstate/without-xstate).
+You can find the source code for the individual steps above [on GitHub](https://github.com/mootoday/www-mootoday-com/tree/master/src/content/blog/svelte-and-xstate/without-xstate).
 
 ### Conclusion – Without XState
 
@@ -547,7 +547,7 @@ We introduced a new `copying` state which leverages XState's built-in support fo
 
 Notice after you click the <Icon name="documentDuplicate" class="inline w-6 h-6" /> icon above, your clipboard contains `mike@abc.com`.
 
-You can find the source code for the individual steps above [on GitHub](https://github.com/mikenikles/www-mikenikles-com/tree/master/src/content/blog/svelte-and-xstate/with-xstate).
+You can find the source code for the individual steps above [on GitHub](https://github.com/mootoday/www-mootoday-com/tree/master/src/content/blog/svelte-and-xstate/with-xstate).
 
 ### Conclusion – With XState
 
