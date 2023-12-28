@@ -40,15 +40,15 @@ The default Svelte template provides a `build` NPM script that compiles Svelte c
 
 ## A Google Docs add-on Svelte template
 
-First things first: The template repository is available at [https://github.com/mikenikles/google-docs-addon-svelte-template](https://github.com/mikenikles/google-docs-addon-svelte-template). You can simply clone this repository, follow the instructions in the `README` and you're up and running in no time. To learn about the steps I took, have a look at the [closed pull requests](https://github.com/mikenikles/google-docs-addon-svelte-template/pulls?q=is%3Apr+is%3Aclosed) or keep reading.
+First things first: The template repository is available at [https://github.com/mootoday/google-docs-addon-svelte-template](https://github.com/mootoday/google-docs-addon-svelte-template). You can simply clone this repository, follow the instructions in the `README` and you're up and running in no time. To learn about the steps I took, have a look at the [closed pull requests](https://github.com/mootoday/google-docs-addon-svelte-template/pulls?q=is%3Apr+is%3Aclosed) or keep reading.
 
-Secondly, remember at the beginning I said I needed a Google Docs add-on? If you're curious to see it all in action in a bigger project, please check out [https://github.com/mikenikles/markua-docs-addon](https://github.com/mikenikles/markua-docs-addon).
+Secondly, remember at the beginning I said I needed a Google Docs add-on? If you're curious to see it all in action in a bigger project, please check out [https://github.com/mootoday/markua-docs-addon](https://github.com/mootoday/markua-docs-addon).
 
 ### Initialize all tooling (npm, clasp)
 
 Note: I recommend you clone my template above to get started and save yourself the following steps! This is mainly for the curious who want to understand what's going on.
 
-[Files changed in pull request #1](https://github.com/mikenikles/google-docs-addon-svelte-template/pull/1/files)
+[Files changed in pull request #1](https://github.com/mootoday/google-docs-addon-svelte-template/pull/1/files)
 
 1.  To start, let's create an empty folder and run `npm init` - use values of your choice to complete the wizard.
 2.  Next, we need two dev dependencies:
@@ -110,7 +110,7 @@ The two `oauthScopes` you see ask for permissions when users install the add-on.
 
 ### Add the Svelte sidebar
 
-[Files changed in pull request #2](https://github.com/mikenikles/google-docs-addon-svelte-template/pull/2/files)
+[Files changed in pull request #2](https://github.com/mootoday/google-docs-addon-svelte-template/pull/2/files)
 
 This is the fun part where we add a Svelte application, a few NPM scripts to build the application and a workflow to use the compiled Svelte app in the add-on custom sidebar. Let's go!
 
@@ -235,6 +235,6 @@ This opens the Svelte sidebar.
 
 ## Optional: Interact with the Google Doc content
 
-This is out of scope for this blog post, but the template contains an example of how a button in the sidebar can insert text into the document. Please refer to [pull request #3](https://github.com/mikenikles/google-docs-addon-svelte-template/pull/3/files) for details.
+This is out of scope for this blog post, but the template contains an example of how a button in the sidebar can insert text into the document. Please refer to [pull request #3](https://github.com/mootoday/google-docs-addon-svelte-template/pull/3/files) for details.
 
 Please let me know what you think and if that's helpful. You can reach me on Twitter [@mikenikles](https://twitter.com/mikenikles).

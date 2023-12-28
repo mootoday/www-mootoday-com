@@ -63,7 +63,7 @@
 							><a
 								class="group -m-1 p-1"
 								aria-label="Follow on GitHub"
-								href="https://github.com/mikenikles"
+								href="https://github.com/mootoday"
 								><svg
 									viewBox="0 0 24 24"
 									aria-hidden="true"

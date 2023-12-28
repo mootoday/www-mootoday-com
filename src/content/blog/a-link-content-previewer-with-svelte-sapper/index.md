@@ -44,7 +44,7 @@ With all code in place as described in her post, the solution can be used as fol
 
 This was my first thought when I read the blog post and looked at the source code. What if we fetched the link's `href` source in the `onmouseover` handler and dynamically set the title, text and image?
 
-A sample Sapper application is available on my Github profile at [https://github.com/mikenikles/sapper-link-preview](https://github.com/mikenikles/sapper-link-preview).
+A sample Sapper application is available on my Github profile at [https://github.com/mootoday/sapper-link-preview](https://github.com/mootoday/sapper-link-preview).
 
 Shouldn't be too hard, eh? Use the browser's built-in `fetch` in the `onmouseover` handler, parse the returned HTML and look for the page's `<title>`, some sort of meta tag for the text and image.
 

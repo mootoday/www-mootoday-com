@@ -62,4 +62,4 @@ The filter & search features help narrow down what is displayed in the timeline.
 
 ## Technical implementation
 
-The majority of the work happened in [PR 252](https://github.com/mikenikles/www-mikenikles-com/pull/252). There are about 10 lines of custom CSS code, the rest is styled with [Tailwind CSS](https://tailwindcss.com) and of course still based on [Svelte](https://svelte.dev) & [Sapper](https://sapper.svelte.dev).
+The majority of the work happened in [PR 252](https://github.com/mootoday/www-mootoday-com/pull/252). There are about 10 lines of custom CSS code, the rest is styled with [Tailwind CSS](https://tailwindcss.com) and of course still based on [Svelte](https://svelte.dev) & [Sapper](https://sapper.svelte.dev).

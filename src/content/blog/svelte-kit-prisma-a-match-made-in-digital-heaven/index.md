@@ -15,7 +15,7 @@ featured: true
 - Most production applications need to persist & retrieve data. Prisma is a pretty genius way to achieve that.
 - With SvelteKit, you get client & server-side data fetching - the best of both worlds.
 - This all even works if JavaScript is disabled in the browser.
-- Template GitHub repo: https://github.com/mikenikles/sveltekit-prisma
+- Template GitHub repo: https://github.com/mootoday/sveltekit-prisma
 
 > 📣&nbsp; **SvelteKit & Prisma video course**
 >
@@ -255,7 +255,7 @@ JavaScript's purpose is to enhance the web experience, not break everything if J
 
 ## Conclusion
 
-With a few modifications to a default SvelteKit demo app, we managed to configure Prisma to persist todo items. There is of course a lot more you can do with Prisma, and with SvelteKit for that matter. The source code at https://github.com/mikenikles/sveltekit-prisma should get you a long way towards your own web app.
+With a few modifications to a default SvelteKit demo app, we managed to configure Prisma to persist todo items. There is of course a lot more you can do with Prisma, and with SvelteKit for that matter. The source code at https://github.com/mootoday/sveltekit-prisma should get you a long way towards your own web app.
 
 If you found this interesting, you may also like (wow... is this an e-commerce website 😂?!) my current project called [Webstone](https://github.com/webstonehq/webstone). Webstone is a full-stack web application boilerplate with a CLI to automate tedious tasks like adding new pages, updating the database (of course it uses Prisma 😉). It's in early development, but do hit that star button on GitHub which helps me get motivated to spend more time on the project 🙏.
 

@@ -85,7 +85,176 @@ With the above in mind, the following diagram which I briefly mentioned in my fi
 
 As you can see, we use [CircleCI](https://circleci.com/). With CircleCI 2.0 and [Workflows](https://circleci.com/docs/2.0/workflows/), the above translates to the following `[.circleci/config.yml](https://circleci.com/docs/2.0/configuration-reference/)` file:
 
-[https://gist.github.com/mikenikles/fca6250fab7d9e54ec70f5dd38a7dcaf.js](https://gist.github.com/mikenikles/fca6250fab7d9e54ec70f5dd38a7dcaf.js)
+```yaml
+version: 2
+
+# Re-usable blocks to reduce boilerplate
+# in job definitions.
+references:
+  container_config: &container_config
+    docker:
+      - image: my-company/circleci:gcloud # We use a custom Alpine Linux base image with the bare minimum
+    working_directory: /tmp/workspace
+  restore_repo: &restore_repo
+    restore_cache:
+      keys:
+        - v1-repo-{{ .Branch }}-{{ .Revision }}
+        - v1-repo-{{ .Branch }}
+        - v1-repo
+jobs:
+  build:
+    <<: *container_config
+    steps:
+      - *restore_repo
+      - checkout
+      - run: # Necessary to fetch / publish private NPM packages
+          name: Login to NPM
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ./.npmrc
+      - run:
+          name: Install root dependencies
+          command: yarn
+      - run:
+          name: Bootstrap packages and services
+          command: yarn bootstrap # This runs `lerna bootstrap`
+      - run:
+          name: Build packages
+          command: yarn packages:build # This runs `lerna run build  --scope '@my-company/*' --parallel`
+      - save_cache: # Now that everything is initialized and built, let's save it all to a cache
+          key: v1-repo-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - .
+  test:
+    <<: *container_config
+    steps:
+      - *restore_repo
+      - run: # Here `--since remotes/origin/master` looks at the diff between `master` and the current PR branch. We only run tests for code we changed and its dependents.
+          name: Run tests
+          command: ./node_modules/.bin/lerna exec --since remotes/origin/master -- yarn test:ci # `test:ci` runs ESLint and Jest
+  publish_packages:
+    <<: *container_config
+    steps:
+      - *restore_repo
+      - checkout
+      - add-ssh-keys: # This is an SSH key with write permissions to our Github repo in order to `git push` changes.
+          fingerprints:
+            - "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx"
+      - run:
+          name: Switch to the correct git branch
+          command: git checkout $CIRCLE_BRANCH
+      - run:
+          name: Configure git defaults
+          command: git config user.email "circleci-write-key@my-company.com" && git config user.name "CircleCI"
+      - run: # Temporary until we use Lerna's `--conventional-commits` flag (https://github.com/lerna/lerna#--conventional-commits)
+          name: Bump npm packages version (patch)
+          command: yarn packages:patch
+      - run: # Publishes each changed package to NPM, uses Lerna's `--parallel` flag to speed the process up
+          name: Publish packages (if applicable)
+          command: yarn packages:publish
+      - run:
+          name: Commit new versions to git
+          # This avoids the build from breaking if there are no changes to be committed.
+          # `git` exits with code 1 when there is nothing to commit.
+          command: git diff --quiet && git diff --staged --quiet || git commit -am '[skip ci] update package version(s)'
+      - run:
+          name: Push changes to Github
+          command: git push origin $CIRCLE_BRANCH
+  deploy_staging:
+    <<: *container_config
+    steps:
+      - *restore_repo
+      - checkout
+      - run:
+          # See https://circleci.com/docs/2.0/env-vars/#interpolating-environment-variables-to-set-other-environment-variables
+          name: Set job environment variables
+          command: |
+            echo 'export GOOGLE_AUTH=$GOOGLE_AUTH_STAGING' >> $BASH_ENV
+            echo 'export GOOGLE_PROJECT_ID=$GOOGLE_PROJECT_ID_STAGING' >> $BASH_ENV
+      - run:
+          # This is necessary because the `publish_packages` job may have pushed a commit with updated package.json files.
+          name: Pull the latest code.
+          command: git pull origin $CIRCLE_BRANCH
+      - run:
+          name: Copy .npmrc to the home directory
+          command: cp ./.npmrc ~/.npmrc
+      - run:
+          name: Authenticate gcloud CLI
+          command: |
+            source $BASH_ENV # 2017-12-21: That doesn't seem to happen automatically
+            echo "$GOOGLE_AUTH" > $HOME/gcp-key.json
+            gcloud auth activate-service-account --key-file $HOME/gcp-key.json
+            gcloud --quiet config set project $GOOGLE_PROJECT_ID
+            gcloud --quiet config set compute/zone us-west1-a
+            # Print for debugging
+            gcloud config list
+      # Note: The following `yarn deploy:*` scripts use `gcloud` to deploy services, configurations and the GAE dispatch file for URLs
+      - run:
+          name: Deploy services
+          command: |
+            source $BASH_ENV # 2017-12-21: That doesn't seem to happen automatically
+            yarn deploy:services
+      - run:
+          name: Deploy services config
+          command: |
+            source $BASH_ENV # 2017-12-21: That doesn't seem to happen automatically
+            yarn deploy:configs
+      - run:
+          name: Deploy the default service dispatch config
+          command: |
+            source $BASH_ENV # 2017-12-21: That doesn't seem to happen automatically
+            yarn deploy:dispatch
+  deploy_production:
+    <<: *container_config
+    steps:
+      - *restore_repo
+      - checkout
+      - run:
+          # See https://circleci.com/docs/2.0/env-vars/#interpolating-environment-variables-to-set-other-environment-variables
+          name: Set job environment variables
+          command: |
+            echo 'export GOOGLE_AUTH=$GOOGLE_AUTH_PRODUCTION' >> $BASH_ENV
+            echo 'export GOOGLE_PROJECT_ID=$GOOGLE_PROJECT_ID_PRODUCTION' >> $BASH_ENV
+      # Same as in `deploy_staging` above. Any better approach than copy / paste?
+
+# PRs will be opened with package and/or service changes
+# approval will be required to start npm versioning and publishing
+# staging is deployed automatically FOR ONLY the current change for a given service
+# NOTE: watch out for overlap when testing a single service and multiple PRs.
+# Once services have been tested on staging approve deployment to production
+workflows:
+  version: 2
+  build-test-and-deploy:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - approve_packages:
+          type: approval
+          requires:
+            - test
+      - publish_packages:
+          filters:
+            branches:
+              ignore: master
+          requires:
+            - approve_packages
+      - deploy_staging:
+          filters:
+            branches:
+              ignore: master
+          requires:
+            - publish_packages
+      - approve_production:
+          type: approval
+          requires:
+            - deploy_staging
+      - deploy_production:
+          filters:
+            branches:
+              ignore: master
+          requires:
+            - approve_production
+```
 
 You notice 7 configured workflow jobs, they correspond to the 7 rectangles in the diagram above.
 

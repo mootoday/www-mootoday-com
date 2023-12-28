@@ -50,7 +50,7 @@ As these instructions may change, please follow [the first two steps of the docu
 2.  Step 2: Register your app with Firebase  
     **Note**: Make sure you follow the (optional) instructions to set up Firebase Hosting for our web app.
 
-## Set up Firebase Hosting ([Pull Request](https://github.com/mikenikles/sapper-on-cloud-run/pull/5))
+## Set up Firebase Hosting ([Pull Request](https://github.com/mootoday/sapper-on-cloud-run/pull/5))
 
 Anything discussed going forward assumes you read the previous blog post and have a repository set up accordingly.
 

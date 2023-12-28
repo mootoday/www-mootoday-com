@@ -17,7 +17,7 @@ featured: false
 
 **Source code**
 
-You can find the source code related to this post in the [`mikenikles/www-mikenikles-com`](https://github.com/mikenikles/www-mikenikles-com) GitHub repository. In particular, look for the `handleCurl` function in [`src/hooks.server.ts`](https://github.com/mikenikles/www-mikenikles-com/blob/master/src/hooks.server.ts).
+You can find the source code related to this post in the [`mootoday/www-mootoday-com`](https://github.com/mootoday/www-mootoday-com) GitHub repository. In particular, look for the `handleCurl` function in [`src/hooks.server.ts`](https://github.com/mootoday/www-mootoday-com/blob/master/src/hooks.server.ts).
 
 ## CLI distributions
 
