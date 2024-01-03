@@ -10,6 +10,6 @@
 		"@cloudflare/workers-types": "^4.20230419.0",
 		"cf-workers-proxy": "^0.0.5",
 		"typescript": "^5.0.4",
-		"wrangler": "^3.0.0"
+		"wrangler": "^3.19.0"
 	}
 }
