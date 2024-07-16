@@ -153,7 +153,7 @@ layout {
 With that, my terminal contains two columns, three rows.
 
 ```
-| lazygit & gh dash | zsh |
+| lazygit | gh dash | zsh |
 | hx .              | zsh |
 | devbox services   | zsh |
 ```
