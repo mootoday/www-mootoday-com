@@ -158,6 +158,16 @@ With that, my terminal contains two columns, three rows.
 | devbox services   | zsh |
 ```
 
+A note on Zellij sessions: I use the following command in my `devbox.json` as a script to either create a new Zellij session or attach to one if one exists:
+
+```json
+"scripts": {
+	"env": "SESSION_NAME=$(basename \"$PWD\"); zellij list-sessions | grep $SESSION_NAME && zellij attach $SESSION_NAME || zellij --layout .config/zellij/layout.kdl --session $SESSION_NAME"
+}
+```
+
+Then all that is needed to enter my project environment is to run: `devbox run env`.
+
 That was easy and took a few minutes to configure – that's why you read the docs.
 
 > Editor & terminal layout done. Both tools are written in Rust and as you would expect, they are at least as fast as a ray of sunlight.
