@@ -18,10 +18,17 @@
 			description: 'Webstone provides an ecosystem of plugins for your full-stack web application.'
 		},
 		{
+			logo: 'how-is-it',
+			href: 'https://howisit.app',
+			hrefDisplayText: 'howisit.app',
+			name: 'How is it?',
+			description: 'Understand your visitors, improve your product. Collect instant feedback.'
+		},
+		{
 			logo: 'your-analytics',
 			href: 'https://www.your-analytics.org/',
 			hrefDisplayText: 'your-analytics.org',
-			name: 'Your Analytics',
+			name: 'Your Analytics (sold)',
 			description: 'An open source, privacy-focused web analytics platform.'
 		}
 	];
