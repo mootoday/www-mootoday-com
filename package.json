@@ -16,7 +16,7 @@
 		"generate:images": "node ./generate-responsive-image-data.js"
 	},
 	"devDependencies": {
-		"@howisit/svelte": "^0.0.6",
+		"@howisit/svelte": "^0.0.9",
 		"@melt-ui/svelte": "^0.24.0",
 		"@mux/blurhash": "^0.1.2",
 		"@mux/mux-player": "^1.5.1",
