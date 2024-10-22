@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-cloudflare';
+import adapter from '@sveltejs/adapter-node';
 import { mdsvex } from 'mdsvex';
 import rehypePicture from 'rehype-picture';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
