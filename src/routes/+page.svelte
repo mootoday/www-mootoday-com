@@ -51,7 +51,7 @@
 							<a
 								class="group -m-1 p-1"
 								aria-label="Follow on X"
-								href="https://x.com/mootoday"
+								href="https://bsky.app/profile/mootoday.com"
 								><svg
 									viewBox="0 0 24 24"
 									aria-hidden="true"

@@ -78,7 +78,7 @@ Each blog post will be released as a pull request. Anyone can access drafts and 
 gives me the flexibility to potentially allow for community contributions such as translations etc.
 
 In addition, I will make the website's analytics available publicly as part of a project later in 2020. Stay
-tuned for that by following me on X [@mootoday](https://www.x.com/mootoday).
+tuned for that by following me on X [@mootoday](https://bsky.app/profile/mootoday.com).
 
 ### Best practices
 

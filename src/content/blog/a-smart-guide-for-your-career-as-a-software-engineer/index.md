@@ -50,7 +50,7 @@ I am Mike; I have led hundreds of job interviews and reviewed thousands of resum
 
 I currently work at Google. Prior to that, I had my own business and worked at companies anywhere from two to hundreds of employees. I helped with critical first hires, tripled engineering teams and mentored others to become efficient hiring managers.
 
-You can learn more about me on X [@mootoday](https://x.com/mootoday) or on my personal website [www.mootoday.com](https://www.mootoday.com).
+You can learn more about me on X [@mootoday](https://bsky.app/profile/mootoday.com) or on my personal website [www.mootoday.com](https://www.mootoday.com).
 
 ## Templates
 
@@ -76,7 +76,7 @@ I wrote this book to help you fast-track your career and make sure you stand out
 
 For my previous book, a number of people contacted me and said they would love to read it, but couldn't afford it. I provided these individuals with coupon codes based on what they said they could afford and without exception, they were thrilled and so was I 💪. I would absolutely love to provide my content for free and I will continue to do that with blog posts, helping out in online forums, answer questions in chat rooms and with videos starting in 2021, but writing a book takes effort and comes with a cost to myself which is why I charge a minimal price for it. For the next 30 days, the book is $20, which means you pay $1 for each year of experience I have, seems like a good deal to me 😉.
 
-I'm excited to announce a purchasing power parity policy (wow… that's a lot of Ps 😛). I cannot automate it, but if you think the price is too expensive, please contact me and we can figure something out that works for you. The best place to reach me is with a direct message on X [@mootoday](https://x.com/mootoday). If you decide to do that, please message me with a price you can afford.
+I'm excited to announce a purchasing power parity policy (wow… that's a lot of Ps 😛). I cannot automate it, but if you think the price is too expensive, please contact me and we can figure something out that works for you. The best place to reach me is with a direct message on X [@mootoday](https://bsky.app/profile/mootoday.com). If you decide to do that, please message me with a price you can afford.
 
 ## Help spread the word and earn 30%
 
