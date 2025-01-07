@@ -17,7 +17,7 @@
 
 <ContentLayout title="Short and long-form content.">
 	<svelte:fragment slot="intro">
-		For hot takes on anything tech, follow me on X <a href="https://bsky.app/profile/mootoday.com"
+		For hot takes on anything tech, follow me on Bluesky <a href="https://bsky.app/profile/mootoday.com"
 			>@mootoday</a
 		>.
 	</svelte:fragment>

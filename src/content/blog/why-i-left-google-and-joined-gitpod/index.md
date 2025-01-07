@@ -94,6 +94,6 @@ I talked to many people about this decision and once I presented Gitpod, the fee
 
 I have no doubt the future of how we develop software is going to be based in the cloud. The amount of time we waste globally across all local development environments is simply not sustainable going forward. Developer experience is going to become a competitive advantage not only for hiring the best talent, but also to compete by improving productivity and reducing time to market.
 
-Please reach out to me via X [@mootoday](https://bsky.app/profile/mootoday.com) or find me in the Gitpod community at https://community.gitpod.io. I would love to dive deeper into Gitpod and work with you to enable the next generation of software development environment for your project & team.
+Please reach out to me via Bluesky [@mootoday](https://bsky.app/profile/mootoday.com) or find me in the Gitpod community at https://community.gitpod.io. I would love to dive deeper into Gitpod and work with you to enable the next generation of software development environment for your project & team.
 
 👋

@@ -237,4 +237,4 @@ This opens the Svelte sidebar.
 
 This is out of scope for this blog post, but the template contains an example of how a button in the sidebar can insert text into the document. Please refer to [pull request #3](https://github.com/mootoday/google-docs-addon-svelte-template/pull/3/files) for details.
 
-Please let me know what you think and if that's helpful. You can reach me on X [@mootoday](https://bsky.app/profile/mootoday.com).
+Please let me know what you think and if that's helpful. You can reach me on Bluesky [@mootoday](https://bsky.app/profile/mootoday.com).
