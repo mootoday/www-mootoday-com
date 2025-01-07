@@ -4,14 +4,14 @@
 	const books = [
 		{
 			logo: '',
-			href: 'https://x.com/mootoday',
+			href: 'https://bsky.app/profile/mootoday.com',
 			hrefDisplayText: 'Contact me for access',
 			name: 'Cloud Native Web Development',
 			description: 'From zero to production: A hands-on guidebook.'
 		},
 		{
 			logo: '',
-			href: 'https://x.com/mootoday',
+			href: 'https://bsky.app/profile/mootoday.com',
 			hrefDisplayText: 'Contact me for access',
 			name: 'A Smart Guide for Your Career as a Software Engineer',
 			description:
