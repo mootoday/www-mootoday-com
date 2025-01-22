@@ -131,6 +131,8 @@ The decision to build a CLI is not only about technical preferences. If done wel
 
 Do you remember the `now` CLI, by Zeit? It was Vercel's (prev. Zeit) first product (afaik) and to this day one of my favourite examples of how a CLI-first product can be very successful. Developers loved and used `now` because it was simple, it worked, it was fast, and it did the job better than alternative solutions that provided a web interface.
 
+There is also `flyctl` from <a href="https://fly.io/docs/flyctl/" target="_blank">fly.io</a>. Their CLI is as comprehensive as it gets and a must-study CLI to learn from. 
+
 More recently, `ssh terminal.shop` demonstrated how a CLI-only approach to e-commerce can challenge decades of "e-commerce best practices".
 
 These success stories aren't accidents. They reflect a deep understanding of technical users' needs:
