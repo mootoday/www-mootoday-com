@@ -37,7 +37,7 @@
 		<div class="mx-auto max-w-7xl lg:px-8">
 			<div class="relative px-4 sm:px-8 lg:px-12">
 				<div class="mx-auto max-w-2xl lg:max-w-5xl">
-					<div class="max-w-2xl">
+					<div class="max-w-4xl">
 						<h1
 							class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
 						>
