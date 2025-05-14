@@ -15,7 +15,7 @@ featured: false
 - Security isolation when running untrusted customer code is complex and costly
 - Multi-language support is even more complex
 - The WebAssembly Component Model enables clean, language-agnostic interfaces between individual components and also hosts and guests, written as Wasm Interface Type (WIT) definitions
-- Fuel metering, memory limits, and no I/O by default helps mitigate risks like infinite loops or resource exhaustion from untrusted code
+- Fuel metering, memory limits, and no I/O by default help mitigate risks like infinite loops or resource exhaustion from untrusted code
 
 ## Why would I run untrusted code in the first place?
 
@@ -96,7 +96,7 @@ In the `runner` world (<a href="https://component-model.bytecodealliance.org/des
 
 Where are host functions defined? Where is their implementation? How do Wasm components call these functions?
 
-As we learned in the previous chapter about WIT, host functions' interface is defined in a WIT file (e.g. `log()` in our case):
+As we learned in the previous section about WIT, host functions' interface is defined in a WIT file (e.g. `log()` in our case):
 
 ```wit
 // wit/world.wit
@@ -159,11 +159,25 @@ You can find the `run()` function implementation that is called by the server ru
 local::main::host::log("Logging from the Rust guest");
 ```
 
-### JS
+### JavaScript
 
 The source code for the JavaScript Wasm component can be found at <a href="https://github.com/mootoday/wasm-on-server-guest-javascript" target="_blank">github.com/mootoday/wasm-on-server-guest-javascript</a>.
 
-The following code in `src/lib.rs` generates the necessary bindings based on the `wit/world.wit` WIT definition:
+The `build:guest-types` NPM scripts generates the necessary Typescript types based on the `wit/world.wit` WIT definition. This is then used in `src/index.js`.
+
+The main piece of code is located in the `src/index.js` file, namely the exported `run()` function.
+
+Host functions are called by importing them from the generated package:
+
+```js
+import { log } from "local:main/host@0.0.1";
+
+...
+
+export const run = () => {
+  log("Logging from the Javascript guest");
+}
+````
 
 ## Next steps
 
