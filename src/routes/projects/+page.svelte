@@ -3,6 +3,22 @@
 
 	const projects = [
 		{
+			logo: 'pipestack',
+			href: 'https://pipestack.dev/',
+			hrefDisplayText: 'pipestack.dev',
+			name: 'Pipestack',
+			description:
+				'Build workflows. Upload your own code. Deploy to the edge, the cloud, or everywhere at once.'
+		},
+		{
+			logo: 'loopback',
+			href: 'https://loopback.works/',
+			hrefDisplayText: 'loopback.works',
+			name: 'Loopback',
+			description:
+				'Loopback is your hub for collecting and managing feedback from any channel.'
+		},
+		{
 			logo: 'webstone-education',
 			href: 'https://www.webstone.app/',
 			hrefDisplayText: 'webstone.app',
