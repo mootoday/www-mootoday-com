@@ -23,7 +23,7 @@
 		"@mux/mux-player": "^1.5.1",
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-cloudflare": "^2.3.1",
-		"@sveltejs/kit": "^1.0.0",
+		"@sveltejs/kit": "^1.30.4",
 		"@tailwindcss/forms": "^0.5.2",
 		"@tailwindcss/typography": "^0.5.3",
 		"@typescript-eslint/eslint-plugin": "^6.1.0",
