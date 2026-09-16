@@ -1,0 +1,1033 @@
+{
+	"version": 1,
+	"generatedAt": "2026-09-16T00:00:00.000Z",
+	"stages": [
+		{
+			"n": 1,
+			"name": "Foundations",
+			"exercise": "Run claude in a real repo. Ask it to explain the codebase, fix a small bug, then /rewind the change. Cycle permission modes with Shift+Tab and run /init to draft a CLAUDE.md."
+		},
+		{
+			"n": 2,
+			"name": "Surfaces",
+			"exercise": "Open the same repo in VS Code or JetBrains and in the desktop app. Start a web session and pull it into your terminal with claude --teleport."
+		},
+		{
+			"n": 3,
+			"name": "Extend",
+			"exercise": "Write one skill, add a PostToolUse hook that formats edited files, connect one MCP server, and create one subagent. Then install a plugin from a marketplace."
+		},
+		{
+			"n": 4,
+			"name": "Scale and automate",
+			"exercise": "Run two sessions in separate worktrees and watch them in agent view. Pipe a log into claude -p, try /loop, and run /install-github-app on a test repo."
+		},
+		{
+			"n": 5,
+			"name": "Control and tune",
+			"exercise": "Write allow and deny rules in .claude/settings.json, enable the sandbox, inspect /context and /usage, and compare effort levels on the same task."
+		},
+		{
+			"n": 6,
+			"name": "Teams and SDK",
+			"exercise": "Skim managed settings and provider setup, then write a short Agent SDK script that loads your CLAUDE.md and adds one custom tool."
+		}
+	],
+	"groups": [
+		{
+			"id": "how-it-works",
+			"title": "How it works",
+			"concepts": [
+				"how-claude-code-works",
+				"tools-reference",
+				"context-window",
+				"checkpointing",
+				"sessions",
+				"commands"
+			]
+		},
+		{
+			"id": "instructions-and-memory",
+			"title": "Instructions and memory",
+			"concepts": [
+				"memory",
+				"memory--auto-memory",
+				"claude-directory",
+				"output-styles",
+				"large-codebases"
+			]
+		},
+		{
+			"id": "extend-claude",
+			"title": "Extend Claude",
+			"concepts": [
+				"skills",
+				"hooks-guide",
+				"mcp-quickstart",
+				"discover-plugins",
+				"artifacts"
+			]
+		},
+		{
+			"id": "where-it-runs",
+			"title": "Where it runs",
+			"concepts": [
+				"cli-reference",
+				"terminal-config",
+				"vs-code",
+				"desktop-quickstart",
+				"web-quickstart",
+				"remote-control",
+				"chrome"
+			]
+		},
+		{
+			"id": "parallel-work",
+			"title": "Parallel work",
+			"concepts": [
+				"sub-agents",
+				"agent-view",
+				"agent-teams",
+				"workflows",
+				"worktrees",
+				"cross-session-messaging"
+			]
+		},
+		{
+			"id": "safety-and-control",
+			"title": "Safety and control",
+			"concepts": [
+				"permission-modes",
+				"permissions",
+				"sandboxing",
+				"settings",
+				"security"
+			]
+		},
+		{
+			"id": "automate",
+			"title": "Automate",
+			"concepts": [
+				"headless",
+				"github-actions",
+				"code-review",
+				"routines",
+				"scheduled-tasks",
+				"channels"
+			]
+		},
+		{
+			"id": "tune-and-debug",
+			"title": "Tune and debug",
+			"concepts": [
+				"model-config",
+				"prompt-caching",
+				"costs",
+				"debug-your-config"
+			]
+		},
+		{
+			"id": "agent-sdk",
+			"title": "Agent SDK",
+			"concepts": [
+				"agent-sdk/overview",
+				"agent-sdk/claude-code-features",
+				"agent-sdk/custom-tools",
+				"agent-sdk/sessions",
+				"agent-sdk/permissions",
+				"agent-sdk/modifying-system-prompts",
+				"agent-sdk/hosting"
+			]
+		},
+		{
+			"id": "teams-and-enterprise",
+			"title": "Teams and enterprise",
+			"concepts": [
+				"managed-settings",
+				"authentication",
+				"gateways",
+				"network-config",
+				"cloud-environments",
+				"monitoring-usage"
+			]
+		}
+	],
+	"concepts": [
+		{
+			"id": "how-claude-code-works",
+			"title": "Agentic loop",
+			"stage": 1,
+			"docs": [
+				"how-claude-code-works"
+			],
+			"summary": "Claude gathers context, takes an action, checks the result, and repeats until the task is done.",
+			"related": [
+				"tools-reference",
+				"context-window",
+				"sub-agents",
+				"agent-sdk/overview",
+				"permission-modes"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "tools-reference",
+			"title": "Built-in tools",
+			"stage": 1,
+			"docs": [
+				"tools-reference"
+			],
+			"summary": "Read, Edit, Write, Bash, search, web fetch, Monitor and more. Each tool has its own permission behavior.",
+			"related": [
+				"permissions",
+				"sandboxing",
+				"mcp-quickstart",
+				"hooks-guide",
+				"chrome"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "context-window",
+			"title": "Context window",
+			"stage": 1,
+			"docs": [
+				"context-window"
+			],
+			"summary": "System prompt, CLAUDE.md, files, and tool output all share one window. /compact summarizes when it fills.",
+			"related": [
+				"memory",
+				"skills",
+				"sub-agents",
+				"prompt-caching",
+				"costs",
+				"debug-your-config"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "permission-modes",
+			"title": "Permission modes",
+			"stage": 1,
+			"docs": [
+				"permission-modes",
+				"auto-mode-config"
+			],
+			"summary": "Default, acceptEdits, plan, and auto mode, where a classifier approves safe actions. Cycle with Shift+Tab.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "memory",
+			"title": "CLAUDE.md",
+			"stage": 1,
+			"docs": [
+				"memory"
+			],
+			"summary": "Markdown instructions loaded at session start, from user, project, and nested directory files. Keep them short and specific.",
+			"related": [
+				"memory--auto-memory",
+				"claude-directory",
+				"large-codebases",
+				"agent-sdk/claude-code-features",
+				"output-styles",
+				"skills"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "memory--auto-memory",
+			"title": "Auto memory",
+			"stage": 1,
+			"docs": [
+				"memory"
+			],
+			"summary": "Claude records its own learnings as it works and recalls them in later sessions.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "checkpointing",
+			"title": "Checkpoints, /rewind",
+			"stage": 1,
+			"docs": [
+				"checkpointing"
+			],
+			"summary": "Edits are checkpointed as Claude works. /rewind restores code, conversation, or both.",
+			"related": [
+				"sessions",
+				"permission-modes"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "sessions",
+			"title": "Sessions",
+			"stage": 1,
+			"docs": [
+				"sessions"
+			],
+			"summary": "Conversations persist. Name them, --continue, --resume, branch, export, and move them between surfaces.",
+			"related": [
+				"web-quickstart",
+				"remote-control",
+				"worktrees",
+				"agent-sdk/sessions",
+				"agent-view"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "commands",
+			"title": "Slash commands",
+			"stage": 1,
+			"docs": [
+				"commands"
+			],
+			"summary": "Built-in commands such as /context, /usage, /doctor, /compact, and /init, plus bundled skills.",
+			"related": [
+				"skills",
+				"debug-your-config",
+				"cli-reference"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "cli-reference",
+			"title": "Terminal CLI",
+			"stage": 2,
+			"docs": [
+				"cli-reference",
+				"interactive-mode"
+			],
+			"summary": "The full-featured terminal app: flags, interactive mode, shell commands with !, and history search.",
+			"related": [
+				"vs-code",
+				"desktop-quickstart",
+				"terminal-config"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "terminal-config",
+			"title": "Terminal setup",
+			"stage": 2,
+			"docs": [
+				"terminal-config",
+				"statusline",
+				"keybindings"
+			],
+			"summary": "Terminal config, fullscreen rendering, vim mode, status line, keybindings, voice dictation, and screen readers.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "vs-code",
+			"title": "VS Code, JetBrains",
+			"stage": 2,
+			"docs": [
+				"vs-code",
+				"jetbrains"
+			],
+			"summary": "Editor integrations with inline diffs, @-mentions, plan review, and selection context.",
+			"related": [
+				"permission-modes"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "desktop-quickstart",
+			"title": "Desktop app",
+			"stage": 2,
+			"docs": [
+				"desktop-quickstart",
+				"desktop"
+			],
+			"summary": "Parallel sessions with git isolation, visual diff review, app previews, scheduled tasks, and Dispatch from your phone.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "web-quickstart",
+			"title": "Web sessions",
+			"stage": 2,
+			"docs": [
+				"web-quickstart",
+				"claude-code-on-the-web"
+			],
+			"summary": "Cloud sessions from the browser with no local setup. Move work with --cloud and --teleport, and auto-fix PRs.",
+			"related": [
+				"remote-control",
+				"cloud-environments"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "remote-control",
+			"title": "Remote and mobile",
+			"stage": 2,
+			"docs": [
+				"remote-control",
+				"mobile"
+			],
+			"summary": "Continue a local session from your phone or any browser, and start or steer tasks from the mobile app.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "chrome",
+			"title": "Chrome, computer use",
+			"stage": 2,
+			"docs": [
+				"chrome",
+				"computer-use"
+			],
+			"summary": "Claude in Chrome tests and debugs web apps. Computer use drives native GUI apps from the CLI.",
+			"related": [
+				"desktop-quickstart"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "claude-directory",
+			"title": ".claude directory",
+			"stage": 3,
+			"docs": [
+				"claude-directory"
+			],
+			"summary": "The .claude/ and ~/.claude/ folders hold settings, skills, subagents, hooks, commands, rules, and memory.",
+			"related": [
+				"settings",
+				"skills",
+				"sub-agents",
+				"hooks-guide"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "skills",
+			"title": "Skills",
+			"stage": 3,
+			"docs": [
+				"skills"
+			],
+			"summary": "Folders with a SKILL.md and optional scripts. Only the description loads until needed. Invoke with /name or let Claude choose.",
+			"related": [
+				"discover-plugins",
+				"agent-sdk/claude-code-features"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "hooks-guide",
+			"title": "Hooks",
+			"stage": 3,
+			"docs": [
+				"hooks-guide",
+				"hooks"
+			],
+			"summary": "Deterministic shell, HTTP, or prompt handlers on events like PreToolUse, PostToolUse, and Stop. They can block actions.",
+			"related": [
+				"permissions",
+				"discover-plugins",
+				"channels",
+				"agent-sdk/permissions",
+				"scheduled-tasks"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "mcp-quickstart",
+			"title": "MCP servers",
+			"stage": 3,
+			"docs": [
+				"mcp-quickstart",
+				"mcp"
+			],
+			"summary": "Model Context Protocol servers add external tools and data such as issue trackers, chat, databases, and design docs.",
+			"related": [
+				"discover-plugins",
+				"channels",
+				"managed-settings",
+				"agent-sdk/custom-tools",
+				"artifacts"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "discover-plugins",
+			"title": "Plugins",
+			"stage": 3,
+			"docs": [
+				"discover-plugins",
+				"plugins",
+				"plugin-marketplaces"
+			],
+			"summary": "Shareable bundles of skills, subagents, hooks, and MCP servers, installed from marketplaces and testable with evals.",
+			"related": [
+				"sub-agents",
+				"code-review"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "sub-agents",
+			"title": "Subagents",
+			"stage": 3,
+			"docs": [
+				"sub-agents"
+			],
+			"summary": "Specialized agents with their own prompt, tools, and fresh context. They keep the main context clean and can run in the background.",
+			"related": [
+				"agent-teams",
+				"workflows",
+				"agent-sdk/custom-tools"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "output-styles",
+			"title": "Output styles",
+			"stage": 3,
+			"docs": [
+				"output-styles"
+			],
+			"summary": "Change the system-prompt persona and format, such as explanatory or concise, or write your own.",
+			"related": [
+				"agent-sdk/modifying-system-prompts"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "worktrees",
+			"title": "Git worktrees",
+			"stage": 4,
+			"docs": [
+				"worktrees"
+			],
+			"summary": "--worktree isolates each session in its own git worktree so parallel edits never collide.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "agent-view",
+			"title": "Agent view",
+			"stage": 4,
+			"docs": [
+				"agent-view"
+			],
+			"summary": "One screen to dispatch and watch many sessions and see which ones need your input.",
+			"related": [
+				"agent-teams",
+				"worktrees",
+				"desktop-quickstart"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "agent-teams",
+			"title": "Agent teams",
+			"stage": 4,
+			"docs": [
+				"agent-teams"
+			],
+			"summary": "Several full sessions coordinating through shared tasks and messages under a lead.",
+			"related": [
+				"cross-session-messaging"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "cross-session-messaging",
+			"title": "Session messaging",
+			"stage": 4,
+			"docs": [
+				"cross-session-messaging"
+			],
+			"summary": "Sessions can list and message each other on this machine, on other machines, or on the web.",
+			"related": [
+				"channels"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "workflows",
+			"title": "Dynamic workflows",
+			"stage": 4,
+			"docs": [
+				"workflows"
+			],
+			"summary": "A script Claude writes to orchestrate many subagents, rerunnable for audits, migrations, and research.",
+			"related": [
+				"headless",
+				"scheduled-tasks"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "headless",
+			"title": "Headless (claude -p)",
+			"stage": 4,
+			"docs": [
+				"headless"
+			],
+			"summary": "Run non-interactively: pipe input in, get text or JSON out. The basis for scripts and CI.",
+			"related": [
+				"github-actions",
+				"agent-sdk/overview",
+				"cli-reference"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "scheduled-tasks",
+			"title": "/loop and /goal",
+			"stage": 4,
+			"docs": [
+				"scheduled-tasks",
+				"goal"
+			],
+			"summary": "/loop repeats a prompt inside a session. /goal keeps Claude working until a condition holds.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "routines",
+			"title": "Routines",
+			"stage": 4,
+			"docs": [
+				"routines",
+				"desktop-scheduled-tasks"
+			],
+			"summary": "Automations on a schedule, API call, or GitHub event. Cloud routines run while your machine is off.",
+			"related": [
+				"web-quickstart",
+				"cloud-environments",
+				"scheduled-tasks",
+				"desktop-quickstart"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "channels",
+			"title": "Channels",
+			"stage": 4,
+			"docs": [
+				"channels",
+				"channels-reference"
+			],
+			"summary": "Push webhooks, CI results, and chat messages into a running session through an MCP server.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "github-actions",
+			"title": "GitHub, GitLab CI",
+			"stage": 4,
+			"docs": [
+				"github-actions",
+				"gitlab-ci-cd"
+			],
+			"summary": "Respond to @claude in issues and PRs and run tasks in pipelines, including through cloud providers.",
+			"related": [
+				"code-review",
+				"authentication"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "code-review",
+			"title": "Code review",
+			"stage": 4,
+			"docs": [
+				"code-review",
+				"ultrareview",
+				"security-guidance"
+			],
+			"summary": "Automated multi-agent PR review, /code-review, cloud ultrareview, and security plugins.",
+			"related": [
+				"web-quickstart"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "artifacts",
+			"title": "Artifacts",
+			"stage": 4,
+			"docs": [
+				"artifacts"
+			],
+			"summary": "Publish session output as live pages you can keep private, share with your org, or make public.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "settings",
+			"title": "Settings scopes",
+			"stage": 5,
+			"docs": [
+				"settings",
+				"settings-reference"
+			],
+			"summary": "settings.json at user, project, local, and managed scopes. Managed settings win over everything else.",
+			"related": [
+				"managed-settings",
+				"permissions",
+				"debug-your-config"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "permissions",
+			"title": "Permission rules",
+			"stage": 5,
+			"docs": [
+				"permissions"
+			],
+			"summary": "Allow, ask, and deny rules per tool and argument pattern, for example Bash(npm test:*).",
+			"related": [
+				"permission-modes",
+				"sandboxing",
+				"managed-settings",
+				"agent-sdk/permissions"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "sandboxing",
+			"title": "Sandboxing",
+			"stage": 5,
+			"docs": [
+				"sandboxing",
+				"sandbox-environments"
+			],
+			"summary": "OS-level filesystem and network isolation for Bash, compared with dev containers, Docker, and VMs.",
+			"related": [
+				"security",
+				"network-config",
+				"agent-sdk/hosting"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "security",
+			"title": "Security and data",
+			"stage": 5,
+			"docs": [
+				"security",
+				"data-usage"
+			],
+			"summary": "Built-in safeguards, prompt-injection defenses, data usage policy, and zero data retention.",
+			"related": [
+				"managed-settings"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "model-config",
+			"title": "Models and effort",
+			"stage": 5,
+			"docs": [
+				"model-config",
+				"fast-mode",
+				"advisor"
+			],
+			"summary": "Choose the model, effort level, extended context, fast mode, and an advisor model for hard decisions.",
+			"related": [
+				"prompt-caching",
+				"costs",
+				"authentication"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "prompt-caching",
+			"title": "Prompt caching",
+			"stage": 5,
+			"docs": [
+				"prompt-caching"
+			],
+			"summary": "Stable prompt prefixes are cached. Switching models or compacting causes a slower uncached turn.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "costs",
+			"title": "Costs and usage",
+			"stage": 5,
+			"docs": [
+				"costs"
+			],
+			"summary": "/usage shows what drives your limits. Control spend with context hygiene, model choice, and team limits.",
+			"related": [
+				"monitoring-usage",
+				"gateways"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "debug-your-config",
+			"title": "Debugging config",
+			"stage": 5,
+			"docs": [
+				"debug-your-config",
+				"troubleshooting"
+			],
+			"summary": "/context, /doctor, /hooks, /mcp, and safe mode show what actually loaded and why.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "large-codebases",
+			"title": "Large codebases",
+			"stage": 5,
+			"docs": [
+				"large-codebases"
+			],
+			"summary": "Monorepo patterns: nested CLAUDE.md files, sparse worktrees, code intelligence, and per-package skills.",
+			"related": [
+				"worktrees",
+				"skills"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "managed-settings",
+			"title": "Managed settings",
+			"stage": 6,
+			"docs": [
+				"managed-settings",
+				"server-managed-settings",
+				"managed-mcp"
+			],
+			"summary": "Push enforced settings, permission policy, and MCP allowlists to every machine or from the server.",
+			"related": [
+				"authentication"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "authentication",
+			"title": "Providers and auth",
+			"stage": 6,
+			"docs": [
+				"authentication",
+				"third-party-integrations",
+				"feature-availability"
+			],
+			"summary": "Use Claude plans, Console API keys, Amazon Bedrock, Claude Platform on AWS, Google Cloud, or Microsoft Foundry.",
+			"related": [
+				"gateways"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "gateways",
+			"title": "LLM gateways",
+			"stage": 6,
+			"docs": [
+				"gateways",
+				"llm-gateway"
+			],
+			"summary": "Route traffic through Claude apps gateway or your own LLM gateway for SSO, model routing, and spend caps.",
+			"related": [
+				"monitoring-usage",
+				"network-config"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "network-config",
+			"title": "Network and proxies",
+			"stage": 6,
+			"docs": [
+				"network-config",
+				"devcontainer"
+			],
+			"summary": "Proxies, custom certificate authorities, mTLS, corporate launchers, and dev containers.",
+			"related": [
+				"cloud-environments"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "cloud-environments",
+			"title": "Cloud environments",
+			"stage": 6,
+			"docs": [
+				"cloud-environments",
+				"self-hosted-environments"
+			],
+			"summary": "Set network access and setup scripts for cloud sessions, or run them on your own runners.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "monitoring-usage",
+			"title": "Monitoring",
+			"stage": 6,
+			"docs": [
+				"monitoring-usage",
+				"analytics"
+			],
+			"summary": "OpenTelemetry metrics and events plus an analytics dashboard for adoption and usage.",
+			"related": [
+				"agent-sdk/permissions"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "agent-sdk/overview",
+			"title": "SDK basics",
+			"stage": 6,
+			"docs": [
+				"agent-sdk/overview",
+				"agent-sdk/quickstart"
+			],
+			"summary": "Claude Code as a Python or TypeScript library, with the same agent loop and tools under your control.",
+			"related": [
+				"agent-sdk/claude-code-features",
+				"agent-sdk/custom-tools",
+				"agent-sdk/sessions",
+				"agent-sdk/permissions",
+				"agent-sdk/modifying-system-prompts",
+				"agent-sdk/hosting"
+			],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "agent-sdk/claude-code-features",
+			"title": "Claude Code features",
+			"stage": 6,
+			"docs": [
+				"agent-sdk/claude-code-features"
+			],
+			"summary": "Opt in to CLAUDE.md, skills, hooks, and plugins from the filesystem inside SDK agents.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "agent-sdk/custom-tools",
+			"title": "Custom tools and MCP",
+			"stage": 6,
+			"docs": [
+				"agent-sdk/custom-tools",
+				"agent-sdk/mcp",
+				"agent-sdk/subagents"
+			],
+			"summary": "Define in-process tools, connect MCP servers, use tool search, and declare subagents in code.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "agent-sdk/sessions",
+			"title": "Sessions, streaming",
+			"stage": 6,
+			"docs": [
+				"agent-sdk/sessions",
+				"agent-sdk/streaming-output",
+				"agent-sdk/structured-outputs"
+			],
+			"summary": "Resume and fork sessions, stream output, handle approvals, and return validated structured output.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "agent-sdk/permissions",
+			"title": "Control, telemetry",
+			"stage": 6,
+			"docs": [
+				"agent-sdk/permissions",
+				"agent-sdk/hooks",
+				"agent-sdk/observability"
+			],
+			"summary": "Permission callbacks, hooks as functions, checkpointing, cost tracking, and OpenTelemetry.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "agent-sdk/modifying-system-prompts",
+			"title": "System prompts",
+			"stage": 6,
+			"docs": [
+				"agent-sdk/modifying-system-prompts"
+			],
+			"summary": "Use the claude_code preset, append to it, or replace it with a fully custom system prompt.",
+			"related": [],
+			"rev": 1,
+			"addedIn": 1
+		},
+		{
+			"id": "agent-sdk/hosting",
+			"title": "Hosting, security",
+			"stage": 6,
+			"docs": [
+				"agent-sdk/hosting",
+				"agent-sdk/secure-deployment"
+			],
+			"summary": "Run agents in containers with session persistence, tenant isolation, and credential controls.",
+			"related": [
+				"cloud-environments"
+			],
+			"rev": 1,
+			"addedIn": 1
+		}
+	],
+	"aliases": {},
+	"retired": []
+}

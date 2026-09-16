@@ -1,0 +1,86 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"required": ["stages", "groups", "concepts", "aliases", "retired", "revChanges"],
+	"properties": {
+		"stages": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": ["n", "name", "exercise"],
+				"properties": {
+					"n": { "type": "integer" },
+					"name": { "type": "string" },
+					"exercise": { "type": "string" }
+				}
+			}
+		},
+		"groups": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": ["id", "title", "concepts"],
+				"properties": {
+					"id": { "type": "string" },
+					"title": { "type": "string" },
+					"concepts": { "type": "array", "items": { "type": "string" } }
+				}
+			}
+		},
+		"concepts": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": ["id", "title", "stage", "docs", "summary", "related", "rev"],
+				"properties": {
+					"id": { "type": "string" },
+					"title": { "type": "string" },
+					"stage": { "type": "integer" },
+					"docs": { "type": "array", "items": { "type": "string" } },
+					"summary": { "type": "string" },
+					"related": { "type": "array", "items": { "type": "string" } },
+					"rev": { "type": "integer" }
+				}
+			}
+		},
+		"aliases": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": ["from", "to"],
+				"properties": {
+					"from": { "type": "string" },
+					"to": { "type": "string" }
+				}
+			}
+		},
+		"retired": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": ["id", "title"],
+				"properties": {
+					"id": { "type": "string" },
+					"title": { "type": "string" }
+				}
+			}
+		},
+		"revChanges": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": ["id", "reason"],
+				"properties": {
+					"id": { "type": "string" },
+					"reason": { "type": "string" }
+				}
+			}
+		}
+	}
+}

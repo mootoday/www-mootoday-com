@@ -13,7 +13,8 @@
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"generate:images": "node ./generate-responsive-image-data.js"
+		"generate:images": "node ./generate-responsive-image-data.js",
+		"study:generate": "node scripts/claude-study/generate.ts"
 	},
 	"devDependencies": {
 		"@howisit/svelte": "^0.0.9",
@@ -58,6 +59,9 @@
 		"vitest": "^0.33.0",
 		"wrangler": "^3.114.17",
 		"xstate": "^4.35.0"
+	},
+	"engines": {
+		"node": ">=22.18"
 	},
 	"type": "module"
 }

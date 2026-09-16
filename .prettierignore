@@ -11,3 +11,6 @@ node_modules
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
+
+# Generated; keep the generator's output format stable for PR diffs
+src/content/blog/learn-claude-code/study-map.json

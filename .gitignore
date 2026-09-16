@@ -10,3 +10,7 @@ spotlight
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 wrangler/.wrangler
+.claude-study
+/test-results
+/playwright-report
+
