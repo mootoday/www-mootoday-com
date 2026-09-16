@@ -1,6 +1,6 @@
 {
-	"version": 1,
-	"generatedAt": "2026-09-16T00:00:00.000Z",
+	"version": 2,
+	"generatedAt": "2026-09-16T21:27:22.049Z",
 	"stages": [
 		{
 			"n": 1,
@@ -35,6 +35,15 @@
 	],
 	"groups": [
 		{
+			"id": "get-started",
+			"title": "Get started",
+			"concepts": [
+				"quickstart",
+				"common-workflows",
+				"best-practices"
+			]
+		},
+		{
 			"id": "how-it-works",
 			"title": "How it works",
 			"concepts": [
@@ -61,6 +70,7 @@
 			"id": "extend-claude",
 			"title": "Extend Claude",
 			"concepts": [
+				"features-overview",
 				"skills",
 				"hooks-guide",
 				"mcp-quickstart",
@@ -78,6 +88,7 @@
 				"desktop-quickstart",
 				"web-quickstart",
 				"remote-control",
+				"slack",
 				"chrome"
 			]
 		},
@@ -113,7 +124,8 @@
 				"code-review",
 				"routines",
 				"scheduled-tasks",
-				"channels"
+				"channels",
+				"deep-links"
 			]
 		},
 		{
@@ -153,6 +165,24 @@
 		}
 	],
 	"concepts": [
+		{
+			"id": "quickstart",
+			"title": "Install and first run",
+			"stage": 1,
+			"docs": [
+				"quickstart",
+				"overview",
+				"setup"
+			],
+			"summary": "Install Claude Code, sign in, and run claude in a project to ask questions and make your first edit.",
+			"related": [
+				"how-claude-code-works",
+				"cli-reference",
+				"desktop-quickstart"
+			],
+			"rev": 1,
+			"addedIn": 2
+		},
 		{
 			"id": "how-claude-code-works",
 			"title": "Agentic loop",
@@ -302,6 +332,39 @@
 			"addedIn": 1
 		},
 		{
+			"id": "common-workflows",
+			"title": "Common workflows",
+			"stage": 1,
+			"docs": [
+				"common-workflows",
+				"prompt-library"
+			],
+			"summary": "Step-by-step recipes for exploring a codebase, fixing bugs, refactoring, and writing tests, plus a library of copy-paste prompts.",
+			"related": [
+				"permission-modes",
+				"checkpointing"
+			],
+			"rev": 1,
+			"addedIn": 2
+		},
+		{
+			"id": "best-practices",
+			"title": "Best practices",
+			"stage": 1,
+			"docs": [
+				"best-practices"
+			],
+			"summary": "Patterns that make Claude effective: give it a way to verify its work, plan before coding, keep context clean, and scale with parallel sessions.",
+			"related": [
+				"common-workflows",
+				"context-window",
+				"memory",
+				"worktrees"
+			],
+			"rev": 1,
+			"addedIn": 2
+		},
+		{
 			"id": "cli-reference",
 			"title": "Terminal CLI",
 			"stage": 2,
@@ -390,6 +453,21 @@
 			"addedIn": 1
 		},
 		{
+			"id": "slack",
+			"title": "Slack, Claude Tag",
+			"stage": 2,
+			"docs": [
+				"slack",
+				"claude-tag"
+			],
+			"summary": "Mention Claude in Slack to delegate coding tasks that run as cloud sessions. Team and Enterprise workspaces are moving to Claude Tag.",
+			"related": [
+				"web-quickstart"
+			],
+			"rev": 1,
+			"addedIn": 2
+		},
+		{
 			"id": "chrome",
 			"title": "Chrome, computer use",
 			"stage": 2,
@@ -403,6 +481,24 @@
 			],
 			"rev": 1,
 			"addedIn": 1
+		},
+		{
+			"id": "features-overview",
+			"title": "Choosing extensions",
+			"stage": 3,
+			"docs": [
+				"features-overview"
+			],
+			"summary": "When to reach for CLAUDE.md, skills, subagents, hooks, MCP, or plugins, and how each one affects your context.",
+			"related": [
+				"memory",
+				"skills",
+				"sub-agents",
+				"hooks-guide",
+				"mcp-quickstart"
+			],
+			"rev": 1,
+			"addedIn": 2
 		},
 		{
 			"id": "claude-directory",
@@ -651,6 +747,21 @@
 			"related": [],
 			"rev": 1,
 			"addedIn": 1
+		},
+		{
+			"id": "deep-links",
+			"title": "Deep links",
+			"stage": 4,
+			"docs": [
+				"deep-links"
+			],
+			"summary": "claude-cli:// links in runbooks, alerts, and dashboards open a terminal session in the right repo with the prompt filled in.",
+			"related": [
+				"channels",
+				"sessions"
+			],
+			"rev": 1,
+			"addedIn": 2
 		},
 		{
 			"id": "github-actions",
