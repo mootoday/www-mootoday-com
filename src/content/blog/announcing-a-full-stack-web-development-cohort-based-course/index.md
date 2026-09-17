@@ -81,7 +81,7 @@ Mike 👋
 **Links**
 
 - <sup>1</sup> <a id="link-1" href="https://www.youtube.com/watch?v=OUzaUJ3gEug" target="_blank">https://www.youtube.com/watch?v=OUzaUJ3gEug</a>
-- <sup>2</sup> <a id ="link-2" href="https://www.mootoday.com" target="_blank">https://www.mootoday.com</a>
+- <sup>2</sup> <a id ="link-2" href="https://www.mikenikles.com" target="_blank">https://www.mikenikles.com</a>
 - <sup>4</sup> <a id ="link-4" href="https://github.com/mootoday" target="_blank">https://github.com/mootoday</a>
 - <sup>5</sup> <a id ="link-5" href="https://www.educative.io/courses/cloud-native-development" target="_blank">https://www.educative.io/courses/cloud-native-development</a>
 - <sup>6</sup> <a id ="link-7" href="https://svelte.dev" target="_blank">https://svelte.dev</a> & <a href="https://kit.svelte.dev" target="_blank">https://kit.svelte.dev</a>

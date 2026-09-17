@@ -240,7 +240,7 @@ Congratulations! That is excellent progress so far today. Reward yourself with a
 
 ## Proof of concept
 
-Next, you want to migrate the three most used commands in your Node.js CLI to your new Rust CLI. Follow the pattern of the `Greet` command we developed earlier. To reduce boilerplate code as you add more commands, I developed the `clap-nested-commands` crate (<a href="https://crates.io/crates/clap-nested-commands" target="_blank">website</a>, <a href="https://www.mootoday.com/blog/my-first-rust-crate" target="_blank">blog post</a>).
+Next, you want to migrate the three most used commands in your Node.js CLI to your new Rust CLI. Follow the pattern of the `Greet` command we developed earlier. To reduce boilerplate code as you add more commands, I developed the `clap-nested-commands` crate (<a href="https://crates.io/crates/clap-nested-commands" target="_blank">website</a>, <a href="https://www.mikenikles.com/blog/my-first-rust-crate" target="_blank">blog post</a>).
 
 My approach for this phase of the migration was to implement the three commands as quickly and dirty as possible. As I was still learning Rust, I freely used `.unwrap()`, barely handled errors, and `.clone()`d data way too often. The goal is to ship the commands to your alpha testers as quickly as possible.
 
@@ -275,7 +275,7 @@ Lastly, automate the release process with CI/CD pipelines. Run tests, then build
 curl https://your-domain.com | sh
 ```
 
-> To learn how you can make the above command work for your own CLI, see <a href="https://www.mootoday.com/blog/curl-your-landing-page" target="_blank">this blog post</a> I wrote.
+> To learn how you can make the above command work for your own CLI, see <a href="https://www.mikenikles.com/blog/curl-your-landing-page" target="_blank">this blog post</a> I wrote.
 
 ## Feedback, feedback, and more feedback
 

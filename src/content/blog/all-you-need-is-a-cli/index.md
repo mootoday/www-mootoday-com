@@ -111,7 +111,7 @@ Take 15% of the time and money you save by not developing a web app and invest i
 
 Luckily, it does not take much to stand out. Here are a few features that add value:
 
-- Display the CLI's changelog (<a href="https://bsky.app/profile/mootoday.com/post/3lgaypql74c22" target="_blank">here is a video of how I made it look</a>)
+- Display the CLI's changelog (<a href="https://bsky.app/profile/mikenikles.com/post/3lgaypql74c22" target="_blank">here is a video of how I made it look</a>)
 - When an error happens, prompt for feedback and provide an option to never ask again
 - Check for new CLI versions automatically and offer to self-update the CLI
 - Provide context-aware help and examples
@@ -151,6 +151,6 @@ I have seen startups spend months building a web interface for something that co
 
 Know your audience. If they are technical, you may likely go a long way with a solid CLI built with best practices in mind.
 
-Ready to start? Check out the CLI Guidelines at <a href="https://clig.dev/" target="_blank">clig.dev</a> and <a href="https://bsky.app/profile/mootoday.com" target="_blank">follow me on Bluesky</a> to learn more about CLIs (and full-stack web development).
+Ready to start? Check out the CLI Guidelines at <a href="https://clig.dev/" target="_blank">clig.dev</a> and <a href="https://bsky.app/profile/mikenikles.com" target="_blank">follow me on Bluesky</a> to learn more about CLIs (and full-stack web development).
 
 👋

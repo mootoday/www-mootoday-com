@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>Feed - mootoday.com</title>
+	<title>Feed - mikenikles.com</title>
 	<meta name="description" content={data.entry.content} />
 </svelte:head>
 

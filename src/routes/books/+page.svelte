@@ -4,14 +4,14 @@
 	const books = [
 		{
 			logo: '',
-			href: 'https://bsky.app/profile/mootoday.com',
+			href: 'https://bsky.app/profile/mikenikles.com',
 			hrefDisplayText: 'Contact me for access',
 			name: 'Cloud Native Web Development',
 			description: 'From zero to production: A hands-on guidebook.'
 		},
 		{
 			logo: '',
-			href: 'https://bsky.app/profile/mootoday.com',
+			href: 'https://bsky.app/profile/mikenikles.com',
 			hrefDisplayText: 'Contact me for access',
 			name: 'A Smart Guide for Your Career as a Software Engineer',
 			description:
@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<title>Projects - mootoday.com</title>
+	<title>Projects - mikenikles.com</title>
 	<meta
 		name="description"
 		content="Various web and full-stack software projects. Mostly written in Typescript, Node.js, and Svelte."

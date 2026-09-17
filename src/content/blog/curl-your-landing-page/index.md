@@ -12,7 +12,7 @@ featured: false
 **Key takeaways**
 
 - Streamline CLI installations with `curl https://your-domain.com | sh`
-- Try it out: `curl https://mootoday.com | sh`
+- Try it out: `curl https://mikenikles.com | sh`
 - Serve HTML for browsers, a shell script for `curl` requests
 
 **Source code**
@@ -34,7 +34,7 @@ curl https://your-domain.com | sh
 To see what this looks like in action, try the following command:
 
 ```sh
-curl https://mootoday.com | sh
+curl https://mikenikles.com | sh
 ```
 
 So... did you execute the above command 😰? You didn't, right? If you did, no harm was done since I'm a kind person and as of this writing, my domain hasn't been hacked.
@@ -46,7 +46,7 @@ Needless to say there could be major security implications by downloading and ru
 If you want to check what a script is about (which is what I do before I execute any `curl ... | sh` command):
 
 ```sh
-curl https://mootoday.com | cat
+curl https://mikenikles.com | cat
 ```
 
 Voilà, this prints the content of that shell script so you can verify its content before you run it.
@@ -61,7 +61,7 @@ In short, it's a string that tells the web server what kind of application sent 
 
 <UserAgent />
 
-When someone uses `curl https://mootoday.com`, the `User-Agent` is something like this:
+When someone uses `curl https://mikenikles.com`, the `User-Agent` is something like this:
 
 <code>curl/8.1.2</code>
 

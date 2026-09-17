@@ -78,13 +78,13 @@ Each blog post will be released as a pull request. Anyone can access drafts and 
 gives me the flexibility to potentially allow for community contributions such as translations etc.
 
 In addition, I will make the website's analytics available publicly as part of a project later in 2020. Stay
-tuned for that by following me on Bluesky [@mootoday](https://bsky.app/profile/mootoday.com).
+tuned for that by following me on Bluesky [@mikenikles](https://bsky.app/profile/mikenikles.com).
 
 ### Best practices
 
 As it has always been the case, my personal website is a place for me to experiment with new technologies.
 If I get asked "How would you ...?" in relation to web development, I want my answer to be "Have a look at
-www.mootoday.com".
+www.mikenikles.com".
 
 A perfect Lighthouse score, fully accessible, top SEO ratings, works without JavaScript, etc.
 

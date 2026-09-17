@@ -324,7 +324,7 @@ Every time a new revision of the web application is deployed to Cloud Run, a new
 ```bash
 gcloud beta run domain-mappings create \
   --service sapper-on-cloud-run \
-  --domain sapper-on-cloud-run.mootoday.com \
+  --domain sapper-on-cloud-run.mikenikles.com \
   --region us-central1 \
   --platform managed
 ```

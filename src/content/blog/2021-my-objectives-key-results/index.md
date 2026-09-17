@@ -15,7 +15,7 @@ layout: blog
 
 <!-- Photo by [🇻🇪 Jose G. Ortega Castro 🇲🇽](https://unsplash.com/@j0rt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/notebook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) -->
 
-I briefly touched on Objectives & Key Results (OKRs) in my [2020 - Year in Review](https://www.mootoday.com/blog/2020-year-in-review) blog post. Below, I will dive deeper into what I have planned for 2021.
+I briefly touched on Objectives & Key Results (OKRs) in my [2020 - Year in Review](https://www.mikenikles.com/blog/2020-year-in-review) blog post. Below, I will dive deeper into what I have planned for 2021.
 
 ## What is OKR?
 
@@ -33,7 +33,7 @@ If you can assign a progress percentage to your key results, you likely have a g
 
 ## Why create personal OKRs?
 
-I used personal OKRs for the first time in 2020 and despite everything that happened in the world, I had one of the most productive and successful years in my life. Check my [2020 - Year in Review](https://www.mootoday.com/blog/2020-year-in-review) blog post for full details.
+I used personal OKRs for the first time in 2020 and despite everything that happened in the world, I had one of the most productive and successful years in my life. Check my [2020 - Year in Review](https://www.mikenikles.com/blog/2020-year-in-review) blog post for full details.
 
 Without goals and concrete, small steps towards these goals, living life is like driving a ship in the ocean without navigational assistance. You move (read: you get older), but you don't really know which way you go or whether you actually make progress.
 

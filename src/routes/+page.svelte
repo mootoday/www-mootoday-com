@@ -25,7 +25,7 @@
 </script>
 
 <svelte:head>
-	<title>www.mootoday.com</title>
+	<title>www.mikenikles.com</title>
 	<meta
 		name="description"
 		content="Content about developer experience, full-stack web development, tech careers, and whatever else crosses my mind."
@@ -51,7 +51,7 @@
 							<a
 								class="group -m-1 p-1"
 								aria-label="Follow on Bluesky"
-								href="https://bsky.app/profile/mootoday.com"
+								href="https://bsky.app/profile/mikenikles.com"
 							>
 								<svg
 									width="24"

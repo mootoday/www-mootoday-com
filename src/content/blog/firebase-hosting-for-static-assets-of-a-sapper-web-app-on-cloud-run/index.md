@@ -14,7 +14,7 @@ layout: blog
 
 Sapper on Cloud Run with static assets hosted on Firebase Hosting Architecture
 
-This is a follow-up post to [Sapper, Google Cloud Run, Continuous Deployment - A boilerplate template](https://www.mootoday.com/blog/sapper-google-cloud-run-continuous-deployment-a-boilerplate-template).
+This is a follow-up post to [Sapper, Google Cloud Run, Continuous Deployment - A boilerplate template](https://www.mikenikles.com/blog/sapper-google-cloud-run-continuous-deployment-a-boilerplate-template).
 
 In this second part, we are going to optimize how static assets are hosted and delivered to the browser. The final architecture for this post is going to be like this:
 

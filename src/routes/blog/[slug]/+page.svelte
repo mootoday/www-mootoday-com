@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.metadata?.title} - mootoday.com</title>
+	<title>{data.metadata?.title} - mikenikles.com</title>
 	<meta name="description" content={data.metadata?.summary} />
 	<link href="/prism.css" rel="stylesheet" />
 </svelte:head>

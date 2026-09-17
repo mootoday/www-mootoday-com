@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<title>Projects - mootoday.com</title>
+	<title>Projects - mikenikles.com</title>
 	<meta
 		name="description"
 		content="Various web and full-stack software projects. Mostly written in Typescript, Node.js, and Svelte."

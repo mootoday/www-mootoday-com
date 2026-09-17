@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>About - mootoday.com</title>
+	<title>About - mikenikles.com</title>
 	<meta
 		name="description"
 		content="Mike. I improve your developer experience to save you time and money."
@@ -73,7 +73,7 @@
 				<li class="flex">
 					<a
 						class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
-						href="https://bsky.app/profile/mootoday.com"
+						href="https://bsky.app/profile/mikenikles.com"
 					>
 						<svg
 							width="24"

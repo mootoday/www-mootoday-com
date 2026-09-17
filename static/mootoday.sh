@@ -17,8 +17,8 @@ typewriter_effect() {
     printf "\n"
 }
 
-echo "Web: https://www.mootoday.com";
-echo "X  : @mootoday";
+echo "Web: https://www.mikenikles.com";
+echo "X  : @mikenikles";
 echo "";
 typewriter_effect "PS: Don't run 'curl https://... | sh' for URLs you don't trust."
 echo "";
