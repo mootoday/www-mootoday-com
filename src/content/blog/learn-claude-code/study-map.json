@@ -1,6 +1,6 @@
 {
-	"version": 2,
-	"generatedAt": "2026-09-16T21:27:22.049Z",
+	"version": 3,
+	"generatedAt": "2026-09-21T06:22:05.463Z",
 	"stages": [
 		{
 			"n": 1,
@@ -101,7 +101,8 @@
 				"agent-teams",
 				"workflows",
 				"worktrees",
-				"cross-session-messaging"
+				"cross-session-messaging",
+				"claude-projects"
 			]
 		},
 		{
@@ -122,6 +123,7 @@
 				"headless",
 				"github-actions",
 				"code-review",
+				"claude-security",
 				"routines",
 				"scheduled-tasks",
 				"channels",
@@ -155,6 +157,7 @@
 			"id": "teams-and-enterprise",
 			"title": "Teams and enterprise",
 			"concepts": [
+				"admin-setup",
 				"managed-settings",
 				"authentication",
 				"gateways",
@@ -689,6 +692,24 @@
 			"addedIn": 1
 		},
 		{
+			"id": "claude-projects",
+			"title": "Projects",
+			"stage": 4,
+			"docs": [
+				"claude-projects",
+				"agents"
+			],
+			"summary": "One conversation that coordinates parallel cloud sessions on a body of related work, sharing repositories, instructions, and memory.",
+			"related": [
+				"agent-teams",
+				"web-quickstart",
+				"cloud-environments",
+				"workflows"
+			],
+			"rev": 1,
+			"addedIn": 3
+		},
+		{
 			"id": "headless",
 			"title": "Headless (claude -p)",
 			"stage": 4,
@@ -794,6 +815,22 @@
 			],
 			"rev": 1,
 			"addedIn": 1
+		},
+		{
+			"id": "claude-security",
+			"title": "Security scanning",
+			"stage": 4,
+			"docs": [
+				"claude-security"
+			],
+			"summary": "The Claude Security plugin scans your codebase for vulnerabilities in a session and turns findings into patches you review and apply.",
+			"related": [
+				"code-review",
+				"discover-plugins",
+				"security"
+			],
+			"rev": 1,
+			"addedIn": 3
 		},
 		{
 			"id": "artifacts",
@@ -945,6 +982,25 @@
 			],
 			"rev": 1,
 			"addedIn": 1
+		},
+		{
+			"id": "admin-setup",
+			"title": "Organization rollout",
+			"stage": 6,
+			"docs": [
+				"admin-setup",
+				"communications-kit",
+				"champion-kit"
+			],
+			"summary": "A decision map for admins: pick an API provider, enforce managed settings, monitor usage, and review data handling, plus kits for driving adoption.",
+			"related": [
+				"managed-settings",
+				"authentication",
+				"monitoring-usage",
+				"security"
+			],
+			"rev": 1,
+			"addedIn": 3
 		},
 		{
 			"id": "managed-settings",
