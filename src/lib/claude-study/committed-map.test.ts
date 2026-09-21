@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import data from '../../content/blog/learn-claude-code/study-map.json';
+import log from '../../content/blog/learn-claude-code/changelog.json';
 import { layout } from './layout';
 import { validate, warnings } from './study-map';
-import type { StudyMap, StudyMapDraft } from './types';
+import type { ChangelogEntry, StudyMap, StudyMapDraft } from './types';
 import { V1_IDS } from './v1-ids';
 
 const map = data as StudyMap;
@@ -44,5 +45,11 @@ describe('committed study-map.json', () => {
 
 	it('is within the soft limits', () => {
 		expect(warnings(map)).toEqual([]);
+	});
+
+	it('has a changelog entry for every version, newest first, ending at this one', () => {
+		const versions = (log as ChangelogEntry[]).map((e) => e.version);
+		expect(versions).toEqual(Array.from({ length: map.version }, (_, i) => map.version - i));
+		expect((log as ChangelogEntry[])[0].date).toBe(map.generatedAt);
 	});
 });

@@ -1,5 +1,6 @@
 <script context="module">
 	import data from './study-map.json';
+	import changelog from './changelog.json';
 	import { HUB_R, layout } from '$lib/claude-study/layout';
 
 	const DOCS = 'https://code.claude.com/docs/en/';
@@ -28,12 +29,30 @@
 	for (const s of STAGES) ORD[s.n] = MAP.concepts.filter((c) => c.stage === s.n).map((c) => c.id);
 
 	const TOTAL = MAP.concepts.length;
-	const UPDATED = new Date(MAP.generatedAt).toLocaleDateString('en-US', {
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric',
-		timeZone: 'UTC'
-	});
+	/** @param {string} iso */
+	const formatDate = (iso) =>
+		new Date(iso).toLocaleDateString('en-US', {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+			timeZone: 'UTC'
+		});
+	const UPDATED = formatDate(MAP.generatedAt);
+
+	/** @type {import('$lib/claude-study/types').ChangelogEntry[]} */
+	const LOG = /** @type {any} */ (changelog);
+
+	/** @param {import('$lib/claude-study/types').ChangelogEntry} e */
+	function logSummary(e) {
+		if (e.version === 1) return 'First version';
+		const parts = [
+			e.added.length && `${e.added.length} new`,
+			e.updated.length && `${e.updated.length} updated`,
+			e.merged.length && `${e.merged.length} merged`,
+			e.retired.length && `${e.retired.length} retired`
+		].filter(Boolean);
+		return parts.length ? parts.join(', ') : 'No concept changes';
+	}
 
 	const L = layout(MAP.groups);
 	const O = L.hub;
@@ -147,6 +166,12 @@
 		const next = order[order.indexOf(id) + 1];
 		if (next) select(next);
 		else selectBlock(C[id].b < STAGES.length ? C[id].b + 1 : 0);
+	}
+
+	/** Open a concept from the changelog, bringing the panel into view on wide layouts too @param {string} id */
+	async function selectFromLog(id) {
+		await select(id);
+		if (root && root.clientWidth >= 880) root.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	}
 
 	/** @param {number} b */
@@ -476,6 +501,72 @@
 			{/if}
 		</aside>
 	</div>
+
+	<section class="log" aria-labelledby="ccmap-log">
+		<h2 id="ccmap-log">Changelog</h2>
+		<p class="muted">How the map changed as the Claude Code docs evolved.</p>
+		<ul>
+			{#each LOG as e (e.version)}
+				<li>
+					<details>
+						<summary>
+							<span class="dt">{formatDate(e.date)}</span>
+							<span class="muted">{logSummary(e)}</span>
+						</summary>
+						<div class="lbody">
+							{#if e.version === 1}
+								<p>The first version of the map.</p>
+							{/if}
+							{#if e.added.length}
+								<div class="sub">New</div>
+								<ul>
+									{#each e.added as c}
+										<li>
+											{#if C[c.id]}
+												<button class="linkish" on:click={() => selectFromLog(c.id)}>{c.title}</button>
+											{:else}{c.title}{/if}
+											<span class="muted">stage {c.stage}</span>
+										</li>
+									{/each}
+								</ul>
+							{/if}
+							{#if e.updated.length}
+								<div class="sub">Updated</div>
+								<ul>
+									{#each e.updated as c}
+										<li>
+											{#if C[c.id]}
+												<button class="linkish" on:click={() => selectFromLog(c.id)}>{c.title}</button>
+											{:else}{c.title}{/if}
+											{#if c.reason}<span class="why">{c.reason}</span>{/if}
+										</li>
+									{/each}
+								</ul>
+							{/if}
+							{#if e.merged.length}
+								<div class="sub">Merged</div>
+								<ul>
+									{#each e.merged as m}
+										<li>{m.fromTitle} → {m.toTitle}</li>
+									{/each}
+								</ul>
+							{/if}
+							{#if e.retired.length}
+								<div class="sub">Retired</div>
+								<ul>
+									{#each e.retired as r}<li>{r.title}</li>{/each}
+								</ul>
+							{/if}
+							{#if e.version > 1 && !(e.added.length + e.updated.length + e.merged.length + e.retired.length)}
+								<p>Summaries and links were refreshed; no concepts changed.</p>
+							{/if}
+							<p class="muted">{e.concepts} concepts in {e.groups} groups.</p>
+						</div>
+					</details>
+				</li>
+			{/each}
+		</ul>
+	</section>
 
 	<p class="foot">
 		Generated from the Claude Code documentation at
@@ -1007,6 +1098,81 @@
 	}
 	.muted {
 		color: var(--ink3);
+		font-size: 14px;
+	}
+	.log {
+		margin-top: 36px;
+		background: var(--paper);
+		border: 1px solid var(--line);
+		border-radius: 14px;
+		padding: 20px 22px;
+	}
+	.log h2 {
+		font-size: 20px;
+		line-height: 1.2;
+	}
+	.log > p {
+		margin: 4px 0 12px;
+	}
+	.log ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.log > ul > li {
+		margin: 0;
+		border-top: 1px solid var(--line);
+	}
+	.log summary {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 2px 12px;
+		padding: 10px 0;
+		cursor: pointer;
+		list-style: none;
+	}
+	.log summary::-webkit-details-marker {
+		display: none;
+	}
+	.log summary::before {
+		content: '';
+		width: 7px;
+		height: 7px;
+		margin: 0 5px 0 2px;
+		border-right: 2px solid var(--ink3);
+		border-bottom: 2px solid var(--ink3);
+		transform: translateY(-2px) rotate(-45deg);
+		transition: transform 0.15s;
+	}
+	.log details[open] summary::before {
+		transform: translateY(-4px) rotate(45deg);
+	}
+	.log summary:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 2px;
+	}
+	.log .dt {
+		font-weight: 700;
+	}
+	.lbody {
+		padding: 0 0 14px 24px;
+		font-size: 15px;
+	}
+	.lbody .sub {
+		margin: 8px 0 4px;
+	}
+	.lbody li {
+		margin: 0;
+		padding: 2px 0;
+	}
+	.lbody p {
+		margin: 8px 0 0;
+		color: var(--ink2);
+	}
+	.lbody .why {
+		display: block;
+		color: var(--ink2);
 		font-size: 14px;
 	}
 	.foot {

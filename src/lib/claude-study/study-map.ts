@@ -1,4 +1,4 @@
-import type { StudyMap, StudyMapDraft } from './types';
+import type { ChangelogEntry, StudyMap, StudyMapDraft } from './types';
 
 export function parseDocSlugs(llmsTxt: string): Set<string> {
 	const slugs = new Set<string>();
@@ -250,26 +250,55 @@ export function warnings(
 	return out;
 }
 
+/** What changed from `prev` to `next`, for the changelog. */
+export function changes(
+	prev: StudyMap | null,
+	next: StudyMap,
+	reasons: Record<string, string> = {}
+): ChangelogEntry {
+	const prevById = new Map(prev?.concepts.map((c) => [c.id, c]) ?? []);
+	const title = (id: string) =>
+		next.concepts.find((c) => c.id === id)?.title ?? prevById.get(id)?.title ?? id;
+	const renamed = renameTargets(prev, next.aliases);
+
+	return {
+		version: next.version,
+		date: next.generatedAt,
+		concepts: next.concepts.length,
+		groups: next.groups.length,
+		added: next.concepts
+			.filter((c) => !prevById.has(c.id) && !renamed.has(c.id))
+			.map((c) => ({ id: c.id, title: c.title, stage: c.stage })),
+		updated: next.concepts.flatMap((c) => {
+			const p = prevById.get(c.id);
+			if (!p || c.rev <= p.rev) return [];
+			const reason = Object.hasOwn(reasons, c.id)
+				? reasons[c.id].replace(/\s+/g, ' ').trim()
+				: undefined;
+			return [
+				{ id: c.id, title: c.title, fromRev: p.rev, toRev: c.rev, ...(reason && { reason }) }
+			];
+		}),
+		merged: Object.keys(next.aliases)
+			.filter((from) => !prev || !Object.hasOwn(prev.aliases, from))
+			.map((from) => ({
+				from,
+				fromTitle: title(from),
+				to: next.aliases[from],
+				toTitle: title(next.aliases[from])
+			})),
+		retired: next.retired
+			.filter((r) => r.retiredIn === next.version)
+			.map((r) => ({ id: r.id, title: r.title }))
+	};
+}
+
 export function changelog(
 	prev: StudyMap | null,
 	next: StudyMap,
 	reasons: Record<string, string> = {}
 ): string {
-	const prevById = new Map(prev?.concepts.map((c) => [c.id, c]) ?? []);
-	const title = (id: string) =>
-		next.concepts.find((c) => c.id === id)?.title ?? prevById.get(id)?.title ?? id;
-
-	const renamed = renameTargets(prev, next.aliases);
-	const added = next.concepts.filter((c) => !prevById.has(c.id) && !renamed.has(c.id));
-	const updated = next.concepts.filter((c) => {
-		const p = prevById.get(c.id);
-		return p && c.rev > p.rev;
-	});
-	const merged = Object.entries(next.aliases).filter(
-		([from]) => !prev || !Object.hasOwn(prev.aliases, from)
-	);
-	const retired = next.retired.filter((r) => r.retiredIn === next.version);
-
+	const { added, updated, merged, retired } = changes(prev, next, reasons);
 	const section = (heading: string, items: string[]) =>
 		items.length ? [`### ${heading}`, '', ...items.map((i) => `- ${i}`), ''] : [];
 
@@ -285,15 +314,13 @@ export function changelog(
 		...section(
 			'Updated',
 			updated.map((c) => {
-				const line = `${c.title} (\`${c.id}\`, rev ${prevById.get(c.id)!.rev} → ${c.rev})`;
-				return Object.hasOwn(reasons, c.id)
-					? `${line} — ${reasons[c.id].replace(/\s+/g, ' ').trim()}`
-					: line;
+				const line = `${c.title} (\`${c.id}\`, rev ${c.fromRev} → ${c.toRev})`;
+				return c.reason ? `${line} — ${c.reason}` : line;
 			})
 		),
 		...section(
 			'Merged',
-			merged.map(([from, to]) => `${title(from)} (\`${from}\`) → ${title(to)} (\`${to}\`)`)
+			merged.map((m) => `${m.fromTitle} (\`${m.from}\`) → ${m.toTitle} (\`${m.to}\`)`)
 		),
 		...section(
 			'Retired',
@@ -303,4 +330,11 @@ export function changelog(
 			? []
 			: ['No concept changes.', ''])
 	].join('\n');
+}
+
+/** Adds `entry` to the changelog, newest first, replacing any entry for the same version. */
+export function addToChangelog(log: ChangelogEntry[], entry: ChangelogEntry): ChangelogEntry[] {
+	return [entry, ...log.filter((e) => e.version !== entry.version)].sort(
+		(a, b) => b.version - a.version
+	);
 }

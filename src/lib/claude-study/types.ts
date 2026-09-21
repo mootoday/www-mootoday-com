@@ -35,3 +35,17 @@ export type StudyMapDraft = {
 	/** One entry per concept whose rev increased, explaining the change for readers. */
 	revChanges: { id: string; reason: string }[];
 };
+
+/** One generator run, as shown in the changelog on the page. */
+export type ChangelogEntry = {
+	version: number;
+	/** The map's generatedAt */
+	date: string;
+	concepts: number;
+	groups: number;
+	added: { id: string; title: string; stage: number }[];
+	updated: { id: string; title: string; fromRev: number; toRev: number; reason?: string }[];
+	/** Renames and merges: `from` now resolves to `to` */
+	merged: { from: string; fromTitle: string; to: string; toTitle: string }[];
+	retired: { id: string; title: string }[];
+};

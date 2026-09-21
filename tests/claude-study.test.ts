@@ -57,6 +57,14 @@ test.describe('Claude study map', () => {
 		await expect(page.locator('nav .seg').first()).toContainText(/(^|\D)2 of \d+ learned/);
 	});
 
+	test('expands a changelog date to show what changed', async ({ page }) => {
+		await page.goto('/blog/learn-claude-code');
+		const latest = page.locator('.log details').first();
+		await expect(latest.locator('.lbody')).toBeHidden();
+		await latest.locator('summary').click();
+		await expect(latest.locator('.lbody')).toContainText(`${map.concepts.length} concepts`);
+	});
+
 	test('redirects the old URL', async ({ page }) => {
 		await page.goto('/blog/learn-claude-code-in-a-day');
 		await expect(page).toHaveURL(/\/blog\/learn-claude-code$/);

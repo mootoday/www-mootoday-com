@@ -1,17 +1,20 @@
 import { spawn } from 'node:child_process';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import {
+	addToChangelog,
 	changelog,
+	changes,
 	finalize,
 	parseDocSlugs,
 	uncoveredDocs,
 	validate,
 	warnings
 } from '../../src/lib/claude-study/study-map.ts';
-import type { StudyMap, StudyMapDraft } from '../../src/lib/claude-study/types.ts';
+import type { ChangelogEntry, StudyMap, StudyMapDraft } from '../../src/lib/claude-study/types.ts';
 
 const ROOT = new URL('../../', import.meta.url);
 const MAP_PATH = new URL('src/content/blog/learn-claude-code/study-map.json', ROOT);
+const CHANGELOG_PATH = new URL('src/content/blog/learn-claude-code/changelog.json', ROOT);
 const OUT_DIR = new URL('.claude-study/', ROOT);
 const LLMS_URL = 'https://code.claude.com/docs/llms.txt';
 const CLAUDE_TIMEOUT_MS = 15 * 60_000;
@@ -134,9 +137,10 @@ async function fetchText(url: string): Promise<string> {
 }
 
 async function main() {
-	const [llmsTxt, prevRaw, prompt, schema] = await Promise.all([
+	const [llmsTxt, prevRaw, changelogRaw, prompt, schema] = await Promise.all([
 		fetchText(LLMS_URL),
 		readFile(MAP_PATH, 'utf8'),
+		readFile(CHANGELOG_PATH, 'utf8'),
 		readFile(new URL('prompt.md', import.meta.url), 'utf8'),
 		readFile(new URL('schema.json', import.meta.url), 'utf8')
 	]);
@@ -188,16 +192,23 @@ async function main() {
 
 	const next = finalize(draft, prev, new Date());
 	for (const w of warnings(next, prev)) console.error(`Warning: ${w}`);
+	const reasons = Object.fromEntries(draft.revChanges.map((r) => [r.id, r.reason]));
+	const log = addToChangelog(
+		JSON.parse(changelogRaw) as ChangelogEntry[],
+		changes(prev, next, reasons)
+	);
 	const json = JSON.stringify(next, null, '\t') + '\n';
+	const logJson = JSON.stringify(log, null, '\t') + '\n';
 	if (dryRun) {
 		await writeOut('dry-run.json', json);
+		await writeOut('dry-run-changelog.json', logJson);
 		console.error(
-			'Dry run: study-map.json not written. Output saved to .claude-study/dry-run.json'
+			'Dry run: study-map.json and changelog.json not written. Output saved to .claude-study/dry-run*.json'
 		);
 	} else {
 		await writeFile(MAP_PATH, json);
+		await writeFile(CHANGELOG_PATH, logJson);
 	}
-	const reasons = Object.fromEntries(draft.revChanges.map((r) => [r.id, r.reason]));
 	console.log(changelog(prev, next, reasons));
 }
 

@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import {
+	addToChangelog,
 	changelog,
+	changes,
 	finalize,
 	parseDocSlugs,
 	resolveId,
@@ -8,7 +10,7 @@ import {
 	validate,
 	warnings
 } from './study-map';
-import type { StudyMap, StudyMapDraft } from './types';
+import type { ChangelogEntry, StudyMap, StudyMapDraft } from './types';
 
 describe('parseDocSlugs', () => {
 	it('extracts top-level and nested slugs from llms.txt', () => {
@@ -796,5 +798,67 @@ describe('changelog', () => {
 		expect(changelog(prev, next)).toContain(
 			'### Merged\n\n- toString (`toString`) → CLAUDE.md (`memory`)'
 		);
+	});
+});
+
+describe('changes', () => {
+	it('records the version, date and structured changes with reasons', () => {
+		const d = draftOf(prevMap());
+		d.concepts.find((c) => c.id === 'hooks-guide')!.rev = 2;
+		removeConcept(d, 'memory--auto-memory');
+		d.aliases.push({ from: 'memory--auto-memory', to: 'memory' });
+		const next = finalize(d, prevMap(), new Date('2026-09-20T06:00:00Z'));
+		const entry = changes(prevMap(), next, { 'hooks-guide': ' Hooks can\n block. ' });
+		expect(entry).toMatchObject({
+			version: 4,
+			date: '2026-09-20T06:00:00.000Z',
+			concepts: next.concepts.length,
+			groups: next.groups.length,
+			added: [],
+			updated: [
+				{ id: 'hooks-guide', title: 'Hooks', fromRev: 1, toRev: 2, reason: 'Hooks can block.' }
+			],
+			merged: [
+				{
+					from: 'memory--auto-memory',
+					fromTitle: 'Auto memory',
+					to: 'memory',
+					toTitle: 'CLAUDE.md'
+				}
+			],
+			retired: []
+		});
+	});
+
+	it('omits the reason when none was given', () => {
+		const d = draftOf(prevMap());
+		d.concepts.find((c) => c.id === 'hooks-guide')!.rev = 2;
+		const entry = changes(prevMap(), finalize(d, prevMap(), new Date('2026-09-20T06:00:00Z')));
+		expect(entry.updated[0]).not.toHaveProperty('reason');
+	});
+});
+
+describe('addToChangelog', () => {
+	const entry = (version: number): ChangelogEntry => ({
+		version,
+		date: `2026-09-1${version}T00:00:00.000Z`,
+		concepts: 1,
+		groups: 1,
+		added: [],
+		updated: [],
+		merged: [],
+		retired: []
+	});
+
+	it('keeps entries newest first', () => {
+		expect(addToChangelog([entry(2), entry(1)], entry(3)).map((e) => e.version)).toEqual([3, 2, 1]);
+	});
+
+	it('replaces an entry for the same version', () => {
+		const log = addToChangelog([entry(2), entry(1)], { ...entry(2), concepts: 9 });
+		expect(log.map((e) => [e.version, e.concepts])).toEqual([
+			[2, 9],
+			[1, 1]
+		]);
 	});
 });

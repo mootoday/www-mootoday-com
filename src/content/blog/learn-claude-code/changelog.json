@@ -1,0 +1,79 @@
+[
+	{
+		"version": 3,
+		"date": "2026-09-21T06:22:05.463Z",
+		"concepts": 66,
+		"groups": 11,
+		"added": [
+			{
+				"id": "claude-projects",
+				"title": "Projects",
+				"stage": 4
+			},
+			{
+				"id": "claude-security",
+				"title": "Security scanning",
+				"stage": 4
+			},
+			{
+				"id": "admin-setup",
+				"title": "Organization rollout",
+				"stage": 6
+			}
+		],
+		"updated": [],
+		"merged": [],
+		"retired": []
+	},
+	{
+		"version": 2,
+		"date": "2026-09-16T21:27:22.049Z",
+		"concepts": 63,
+		"groups": 11,
+		"added": [
+			{
+				"id": "quickstart",
+				"title": "Install and first run",
+				"stage": 1
+			},
+			{
+				"id": "common-workflows",
+				"title": "Common workflows",
+				"stage": 1
+			},
+			{
+				"id": "best-practices",
+				"title": "Best practices",
+				"stage": 1
+			},
+			{
+				"id": "slack",
+				"title": "Slack, Claude Tag",
+				"stage": 2
+			},
+			{
+				"id": "features-overview",
+				"title": "Choosing extensions",
+				"stage": 3
+			},
+			{
+				"id": "deep-links",
+				"title": "Deep links",
+				"stage": 4
+			}
+		],
+		"updated": [],
+		"merged": [],
+		"retired": []
+	},
+	{
+		"version": 1,
+		"date": "2026-09-16T00:00:00.000Z",
+		"concepts": 57,
+		"groups": 10,
+		"added": [],
+		"updated": [],
+		"merged": [],
+		"retired": []
+	}
+]
