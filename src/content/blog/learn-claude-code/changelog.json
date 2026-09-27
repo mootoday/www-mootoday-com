@@ -1,5 +1,33 @@
 [
 	{
+		"version": 4,
+		"date": "2026-09-27T06:47:14.770Z",
+		"concepts": 68,
+		"groups": 11,
+		"added": [
+			{
+				"id": "plugins/code-intelligence",
+				"title": "Code intelligence",
+				"stage": 3
+			},
+			{
+				"id": "plugins/create",
+				"title": "Build plugins",
+				"stage": 3
+			}
+		],
+		"updated": [],
+		"merged": [
+			{
+				"from": "discover-plugins",
+				"fromTitle": "Plugins",
+				"to": "plugins/overview",
+				"toTitle": "Plugins"
+			}
+		],
+		"retired": []
+	},
+	{
 		"version": 3,
 		"date": "2026-09-21T06:22:05.463Z",
 		"concepts": 66,

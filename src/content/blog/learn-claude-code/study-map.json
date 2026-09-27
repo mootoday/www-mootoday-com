@@ -1,6 +1,6 @@
 {
-	"version": 3,
-	"generatedAt": "2026-09-21T06:22:05.463Z",
+	"version": 4,
+	"generatedAt": "2026-09-27T06:47:14.770Z",
 	"stages": [
 		{
 			"n": 1,
@@ -74,7 +74,9 @@
 				"skills",
 				"hooks-guide",
 				"mcp-quickstart",
-				"discover-plugins",
+				"plugins/overview",
+				"plugins/code-intelligence",
+				"plugins/create",
 				"artifacts"
 			]
 		},
@@ -529,7 +531,7 @@
 			],
 			"summary": "Folders with a SKILL.md and optional scripts. Only the description loads until needed. Invoke with /name or let Claude choose.",
 			"related": [
-				"discover-plugins",
+				"plugins/overview",
 				"agent-sdk/claude-code-features"
 			],
 			"rev": 1,
@@ -546,7 +548,7 @@
 			"summary": "Deterministic shell, HTTP, or prompt handlers on events like PreToolUse, PostToolUse, and Stop. They can block actions.",
 			"related": [
 				"permissions",
-				"discover-plugins",
+				"plugins/overview",
 				"channels",
 				"agent-sdk/permissions",
 				"scheduled-tasks"
@@ -564,7 +566,7 @@
 			],
 			"summary": "Model Context Protocol servers add external tools and data such as issue trackers, chat, databases, and design docs.",
 			"related": [
-				"discover-plugins",
+				"plugins/overview",
 				"channels",
 				"managed-settings",
 				"agent-sdk/custom-tools",
@@ -574,21 +576,37 @@
 			"addedIn": 1
 		},
 		{
-			"id": "discover-plugins",
+			"id": "plugins/overview",
 			"title": "Plugins",
 			"stage": 3,
 			"docs": [
-				"discover-plugins",
-				"plugins",
-				"plugin-marketplaces"
+				"plugins/overview",
+				"plugins/install",
+				"plugins/anthropic-marketplaces"
 			],
-			"summary": "Shareable bundles of skills, subagents, hooks, and MCP servers, installed from marketplaces and testable with evals.",
+			"summary": "Shareable bundles of skills, subagents, hooks, and MCP servers. Install from marketplaces with /plugin and pick a user or project scope.",
 			"related": [
 				"sub-agents",
-				"code-review"
+				"code-review",
+				"plugins/create"
 			],
 			"rev": 1,
 			"addedIn": 1
+		},
+		{
+			"id": "plugins/code-intelligence",
+			"title": "Code intelligence",
+			"stage": 3,
+			"docs": [
+				"plugins/code-intelligence"
+			],
+			"summary": "Language server plugins let Claude see type errors right after edits and navigate code by symbol instead of text search.",
+			"related": [
+				"plugins/overview",
+				"large-codebases"
+			],
+			"rev": 1,
+			"addedIn": 4
 		},
 		{
 			"id": "sub-agents",
@@ -619,6 +637,23 @@
 			],
 			"rev": 1,
 			"addedIn": 1
+		},
+		{
+			"id": "plugins/create",
+			"title": "Build plugins",
+			"stage": 3,
+			"docs": [
+				"plugins/create",
+				"plugin-evals",
+				"plugins/publish"
+			],
+			"summary": "Package your .claude/ setup as a plugin, test it with claude plugin eval, and publish it through a marketplace.",
+			"related": [
+				"skills",
+				"hooks-guide"
+			],
+			"rev": 1,
+			"addedIn": 4
 		},
 		{
 			"id": "worktrees",
@@ -826,7 +861,7 @@
 			"summary": "The Claude Security plugin scans your codebase for vulnerabilities in a session and turns findings into patches you review and apply.",
 			"related": [
 				"code-review",
-				"discover-plugins",
+				"plugins/overview",
 				"security"
 			],
 			"rev": 1,
@@ -1195,6 +1230,8 @@
 			"addedIn": 1
 		}
 	],
-	"aliases": {},
+	"aliases": {
+		"discover-plugins": "plugins/overview"
+	},
 	"retired": []
 }
